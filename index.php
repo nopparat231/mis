@@ -36,13 +36,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-     
+
 
       <?php
 
+      if (isset($_GET['pa1'])) {
+        include 'pa1.php';
+      }else{
+        include 'new.php';
+      }
 
-      include 'new.php';
-      
       ?>
 
 
