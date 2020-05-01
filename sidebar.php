@@ -34,6 +34,12 @@
                   <p>ประเมินการสอน</p>
                 </a>
               </li>
+                <li class="nav-item">
+                <a href="index.php?pa2" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ประเมินผลสัมฤทธิ์ของงานของข้าราชการ</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="index.php?from" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
