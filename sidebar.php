@@ -41,6 +41,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="index.php?pa2" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ประเมินพฤติกรรมการปฏิบัติราชการ (สมรรถนะ)</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="index.php?from" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ประเมินบริการสารสนเทศ</p>

@@ -90,7 +90,7 @@ div.WordSection2
 <div class=WordSection1>
 
 <p class=MsoNormal style='margin-top:12.0pt'><span class=SpellE><span
-class=GramE><b><u><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span></u></b></span></span><b><span
+class=GramE><b><u><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ตอนที่&nbsp;๑&nbsp;การประเมินผลการปฏิบัติงาน ผู้บริหารสายวิชาการ (คณบดี/ผู้อำนวยการสถาบัน/สำนัก)</span></u></b></span></span><b><span
 style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></b></p>
 
 <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=0
@@ -101,28 +101,28 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><b><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>sssssssssssssss</span></b></span><b><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานในตำแหน่งวิชาการ &nbsp;(20คะแนน)</span></b></span><b><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></b></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><b><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>sss</span></b></span><b><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>คะแนน</span></b></span><b><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></b></p>
   </td>
   <td width=539 valign=top style='width:404.0pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><b><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ssssss</span></b></span><b><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานในตำแหน่งบริหาร&nbsp;(80 คะแนน)</span></b></span><b><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></b></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><b><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ssss</span></b></span><b><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>คะแนน</span></b></span><b><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></b></p>
   </td>
   <![if !supportMisalignedRows]>
@@ -134,7 +134,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.1
-  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานสอน </span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 rowspan=5 valign=top style='width:49.6pt;border-top:none;
@@ -149,7 +149,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.
-  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>งานบริหาร (ภาระงานหลักตามภาระหน้าที่) (50 คะแนน)</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
@@ -168,7 +168,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.2</span><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> <span
-  class=SpellE>ffffff</span><span lang=TH> <o:p></o:p></span></span></p>
+  class=SpellE>ภาระงานวิจัยหรืองานวิชาการอื่น </span><span lang=TH> <o:p></o:p></span></span></p>
   </td>
   <td width=539 rowspan=3 valign=top style='width:404.0pt;border-top:none;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -176,14 +176,14 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp;</span>1.1 </span><span style='font-size:12.0pt;
-  font-family:"TH SarabunPSK",sans-serif'>ffffff<span lang=TH><o:p></o:p></span></span></p>
+  font-family:"TH SarabunPSK",sans-serif'>การบริหารคน (20 คะแนน)<span lang=TH><o:p></o:p></span></span></p>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการกำกับ ติดตาม และประเมินผลการปฏิบัติงาน และพัฒนาบุคลากรอย่างทัดเทียมกัน</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการกำหนดภาระหน้าที่หรือขั้นตอนการดำเนินงานของหน่วยงานและมอบหมายงานแก่บุคลากรในหน่วยงานได้เหมาะสมกับปริมาณและคุณภาพของงานที่ทำ</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 rowspan=3 valign=top style='width:49.6pt;border-top:none;
@@ -202,7 +202,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.3
-  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> ภาระงานบริการวิชาการ </span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <![if !supportMisalignedRows]>
@@ -214,7 +214,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.4
-  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานทำนุบำรุงศิลปวัฒนธรรม </span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <![if !supportMisalignedRows]>
@@ -226,7 +226,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.5
-  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานเกี่ยวกับงานกิจการนักศึกษา ภาระงานอื่นๆ </span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=539 rowspan=2 valign=top style='width:404.0pt;border-top:none;
@@ -235,15 +235,15 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp;</span>1.2 </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>การบริหารงบประมาณ (10 คะแนน)</span></span><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>บริหารงานด้วยความซื่อสัตย์ สุจริต ไม่มีผลประโยชน์ด้านอื่นที่ขัดแย้งกับการปฏิบัติหน้าที่</span></span><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการบริหารจัดการงบประมาณภายใต้ขอบเขตอำนาจให้เป็นไปตามเป้าหมายของหน่วยงานและมหาวิทยาลัย</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 rowspan=2 valign=top style='width:49.6pt;border-top:none;
@@ -262,10 +262,13 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:32.15pt'>
   <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
-  font-family:"TH SarabunPSK",sans-serif'>sssss</span></u></b></span><b><u><span
+  font-family:"TH SarabunPSK",sans-serif'>สูตรคำนวณคะแนนด้านวิชาการ
+</span></u></b></span>
+<b><u><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
-  <p class=MsoNormal><span class=SpellE><span style='font-size:12.0pt;
-  font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span lang=TH
+
+  <p class=MsoNormal><span class=SpellE><span style='font-size:9.0pt;
+  font-family:"TH SarabunPSK",sans-serif'><u>คะแนนวิชาการจากหน่วยงาน x 20 จากงานวิชาการที่ม.กำหนด</u><br>70 (ผลสัมฤทธิ์ขององค์ประกอบที่ 1)</span></span><span lang=TH
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> <o:p></o:p></span></p>
   </td>
   <td width=66 rowspan=3 valign=top style='width:49.6pt;border-top:none;
@@ -285,22 +288,22 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:97.9pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp;</span>1.3 </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>การบริหารงาน (20 คะแนน)</span></span><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-  style='mso-spacerun:yes'>&nbsp; </span>- ÁÕ</span><span style='font-size:
-  12.0pt;font-family:"TH SarabunPSK",sans-serif'> <span class=SpellE>ffffff</span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'>&nbsp; </span>- </span><span style='font-size:
+  12.0pt;font-family:"TH SarabunPSK",sans-serif'> <span class=SpellE>มีการบริหารงานสอดคล้องกับระบบการบริหารของมหาวิทยาลัยรวมทั้งสอดคล้องกับความคาดหวังของความต้องการของหน่วยงานต่างๆ ทั้งภายในและภายนอกมหาวิทยาลัย</span><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-  <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-  style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการเผยแพร่ข้อมูลของหน่วยงานอย่างเปิดเผย และเข้าถึงข้อมูลข่าวสารได้อย่างเสรีตามความเหมาะสม</span></span><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
   style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการสื่อสารหรือแจ้งข้อมูลที่จำเป็นและเป็นประโยชน์ในการทำงานอย่างสม่ำเสมอและถูกต้อง</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+  style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการบริหารงาน โดยคำนึงถึงบุคลากรหรือหน่วยงานที่เกี่ยวข้องให้ได้รับการบริการอย่างทัดเทียมกัน</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
@@ -320,7 +323,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>2.
-  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>งานบริหารงานตามยุทธศาสตร์ของมหาวิทยาลัยและของคณะ (30 คะแนน)</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
@@ -339,10 +342,10 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
-  font-family:"TH SarabunPSK",sans-serif'>ssss</span></u></b></span><b><u><span
+  font-family:"TH SarabunPSK",sans-serif'>คะแนนรวม</span></u></b></span><b><u><span
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
   <p class=MsoNormal><span class=SpellE><span style='font-size:12.0pt;
-  font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span lang=TH
+  font-family:"TH SarabunPSK",sans-serif'><u>คะแนนวิชาการ (20) + บริหาร (80)</u><br>100</span></span><span lang=TH
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
@@ -357,10 +360,10 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
-  font-family:"TH SarabunPSK",sans-serif'>ssss</span></u></b></span><b><u><span
+  font-family:"TH SarabunPSK",sans-serif'>ด้านบริหาร</span></u></b></span><b><u><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
   <p class=MsoNormal><span class=SpellE><span style='font-size:12.0pt;
-  font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span lang=TH
+  font-family:"TH SarabunPSK",sans-serif'><u>คะแนนประเมินจากผู้บริหาร x 80 จากงานบริหารผลสัมฤทธิ์</u><br>70 (ผลสัมฤทธิ์ องค์ประกอบที่ 1)</span></span><span lang=TH
   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
@@ -379,7 +382,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>รวม</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
@@ -394,7 +397,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><span
-  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span><span
+  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>รวม</span></span><span
   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
   </td>
   <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
@@ -411,7 +414,7 @@ style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></spa
 </table>
 
 <p class=MsoNormal><span class=SpellE><span class=GramE><span style='font-size:
-12.0pt;font-family:"TH SarabunPSK",sans-serif'>ffffff</span></span></span><span
+12.0pt;font-family:"TH SarabunPSK",sans-serif'>สัดส่วนภาระงานในตำแหน่งวิชาการ (20) : ภาระงานในตำแหน่งบริหาร (80)</span></span></span><span
 lang=TH style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
 
 </div>
