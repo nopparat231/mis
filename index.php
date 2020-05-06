@@ -98,6 +98,30 @@ scratch. This page gets rid of all links and provides the needed markup only.
         "autoWidth": false,
       });
     });
+
+    function getse1() {
+      var se1 = parseInt(document.getElementById("se1").value);
+      var sum2 = parseInt(document.getElementById("sum2").value);
+      var sumse1 = (se1 + sum2) / 100;
+      document.getElementById("sum1").value = sumse1;
+
+    }
+
+    function getse2() {
+      var se2 = parseInt(document.getElementById("se2").value);
+      var se3 = parseInt(document.getElementById("se3").value);
+      var se4 = parseInt(document.getElementById("se4").value);
+      var se5 = parseInt(document.getElementById("se5").value);
+      var se6 = parseInt(document.getElementById("se6").value);
+
+      //var sum2 = document.getElementById("sum2").value;
+      var sumse2 = se2 + se3 + se4 + se5 + se6;
+
+      document.getElementById("sum2").value = sumse2;
+      getse1();
+
+    }
+
   </script>
 
   <?php

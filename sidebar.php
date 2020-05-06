@@ -31,7 +31,7 @@
               <li class="nav-item">
                 <a href="index.php?pa1" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>ประเมินการสอน</p>
+                  <p>ประเมินการใช้งานระบบ</p>
                 </a>
               </li>
                 <li class="nav-item">
