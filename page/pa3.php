@@ -26,66 +26,86 @@
 
  				<div class="card card-primary card-outline">
  					<div class="card-header">
- 						<h5 class="m-0">ฟอร์มประเมินการใช้งานระบบ</h5>
+ 						<h5 class="m-0">ฟอร์มประเมิน</h5>
  					</div>
  					<div class="card-body">
+
+ 						<?php 
+ 						include 'conn.php';
+
+
+
+ 						$sqlh=" SELECT * FROM f_h";
+ 						$qryh = mysqli_query($conn,$sqlh);
+ 						//$rowh = mysqli_fetch_assoc($qryh);
+ 						$rowcheckh = mysqli_num_rows($qryh); 
+
+
+
+ 						?>
 
  						<b> ตอนที่ ๑ การประเมินผลการปฏิบัติงาน ผู้บริหารสายวิชาการ (คณบดี/ผู้อำนวยการสถาบัน/สำนัก) </b><br>
 
  						<form id="formq" name="formq" method="post" action="q_db.php">
  							<table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
- 								<tr>
- 									<td width="75%" rowspan="2" align="float-sm-right"><strong>&nbsp; 1. ภาระงานในตำแหน่งวิชาการ  (20คะแนน)</strong></td>
- 									<td colspan="5" align="center"><strong>ระดับความคิดเห็น</strong></td>
- 								</tr>
- 								<tr>
- 									<td width="5%" align="center"><strong>5</strong></td>
- 									<td width="5%" align="center"><strong>4</strong></td>
- 									<td width="5%" align="center"><strong>3</strong></td>
- 									<td width="5%" align="center"><strong>2</strong></td>
- 									<td width="5%" align="center"><strong>1</strong></td>
- 								</tr>
- 								
- 								<tr>
- 									<td height="30">
- 										&nbsp; 1.1 ภาระงานสอน <br>	
- 										&nbsp; 1.2 ภาระงานวิจัยหรืองานวิชาการอื่น <br>	
- 										&nbsp; 1.3 ภาระงานบริการวิชาการ <br>	
- 										&nbsp; 1.4 ภาระงานทำนุบำรุงศิลปวัฒนธรรม <br>	
- 										&nbsp; 1.5 ภาระงานเกี่ยวกับงานกิจการนักศึกษา ภาระงานอื่นๆ<br>	
- 									</td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="5" required="required" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="4" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="3" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="2" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="1" /></td>
- 								</tr>
 
 
- 								<tr>
- 									<td height="30" colspan="6" bgcolor="#F4F4F4"><strong></strong></td>
- 								</tr>
+ 								<?php 
 
- 								<tr>
- 									<td width="75%" rowspan="2" align="center"><strong>ภาระงานในตำแหน่งบริหาร (80 คะแนน)</strong></td>
- 									<td colspan="5" align="center"><strong>ระดับความคิดเห็น</strong></td>
- 								</tr>
- 								<tr>
- 									<td width="5%" align="center"><strong>5</strong></td>
- 									<td width="5%" align="center"><strong>4</strong></td>
- 									<td width="5%" align="center"><strong>3</strong></td>
- 									<td width="5%" align="center"><strong>2</strong></td>
- 									<td width="5%" align="center"><strong>1</strong></td>
- 								</tr>
- 								
- 								<tr>
- 									<td height="30">&nbsp; 1.คู่มือการใช้งานระบบอ่านเข้าใจง่ายและปฏิบัติตามคู่มือได้ทันที</td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="5" required="required" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="4" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="3" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="2" /></td>
- 									<td height="30" align="center"><input type="radio" name="a1"  value="1" /></td>
- 								</tr>
+ 								while($rowh = $qryh->fetch_array()){
+
+ 									?>
+
+ 									<tr>
+ 										<td height="30" colspan="6" bgcolor="#F4F4F4">
+ 											<strong>&nbsp; <?php echo $rowh['f_hdetail']; ?> </strong>
+ 										</td>
+ 									</tr>
+
+
+ 									<?php
+
+
+ 									$sqlf=" SELECT f_hhh , f_id , f_hh FROM f_pam WHERE f_hh =".$rowh['f_hid'];
+ 									$qryf = mysqli_query($conn,$sqlf);
+ 									//$rowf = mysqli_fetch_assoc($qryf);
+ 									$rowcheckf = mysqli_num_rows($qryf); 
+
+ 									while($rowf = $qryf->fetch_array()){
+ 										?>
+
+
+ 										<tr>
+ 											<td width="75%" rowspan="2" align="float-sm-right">
+ 												<strong></strong>
+ 											</td>
+ 										</tr>
+ 										<tr>
+ 											<td width="5%" align="center"><strong>5</strong></td>
+ 											<td width="5%" align="center"><strong>4</strong></td>
+ 											<td width="5%" align="center"><strong>3</strong></td>
+ 											<td width="5%" align="center"><strong>2</strong></td>
+ 											<td width="5%" align="center"><strong>1</strong></td>
+ 										</tr>
+
+ 										<tr>
+ 											<td height="30">
+ 												<?php echo $rowf['f_hhh']; ?>
+
+ 											</td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="5" required="required" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="4" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="3" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="2" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="1" /></td>
+ 										</tr>
+
+ 									<?php } ?>
+
+
+
+ 								<?php } ?>
+
 
  							</table>
 
