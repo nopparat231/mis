@@ -30,10 +30,13 @@
  					</div>
  					<div class="card-body">
 
+
  						<?php 
  						include 'conn.php';
 
+ 						include 'head_page.php';
 
+ 						$f_thid = isset($_GET['f_thid']);
 
  						$sqlh=" SELECT * FROM f_h";
  						$qryh = mysqli_query($conn,$sqlh);
@@ -41,12 +44,16 @@
  						$rowcheckh = mysqli_num_rows($qryh); 
 
 
+ 						$sqlth=" SELECT * FROM f_th WHERE f_thid =".$f_thid;
+ 						$qryth = mysqli_query($conn,$sqlth);
+ 						$rowth = mysqli_fetch_assoc($qryth);
+ 						
 
  						?>
 
- 						<b> ตอนที่ ๑ การประเมินผลการปฏิบัติงาน ผู้บริหารสายวิชาการ (คณบดี/ผู้อำนวยการสถาบัน/สำนัก) </b><br>
+ 						<b> <?php echo $rowth['f_thdettail']; ?> </b><br>
 
- 						<form id="formq" name="formq" method="post" action="q_db.php">
+ 						<form id="frmdb" name="frmdb" method="post" action="pa3_db.php">
  							<table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
 
 
@@ -66,7 +73,7 @@
  									<?php
 
 
- 									$sqlf=" SELECT f_hhh , f_id , f_hh , f_score  FROM f_pam WHERE f_hh =".$rowh['f_hid'];
+ 									$sqlf=" SELECT f_hhh , f_id , f_hh , f_score FROM f_pam WHERE f_hh =".$rowh['f_hid'];
  									$qryf = mysqli_query($conn,$sqlf);
  									//$rowf = mysqli_fetch_assoc($qryf);
  									$rowcheckf = mysqli_num_rows($qryf); 

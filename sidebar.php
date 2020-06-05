@@ -47,9 +47,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="index.php?pa3" class="nav-link">
+                <a href="index.php?pa3&f_thid=1" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>ประเมินบริการสารสนเทศ</p>
+                  <p>ประเมินบุคลากร</p>
                 </a>
               </li>
                <li class="nav-item">
