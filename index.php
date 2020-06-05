@@ -50,6 +50,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         include 'page/pa2.php';
       }elseif (isset($_GET['pa3'])) {
         include 'page/pa3.php';
+      }elseif (isset($_GET['pa4'])) {
+        include 'page/pa4.php';
       }else{
         include 'new.php';
       }
