@@ -28,38 +28,52 @@
                   <p>หน้าแรก</p>
                 </a>
               </li>
-              <li class="nav-item">
+<!--               <li class="nav-item">
                 <a href="index.php?pa1" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ประเมินการใช้งานระบบ</p>
                 </a>
-              </li>
-                <li class="nav-item">
+              </li> -->
+<!--               <li class="nav-item">
                 <a href="index.php?pa2" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ประเมินผลสัมฤทธิ์ของงานของข้าราชการ</p>
                 </a>
-              </li>
-              <li class="nav-item">
+              </li> -->
+ <!--              <li class="nav-item">
                 <a href="index.php?pa2" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ประเมินพฤติกรรมการปฏิบัติราชการ (สมรรถนะ)</p>
                 </a>
-              </li>
-              <li class="nav-item">
+              </li> -->
+<!--               <li class="nav-item">
                 <a href="index.php?pa3&f_thid=1" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ประเมินบุคลากร</p>
                 </a>
-              </li>
-               <li class="nav-item">
+              </li> -->
+<!--               <li class="nav-item">
                 <a href="index.php?pa4" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>เพิ่มหัวข้อ</p>
                 </a>
+              </li> -->
+
+              <li class="nav-item">
+                <a href="index.php?pa5" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>เลือกหัวข้อหัวข้อการประเมิน</p>
+                </a>
               </li>
+
+
             </ul>
           </li>
+
+
+
+
+
 
           <li class="nav-item">
             <a href="#" class="nav-link">

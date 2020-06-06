@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2020 at 03:48 PM
+-- Generation Time: Jun 06, 2020 at 06:13 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `mis`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `f_action`
+--
+
+CREATE TABLE `f_action` (
+  `f_acid` int(11) NOT NULL,
+  `f_ac_pamid` int(11) NOT NULL,
+  `f_ac_user_h_id` int(11) NOT NULL,
+  `f_ac_user_c_id` int(11) NOT NULL,
+  `f_ac_status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -65,9 +79,35 @@ INSERT INTO `f_pam` (`f_id`, `f_th`, `f_hh`, `f_hhh`, `f_score`, `f_staus`) VALU
 (2, 1, 2, '1. งานบริหาร (ภาระงานหลักตามภาระหน้าที่) (50 คะแนน)', 50, 0),
 (5, 1, 2, '1.1 การบริหารคน (20 คะแนน)<br>\r\n- มีการกำกับ ติดตาม และประเมินผลการปฏิบัติงาน และพัฒนาบุคลากรอย่างทัดเทียมกัน<br>\r\n- มีการกำหนดภาระหน้าที่หรือขั้นตอนการดำเนินงานของหน่วยงานและมอบหมายงานแก่บุคลากรในหน่วยงานได้เหมาะสมกับปริมาณและคุณภาพของงานที่ทำ<br>', 20, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `f_th`
+--
+
+CREATE TABLE `f_th` (
+  `f_thid` int(11) NOT NULL,
+  `f_thdettail` varchar(250) NOT NULL,
+  `f_thnum` int(11) NOT NULL,
+  `f_thstatus` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `f_th`
+--
+
+INSERT INTO `f_th` (`f_thid`, `f_thdettail`, `f_thnum`, `f_thstatus`) VALUES
+(1, 'ตอนที่ ๑ การประเมินผลการปฏิบัติงาน ผู้บริหารสายวิชาการ (คณบดี/ผู้อำนวยการสถาบัน/สำนัก)', 1, 0);
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `f_action`
+--
+ALTER TABLE `f_action`
+  ADD PRIMARY KEY (`f_acid`);
 
 --
 -- Indexes for table `f_h`
@@ -82,8 +122,20 @@ ALTER TABLE `f_pam`
   ADD PRIMARY KEY (`f_id`);
 
 --
+-- Indexes for table `f_th`
+--
+ALTER TABLE `f_th`
+  ADD PRIMARY KEY (`f_thid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `f_action`
+--
+ALTER TABLE `f_action`
+  MODIFY `f_acid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `f_h`
@@ -96,6 +148,12 @@ ALTER TABLE `f_h`
 --
 ALTER TABLE `f_pam`
   MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `f_th`
+--
+ALTER TABLE `f_th`
+  MODIFY `f_thid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

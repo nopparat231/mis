@@ -23,37 +23,38 @@
  		<div class="row">
  			<div class="col-lg-12">
 
+ 				<form id="frmdb" name="frmdb" method="get" action="pa3_db.php">
+ 					<div class="card card-primary card-outline">
+ 						<div class="card-header">
+ 							<h5 class="m-0">ฟอร์มประเมิน</h5>
+ 						</div>
 
- 				<div class="card card-primary card-outline">
- 					<div class="card-header">
- 						<h5 class="m-0">ฟอร์มประเมิน</h5>
- 					</div>
- 					<div class="card-body">
+ 						<div class="card-body">
 
 
- 						<?php 
- 						include 'conn.php';
+ 							<?php 
+ 							include 'conn.php';
 
- 						include 'head_page.php';
+ 							include 'head_page.php';
 
- 						$f_thid = isset($_GET['f_thid']);
+ 							$f_thid = isset($_GET['rob']);
 
- 						$sqlh=" SELECT * FROM f_h";
- 						$qryh = mysqli_query($conn,$sqlh);
+ 							$sqlh=" SELECT * FROM f_h";
+ 							$qryh = mysqli_query($conn,$sqlh);
  						//$rowh = mysqli_fetch_assoc($qryh);
- 						$rowcheckh = mysqli_num_rows($qryh); 
+ 							$rowcheckh = mysqli_num_rows($qryh); 
 
 
- 						$sqlth=" SELECT * FROM f_th WHERE f_thid =".$f_thid;
- 						$qryth = mysqli_query($conn,$sqlth);
- 						$rowth = mysqli_fetch_assoc($qryth);
- 						
+ 							$sqlth=" SELECT * FROM f_th WHERE f_thid =".$f_thid;
+ 							$qryth = mysqli_query($conn,$sqlth);
+ 							$rowth = mysqli_fetch_assoc($qryth);
+ 							
 
- 						?>
+ 							?>
 
- 						<b> <?php echo $rowth['f_thdettail']; ?> </b><br>
+ 							<b> <?php echo $rowth['f_thdettail']; ?> </b><br>
 
- 						<form id="frmdb" name="frmdb" method="post" action="pa3_db.php">
+ 							
  							<table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
 
 
@@ -173,7 +174,8 @@
  					</div>
 
  					<div class="card-footer">
- 						<a href="#" class="btn btn-primary">บันทึก</a>
+ 						<button  class="btn btn-primary">บันทึก</button>
+ 						
  					</div>
 
  				</div>

@@ -23,84 +23,62 @@
  		<div class="row">
  			<div class="col-lg-12">
 
+ 				<form action="index.php" method="get">
 
- 				<div class="card card-primary card-outline">
- 					<div class="card-header">
- 						<h5 class="m-0">ฟอร์มประเมินการสอน</h5>
- 					</div>
- 					<div class="card-body">
+ 					<input type="hidden" name="pa3">
 
- 						<h5 ><p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
- 						ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
- 						<p>รอบการประเมิน</p>
- 						<input type="checkbox" name="">
- 						รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..
- 						<br><br>
- 						<input type="checkbox" name="">	
- 						รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  ... 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..  ถึง &nbsp;&nbsp; ๓๐  กันยายน  .. 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..	
+ 					<div class="card card-primary card-outline">
+ 						<div class="card-header">
+ 							<h5 class="m-0">ฟอร์มประเมินการสอน</h5>
+ 						</div>
+ 						<div class="card-body">
 
- 						<br>
- 						<br>
+ 							<h5 >
+ 								<p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
+ 								ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
+ 								<p>รอบการประเมิน</p>
+ 								<input type="radio" name="rob" value="1" checked="checked">
+ 								รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 
+ 								<input type="number" name="y" style="width: 150px"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
+ 								<input type="number" name="yy" style="width: 150px">..
+ 								<br><br>
+
+ 								<!-- เดี๋ยวหลับมาทำ JS คลิ๊กเลือก -->
+
+<!--  								<input type="radio" name="rob" value="2">	
+ 								รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  ... 
+ 								<input type="number" name="y" style="width: 150px"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
+ 								<input type="number" name="yy" style="width: 150px">..
+ 								<br><br> -->
+
+ 								<br>
+ 								<br>
 
 
- 						ชื่อผู้รับการประเมิน 		
- 						<select class="custom-select" style="width: 100px">
- 							<option value="1">นาย</option>
- 							<option value="2">นาง</option>
- 							<option value="3">นางสาว</option>
-
- 						</select>
- 						....<input type="text" name="" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="" style="width: 300px"><br><br>
- 						ชื่อผู้บังคับบัญชา  		
- 						<select class="custom-select" style="width: 100px">
- 							<option value="1">นาย</option>
- 							<option value="2">นาง</option>
- 							<option value="3">นางสาว</option>
-
- 						</select>
- 						....<input type="text" name="" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="" style="width: 300px"><br></h5>
+ 								ชื่อผู้รับการประเมิน 		
+ 								<input type="text" name="nameh" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="tumh" style="width: 300px"><br><br>
+ 								ชื่อผู้บังคับบัญชา  		
+ 								<input type="text" name="namec" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="tumc" style="width: 300px"><br></h5>
 
 
- 						<br>
+ 								<br>
 
- 						<?php //include 'pa2table.php'; ?>
+ 								<?php //include 'pa2table.php'; ?>
 
- 					</div>
+ 							</div>
 
- 					<div class="card-footer">
- 						<a href="#" class="btn btn-primary">บันทึก</a>
- 					</div>
+ 							<div class="card-footer">
+ 								<button class="btn btn-primary">บันทึก</button>
+ 							</div>
+
+ 						</div>
+
+ 					</form>
 
  				</div>
-
+ 				<!-- /.col-md-6 -->
  			</div>
- 			<!-- /.col-md-6 -->
- 		</div>
- 		<!-- /.row -->
- 	</div><!-- /.container-fluid -->
- </div>
- <!-- /.content -->
+ 			<!-- /.row -->
+ 		</div><!-- /.container-fluid -->
+ 	</div>
+ 	<!-- /.content -->
