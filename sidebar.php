@@ -2,15 +2,23 @@
   <aside class="main-sidebar sidebar-light-primary">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <span class="brand-text font-weight-light">Username</span>
-    </a>
+      <span class="brand-text font-weight-light"><b>
 
-    <!-- Sidebar -->
-    <div class="sidebar text-xs">
+        <?php if ($_SESSION["USERNAME"] <> ""): ?>
+         <?php echo "ยินดีต้อนรับ : ".$_SESSION["USERNAME"]; ?>
+         <?php else: ?>
+          &nbsp;
+       <?php endif ?>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar nav-compact nav-child-indent nav-legacy flex-column" data-widget="treeview" role="menu" data-accordion="false">
+     </b></span>
+   </a>
+
+   <!-- Sidebar -->
+   <div class="sidebar text-xs">
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar nav-compact nav-child-indent nav-legacy flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item has-treeview menu-open">

@@ -125,7 +125,7 @@ $('form').on("submit", function(e){
       }
     }).done(function(result, textStatus, xhr){
       if(result == "success"){
-        window.location.href = "index.php";
+        window.location.href = "test.php";
       }else{
         $('.alert-incorrect').removeClass('d-none').text('Username or password is incorrect.');
         $('#username').addClass('is-invalid');

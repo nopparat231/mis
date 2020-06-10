@@ -23,7 +23,7 @@
  		<div class="row">
  			<div class="col-lg-12">
 
- 				<form id="frmdb" name="frmdb" method="get" action="pa3_db.php">
+ 				<form id="frmdb" name="frmdb" method="get" action="page/pa3_db.php">
  					<div class="card card-primary card-outline">
  						<div class="card-header">
  							<h5 class="m-0">ฟอร์มประเมิน</h5>
@@ -153,11 +153,11 @@
  												<?php echo $rowf['f_hhh']; ?>
 
  											</td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="5" required="required" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="4" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="3" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="2" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id']; ?>"  value="1" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="5" required="required" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="4" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="3" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="2" /></td>
+ 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="1" /></td>
  										</tr>
 
  									<?php } ?>
