@@ -38,6 +38,8 @@
  							include 'head_page.php';
 
  							$f_thid = isset($_GET['rob']);
+ 							$user_id = $_SESSION["USER_ID"];
+
 
  							$sqlh=" SELECT * FROM f_h";
  							$qryh = mysqli_query($conn,$sqlh);
@@ -54,7 +56,8 @@
 
  							<b> <?php echo $rowth['f_thdettail']; ?> </b><br>
 
- 							
+ 							<input type="hidden" name="user_id" value="<?php echo($user_id); ?>">
+ 							<input type="hidden" name="th_id" value="<?php echo($f_thid); ?>">
  							<table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
 
 

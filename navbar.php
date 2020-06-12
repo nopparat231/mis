@@ -31,9 +31,9 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index.php" class="nav-link">หน้าแรก</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+ <!--      <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link" data-toggle="modal" data-target="#contact">ติดต่อ</a>
-      </li>
+      </li> -->
     </ul>
 
     <!-- Right navbar links -->

@@ -30,41 +30,27 @@
  					</div>
  					<div class="card-body">
 
+ 						<?php 
+ 						include '../conn.php';
+ 						$user_id = $_SESSION["USER_ID"];
+
+
+ 						$sqlth=" SELECT * FROM user WHERE user_id =".$user_id;
+ 						$qryth = mysqli_query($conn,$sqlth);
+ 						$rowth = mysqli_fetch_assoc($qryth);
+
+// รอมาดึงข้อมูลตากฐานข้อมูล
+
+ 						?>
+
  						<h5 ><p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
  						ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
  						<p>รอบการประเมิน</p>
- 						<input type="checkbox" name="">
- 						รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..
+ 						<input type="checkbox" name="" checked>
+ 						รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 2133 ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. 2321..
  						<br><br>
- 						<input type="checkbox" name="">	
- 						รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  ... 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..  ถึง &nbsp;&nbsp; ๓๐  กันยายน  .. 
- 						<select class="custom-select" id="inputGroupSelect01" style="width: 150px">
- 							<option selected>เลือก พ.ศ</option>
- 							<option value="1">๒๕๖๓</option>
- 							<option value="2">๒๕๖๔</option>
- 							<option value="3">๒๕๖๕</option>
- 						</select>..	
 
- 						<br>
- 						<br>
+
  				<!-- 			<label class="b-contain">
  								<span>รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  ................  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ...................	</span>
  								<input type="checkbox">
@@ -77,14 +63,7 @@
  							</label> -->
  							
 
- 							ชื่อผู้รับการประเมิน 		
- 							<select class="custom-select" style="width: 100px">
- 								<option value="1">นาย</option>
- 								<option value="2">นาง</option>
- 								<option value="3">นางสาว</option>
-
- 							</select>
- 							....<input type="text" name="" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="" style="width: 300px"><br><br>
+ 							ชื่อผู้รับการประเมิน ....<input type="text" name="" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="" style="width: 300px"><br><br>
  							ชื่อผู้บังคับบัญชา  		
  							<select class="custom-select" style="width: 100px">
  								<option value="1">นาย</option>

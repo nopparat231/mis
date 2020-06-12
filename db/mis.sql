@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2020 at 05:35 PM
+-- Generation Time: Jun 12, 2020 at 05:33 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -32,17 +32,21 @@ CREATE TABLE IF NOT EXISTS `f_action` (
   `f_ac_user_h_id` int(11) NOT NULL,
   `f_ac_user_c_id` int(11) NOT NULL,
   `f_ac_score` int(11) NOT NULL,
-  `f_ac_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `f_ac_status` int(11) NOT NULL,
+  `f_ad_time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `f_action`
 --
 
-INSERT INTO `f_action` (`f_ac_id`, `f_ac_pam_id`, `f_ac_user_h_id`, `f_ac_user_c_id`, `f_ac_score`, `f_ac_status`) VALUES
-(1, 1, 3, 4, 4, 0),
-(2, 2, 3, 4, 5, 0),
-(3, 5, 3, 4, 3, 0);
+INSERT INTO `f_action` (`f_ac_id`, `f_ac_pam_id`, `f_ac_user_h_id`, `f_ac_user_c_id`, `f_ac_score`, `f_ac_status`, `f_ad_time_stamp`) VALUES
+(1, 1, 3, 4, 4, 0, '2020-06-12 15:12:24'),
+(2, 2, 3, 4, 5, 0, '2020-06-12 15:12:24'),
+(3, 5, 3, 4, 3, 0, '2020-06-12 15:12:24'),
+(4, 1, 2, 1, 5, 0, '2020-06-12 15:28:13'),
+(5, 2, 2, 1, 4, 0, '2020-06-12 15:28:13'),
+(6, 5, 2, 1, 3, 0, '2020-06-12 15:28:13');
 
 -- --------------------------------------------------------
 
@@ -194,7 +198,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `f_action`
 --
 ALTER TABLE `f_action`
-MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `f_h`
 --

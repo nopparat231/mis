@@ -39,22 +39,37 @@
  						</div>
  						<div class="card-body">
 
+
+ 							<?php 
+ 							include '../conn.php';
+ 							$user_id = $_SESSION["USER_ID"];
+
+
+ 							$sqlth=" SELECT * FROM user WHERE user_id =".$user_id;
+ 							$qryth = mysqli_query($conn,$sqlth);
+ 							$rowth = mysqli_fetch_assoc($qryth);
+ 							
+
+
+ 							?>
+
  							<h5 >
+
  								<p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
  								ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
  								<p>รอบการประเมิน</p>
- 								<input type="radio" name="rob" value="1" checked="checked" required>
+ 								<input type="checkbox" name="rob" value="1" checked="checked" required >
  								รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 
- 								<input type="number" name="y" style="width: 150px"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
- 								<input type="number" name="yy" style="width: 150px">..
+ 								<input type="number" name="y1" style="width: 150px" value="<?php echo(date('Y')) ?>"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
+ 								<input type="number" name="yy1" style="width: 150px" value="<?php echo(date('Y')) ?>">..
  								<br><br>
 
  								<!-- เดี๋ยวหลับมาทำ JS คลิ๊กเลือก -->
 
- 								<input type="radio" name="rob" value="2">	
+ 								<input type="checkbox" name="rob" value="2">	
  								รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  ... 
- 								<input type="number" name="y" style="width: 150px"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
- 								<input type="number" name="yy" style="width: 150px">..
+ 								<input type="number" name="y2" style="width: 150px"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
+ 								<input type="number" name="yy2" style="width: 150px">..
  								<br><br>
 
  								<br>
@@ -62,9 +77,11 @@
 
 
  								ชื่อผู้รับการประเมิน 		
- 								<input type="text" name="nameh" style="width: 300px" required>....... ตำแหน่ง/ระดับ...<input type="text" name="tumh" style="width: 300px"><br><br>
+ 								<input type="text" name="nameh" style="width: 300px" required value="">....... ตำแหน่ง/ระดับ...
+ 								<input type="text" name="tumh" style="width: 300px"><br><br>
  								ชื่อผู้บังคับบัญชา  		
- 								<input type="text" name="namec" style="width: 300px" required>....... ตำแหน่ง/ระดับ...<input type="text" name="tumc" style="width: 300px"><br></h5>
+ 								<input type="text" name="namec" style="width: 300px" required value="<?php echo($rowth['first_name'].' '.$rowth['last_name']) ?>">....... ตำแหน่ง/ระดับ...
+ 								<input type="text" name="tumc" style="width: 300px" value="<?php echo($rowth['user_tumn']) ?>"><br></h5>
 
 
  								<br>
