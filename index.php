@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php 
 session_start();
-error_reporting(0);
- ?>
+//error_reporting(0);
+?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -24,6 +24,13 @@ error_reporting(0);
   <!-- mycss -->
   <link rel="stylesheet" type="text/css" href="css/cuttom.css">
 
+<style type="text/css">
+  @media print{
+   .noprint{
+       display:none;
+   }
+}
+</style>
 
 </head>
 <body class="hold-transition sidebar-mini text-sm ">
@@ -54,6 +61,12 @@ error_reporting(0);
         include 'page/pa4.php';
       }elseif (isset($_GET['pa5'])) {
         include 'page/pa5.php';
+      }elseif (isset($_GET['pa6'])) {
+        include 'page/pa6.php';
+      }elseif (isset($_GET['pa7'])) {
+        include 'page/pa7_new.php';
+      }elseif (isset($_GET['pa8'])) {
+        include 'page/pa8_user.php';
       }else{
         include 'new.php';
       }
@@ -67,13 +80,13 @@ error_reporting(0);
 
 
     <!-- Main Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer noprint">
       <!-- To the right -->
       <div class="float-right d-none d-sm-inline">
-        Anything you want
+        RMUTK MIS
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2020 </strong>
     </footer>
   </div>
   <!-- ./wrapper -->
@@ -105,47 +118,44 @@ error_reporting(0);
       });
     });
 
-    function getse1() {
-      var se1 = parseInt(document.getElementById("se1").value);
-      var sum2 = parseInt(document.getElementById("sum2").value);
-      var sumse1 = (se1 + sum2) / 100;
-      document.getElementById("sum1").value = sumse1;
 
-    }
 
-    function getse2() {
-      var se2 = parseInt(document.getElementById("se2").value);
-      var se3 = parseInt(document.getElementById("se3").value);
-      var se4 = parseInt(document.getElementById("se4").value);
-      var se5 = parseInt(document.getElementById("se5").value);
-      var se6 = parseInt(document.getElementById("se6").value);
+    var se2 = parseInt(document.getElementById("fid6").value);
+    var se3 = parseInt(document.getElementById("fid7").value);
+    var se4 = parseInt(document.getElementById("fid8").value);
+    var se5 = parseInt(document.getElementById("fid9").value);
+      //var se6 = parseInt(document.getElementById("se6").value);
 
       //var sum2 = document.getElementById("sum2").value;
-      var sumse2 = se2 + se3 + se4 + se5 + se6;
+      var sumse2 = se2 + se3 + se4 + se5;
 
       document.getElementById("sum2").value = sumse2;
-      getse1();
 
-    }
 
-  </script>
+      var se1 = parseInt(document.getElementById("fid1").value);
+      //var sum2 = parseInt(document.getElementById("sum2").value);
+      var sumse1 = (se1 + sumse2) / 100;
+      document.getElementById("sum1").value = sumse1;
 
-  <?php
 
-  if (isset($_GET['model'])) {
-    include 'model.php';
-    ?>
-
-    <script>
-      $(window).on('load',function(){
-        $('#showModel').modal('show');
-      });
     </script>
 
     <?php
-  }
 
-  ?>
+    if (isset($_GET['model'])) {
+      include 'model.php';
+      ?>
 
-</body>
-</html>
+      <script>
+        $(window).on('load',function(){
+          $('#showModel').modal('show');
+        });
+      </script>
+
+      <?php
+    }
+
+    ?>
+
+  </body>
+  </html>

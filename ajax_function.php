@@ -22,7 +22,10 @@ if($_GET["obj"] == "check_login"){
     $num = $result->num_rows;
     if($num > 0){
         $row = $result->fetch_assoc();
+
         $_SESSION["USER_ID"] = $row["user_id"];
+        $_SESSION["USER_STATUS"] = $row["user_status"];
+
         $_SESSION["USERNAME"] = $row["username"];
         $user_id = $row["user_id"];
         

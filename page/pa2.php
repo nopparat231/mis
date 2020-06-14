@@ -24,72 +24,89 @@
  			<div class="col-lg-12">
 
 
- 				<div class="card card-primary card-outline">
- 					<div class="card-header">
+ 				<div class="card card-primary card-outline ">
+ 					<div class="card-header noprint">
  						<h5 class="m-0">ฟอร์มประเมินการสอน</h5>
  					</div>
  					<div class="card-body">
 
  						<?php 
- 						include '../conn.php';
+ 						include './conn.php';
  						$user_id = $_SESSION["USER_ID"];
 
+ 						$user_c_id = $_GET['user_c_id'];
 
- 						$sqlth=" SELECT * FROM user WHERE user_id =".$user_id;
- 						$qryth = mysqli_query($conn,$sqlth);
- 						$rowth = mysqli_fetch_assoc($qryth);
 
-// รอมาดึงข้อมูลตากฐานข้อมูล
+
+ 						$sqlac=" SELECT * FROM `f_action` WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' ";
+ 						$qryac = mysqli_query($conn,$sqlac);
+ 						//$rowac = mysqli_fetch_assoc($qryac);
+
+ 						$sqlhuser=" SELECT * FROM user WHERE user_id =".$user_id;
+ 						$qryhuser = mysqli_query($conn,$sqlhuser);
+ 						$rowhuser = mysqli_fetch_assoc($qryhuser);
+
+ 						$sqlcuser=" SELECT * FROM user WHERE user_id =".$user_c_id;
+ 						$qrycuser = mysqli_query($conn,$sqlcuser);
+ 						$rowcuser = mysqli_fetch_assoc($qrycuser);
+
+
 
  						?>
 
- 						<h5 ><p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
- 						ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
- 						<p>รอบการประเมิน</p>
- 						<input type="checkbox" name="" checked>
- 						รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 2133 ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. 2321..
- 						<br><br>
+ 						<h5 >
+ 							<p style="text-align: center;">
+ 								แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
+ 								ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ <br>
+
+ 							</p>
+ 							<p>รอบการประเมิน 
+ 								&nbsp;&nbsp; รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 2133 ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. 2321..
+ 							</p>
+
+ 							ชื่อผู้รับการประเมิน ....<?php echo $rowcuser['first_name']."  ".$rowcuser['last_name']; ?>....... ตำแหน่ง/ระดับ...<?php echo $rowcuser['user_tumn']; ?>
+ 							ชื่อผู้บังคับบัญชา ....<?php echo $rowhuser['first_name']."  ".$rowhuser['last_name']; ?>....... ตำแหน่ง/ระดับ...<?php echo $rowhuser['user_tumn']; ?>
+
+ 						</h5>
 
 
- 				<!-- 			<label class="b-contain">
- 								<span>รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  ................  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ...................	</span>
- 								<input type="checkbox">
- 								<div class="b-input"></div>
- 							</label>
- 							<label class="b-contain">
- 								<span>รอบที่ ๒&nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  ...............  ถึง &nbsp;&nbsp; ๓๐  กันยายน  ................</span>
- 								<input type="checkbox">
- 								<div class="b-input"></div>
- 							</label> -->
- 							
 
- 							ชื่อผู้รับการประเมิน ....<input type="text" name="" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="" style="width: 300px"><br><br>
- 							ชื่อผู้บังคับบัญชา  		
- 							<select class="custom-select" style="width: 100px">
- 								<option value="1">นาย</option>
- 								<option value="2">นาง</option>
- 								<option value="3">นางสาว</option>
-
- 							</select>
- 							....<input type="text" name="" style="width: 300px">....... ตำแหน่ง/ระดับ...<input type="text" name="" style="width: 300px"><br></h5>
+ 						<?php
 
 
- 							<br>
+ 						function showhh($user_id,$user_c_id,$f_id){
 
- 							<?php include 'pa2table.php'; ?>
+ 							include './conn.php';
 
- 						</div>
+ 							$sqljoin=" SELECT * FROM f_action INNER JOIN f_pam ON f_id = f_ac_pam_id WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' AND f_id =".$f_id;
+ 							$qryjoin = mysqli_query($conn,$sqljoin);
+ 							$rowjoin = mysqli_fetch_assoc($qryjoin);
 
- 						<div class="card-footer">
- 							<a href="#" class="btn btn-primary">บันทึก</a>
- 						</div>
+ 							echo $rowjoin['f_ac_score'];
+
+ 						}
+
+
+ 						include 'pa2table.php';
+
+
+ 						?>
+
+
 
  					</div>
 
+ 					<div class="card-footer">
+ 						<a href="#" class="btn btn-primary noprint" onclick="window.print()">พิมพ์</a>
+ 						
+ 					</div>
+
  				</div>
- 				<!-- /.col-md-6 -->
+
  			</div>
- 			<!-- /.row -->
- 		</div><!-- /.container-fluid -->
- 	</div>
- 	<!-- /.content -->
+ 			<!-- /.col-md-6 -->
+ 		</div>
+ 		<!-- /.row -->
+ 	</div><!-- /.container-fluid -->
+ </div>
+ <!-- /.content -->

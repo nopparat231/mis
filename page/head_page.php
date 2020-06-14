@@ -2,8 +2,8 @@
 <?php 
 
 $rob = $_GET['rob'];
-$y = $_GET['y'];
-$yy = $_GET['yy'];
+$y1 = $_GET['y1'];
+$yy1 = $_GET['yy1'];
 //รอบที่ประเมิน
 
 $nameh = $_GET['nameh'];
@@ -31,8 +31,8 @@ $tumc = $_GET['tumc'];
 ?>
 
 <input type="hidden" name="rob" value="<?php echo($rob); ?>">
-<input type="hidden" name="y" value="<?php echo($y); ?>">
-<input type="hidden" name="yy" value="<?php echo($yy); ?>">
+<input type="hidden" name="y1" value="<?php echo($y1); ?>">
+<input type="hidden" name="yy1" value="<?php echo($yy1); ?>">
 
 <input type="hidden" name="nameh" value="<?php echo($nameh); ?>">
 <input type="hidden" name="tumh" value="<?php echo($tumh); ?>">
@@ -44,7 +44,7 @@ $tumc = $_GET['tumc'];
 <p>รอบการประเมิน</p>
 
 <?php if ($rob == '1'): ?>
-	รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. <?php echo($y); ?> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. <?php echo($yy); ?> ..
+	รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. <?php echo($y1); ?> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. <?php echo($yy1); ?> ..
 
 	<?php elseif ($rob == '2'): ?>	
 		รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  .. <?php echo($y); ?> ..  ถึง &nbsp;&nbsp; ๓๐  กันยายน  .. <?php echo($yy); ?> ..

@@ -33,7 +33,7 @@
 
 
  							<?php 
- 							include 'conn.php';
+ 							include './conn.php';
 
  							include 'head_page.php';
 
@@ -76,8 +76,8 @@
 
  									<?php
 
-
- 									$sqlf=" SELECT f_hhh , f_id , f_hh , f_score FROM f_pam WHERE f_hh =".$rowh['f_hid'];
+ 									$fid = $rowh['f_hid'];
+ 									$sqlf=" SELECT f_hhh , f_id , f_hh , f_score ,f_pam_num ,f_staus FROM f_pam WHERE f_hh = '$fid' AND f_staus = 0 order by f_pam_num asc ";
  									$qryf = mysqli_query($conn,$sqlf);
  									//$rowf = mysqli_fetch_assoc($qryf);
  									$rowcheckf = mysqli_num_rows($qryf); 
@@ -95,98 +95,199 @@
  										<?php 
 
 
- 										if ($rowf['f_score'] >= 80) {
- 											echo '
+ 										if ($rowf['f_score'] >= 80) { ?>
+ 											
  											<tr>
- 											<td width="5%" align="center"><strong>80</strong></td>
- 											<td width="5%" align="center"><strong>70</strong></td>
- 											<td width="5%" align="center"><strong>50</strong></td>
- 											<td width="5%" align="center"><strong>20</strong></td>
- 											<td width="5%" align="center"><strong>0</strong></td>
+ 												<td width="5%" align="center"><strong>80</strong></td>
+ 												<td width="5%" align="center"><strong>70</strong></td>
+ 												<td width="5%" align="center"><strong>50</strong></td>
+ 												<td width="5%" align="center"><strong>20</strong></td>
+ 												<td width="5%" align="center"><strong>0</strong></td>
  											</tr>
- 											';
- 										}elseif ($rowf['f_score'] >= 50){
- 											echo '	
+
+
  											<tr>
- 											<td width="5%" align="center"><strong>50</strong></td>
- 											<td width="5%" align="center"><strong>40</strong></td>
- 											<td width="5%" align="center"><strong>30</strong></td>
- 											<td width="5%" align="center"><strong>20</strong></td>
- 											<td width="5%" align="center"><strong>0</strong></td>
- 											</tr>
- 											';
- 										}elseif ($rowf['f_score'] >= 20){
- 											echo '	
- 											<tr>
- 											<td width="5%" align="center"><strong>20</strong></td>
- 											<td width="5%" align="center"><strong>15</strong></td>
- 											<td width="5%" align="center"><strong>10</strong></td>
- 											<td width="5%" align="center"><strong>5</strong></td>
- 											<td width="5%" align="center"><strong>0</strong></td>
- 											</tr>
- 											';
- 										}elseif ($rowf['f_score'] >= 10){
- 											echo '	
- 											<tr>
- 											<td width="5%" align="center"><strong>5</strong></td>
- 											<td width="5%" align="center"><strong>4</strong></td>
- 											<td width="5%" align="center"><strong>3</strong></td>
- 											<td width="5%" align="center"><strong>2</strong></td>
- 											<td width="5%" align="center"><strong>1</strong></td>
- 											</tr>
- 											';
- 										}elseif ($rowf['f_score'] >= 5){
- 											echo '	
- 											<tr>
- 											<td width="5%" align="center"><strong>5</strong></td>
- 											<td width="5%" align="center"><strong>4</strong></td>
- 											<td width="5%" align="center"><strong>3</strong></td>
- 											<td width="5%" align="center"><strong>2</strong></td>
- 											<td width="5%" align="center"><strong>1</strong></td>
- 											</tr>
- 											';
- 										}
- 										?>
+ 												<td height="30">
+ 													<?php echo $rowf['f_hhh']; ?>
+
+ 												</td>
+ 												<td height="30" align="center">
+ 													<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="80" required="required" /></td>
+ 													<td height="30" align="center">
+ 														<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="70" /></td>
+ 														<td height="30" align="center">
+ 															<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="50" /></td>
+ 															<td height="30" align="center">
+ 																<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="20" /></td>
+ 																<td height="30" align="center">
+ 																	<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="0" /></td>
+ 																</tr>
+
+ 															<?php }elseif ($rowf['f_score'] >= 50){ ?>
+
+ 																<tr>
+ 																	<td width="5%" align="center"><strong>50</strong></td>
+ 																	<td width="5%" align="center"><strong>40</strong></td>
+ 																	<td width="5%" align="center"><strong>30</strong></td>
+ 																	<td width="5%" align="center"><strong>20</strong></td>
+ 																	<td width="5%" align="center"><strong>0</strong></td>
+ 																</tr>
+
+
+ 																<tr>
+ 																	<td height="30">
+ 																		<?php echo $rowf['f_hhh']; ?>
+
+ 																	</td>
+ 																	<td height="30" align="center">
+ 																		<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="50" required="required" /></td>
+ 																		<td height="30" align="center">
+ 																			<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="40" /></td>
+ 																			<td height="30" align="center">
+ 																				<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="30" /></td>
+ 																				<td height="30" align="center">
+ 																					<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="20" /></td>
+ 																					<td height="30" align="center">
+ 																						<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="0" /></td>
+ 																					</tr>
+
+ 																				<?php	}elseif ($rowf['f_score'] >= 30){ ?>
+
+ 																<tr>
+ 																	<td width="5%" align="center"><strong>30</strong></td>
+ 																	<td width="5%" align="center"><strong>20</strong></td>
+ 																	<td width="5%" align="center"><strong>10</strong></td>
+ 																	<td width="5%" align="center"><strong>5</strong></td>
+ 																	<td width="5%" align="center"><strong>0</strong></td>
+ 																</tr>
+
+
+ 																<tr>
+ 																	<td height="30">
+ 																		<?php echo $rowf['f_hhh']; ?>
+
+ 																	</td>
+ 																	<td height="30" align="center">
+ 																		<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="30" required="required" /></td>
+ 																		<td height="30" align="center">
+ 																			<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="20" /></td>
+ 																			<td height="30" align="center">
+ 																				<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="10" /></td>
+ 																				<td height="30" align="center">
+ 																					<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="5" /></td>
+ 																					<td height="30" align="center">
+ 																						<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="0" /></td>
+ 																					</tr>
+
+ 																				<?php	}elseif ($rowf['f_score'] >= 20){ ?>
+
+ 																					<tr>
+ 																						<td width="5%" align="center"><strong>20</strong></td>
+ 																						<td width="5%" align="center"><strong>15</strong></td>
+ 																						<td width="5%" align="center"><strong>10</strong></td>
+ 																						<td width="5%" align="center"><strong>5</strong></td>
+ 																						<td width="5%" align="center"><strong>0</strong></td>
+ 																					</tr>
+
+ 																					<tr>
+ 																						<td height="30">
+ 																							<?php echo $rowf['f_hhh']; ?>
+
+ 																						</td>
+ 																						<td height="30" align="center">
+ 																							<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="20" required="required" /></td>
+ 																							<td height="30" align="center">
+ 																								<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="15" /></td>
+ 																								<td height="30" align="center">
+ 																									<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="10" /></td>
+ 																									<td height="30" align="center">
+ 																										<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="5" /></td>
+ 																										<td height="30" align="center">
+ 																											<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="0" /></td>
+ 																										</tr>
+
+ 																									<?php	}elseif ($rowf['f_score'] >= 10){ ?>
+
+ 																										<tr>
+ 																											<td width="5%" align="center"><strong>10</strong></td>
+ 																											<td width="5%" align="center"><strong>7</strong></td>
+ 																											<td width="5%" align="center"><strong>5</strong></td>
+ 																											<td width="5%" align="center"><strong>2</strong></td>
+ 																											<td width="5%" align="center"><strong>0</strong></td>
+ 																										</tr>
+
+ 																										<tr>
+ 																											<td height="30">
+ 																												<?php echo $rowf['f_hhh']; ?>
+
+ 																											</td>
+ 																											<td height="30" align="center">
+ 																												<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="10" required="required" /></td>
+ 																												<td height="30" align="center">
+ 																													<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="7" /></td>
+ 																													<td height="30" align="center">
+ 																														<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="5" /></td>
+ 																														<td height="30" align="center">
+ 																															<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="2" /></td>
+ 																															<td height="30" align="center">
+ 																																<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="0" /></td>
+ 																															</tr>
+
+ 																														<?php	}elseif ($rowf['f_score'] >= 5){ ?>
+
+ 																															<tr>
+ 																																<td width="5%" align="center"><strong>5</strong></td>
+ 																																<td width="5%" align="center"><strong>4</strong></td>
+ 																																<td width="5%" align="center"><strong>3</strong></td>
+ 																																<td width="5%" align="center"><strong>2</strong></td>
+ 																																<td width="5%" align="center"><strong>0</strong></td>
+ 																															</tr>
+
+
+ 																															<tr>
+ 																																<td height="30">
+ 																																	<?php echo $rowf['f_hhh']; ?>
+
+ 																																</td>
+ 																																<td height="30" align="center">
+ 																																	<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="5" required="required" /></td>
+ 																																	<td height="30" align="center">
+ 																																		<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="4" /></td>
+ 																																		<td height="30" align="center">
+ 																																			<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="3" /></td>
+ 																																			<td height="30" align="center">
+ 																																				<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="2" /></td>
+ 																																				<td height="30" align="center">
+ 																																					<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="0" /></td>
+ 																																				</tr>
+
+
+ 																																			<?php } 
+
+ 																																		} ?>
 
 
 
-
- 										<tr>
- 											<td height="30">
- 												<?php echo $rowf['f_hhh']; ?>
-
- 											</td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="5" required="required" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="4" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="3" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="2" /></td>
- 											<td height="30" align="center"><input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_hh']; ?>"  value="1" /></td>
- 										</tr>
-
- 									<?php } ?>
+ 																																	<?php } ?>
 
 
+ 																																</table>
 
- 								<?php } ?>
+ 																															</form>
 
+ 																														</div>
 
- 							</table>
+ 																														<div class="card-footer">
+ 																															<button  class="btn btn-primary">บันทึก</button>
 
- 						</form>
+ 																														</div>
 
- 					</div>
+ 																													</div>
 
- 					<div class="card-footer">
- 						<button  class="btn btn-primary">บันทึก</button>
- 						
- 					</div>
-
- 				</div>
-
- 			</div>
- 			<!-- /.col-md-6 -->
- 		</div>
- 		<!-- /.row -->
- 	</div><!-- /.container-fluid -->
- </div>
- <!-- /.content -->
+ 																												</div>
+ 																												<!-- /.col-md-6 -->
+ 																											</div>
+ 																											<!-- /.row -->
+ 																										</div><!-- /.container-fluid -->
+ 																									</div>
+ 																									<!-- /.content -->

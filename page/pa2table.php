@@ -90,7 +90,8 @@
             <div class=WordSection1>
 
               <p class=MsoNormal style='margin-top:12.0pt'><span class=SpellE><span
-                class=GramE><b><u><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ตอนที่&nbsp;๑&nbsp;การประเมินผลการปฏิบัติงาน ผู้บริหารสายวิชาการ (คณบดี/ผู้อำนวยการสถาบัน/สำนัก)</span></u></b></span></span><b><span
+                class=GramE><b><u><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>
+                ตอนที่&nbsp;๑&nbsp;การประเมินผลการปฏิบัติงาน ผู้บริหารสายวิชาการ (คณบดี/ผู้อำนวยการสถาบัน/สำนัก)</span></u></b></span></span><b><span
                   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></b></p>
 
                   <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=0
@@ -143,13 +144,18 @@
                             mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
                             <p class=MsoNormal align=center style='text-align:center'><span
                               style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
-                              <select class="custom-select" style="width: 100px" id="se1" onchange="getse1()">
-                                <option value="0">0</option>
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                              </select>
+                              
+
+                              <?php 
+
+                              $f_id = 1;
+
+                              showhh($user_id,$user_c_id,$f_id);
+
+                              ?>
+                              <input type="hidden" name="fid1" id="fid1" value="<?php showhh($user_id,$user_c_id,$f_id) ?>">
+
+
                             </o:p></span></p>
                           </td>
                           <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
@@ -165,278 +171,306 @@
                         mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
                         mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
                         <p class=MsoNormal><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
-                          <select class="custom-select" style="width: 100px" id="se2" onchange="getse2()">
-                          <option value="0">0</option>
-                          <option value="10">10</option>
-                          <option value="20">20</option>
-                          <option value="30">30</option>
-                          <option value="40">40</option>
-                          <option value="50">50</option>
-                        </select>
+                          &nbsp;&nbsp;
+                          <?php 
 
-                      </o:p></span></p>
-                    </td>
-                    <![if !supportMisalignedRows]>
-                    <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
-                      <![endif]>
-                    </tr>
-                    <tr style='mso-yfti-irow:2'>
-                      <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
-                      border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-                      padding:0cm 5.4pt 0cm 5.4pt'>
-                      <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.2</span><span
-                        style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> <span
-                        class=SpellE>ภาระงานวิจัยหรืองานวิชาการอื่น </span><span lang=TH> <o:p></o:p></span></span></p>
+                          //$f_id = 2;
+
+                          //showhh($user_id,$user_c_id,$f_id);
+
+                          ?>
+
+                        </o:p></span></p>
                       </td>
-                      <td width=539 rowspan=3 valign=top style='width:404.0pt;border-top:none;
-                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                      mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                      mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                      <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                        style='mso-spacerun:yes'>&nbsp;</span>1.1 </span><span style='font-size:12.0pt;
-                        font-family:"TH SarabunPSK",sans-serif'>การบริหารคน (20 คะแนน)<span lang=TH><o:p></o:p></span></span></p>
+                      <![if !supportMisalignedRows]>
+                      <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+                        <![endif]>
+                      </tr>
+                      <tr style='mso-yfti-irow:2'>
+                        <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
+                        border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                        padding:0cm 5.4pt 0cm 5.4pt'>
+                        <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.2</span><span
+                          style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> <span
+                          class=SpellE>ภาระงานวิจัยหรืองานวิชาการอื่น </span><span lang=TH> <o:p></o:p></span></span></p>
+                        </td>
+                        <td width=539 rowspan=3 valign=top style='width:404.0pt;border-top:none;
+                        border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                        mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                        mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
                         <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                          style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-                            style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการกำกับ ติดตาม และประเมินผลการปฏิบัติงาน และพัฒนาบุคลากรอย่างทัดเทียมกัน</span></span><span
-                            lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                            <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                              style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการกำหนดภาระหน้าที่หรือขั้นตอนการดำเนินงานของหน่วยงานและมอบหมายงานแก่บุคลากรในหน่วยงานได้เหมาะสมกับปริมาณและคุณภาพของงานที่ทำ</span></span><span
+                          style='mso-spacerun:yes'>&nbsp;</span>1.1 </span><span style='font-size:12.0pt;
+                          font-family:"TH SarabunPSK",sans-serif'>การบริหารคน (20 คะแนน)<span lang=TH><o:p></o:p></span></span></p>
+                          <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+                            style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+                              style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการกำกับ ติดตาม และประเมินผลการปฏิบัติงาน และพัฒนาบุคลากรอย่างทัดเทียมกัน</span></span><span
+                              lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                              <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+                                style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการกำหนดภาระหน้าที่หรือขั้นตอนการดำเนินงานของหน่วยงานและมอบหมายงานแก่บุคลากรในหน่วยงานได้เหมาะสมกับปริมาณและคุณภาพของงานที่ทำ</span></span><span
+                                  lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                </td>
+                                <td width=66 rowspan=3 valign=top style='width:49.6pt;border-top:none;
+                                border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+                                <p class=MsoNormal align=center style='text-align:center'><span
+                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
+                                  <?php 
+
+                                  $f_id = 9;
+
+                                  showhh($user_id,$user_c_id,$f_id);
+
+                                  ?>
+
+                                  <input type="hidden" name="fid9" id="fid9" value="<?php showhh($user_id,$user_c_id,$f_id) ?>">
+
+
+                                </o:p></span></p>
+                              </td>
+                              <![if !supportMisalignedRows]>
+                              <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+                                <![endif]>
+                              </tr>
+                              <tr style='mso-yfti-irow:3'>
+                                <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
+                                border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                                padding:0cm 5.4pt 0cm 5.4pt'>
+                                <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.3
+                                </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> ภาระงานบริการวิชาการ </span></span><span
                                 lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
                               </td>
-                              <td width=66 rowspan=3 valign=top style='width:49.6pt;border-top:none;
+                              <![if !supportMisalignedRows]>
+                              <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+                                <![endif]>
+                              </tr>
+                              <tr style='mso-yfti-irow:4'>
+                                <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
+                                border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                                padding:0cm 5.4pt 0cm 5.4pt'>
+                                <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.4
+                                </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานทำนุบำรุงศิลปวัฒนธรรม </span></span><span
+                                lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                              </td>
+                              <![if !supportMisalignedRows]>
+                              <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+                                <![endif]>
+                              </tr>
+                              <tr style='mso-yfti-irow:5'>
+                                <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
+                                border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                                padding:0cm 5.4pt 0cm 5.4pt'>
+                                <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.5
+                                </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานเกี่ยวกับงานกิจการนักศึกษา ภาระงานอื่นๆ </span></span><span
+                                lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                              </td>
+                              <td width=539 rowspan=2 valign=top style='width:404.0pt;border-top:none;
                               border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                               mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
                               mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                              <p class=MsoNormal align=center style='text-align:center'><span
-                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
-
-                                <select class="custom-select" style="width: 100px" id="se3"  onchange="getse2()">
-                                 <option value="0">0</option>
-                                  <option value="5">5</option>
-                                  <option value="10">10</option>
-                                  <option value="15">15</option>
-                                  <option value="20">20</option>
-
-                                </select>
-                              </o:p></span></p>
-                            </td>
-                            <![if !supportMisalignedRows]>
-                            <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
-                              <![endif]>
-                            </tr>
-                            <tr style='mso-yfti-irow:3'>
-                              <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
-                              border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-                              padding:0cm 5.4pt 0cm 5.4pt'>
-                              <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.3
-                              </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> ภาระงานบริการวิชาการ </span></span><span
-                              lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                            </td>
-                            <![if !supportMisalignedRows]>
-                            <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
-                              <![endif]>
-                            </tr>
-                            <tr style='mso-yfti-irow:4'>
-                              <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
-                              border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-                              padding:0cm 5.4pt 0cm 5.4pt'>
-                              <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.4
-                              </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานทำนุบำรุงศิลปวัฒนธรรม </span></span><span
-                              lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                            </td>
-                            <![if !supportMisalignedRows]>
-                            <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
-                              <![endif]>
-                            </tr>
-                            <tr style='mso-yfti-irow:5'>
-                              <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
-                              border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-                              padding:0cm 5.4pt 0cm 5.4pt'>
-                              <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>1.5
-                              </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>ภาระงานเกี่ยวกับงานกิจการนักศึกษา ภาระงานอื่นๆ </span></span><span
-                              lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                            </td>
-                            <td width=539 rowspan=2 valign=top style='width:404.0pt;border-top:none;
-                            border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                            <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                              style='mso-spacerun:yes'>&nbsp;</span>1.2 </span><span class=SpellE><span
-                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>การบริหารงบประมาณ (10 คะแนน)</span></span><span
-                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                                  style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-                                    style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>บริหารงานด้วยความซื่อสัตย์ สุจริต ไม่มีผลประโยชน์ด้านอื่นที่ขัดแย้งกับการปฏิบัติหน้าที่</span></span><span
-                                    style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                    <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                                      style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-                                        style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการบริหารจัดการงบประมาณภายใต้ขอบเขตอำนาจให้เป็นไปตามเป้าหมายของหน่วยงานและมหาวิทยาลัย</span></span><span
-                                        lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                      </td>
-                                      <td width=66 rowspan=2 valign=top style='width:49.6pt;border-top:none;
-                                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                      mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                      mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                      <p class=MsoNormal align=center style='text-align:center'><span lang=TH
-                                        style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
-
-                                        <select class="custom-select" style="width: 100px" id="se4" onchange="getse2()">
-                                         <option value="0">0</option>
-                                          <option value="5">5</option>
-                                          <option value="10">10</option>
-
-                                        </select>
-
-                                      </o:p></span></p>
-                                    </td>
-                                    <![if !supportMisalignedRows]>
-                                    <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
-                                      <![endif]>
-                                    </tr>
-                                    <tr style='mso-yfti-irow:6;height:32.15pt'>
-                                      <td width=347 rowspan=3 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
-                                      border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-                                      padding:0cm 5.4pt 0cm 5.4pt;height:32.15pt'>
-                                      <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
-                                      font-family:"TH SarabunPSK",sans-serif'>สูตรคำนวณคะแนนด้านวิชาการ
-                                    </span></u></b></span>
-                                    <b><u><span
-                                      style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
-
-                                      <p class=MsoNormal><span class=SpellE><span style='font-size:8.0pt;
-                                      font-family:"TH SarabunPSK",sans-serif'><u>คะแนนวิชาการจากหน่วยงาน x 20 จากงานวิชาการที่ม.กำหนด</u><br>70 (ผลสัมฤทธิ์ขององค์ประกอบที่ 1)</span></span><span lang=TH
-                                      style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> <o:p></o:p></span></p>
-                                    </td>
-                                    <td width=66 rowspan=3 valign=top style='width:49.6pt;border-top:none;
-                                    border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:32.15pt'>
-                                    <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>&nbsp;</o:p></span></p>
-                                  </td>
-                                  <![if !supportMisalignedRows]>
-                                  <td style='height:32.15pt;border:none' width=0 height=43></td>
-                                  <![endif]>
-                                </tr>
-                                <tr style='mso-yfti-irow:7;height:97.9pt'>
-                                  <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
-                                  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:97.9pt'>
+                              <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+                                style='mso-spacerun:yes'>&nbsp;</span>1.2 </span><span class=SpellE><span
+                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>การบริหารงบประมาณ (10 คะแนน)</span></span><span
+                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
                                   <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                                    style='mso-spacerun:yes'>&nbsp;</span>1.3 </span><span class=SpellE><span
-                                      style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>การบริหารงาน (20 คะแนน)</span></span><span
+                                    style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+                                      style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>บริหารงานด้วยความซื่อสัตย์ สุจริต ไม่มีผลประโยชน์ด้านอื่นที่ขัดแย้งกับการปฏิบัติหน้าที่</span></span><span
                                       style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
                                       <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                                        style='mso-spacerun:yes'>&nbsp; </span>- </span><span style='font-size:
-                                        12.0pt;font-family:"TH SarabunPSK",sans-serif'> <span class=SpellE>มีการบริหารงานสอดคล้องกับระบบการบริหารของมหาวิทยาลัยรวมทั้งสอดคล้องกับความคาดหวังของความต้องการของหน่วยงานต่างๆ ทั้งภายในและภายนอกมหาวิทยาลัย</span><o:p></o:p></span></p>
+                                        style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+                                          style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการบริหารจัดการงบประมาณภายใต้ขอบเขตอำนาจให้เป็นไปตามเป้าหมายของหน่วยงานและมหาวิทยาลัย</span></span><span
+                                          lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                        </td>
+                                        <td width=66 rowspan=2 valign=top style='width:49.6pt;border-top:none;
+                                        border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                        mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                        mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+                                        <p class=MsoNormal align=center style='text-align:center'><span lang=TH
+                                          style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
+
+                                          <?php 
+
+                                          $f_id = 6;
+
+                                          showhh($user_id,$user_c_id,$f_id);
+
+                                          ?>
+                                          <input type="hidden" name="fid6" id="fid6"  value="<?php showhh($user_id,$user_c_id,$f_id) ?>">
+
+
+                                        </o:p></span></p>
+                                      </td>
+                                      <![if !supportMisalignedRows]>
+                                      <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+                                        <![endif]>
+                                      </tr>
+                                      <tr style='mso-yfti-irow:6;height:32.15pt'>
+                                        <td width=347 rowspan=3 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
+                                        border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                                        padding:0cm 5.4pt 0cm 5.4pt;height:32.15pt'>
+                                        <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
+                                        font-family:"TH SarabunPSK",sans-serif'>สูตรคำนวณคะแนนด้านวิชาการ
+                                      </span></u></b></span>
+                                      <b><u><span
+                                        style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
+
+                                        <p class=MsoNormal><span class=SpellE><span style='font-size:8.0pt;
+                                        font-family:"TH SarabunPSK",sans-serif'><u>คะแนนวิชาการจากหน่วยงาน x 20 จากงานวิชาการที่ม.กำหนด</u><br>70 (ผลสัมฤทธิ์ขององค์ประกอบที่ 1)</span></span><span lang=TH
+                                        style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'> <o:p></o:p></span></p>
+                                      </td>
+                                      <td width=66 rowspan=3 valign=top style='width:49.6pt;border-top:none;
+                                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                      mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                      mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:32.15pt'>
+                                      <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>&nbsp;</o:p></span></p>
+                                    </td>
+                                    <![if !supportMisalignedRows]>
+                                    <td style='height:32.15pt;border:none' width=0 height=43></td>
+                                    <![endif]>
+                                  </tr>
+                                  <tr style='mso-yfti-irow:7;height:97.9pt'>
+                                    <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
+                                    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:97.9pt'>
+                                    <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+                                      style='mso-spacerun:yes'>&nbsp;</span>1.3 </span><span class=SpellE><span
+                                        style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>การบริหารงาน (20 คะแนน)</span></span><span
+                                        style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
                                         <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                                          style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-                                            style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการเผยแพร่ข้อมูลของหน่วยงานอย่างเปิดเผย และเข้าถึงข้อมูลข่าวสารได้อย่างเสรีตามความเหมาะสม</span></span><span
-                                            style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                            <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                                              style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการสื่อสารหรือแจ้งข้อมูลที่จำเป็นและเป็นประโยชน์ในการทำงานอย่างสม่ำเสมอและถูกต้อง</span></span><span
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                                <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
-                                                  style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
-                                                    style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการบริหารงาน โดยคำนึงถึงบุคลากรหรือหน่วยงานที่เกี่ยวข้องให้ได้รับการบริการอย่างทัดเทียมกัน</span></span><span
-                                                    lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                          style='mso-spacerun:yes'>&nbsp; </span>- </span><span style='font-size:
+                                          12.0pt;font-family:"TH SarabunPSK",sans-serif'> <span class=SpellE>มีการบริหารงานสอดคล้องกับระบบการบริหารของมหาวิทยาลัยรวมทั้งสอดคล้องกับความคาดหวังของความต้องการของหน่วยงานต่างๆ ทั้งภายในและภายนอกมหาวิทยาลัย</span><o:p></o:p></span></p>
+                                          <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+                                            style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+                                              style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการเผยแพร่ข้อมูลของหน่วยงานอย่างเปิดเผย และเข้าถึงข้อมูลข่าวสารได้อย่างเสรีตามความเหมาะสม</span></span><span
+                                              style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                              <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+                                                style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการสื่อสารหรือแจ้งข้อมูลที่จำเป็นและเป็นประโยชน์ในการทำงานอย่างสม่ำเสมอและถูกต้อง</span></span><span
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                                  <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><span
+                                                    style='mso-spacerun:yes'>&nbsp; </span>- </span><span class=SpellE><span
+                                                      style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>มีการบริหารงาน โดยคำนึงถึงบุคลากรหรือหน่วยงานที่เกี่ยวข้องให้ได้รับการบริการอย่างทัดเทียมกัน</span></span><span
+                                                      lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                                    </td>
+                                                    <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+                                                    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                                    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:97.9pt'>
+                                                    <p class=MsoNormal align=center style='text-align:center'><span lang=TH
+                                                      style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
+
+                                                      <?php 
+
+                                                      $f_id = 7;
+
+                                                      showhh($user_id,$user_c_id,$f_id);
+
+                                                      ?>
+                                                      <input type="hidden" name="fid7" id="fid7" value="<?php showhh($user_id,$user_c_id,$f_id) ?>">
+
+
+                                                    </o:p></span></p>
                                                   </td>
-                                                  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
-                                                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                  <![if !supportMisalignedRows]>
+                                                  <td style='height:97.9pt;border:none' width=0 height=131></td>
+                                                  <![endif]>
+                                                </tr>
+                                                <tr style='mso-yfti-irow:8'>
+                                                  <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
+                                                  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                                                   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                                  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:97.9pt'>
-                                                  <p class=MsoNormal align=center style='text-align:center'><span lang=TH
-                                                    style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
-
-                                                    <select class="custom-select" style="width: 100px" id="se5" onchange="getse2()">
-                                                      <option value="0">0</option>
-                                                      <option value="10">10</option>
-                                                      <option value="20">20</option>
-
-                                                    </select>
-
-
-                                                  </o:p></span></p>
+                                                  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+                                                  <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>2.
+                                                  </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>งานบริหารงานตามยุทธศาสตร์ของมหาวิทยาลัยและของคณะ (30 คะแนน)</span></span><span
+                                                  lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
                                                 </td>
-                                                <![if !supportMisalignedRows]>
-                                                <td style='height:97.9pt;border:none' width=0 height=131></td>
-                                                <![endif]>
-                                              </tr>
-                                              <tr style='mso-yfti-irow:8'>
-                                                <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
-                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+                                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                                                 mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
                                                 mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                                <p class=MsoNormal><span lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>2.
-                                                </span><span class=SpellE><span style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>งานบริหารงานตามยุทธศาสตร์ของมหาวิทยาลัยและของคณะ (30 คะแนน)</span></span><span
-                                                lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                              </td>
-                                              <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
-                                              border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                              mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                              mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                              <p class=MsoNormal align=center style='text-align:center'><span lang=TH
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
-                                                <select class="custom-select" style="width: 100px" id="se6" onchange="getse2()">
-                                                  <option value="0">0</option>
-                                                  <option value="10">10</option>
-                                                  <option value="20">20</option>
-                                                  <option value="30">30</option>
+                                                <p class=MsoNormal align=center style='text-align:center'><span lang=TH
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
+                                                  <?php 
 
-                                                </select>
+                                                  $f_id = 8;
 
-                                              </o:p></span></p>
-                                            </td>
-                                            <![if !supportMisalignedRows]>
-                                            <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
-                                              <![endif]>
-                                            </tr>
-                                            <tr style='mso-yfti-irow:9'>
-                                              <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
-                                              border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-                                              padding:0cm 5.4pt 0cm 5.4pt'>
-                                              <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
-                                              font-family:"TH SarabunPSK",sans-serif'>คะแนนรวม</span></u></b></span><b><u><span
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
-                                                <p class=MsoNormal><span class=SpellE><span style='font-size:12.0pt;
-                                                font-family:"TH SarabunPSK",sans-serif'><u>คะแนนวิชาการ (20) + บริหาร (80)</u><br>100</span></span><span lang=TH
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                              </td>
-                                              <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
-                                              border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                              mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                              mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                              <p class=MsoNormal align=center style='text-align:center'><span lang=TH
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>&nbsp;</o:p></span></p>
-                                              </td>
-                                              <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
-                                              none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                              mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                              mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                              <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
-                                              font-family:"TH SarabunPSK",sans-serif'>ด้านบริหาร</span></u></b></span><b><u><span
-                                                lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
-                                                <p class=MsoNormal><span class=SpellE><span style='font-size:12.0pt;
-                                                font-family:"TH SarabunPSK",sans-serif'><u>คะแนนประเมินจากผู้บริหาร x 80 จากงานบริหารผลสัมฤทธิ์</u><br>70 (ผลสัมฤทธิ์ องค์ประกอบที่ 1)</span></span><span lang=TH
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                              </td>
-                                              <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
-                                              border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                              mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                              mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                              <p class=MsoNormal align=center style='text-align:center'><span lang=TH
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>&nbsp;</o:p></span></p>
+                                                  showhh($user_id,$user_c_id,$f_id);
+
+                                                  ?>
+                                                  <input type="hidden" name="fid8" id="fid8" value="<?php showhh($user_id,$user_c_id,$f_id) ?>">
+
+                                                </o:p></span></p>
                                               </td>
                                               <![if !supportMisalignedRows]>
                                               <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
                                                 <![endif]>
                                               </tr>
-                                              <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+                                              <tr style='mso-yfti-irow:9'>
                                                 <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
                                                 border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
                                                 padding:0cm 5.4pt 0cm 5.4pt'>
+                                                <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
+                                                font-family:"TH SarabunPSK",sans-serif'>คะแนนรวม</span></u></b></span><b><u><span
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
+                                                  <p class=MsoNormal><span class=SpellE><span style='font-size:12.0pt;
+                                                  font-family:"TH SarabunPSK",sans-serif'><u>คะแนนวิชาการ (20) + บริหาร (80)</u><br>100</span></span><span lang=TH
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                                </td>
+                                                <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+                                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                                mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+                                                <p class=MsoNormal align=center style='text-align:center'><span lang=TH
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>&nbsp;</o:p></span></p>
+                                                </td>
+                                                <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
+                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                                mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+                                                <p class=MsoNormal><span class=SpellE><b><u><span style='font-size:12.0pt;
+                                                font-family:"TH SarabunPSK",sans-serif'>ด้านบริหาร</span></u></b></span><b><u><span
+                                                  lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></u></b></p>
+                                                  <p class=MsoNormal><span class=SpellE><span style='font-size:12.0pt;
+                                                  font-family:"TH SarabunPSK",sans-serif'><u>คะแนนประเมินจากผู้บริหาร x 80 จากงานบริหารผลสัมฤทธิ์</u><br>70 (ผลสัมฤทธิ์ องค์ประกอบที่ 1)</span></span><span lang=TH
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                                </td>
+                                                <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+                                                border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                                mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+                                                <p class=MsoNormal align=center style='text-align:center'><span lang=TH
+                                                  style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>&nbsp;</o:p></span></p>
+                                                </td>
+                                                <![if !supportMisalignedRows]>
+                                                <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+                                                  <![endif]>
+                                                </tr>
+                                                <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+                                                  <td width=347 valign=top style='width:260.55pt;border:solid windowtext 1.0pt;
+                                                  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+                                                  padding:0cm 5.4pt 0cm 5.4pt'>
+                                                  <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><span
+                                                    style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>รวม</span></span><span
+                                                    lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                                  </td>
+                                                  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+                                                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                                  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+                                                  <p class=MsoNormal align=center style='text-align:center'><span lang=TH
+                                                    style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
+
+
+                                                    <input type="text" name="sum1" id="sum1" value="0" readonly style="width: 50px;text-align: center;border: none;">
+
+                                                  </o:p></span></p>
+                                                </td>
+                                                <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
+                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                                                mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+                                                mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
                                                 <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><span
                                                   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>รวม</span></span><span
                                                   lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
@@ -448,53 +482,33 @@
                                                 <p class=MsoNormal align=center style='text-align:center'><span lang=TH
                                                   style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
 
-                                                  
-                                                  <input type="text" name="sum1" id="sum1" value="0" readonly style="width: 50px;text-align: center;border: none;">
+
+                                                  <input type="text" name="sum2" id="sum2" value="0" readonly style="width: 50px;text-align: center;border: none;">
 
                                                 </o:p></span></p>
                                               </td>
-                                              <td width=539 valign=top style='width:404.0pt;border-top:none;border-left:
-                                              none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                              mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                              mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                              <p class=MsoNormal align=center style='text-align:center'><span class=SpellE><span
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'>รวม</span></span><span
-                                                lang=TH style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-                                              </td>
-                                              <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
-                                              border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                                              mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-                                              mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-                                              <p class=MsoNormal align=center style='text-align:center'><span lang=TH
-                                                style='font-size:12.0pt;font-family:"TH SarabunPSK",sans-serif'><o:p>
+                                              <![if !supportMisalignedRows]>
+                                              <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+                                                <![endif]>
+                                              </tr>
+                                            </table>
 
-                                                
-                                                <input type="text" name="sum2" id="sum2" value="0" readonly style="width: 50px;text-align: center;border: none;">
+                                            <p class=MsoNormal><span class=SpellE><span class=GramE><span style='font-size:
+                                            12.0pt;font-family:"TH SarabunPSK",sans-serif'>สัดส่วนภาระงานในตำแหน่งวิชาการ (20) : ภาระงานในตำแหน่งบริหาร (80)</span></span></span><span
+                                            lang=TH style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
 
-                                              </o:p></span></p>
-                                            </td>
-                                            <![if !supportMisalignedRows]>
-                                            <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
-                                              <![endif]>
-                                            </tr>
-                                          </table>
+                                          </div>
 
-                                          <p class=MsoNormal><span class=SpellE><span class=GramE><span style='font-size:
-                                          12.0pt;font-family:"TH SarabunPSK",sans-serif'>สัดส่วนภาระงานในตำแหน่งวิชาการ (20) : ภาระงานในตำแหน่งบริหาร (80)</span></span></span><span
-                                          lang=TH style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+                                          <span lang=TH style='font-size:14.0pt;font-family:"TH SarabunPSK",sans-serif;
+                                          mso-fareast-font-family:"Cordia New";mso-ansi-language:EN-US;mso-fareast-language:
+                                          EN-US;mso-bidi-language:TH'><br clear=all style='page-break-before:always;
+                                          mso-break-type:section-break'>
+                                        </span>
+
+                                        <div class=WordSection2>
+
+                                          <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
                                         </div>
 
-                                        <span lang=TH style='font-size:14.0pt;font-family:"TH SarabunPSK",sans-serif;
-                                        mso-fareast-font-family:"Cordia New";mso-ansi-language:EN-US;mso-fareast-language:
-                                        EN-US;mso-bidi-language:TH'><br clear=all style='page-break-before:always;
-                                        mso-break-type:section-break'>
-                                      </span>
-
-                                      <div class=WordSection2>
-
-                                        <p class=MsoNormal><o:p>&nbsp;</o:p></p>
-
-                                      </div>
-
-                                    </body>
+                                      </body>

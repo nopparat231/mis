@@ -18,7 +18,7 @@ $tumc = $_GET['tumc'];
 
 
 $f_ac_user_h_id = $_GET['user_id'];
-$f_ac_user_c_id = 1;
+$f_ac_user_c_id = 4;
 
 $sqlf=" SELECT * FROM f_pam WHERE f_th =".$th_id;
 $qryf = mysqli_query($conn,$sqlf);
@@ -33,7 +33,7 @@ while($rowf = $qryf->fetch_array()){
 
 	$f_ac_score = $_GET[$ac];
 
-	addaction($rowf['f_id'],$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score);
+	addaction($rowf['f_id'],$rowf['f_hh'],$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score);
 
 
 }	
@@ -45,15 +45,15 @@ while($rowf = $qryf->fetch_array()){
 
 
 
-function addaction($f_ac_pam_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score)
+function addaction($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score)
 {
 	include '../conn.php';
 
 
-	$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score) VALUES ($f_ac_pam_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score)";
+	$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_h_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score) VALUES ($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score)";
 
 	if ($conn->query($sql) === TRUE) {
-		header("location:../index.php?pa2");
+		header("location:../index.php?pa2&user_c_id=".$f_ac_user_c_id);
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
