@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2020 at 01:52 PM
+-- Generation Time: Jun 15, 2020 at 06:38 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -139,9 +139,18 @@ INSERT INTO `f_th` (`f_thid`, `f_thdettail`, `f_thnum`, `f_thstatus`) VALUES
 CREATE TABLE IF NOT EXISTS `news` (
 `n_id` int(11) NOT NULL,
   `n_user_id` int(11) NOT NULL,
-  `n_detail` varchar(550) NOT NULL,
+  `n_head` varchar(250) NOT NULL,
+  `n_detail` varchar(2500) NOT NULL,
   `n_status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`n_id`, `n_user_id`, `n_head`, `n_detail`, `n_status`) VALUES
+(1, 2, 'ประกาศ สำหรับ นักศึกษาชั้นปีที่ 1', 'นักศึกษาชั้นปีที่ 1 สามารถเข้าใช้งานระบบประเมินการสอนได้ดังต่อไปนี้\r\n1.เข้าไปที่ mis.rmutk.ac.th\r\n2.ให้กรอก Username และ Password ในการเข้าใช้งานดังต่อไปนี้\r\n           \r\n    Username : รหัสนักศึกษาไม่มีขีด\r\n    Password  : รหัสบัตรประชาชนไม่มีขีด\r\n3.แล้วคลิกที่ปุ่ม Login สีเขียว\r\n4.แล้วคลิกที่ปุ่ม "ประเมินการสอน"\r\n\r\nหมายเหตุ : ถ้าลองแล้วยังใช้งานไม่ได้ ให้แจ้งปัญหามาที่ "gg.gg/misregis"\r\nกรอกข้อมูลให้ครบทุกช่อง เพื่อที่เจ้าหน้าที่จะดำเนินการแก้ไขให้', 1),
+(2, 2, 'teste 413', '<blockquote class="blockquote"><p>estestet</p></blockquote><ol><li>asdasdas</li><li>asdsad</li><li>112</li></ol>', 0);
 
 -- --------------------------------------------------------
 
@@ -166,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `username`, `password`, `user_tumn`, `user_status`) VALUES
 (2, 'admin', 'admin', '443322', '123456', 'ผอ.', 1),
 (3, 'Prasong', 'Ekaluck', '443323', '123456', 'จนท.', 0),
-(4, 'Traipoom', 'Chatwilai', '443324', '123456', 'พนง.', 0);
+(4, 'Traipoom', 'Chatwilai', '443324', '123456', 'พนง.กพ', 0);
 
 --
 -- Indexes for dumped tables
@@ -247,7 +256,7 @@ MODIFY `f_thid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `user`
 --
