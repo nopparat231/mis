@@ -136,14 +136,24 @@
                   </a>
                 </li>
 
-                <?php else: ?>
-
-
-                <?php endif ?>
+                <li class="nav-item">
+                  <a href="index.php?pa7" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>เพิ่มเพิ่มประกาศ</p>
+                  </a>
+                </li>
 
 
               </ul>
             </li>
+
+
+            <?php else: ?>
+
+
+            <?php endif ?>
+
+
 
 
           </ul>

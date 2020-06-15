@@ -19,18 +19,20 @@ session_start();
   <link rel="stylesheet" href="adminlte3/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 
   <link rel="stylesheet" href="adminlte3/dist/css/adminlte.min.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="adminlte3/plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- mycss -->
   <link rel="stylesheet" type="text/css" href="css/cuttom.css">
 
-<style type="text/css">
-  @media print{
-   .noprint{
+  <style type="text/css">
+    @media print{
+     .noprint{
        display:none;
+     }
    }
-}
-</style>
+ </style>
 
 </head>
 <body class="hold-transition sidebar-mini text-sm ">
@@ -64,7 +66,7 @@ session_start();
       }elseif (isset($_GET['pa6'])) {
         include 'page/pa6.php';
       }elseif (isset($_GET['pa7'])) {
-        include 'page/pa7_new.php';
+        include 'page/pa7_news.php';
       }elseif (isset($_GET['pa8'])) {
         include 'page/pa8_user.php';
       }else{
@@ -101,6 +103,8 @@ session_start();
   <!-- DataTables -->
   <script src="adminlte3/plugins/datatables/jquery.dataTables.js"></script>
   <script src="adminlte3/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+  <!-- Summernote -->
+  <script src="adminlte3/plugins/summernote/summernote-bs4.min.js"></script>
 
   <!-- AdminLTE App -->
   <script src="adminlte3/dist/js/adminlte.min.js"></script>
@@ -156,6 +160,12 @@ session_start();
     }
 
     ?>
+    <script>
+      $(function () {
+    // Summernote
+    $('.textarea').summernote()
+  })
+</script>
 
-  </body>
-  </html>
+</body>
+</html>
