@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2020 at 06:38 PM
+-- Generation Time: Jun 16, 2020 at 03:57 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -141,16 +141,18 @@ CREATE TABLE IF NOT EXISTS `news` (
   `n_user_id` int(11) NOT NULL,
   `n_head` varchar(250) NOT NULL,
   `n_detail` varchar(2500) NOT NULL,
-  `n_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `n_status` int(11) NOT NULL,
+  `n_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`n_id`, `n_user_id`, `n_head`, `n_detail`, `n_status`) VALUES
-(1, 2, 'ประกาศ สำหรับ นักศึกษาชั้นปีที่ 1', 'นักศึกษาชั้นปีที่ 1 สามารถเข้าใช้งานระบบประเมินการสอนได้ดังต่อไปนี้\r\n1.เข้าไปที่ mis.rmutk.ac.th\r\n2.ให้กรอก Username และ Password ในการเข้าใช้งานดังต่อไปนี้\r\n           \r\n    Username : รหัสนักศึกษาไม่มีขีด\r\n    Password  : รหัสบัตรประชาชนไม่มีขีด\r\n3.แล้วคลิกที่ปุ่ม Login สีเขียว\r\n4.แล้วคลิกที่ปุ่ม "ประเมินการสอน"\r\n\r\nหมายเหตุ : ถ้าลองแล้วยังใช้งานไม่ได้ ให้แจ้งปัญหามาที่ "gg.gg/misregis"\r\nกรอกข้อมูลให้ครบทุกช่อง เพื่อที่เจ้าหน้าที่จะดำเนินการแก้ไขให้', 1),
-(2, 2, 'teste 413', '<blockquote class="blockquote"><p>estestet</p></blockquote><ol><li>asdasdas</li><li>asdsad</li><li>112</li></ol>', 0);
+INSERT INTO `news` (`n_id`, `n_user_id`, `n_head`, `n_detail`, `n_status`, `n_time`) VALUES
+(1, 2, 'ประกาศ สำหรับ นักศึกษาชั้นปีที่ 1', '<p><b>นักศึกษาชั้นปีที่ 1 สามารถเข้าใช้งานระบบประเมินการสอนได้ดังต่อไปนี้</b></p><p>1.เข้าไปที่ mis.rmutk.ac.th</p><p>2.ให้กรอก Username และ Password ในการเข้าใช้งานดังต่อไปนี้               Username : รหัสนักศึกษาไม่มีขีด    Password  : รหัสบัตรประชาชนไม่มีขีด</p><p>3.แล้วคลิกที่ปุ่ม Login สีเขียว</p><p>4.แล้วคลิกที่ปุ่ม "ประเมินการสอน"หมายเหตุ : ถ้าลองแล้วยังใช้งานไม่ได้ ให้แจ้งปัญหามาที่ "gg.gg/misregis"กรอกข้อมูลให้ครบทุกช่อง เพื่อที่เจ้าหน้าที่จะดำเนินการแก้ไขให้</p><p><br></p>', 0, '2020-06-16 13:47:18'),
+(2, 2, 'teste 413', '<blockquote class="blockquote"><p>estestet</p></blockquote><ol><li>asdasdas</li><li>asdsad</li><li>112</li></ol>', 1, '2020-06-16 13:47:18'),
+(3, 2, 'ประกาศ ระบบการประเมินการสอน ปีการศึกษา 1/2563', '<p><span style="color: rgb(255, 0, 255); font-family: Arial, Helvetica, sans-serif; font-size: 13px;"><b>สามารถประเมินการสอน 1/2563 ได้ตั้งแต่วันที่ 10 ตุลาคม 2563 เวลา 9.00 น. เป็นต้นไป</b></span><br></p><div style="color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 13px;"><span mce_style="color: #ff00ff;" style="color: rgb(255, 0, 255);"></span><span mce_style="color: #0000ff;" style="color: rgb(0, 0, 255);">นักศึกษาที่ไม่สามารถเข้าสู่ระบบเพื่อประเมินการสอน หรือ ไม่สามารถเล่นอินเตอร์เน็ตภายในมหาวิทยาลัยได้</span><span mce_style="color: #0000ff;"><span mce_style="color: #ff0000;" style="color: rgb(255, 0, 0);">&nbsp;<br>สามารถเข้าไปที่<br>1.ให้ login เข้า Wifi ของมหาวิทยาลัย<br>&nbsp; &nbsp;Username : รหัสนักศึกษาไม่มีขีด<br>&nbsp; &nbsp;Password &nbsp;: รหัสบัตรประชาชนไม่มีขีด<br>2.เข้าไปที่ "gg.gg/misregis"</span></span></div><p><span mce_style="color: #ff0000;" style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: rgb(255, 0, 0);">3.กรอกข้อมูลให้เรียบร้อย<br>4.Username และ Password จะใช้งานได้ภายในวันที่ 20 ธันวาคม 2563<br>หมายเหตุ : ให้ใช้โทรศัพท์มือถือหรือคอมพิวเตอร์ในการใช้งาน</span></p><p><br></p><p> 							</p>', 0, '2020-06-16 13:47:18');
 
 -- --------------------------------------------------------
 
@@ -256,7 +258,7 @@ MODIFY `f_thid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --

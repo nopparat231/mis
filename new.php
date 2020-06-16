@@ -23,47 +23,60 @@
     <div class="row">
       <div class="col-lg-12">
 
+        <?php 
 
-        <div class="card card-primary card-outline">
-          <div class="card-header">
-            <h5 class="m-0">Featured</h5>
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Special title treatment</h6>
+        include 'conn.php';
 
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+        $sqlhnew=" SELECT * FROM news WHERE n_status = 0 order by n_id desc";
+        $qryhnew = mysqli_query($conn,$sqlhnew);
+        //$rownew = mysqli_fetch_assoc($qryhnew);
 
-        <div class="card card-warning card-outline">
-          <div class="card-header">
-            <h5 class="m-0">Featured</h5>
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Special title treatment</h6>
 
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-warning">Go somewhere</a>
-          </div>
-        </div>
+        ?>
 
-        <div class="card card-danger card-outline">
-          <div class="card-header">
-            <h5 class="m-0">Featured</h5>
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Special title treatment</h6>
+        <?php 
 
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-danger">Go somewhere</a>
-          </div>
-        </div>
+        while ($rownew = $qryhnew->fetch_array()) {
 
-      </div>
-      <!-- /.col-md-6 -->
-    </div>
-    <!-- /.row -->
-  </div><!-- /.container-fluid -->
+
+
+          $sqlhuser =" SELECT * FROM user where user_id =".$rownew['n_user_id'];
+          $qryhuser = mysqli_query($conn,$sqlhuser);
+          $rowuser = mysqli_fetch_assoc($qryhuser);
+
+          ?>
+
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="m-0"><?php echo $rownew['n_head']; ?></h5>
+            </div>
+            <div class="card-body">
+
+              <p class="card-text">
+
+                <?php echo $rownew['n_detail']; ?>
+
+              </p>
+
+            </div>
+            <div class="card-footer">
+            <p> <?php echo "<u> Written by : ".$rowuser['first_name']." </u> Last Updated on : ".$rownew['n_time']; ?></p>
+           </div>
+         </div>
+
+         <?php 
+
+       }
+
+
+       ?>
+
+
+
+     </div>
+     <!-- /.col-md-6 -->
+   </div>
+   <!-- /.row -->
+ </div><!-- /.container-fluid -->
 </div>
 <!-- /.content -->

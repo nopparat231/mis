@@ -124,7 +124,7 @@
  										<td width="5px"><?php echo $i; ?></td>
  										<td><?php echo $rowuser['first_name']."  ".$rowuser['last_name']; ?></td>
  										<td><?php echo $rownew['n_head']; ?></td>
- 										<td><?php echo mb_substr($rownew['n_detail'], 0,50,'UTF-8')."..."; ?></td>
+ 										<td><?php echo $rownew['n_detail']; ?></td>
  										<td width="10px">
  											<?php if ($rownew['n_status'] == 1): ?>
  												<p style="color: red;" 	>ยกเลิก</p>
