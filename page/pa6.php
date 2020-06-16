@@ -26,7 +26,7 @@
 
  				<div class="card card-primary card-outline ">
  					<div class="card-header noprint">
- 						<h5 class="m-0">รายงานการประเมิน</h5>
+ 						<h5 class="m-0">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)</h5>
  					</div>
  					<div class="card-body">
 
@@ -34,8 +34,9 @@
  						<?php 
  						include './conn.php';
 
+ 						$user_id = $_SESSION["USER_ID"];
 
- 						$sqlhuser=" SELECT * FROM user ";
+ 						$sqlhuser=" SELECT * FROM user WHERE user_id <>  '$user_id' ";
  						$qryhuser = mysqli_query($conn,$sqlhuser);
  						//$rowhuser = mysqli_fetch_assoc($qryhuser);
 

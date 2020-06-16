@@ -44,10 +44,16 @@
  							include './conn.php';
  							$user_id = $_SESSION["USER_ID"];
 
+ 							$user_c_id = $_GET['user_c_id'];
+
 
  							$sqlth=" SELECT * FROM user WHERE user_id =".$user_id;
  							$qryth = mysqli_query($conn,$sqlth);
  							$rowth = mysqli_fetch_assoc($qryth);
+
+ 							$sqluserc=" SELECT * FROM user WHERE user_id =".$user_c_id;
+ 							$qryuserc = mysqli_query($conn,$sqluserc);
+ 							$rowuserc = mysqli_fetch_assoc($qryuserc);
  							
 
 
@@ -58,30 +64,37 @@
  								<p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
  								ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
  								<p>รอบการประเมิน</p>
- 								<input type="checkbox" name="rob" value="1" checked="checked" required >
- 								รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 
- 								<input type="number" name="y1" style="width: 150px" value="<?php echo(date('Y')) ?>"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
- 								<input type="number" name="yy1" style="width: 150px" value="<?php echo(date('Y')) ?>">..
+
+
+ 								<input type="radio" name="rob" value="1" checked="checked" required >
+ 								รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม &nbsp;&nbsp;
+ 								<input type="number" name="y1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>"> &nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
+ 								<input type="number" name="yy1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
  								<br><br>
 
  								<!-- เดี๋ยวหลับมาทำ JS คลิ๊กเลือก -->
 
- 								<input type="checkbox" name="rob" value="2">	
- 								รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  ... 
- 								<input type="number" name="y2" style="width: 150px"> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  ..
- 								<input type="number" name="yy2" style="width: 150px">..
+ 								<input type="radio" name="rob" value="2">	
+ 								รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน &nbsp;&nbsp;
+ 								<input type="number" name="y2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">&nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
+ 								<input type="number" name="yy2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
+
+
  								<br><br>
 
  								<br>
  								<br>
 
 
- 								ชื่อผู้รับการประเมิน 		
- 								<input type="text" name="nameh" style="width: 300px" required value="">....... ตำแหน่ง/ระดับ...
- 								<input type="text" name="tumh" style="width: 300px"><br><br>
+ 								ชื่อผู้รับการประเมิน 	
+ 								<input type="hidden" name="user_c_id" value="<?php echo($user_c_id) ?>">
+ 								<input type="hidden" name="user_h_id" value="<?php echo($user_h_id) ?>">
+
+ 								<input type="text" name="nameh" disabled style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowuserc['first_name'].' '.$rowuserc['last_name']) ?>">ตำแหน่ง/ระดับ...
+ 								<input type="text" name="tumh" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowuserc['user_tumn']) ?>"><br><br>
  								ชื่อผู้บังคับบัญชา  		
- 								<input type="text" name="namec" style="width: 300px" required value="<?php echo($rowth['first_name'].' '.$rowth['last_name']) ?>">....... ตำแหน่ง/ระดับ...
- 								<input type="text" name="tumc" style="width: 300px" value="<?php echo($rowth['user_tumn']) ?>"><br></h5>
+ 								<input type="text" name="namec" disabled  style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowth['first_name'].' '.$rowth['last_name']) ?>">ตำแหน่ง/ระดับ
+ 								<input type="text" name="tumc" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowth['user_tumn']) ?>"><br></h5>
 
 
  								<br>

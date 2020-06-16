@@ -24,7 +24,7 @@
  			<div class="col-lg-12">
 
 
- 				<div class="card card-primary card-outline ">
+ 				<div class="card card-outline ">
  					<div class="card-header noprint">
  						<h5 class="m-0">ฟอร์มประเมินการสอน</h5>
  					</div>
@@ -40,7 +40,10 @@
 
  						$sqlac=" SELECT * FROM `f_action` WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' ";
  						$qryac = mysqli_query($conn,$sqlac);
- 						//$rowac = mysqli_fetch_assoc($qryac);
+
+ 						$sqlacrob=" SELECT * FROM `f_action` WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' ";
+ 						$qryacrob = mysqli_query($conn,$sqlacrob);
+ 						$rowacrob = mysqli_fetch_assoc($qryacrob);
 
  						$sqlhuser=" SELECT * FROM user WHERE user_id =".$user_id;
  						$qryhuser = mysqli_query($conn,$sqlhuser);
@@ -60,53 +63,59 @@
  								ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ <br>
 
  							</p>
- 							<p>รอบการประเมิน 
- 								&nbsp;&nbsp; รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. 2133 ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. 2321..
- 							</p>
-
- 							ชื่อผู้รับการประเมิน ....<?php echo $rowcuser['first_name']."  ".$rowcuser['last_name']; ?>....... ตำแหน่ง/ระดับ...<?php echo $rowcuser['user_tumn']; ?>
- 							ชื่อผู้บังคับบัญชา ....<?php echo $rowhuser['first_name']."  ".$rowhuser['last_name']; ?>....... ตำแหน่ง/ระดับ...<?php echo $rowhuser['user_tumn']; ?>
-
- 						</h5>
 
 
+ 							<?php if ($rowacrob['f_ac_rob'] == '1'): ?>
+ 								รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. <?php echo($rowacrob['f_ac_kid_from']); ?> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. <?php echo($rowacrob['f_ac_kid_end']); ?> ..
 
- 						<?php
+ 								<?php elseif ($rowacrob['f_ac_rob'] == '2'): ?>	
+ 									รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  .. <?php echo($rowacrob['f_ac_kid_from']); ?> ..  ถึง &nbsp;&nbsp; ๓๐  กันยายน  .. <?php echo($rowacrob['f_ac_kid_end']); ?> ..
+ 								<?php endif ?>
+ 								<br>
 
+ 								ชื่อผู้รับการประเมิน ....<?php echo $rowcuser['first_name']."  ".$rowcuser['last_name']; ?>....... ตำแหน่ง/ระดับ...<?php echo $rowcuser['user_tumn']; ?>
+ 								ชื่อผู้บังคับบัญชา ....<?php echo $rowhuser['first_name']."  ".$rowhuser['last_name']; ?>....... ตำแหน่ง/ระดับ...<?php echo $rowhuser['user_tumn']; ?>
 
- 						function showhh($user_id,$user_c_id,$f_id){
-
- 							include './conn.php';
-
- 							$sqljoin=" SELECT * FROM f_action INNER JOIN f_pam ON f_id = f_ac_pam_id WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' AND f_id =".$f_id;
- 							$qryjoin = mysqli_query($conn,$sqljoin);
- 							$rowjoin = mysqli_fetch_assoc($qryjoin);
-
- 							echo $rowjoin['f_ac_score'];
-
- 						}
-
-
- 						include 'pa2table.php';
-
-
- 						?>
+ 							</h5>
 
 
 
- 					</div>
+ 							<?php
 
- 					<div class="card-footer">
- 						<a href="#" class="btn btn-primary noprint" onclick="window.print()">พิมพ์</a>
- 						
+
+ 							function showhh($user_id,$user_c_id,$f_id){
+
+ 								include './conn.php';
+
+ 								$sqljoin=" SELECT * FROM f_action INNER JOIN f_pam ON f_id = f_ac_pam_id WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' AND f_id =".$f_id;
+ 								$qryjoin = mysqli_query($conn,$sqljoin);
+ 								$rowjoin = mysqli_fetch_assoc($qryjoin);
+
+ 								echo $rowjoin['f_ac_score'];
+
+ 							}
+
+
+ 							include 'pa2table.php';
+
+
+ 							?>
+
+
+
+ 						</div>
+
+ 						<div class="card-footer">
+ 							<a href="#" class="btn btn-primary noprint" onclick="window.print()">พิมพ์</a>
+
+ 						</div>
+
  					</div>
 
  				</div>
-
+ 				<!-- /.col-md-6 -->
  			</div>
- 			<!-- /.col-md-6 -->
- 		</div>
- 		<!-- /.row -->
- 	</div><!-- /.container-fluid -->
- </div>
- <!-- /.content -->
+ 			<!-- /.row -->
+ 		</div><!-- /.container-fluid -->
+ 	</div>
+ 	<!-- /.content -->

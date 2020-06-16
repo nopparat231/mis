@@ -3,22 +3,16 @@
 include '../conn.php';
 
 
-$th_id = $_GET['th_id'];
-$rob = $_GET['rob'];
-$y = $_GET['y'];
-$yy = $_GET['yy'];
+$th_id = 1;
+$f_ac_kid_from = $_GET['kid_from'];
+$f_ac_kid_end = $_GET['kid_end'];
+
+$f_ac_rob = $_GET['rob'];
+
 //รอบที่ประเมิน
 
-$nameh = $_GET['nameh'];
-$tumh = $_GET['tumh'];
-//ตำแหน่งผู้ถูกประเมิน
-
-$namec = $_GET['namec'];
-$tumc = $_GET['tumc'];
-
-
 $f_ac_user_h_id = $_GET['user_id'];
-$f_ac_user_c_id = 4;
+$f_ac_user_c_id = $_GET['user_c_id'];
 
 $sqlf=" SELECT * FROM f_pam WHERE f_th =".$th_id;
 $qryf = mysqli_query($conn,$sqlf);
@@ -33,7 +27,7 @@ while($rowf = $qryf->fetch_array()){
 
 	$f_ac_score = $_GET[$ac];
 
-	addaction($rowf['f_id'],$rowf['f_hh'],$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score);
+	addaction($rowf['f_id'],$rowf['f_hh'],$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score,$f_ac_rob,$f_ac_kid_from,$f_ac_kid_end);
 
 
 }	
@@ -45,12 +39,12 @@ while($rowf = $qryf->fetch_array()){
 
 
 
-function addaction($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score)
+function addaction($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score,$f_ac_rob,$f_ac_kid_from,$f_ac_kid_end)
 {
 	include '../conn.php';
 
 
-	$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_h_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score) VALUES ($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score)";
+	$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_h_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score , f_ac_rob , f_ac_kid_from, f_ac_kid_end) VALUES ($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score ,$f_ac_rob ,$f_ac_kid_from ,$f_ac_kid_end )";
 
 	if ($conn->query($sql) === TRUE) {
 		header("location:../index.php?pa2&user_c_id=".$f_ac_user_c_id);
