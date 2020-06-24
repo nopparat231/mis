@@ -82,22 +82,32 @@
 
  							<?php
 
+ 							if (isset($_GET['type']) == 2) {
+ 								
+ 								include 'pa9table.php';
 
- 							function showhh($user_id,$user_c_id,$f_id){
 
- 								include './conn.php';
+ 							}elseif(isset($_GET['type']) == 3){
 
- 								$sqljoin=" SELECT * FROM f_action INNER JOIN f_pam ON f_id = f_ac_pam_id WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' AND f_id =".$f_id;
- 								$qryjoin = mysqli_query($conn,$sqljoin);
- 								$rowjoin = mysqli_fetch_assoc($qryjoin);
 
- 								echo $rowjoin['f_ac_score'];
+ 								function showhh($user_id,$user_c_id,$f_id){
+
+ 									include './conn.php';
+
+ 									$sqljoin=" SELECT * FROM f_action INNER JOIN f_pam ON f_id = f_ac_pam_id WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' AND f_id =".$f_id;
+ 									$qryjoin = mysqli_query($conn,$sqljoin);
+ 									$rowjoin = mysqli_fetch_assoc($qryjoin);
+
+ 									echo $rowjoin['f_ac_score'];
+
+ 								}
+
+
+ 								include 'pa2table.php';
+
+ 							}elseif(isset($_GET['type']) == 4){
 
  							}
-
-
- 							include 'pa2table.php';
-
 
  							?>
 
