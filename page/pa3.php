@@ -49,7 +49,7 @@
  							$rowcheckh = mysqli_num_rows($qryh); 
 
 
- 							$sqlth=" SELECT * FROM f_th WHERE f_thid = 1";
+ 							$sqlth=" SELECT * FROM f_th WHERE f_thnum = 1";
  							$qryth = mysqli_query($conn,$sqlth);
  							$rowth = mysqli_fetch_assoc($qryth);
  							
@@ -294,7 +294,4 @@
  																																	</div>
  																																	<!-- /.col-md-6 -->
  																																</div>
- 																																<!-- /.row -->
- 																															</div><!-- /.container-fluid -->
- 																														</div>
- 																														<!-- /.content -->
+ 																																

@@ -69,6 +69,8 @@ session_start();
         include 'page/pa7_news.php';
       }elseif (isset($_GET['pa8'])) {
         include 'page/pa8_user.php';
+      }elseif (isset($_GET['addtext'])) {
+        include 'page/addtext.php';
       }else{
         include 'new.php';
       }
