@@ -1,4 +1,5 @@
-
+ 
+<?php include 'class_db.php'; ?>
 <?php 
 
 
@@ -42,8 +43,7 @@ $rowuserchh = mysqli_fetch_assoc($qryuserchh);
 <input type="hidden" name="kid_end" value="<?php echo($kid_end); ?>">
 
 
-<h5 ><p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
-ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
+<h5 ><p style="text-align: left;"><?php showth($_GET['type']); ?></p>
 <p>รอบการประเมิน</p>
 
 <?php if ($rob == '1'): ?>

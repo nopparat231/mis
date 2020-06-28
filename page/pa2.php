@@ -100,12 +100,12 @@
 
  									
 
- 								}elseif($_GET['type'] == 4) {
+ 								}elseif($_GET['type'] == 3) {
 
  									include 'pa10.php';
 
 
- 								}elseif($_GET['type'] == 3){
+ 								}elseif($_GET['type'] == 1){
 
 
  									function showhh($user_id,$user_c_id,$f_id){
@@ -131,11 +131,11 @@
 
 
  						</div>
-<!-- 
+
  						<div class="card-footer">
  							<a href="#" class="btn btn-primary noprint" onclick="window.print()">พิมพ์</a>
 
- 						</div> -->
+ 						</div>
 
  					</div>
 

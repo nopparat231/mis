@@ -45,6 +45,7 @@
  							$user_id = $_SESSION["USER_ID"];
 
  							$user_c_id = $_GET['user_c_id'];
+ 							$type = $_GET['type'];
 
 
  							$sqlth=" SELECT * FROM user WHERE user_id =".$user_id;
@@ -88,7 +89,9 @@
 
  								ชื่อผู้รับการประเมิน 	
  								<input type="hidden" name="user_c_id" value="<?php echo($user_c_id) ?>">
- 								<input type="hidden" name="user_h_id" value="<?php echo($user_h_id) ?>">
+ 								
+ 								<input type="hidden" name="type" value="<?php echo($type) ?>">
+
 
  								<input type="text" name="nameh" disabled style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowuserc['first_name'].' '.$rowuserc['last_name']) ?>">ตำแหน่ง/ระดับ...
  								<input type="text" name="tumh" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowuserc['user_tumn']) ?>"><br><br>

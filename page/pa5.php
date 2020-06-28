@@ -32,14 +32,23 @@
  						<h5>
  							<!-- <a href="index.php?pa6&type=3">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)</a> -->
 
- 							<i class="far fa-hand-point-right"></i> 
- 							<a href="index.php?pa2&type=2">ข้อตกลงและแบบประเมินผลสัมฤทธิ์ของงานข้าราชการพลเรือนในสถาบันอุดมศึกษา (องค์ประกอบที่ ๑) </a>
+ 							<?php 
 
- 							<br><br>
- 							<i class="far fa-hand-point-right"></i> 
- 							<a href="index.php?pa2&type=4">แบบประเมินพฤติกรรมในการปฏิบัติราชการของข้าราชการตามสมรรถนะฯ ของข้าราชการพลเรือนในสถาบันอุดมศึกษา (องค์ประกอบที่ ๒) ตำแหน่งวิชาการ</a>
+ 							$sqlth=" SELECT * FROM f_th WHERE f_thstatus = 0";
+ 							$qryth = mysqli_query($conn,$sqlth);
+
+ 							while ($rowth = $qryth->fetch_array()) {
 
 
+ 								?>
+
+ 								<i class="far fa-hand-point-right"></i> 
+ 								<a href="index.php?pa6&type=<?php echo($rowth['f_thid']) ?>"><?php echo $rowth['f_thdettail']; ?></a>
+
+ 								<br><br>
+ 								
+
+ 							<?php } ?>
 
  						</h5>
  						<br>
