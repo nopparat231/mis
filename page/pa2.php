@@ -104,6 +104,7 @@
 
  									include 'pa10.php';
  									include 'pa11.php';
+ 									//include 'pa12.php';
 
 
  								}elseif($_GET['type'] == 1){
