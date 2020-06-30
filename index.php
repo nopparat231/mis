@@ -126,22 +126,22 @@ session_start();
 
 
 
-    var se2 = parseInt(document.getElementById("fid6").value);
-    var se3 = parseInt(document.getElementById("fid7").value);
-    var se4 = parseInt(document.getElementById("fid8").value);
-    var se5 = parseInt(document.getElementById("fid9").value);
-      //var se6 = parseInt(document.getElementById("se6").value);
+    // var se2 = parseInt(document.getElementById("fid6").value);
+    // var se3 = parseInt(document.getElementById("fid7").value);
+    // var se4 = parseInt(document.getElementById("fid8").value);
+    // var se5 = parseInt(document.getElementById("fid9").value);
+    //   //var se6 = parseInt(document.getElementById("se6").value);
 
-      //var sum2 = document.getElementById("sum2").value;
-      var sumse2 = se2 + se3 + se4 + se5;
+    //   //var sum2 = document.getElementById("sum2").value;
+    //   var sumse2 = se2 + se3 + se4 + se5;
 
-      document.getElementById("sum2").value = sumse2;
+    //   document.getElementById("sum2").value = sumse2;
 
 
-      var se1 = parseInt(document.getElementById("fid1").value);
-      //var sum2 = parseInt(document.getElementById("sum2").value);
-      var sumse1 = (se1 + sumse2) / 100;
-      document.getElementById("sum1").value = sumse1;
+    //   var se1 = parseInt(document.getElementById("fid1").value);
+    //   //var sum2 = parseInt(document.getElementById("sum2").value);
+    //   var sumse1 = (se1 + sumse2) / 100;
+    //   document.getElementById("sum1").value = sumse1;
 
 
     </script>

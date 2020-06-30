@@ -103,6 +103,7 @@
  								}elseif($_GET['type'] == 3) {
 
  									include 'pa10.php';
+ 									include 'pa11.php';
 
 
  								}elseif($_GET['type'] == 1){

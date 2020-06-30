@@ -3,7 +3,7 @@
 
 	$text = $_POST['text'];
 
-	$sql = "INSERT INTO `mis`.`f_pam` (`f_id`, `f_th`, `f_h_id`, `f_hhh`, `f_score`, `f_pam_num`, `f_staus`) VALUES (NULL, '3', '6', '$text', '5', '1', '0');";
+	$sql = "INSERT INTO `mis`.`f_pam` (`f_id`, `f_th`, `f_h_id`, `f_hhh`, `f_score`, `f_pam_num`, `f_staus`) VALUES (NULL, '3', '8', '$text', '5', '1', '0');";
 
 	if ($conn->query($sql) === TRUE) {
 		
