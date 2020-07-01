@@ -1,4 +1,5 @@
- <!-- Content Header (Page header) -->
+<?php include 'class_db.php'; ?>
+
  <div class="content-header">
  	<div class="container-fluid">
  		<div class="row mb-2">

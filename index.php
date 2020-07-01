@@ -126,44 +126,80 @@ session_start();
 
 
 
-    // var se2 = parseInt(document.getElementById("fid6").value);
-    // var se3 = parseInt(document.getElementById("fid7").value);
-    // var se4 = parseInt(document.getElementById("fid8").value);
-    // var se5 = parseInt(document.getElementById("fid9").value);
-    //   //var se6 = parseInt(document.getElementById("se6").value);
 
-    //   //var sum2 = document.getElementById("sum2").value;
-    //   var sumse2 = se2 + se3 + se4 + se5;
-
-    //   document.getElementById("sum2").value = sumse2;
+  </script>
 
 
-    //   var se1 = parseInt(document.getElementById("fid1").value);
-    //   //var sum2 = parseInt(document.getElementById("sum2").value);
-    //   var sumse1 = (se1 + sumse2) / 100;
-    //   document.getElementById("sum1").value = sumse1;
 
+  <?php
+
+  if (isset($_GET['type'])) { ?>
+
+    <script type="text/javascript">
+
+
+      var se12 = parseInt(document.getElementById("fidp12").value);
+      var se13 = parseInt(document.getElementById("fidp13").value);
+      var se14 = parseInt(document.getElementById("fidp14").value);
+      var se15 = parseInt(document.getElementById("fidp15").value);
+      var se16 = parseInt(document.getElementById("fidp16").value);
+      var se17 = parseInt(document.getElementById("fidp17").value);
+      var se18 = parseInt(document.getElementById("fidp18").value);
+      var se19 = parseInt(document.getElementById("fidp19").value);
+      var se20 = parseInt(document.getElementById("fidp20").value);
+      var se21 = parseInt(document.getElementById("fidp21").value);
+      var se22 = parseInt(document.getElementById("fidp22").value);
+      var se23 = parseInt(document.getElementById("fidp23").value);
+      var se24 = parseInt(document.getElementById("fidp24").value);
+      var se25 = parseInt(document.getElementById("fidp25").value);
+
+      //var se6 = parseInt(document.getElementById("se6").value);
+
+      //var sum2 = document.getElementById("sum2").value;
+      var sumse2 = se12 + se13 + se14 + se15 + se16 + se17 + se18 + se19 + se20 + se21 + se22 + se23 + se24 + se25;
+
+      document.getElementById("sump2").value = sumse2;
+
+      var sumse3 = sumse2*3;
+
+      document.getElementById("sump4").value = sumse3;
+
+      document.getElementById("sump5").innerHTML = sumse3;
+
+      document.getElementById("sump6").innerHTML = sumse2;
+
+      document.getElementById("sump8").innerHTML = sumse3/sumse3;
+
+      // var se1 = parseInt(document.getElementById("fid1").value);
+      // //var sum2 = parseInt(document.getElementById("sum2").value);
+      // var sumse1 = (se1 + sumse2) / 100;
+      // document.getElementById("sum1").value = sumse1;
 
     </script>
 
     <?php
+  }
 
-    if (isset($_GET['model'])) {
-      include 'model.php';
-      ?>
 
-      <script>
-        $(window).on('load',function(){
-          $('#showModel').modal('show');
-        });
-      </script>
 
-      <?php
-    }
 
+
+  if (isset($_GET['model'])) {
+    include 'model.php';
     ?>
+
     <script>
-      $(function () {
+      $(window).on('load',function(){
+        $('#showModel').modal('show');
+      });
+    </script>
+
+    <?php
+  }
+
+  ?>
+  <script>
+    $(function () {
     // Summernote
     $('.textarea').summernote()
   })

@@ -113,7 +113,7 @@ while ($rowac = $qryac->fetch_array()) {
   }
 
   ?>
-
+<input type="hidden" name="fidp<?php echo $f_ac_pam_id ?>" id="fidp<?php echo $f_ac_pam_id ?>" value="<?php showhh($user_c_id,$f_ac_pam_id) ?>">
 
 </o:p></span></p>
 </td>
