@@ -43,7 +43,7 @@
 
 						$user_id = $_SESSION["USER_ID"];
 
-						$sqlhuser=" SELECT * FROM user WHERE user_id <>  '$user_id' ";
+						$sqlhuser=" SELECT * FROM user WHERE user_status = 0 AND user_id <>  '$user_id' ";
 						$qryhuser = mysqli_query($conn,$sqlhuser);
  						//$rowhuser = mysqli_fetch_assoc($qryhuser);
 

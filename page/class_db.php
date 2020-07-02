@@ -7,7 +7,7 @@ function showth($thid){
 
 	$sqlth=" SELECT * FROM f_th WHERE f_thstatus = 0 AND f_thid =".$thid;
 	$qryth = mysqli_query($conn,$sqlth);
-	$rowth = $qryth->fetch_array();
+	$rowth = mysqli_fetch_assoc($qryth);
 
 
 	echo $rowth['f_thdettail'];
@@ -29,7 +29,17 @@ function showhh($user_c_id,$f_id){
 
 }
 
+function alert($msg) {
+    echo "<script type='text/javascript'>alert('$msg');</script>";
+}
 
+function gotopage($page){
+	header("location: $page");
+}
+
+function goblack(){
+	echo "<script type='text/javascript'>window.history.back();</script>";
+}
 
 
 ?>

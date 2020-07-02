@@ -5,7 +5,7 @@
       <span class="brand-text font-weight-light"><b>
 
         <?php
-        $status = "3";
+        $status = "";
         if (isset($_SESSION["USERNAME"])){
 
           $user = $_SESSION["USERNAME"];
@@ -53,7 +53,7 @@
                 </a>
               </li>
 
-              <?php if ($status == 0): ?>
+              <?php if ($status == 2): ?>
 
 
                 <li class="nav-item">
@@ -76,7 +76,7 @@
 
 
 
-            <?php if ($status == 0): ?>
+            <?php if ($status == 2): ?>
 
 
               <li class="nav-item">

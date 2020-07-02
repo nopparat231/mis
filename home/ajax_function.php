@@ -17,7 +17,7 @@ if($_GET["obj"] == "check_login"){
     $password = $conn->real_escape_string($_POST["password"]);
     if(isset($_POST["remember"])){$remember = $_POST["remember"];}
     
-    $sql = "SELECT * FROM user WHERE username = '".$username."' AND password = '".$password."' ";
+    $sql = "SELECT * FROM user WHERE user_status <> 3 AND username = '".$username."' AND password = '".$password."' ";
     $result = $conn->query($sql);
     $num = $result->num_rows;
     if($num > 0){

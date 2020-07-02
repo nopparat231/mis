@@ -85,8 +85,8 @@
  											<select class="custom-select" name="user_status" id="inputGroupSelect01">
  												<option selected>เลือกสถานะ</option>
  												<option value="1">ผู้ดูแลระบบ</option>
- 											<!-- 	<option value="2">เจ้าหน้าที่</option> -->
- 												<option value="0">ผู้ใช้งานทั่วไป</option>
+ 												<option value="2">ผู้ประเมิน</option>
+ 												<option value="0">ผู้ถูกประเมิน</option>
  											</select>
 
  										</div>
@@ -177,8 +177,8 @@
  											<select class="custom-select" name="user_status" id="inputGroupSelect01">
 
  												<option <?php echo $user_statusck1; ?> value="1">ผู้ดูแลระบบ</option>
- 												<!-- <option <?php echo $user_statusck2; ?> value="2">เจ้าหน้าที่</option> -->
- 												<option <?php echo $user_statusck3; ?> value="0">ผู้ใช้งานทั่วไป</option>
+ 												<option <?php echo $user_statusck2; ?> value="2">ผู้ประเมิน</option>
+ 												<option <?php echo $user_statusck3; ?> value="0">ผู้ถูกประเมิน</option>
  											</select>
 
  										</div>
