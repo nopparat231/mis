@@ -188,149 +188,134 @@ padding:0cm 5.4pt 0cm 5.4pt'>
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
 </td>
 </tr>
-<tr>
-  <td width=147 valign=top style='width:110.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>๑. งานสอน</span></p>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=376 valign=top style='width:281.75pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>ระดับความสำเร็จในการจัดทำ <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๑ มี มคอ.3 และ มคอ.5 ครบทุกรายวิชา <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๒ เป็นไปตามระดับที่ ๑ และมีการพัฒนาสื่อการสอน <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๓ เป็นไปตามระดับที่ ๒ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการไม่น้อยกว่า ๑ โครงการ  <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๔ เป็นไปตามระดับที่ ๓ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๒ โครงการ <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๕ เป็นไปตามระดับที่ ๔ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๓ โครงการ <br>
 
-</span></p>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+<?php 
+
+$user_c_id = $_GET['user_c_id'];
+$type = $_GET['type'];
+
+
+$sqlac=" SELECT * FROM f_action WHERE f_ac_user_c_id = '$user_c_id' ";
+$qryac = mysqli_query($conn,$sqlac);
+
+while ($rowac = $qryac->fetch_array()) {
+
+  $f_ac_pam_id = $rowac['f_ac_pam_id'];
+
+  $sqlpam=" SELECT * FROM f_pam WHERE f_id = '$f_ac_pam_id' AND f_th = '$type' AND f_staus = 0 order by f_pam_num asc ";
+  $qrypam = mysqli_query($conn,$sqlpam);
+
+  while ($rowpam = $qrypam->fetch_array()) {
+
+
+    $hid = $rowpam['f_h_id'];
+
+    ?>
+
+
+
+    <tr>
+      <td width=147 valign=top style='width:110.2pt;border:solid windowtext 1.0pt;
+      border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+      <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+      normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+
+        <?php 
+
+        $sqlh=" SELECT * FROM f_h WHERE f_h_id = '$hid' ";
+        $qryh = mysqli_query($conn,$sqlh);
+
+        while ($rowh = $qryh->fetch_array()) {
+
+          echo "<b>".$rowh['f_hdetail']."</b>";
+
+        }
+
+
+        ?>
+
+      </span></p>
+      <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+      normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+    </td>
+
+
+    <td width=376 valign=top style='width:281.75pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+    normal'>
+
+    <span style='font-family:"TH SarabunPSK",sans-serif'>
+
+      <?php echo $rowpam['f_hhh']; ?>
+
+    </span></p>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+    normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+  </td>
+
+
+
+  <?php forscore($rowac['f_ac_score']); ?>
+
+
+  <td width=66 valign=top style='width:49.35pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+   <br><br><br><br><br>
+
+   <?php echo $rowac['f_ac_score']; ?></span></p>
+
+ </td>
+
+
+ <?php echo ifwha($rowac['f_ac_h_id']); ?>
+
+
+ <td width=77 valign=top style='width:57.7pt;border-top:none;border-left:none;
+ border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+ text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+   <br><br><br><br><br>
+
+
+   <?php 
+
+   if ($rowac['f_ac_h_id'] == 3) {
+    echo ($rowac['f_ac_score']*30)/100;
+   }elseif ($rowac['f_ac_h_id'] == 4) {
+    echo ($rowac['f_ac_score']*30)/100;
+   }elseif ($rowac['f_ac_h_id'] == 9) {
+    echo ($rowac['f_ac_score']*15)/100;
+   }elseif ($rowac['f_ac_h_id'] == 10) {
+    echo ($rowac['f_ac_score']*10)/100;
+   }elseif ($rowac['f_ac_h_id'] == 11) {
+    echo ($rowac['f_ac_score']*15)/100;
+   }
+
+   ?>
+
+
+ </span></p>
 </td>
-<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=24 valign=top style='width:17.65pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=27 valign=top style='width:20.45pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=66 valign=top style='width:49.35pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>5</span></p>
-</td>
-<td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>30</span></p>
-</td>
-<td width=77 valign=top style='width:57.7pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>1.5</span></p>
-</td>
+
 </tr>
 
 
+<?php 
 
-<tr>
-  <td width=147 valign=top style='width:110.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>๒. งานวิจัยและงานวิชาการ</span></p>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=376 valign=top style='width:281.75pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>ระดับความสำเร็จในการจัดทำ <br>
-    &nbsp;&nbsp;&nbsp;&nbsp; ระดับที่ ๑ มีหัวข้องานวิจัย (สิ่งประดิษฐ์) และผลการทดลองหรือข้อมูลเบื้องต้นที่จะนำไปสู่หัวข้องานวิจัย (สิ่งประดิษฐ์) <br>
-    &nbsp;&nbsp;&nbsp;&nbsp; หรือ มีการกำหนดชื่อตำรา (หนังสือ) จำนวนบท และชื่อบททุกบท พร้อมทั้งมีฉบับร่างที่มีเนื้อหาไม่ต่ำกว่าร้อยละ ๒๐ <br>
-</span></p>
-</td>
-<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=24 valign=top style='width:17.65pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=27 valign=top style='width:20.45pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-</td>
-<td width=66 valign=top style='width:49.35pt;border-top:none;border-left:
-none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>5</span></p>
-</td>
-<td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>30</span></p>
-</td>
-<td width=77 valign=top style='width:57.7pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>1.5</span></p>
-</td>
-</tr>
+}
+
+?>
 
 
+
+<?php } ?>
 
 
 </table>
@@ -343,3 +328,397 @@ text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",s
 </body>
 
 </html>
+
+
+<?php 
+
+function forscore($f_ac_score)
+{
+
+
+  if ($f_ac_score == 5) {
+
+    ?>
+
+
+    <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+    normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+  </td>
+
+
+  <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+ <br><br><br><br><br>
+ <i class="fas fa-check"></i>
+</span></p>
+</td>
+
+
+
+<?php  }elseif ($f_ac_score == 4) { ?>
+
+
+  <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+ <br><br><br><br><br>
+ <i class="fas fa-check"></i>
+</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<?php  }elseif ($f_ac_score == 3) { ?>
+
+
+  <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+ <br><br><br><br><br>
+ <i class="fas fa-check"></i>
+</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<?php  }elseif ($f_ac_score == 2) { ?>
+
+
+  <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+ <br><br><br><br><br>
+ <i class="fas fa-check"></i>
+</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<?php  }elseif ($f_ac_score == 1) { ?>
+
+
+  <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+   <br><br><br><br><br>
+   <i class="fas fa-check"></i>
+ </span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+
+<?php  }else{ ?>
+
+  <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+   <br><br><br><br><br>
+   <!-- <i class="fas fa-check"></i> -->
+ </span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+padding:0cm 5.4pt 0cm 5.4pt'>
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+</td>
+
+
+<?php
+}
+}
+
+
+
+
+function ifwha($hid){
+
+  if ($hid == 3) { ?>
+
+    <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+    text-align:center;line-height:normal'>
+    <span style='font-family:"TH SarabunPSK",sans-serif'>
+     <br><br><br><br><br>
+
+     30
+
+
+   </span></p>
+ </td>
+
+ <?php
+}elseif ($hid == 4) { ?>
+
+  <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'>
+  <span style='font-family:"TH SarabunPSK",sans-serif'>
+   <br><br><br><br><br>
+
+   30
+
+
+ </span></p>
+</td>
+
+<?php
+}elseif ($hid == 9) { ?>
+
+  <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'>
+  <span style='font-family:"TH SarabunPSK",sans-serif'>
+   <br><br><br><br><br>
+
+   15
+
+
+ </span></p>
+</td>
+
+<?php
+}elseif ($hid == 10) { ?>
+
+  <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'>
+  <span style='font-family:"TH SarabunPSK",sans-serif'>
+   <br><br><br><br><br>
+
+   10
+
+
+ </span></p>
+</td>
+
+<?php
+}elseif ($hid == 11) { ?>
+
+  <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'>
+  <span style='font-family:"TH SarabunPSK",sans-serif'>
+   <br><br><br><br><br>
+
+   15
+
+
+ </span></p>
+</td>
+
+<?php
+}
+}
+
+
+
+
+?>

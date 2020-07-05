@@ -250,7 +250,7 @@
  																																					<td width="5%" align="center"><strong>4</strong></td>
  																																					<td width="5%" align="center"><strong>3</strong></td>
  																																					<td width="5%" align="center"><strong>2</strong></td>
- 																																					<td width="5%" align="center"><strong>0</strong></td>
+ 																																					<td width="5%" align="center"><strong>1</strong></td>
  																																				</tr>
 
 
@@ -268,7 +268,7 @@
  																																								<td height="30" align="center">
  																																									<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"  value="2" /></td>
  																																									<td height="30" align="center">
- 																																										<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"  value="0" /></td>
+ 																																										<input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"  value="1" /></td>
  																																									</tr>
 
 

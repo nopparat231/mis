@@ -316,8 +316,8 @@ text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",s
 
 </div>
 
-<button class="btn btn-primary noprint" type="submit" >บันทึก</button>
+<!-- <button class="btn btn-primary noprint" type="submit" >บันทึก</button>
 <a type="submit" class="btn btn-danger" href="./index.php?pa5" >ยกเลิก</a>
 
-
+ -->
 </form>
