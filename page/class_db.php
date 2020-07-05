@@ -30,16 +30,48 @@ function showhh($user_c_id,$f_id){
 }
 
 function alert($msg) {
-    echo "<script type='text/javascript'>alert('$msg');</script>";
+	echo "<script type='text/javascript'>alert('$msg');</script>";
 }
-
+ 
 function gotopage($page){
-	header("location: $page");
+	echo "<script type='text/javascript'>window.location.href = '$page';</script>";
 }
 
 function goblack(){
 	echo "<script type='text/javascript'>window.history.back();</script>";
 }
+
+function savescore($user_c,$type,$f_ac_h_id,$score){
+	include './conn.php';
+
+	$sql = "INSERT INTO f_save_score (s_id , s_u_c , s_f_h , s_f_ac_h_id , s_f_score , s_status) VALUES (null , '$user_c' , '$type' , $f_ac_h_id , '$score' , 0)";
+
+	if ($conn->query($sql) === false) {
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}else{
+		gotopage("index.php?pa2&user_c_id=$user_c&type=$type");
+	}
+
+	$conn->close();
+
+}
+
+
+function showscore($user_c,$type){
+
+	include './conn.php';
+
+	$sqlscore=" SELECT SUM(s_f_score) as score , s_u_c , s_f_h FROM f_save_score WHERE s_u_c = '$user_c' AND s_f_h =".$type;
+	$qryscore = mysqli_query($conn,$sqlscore);
+	$rowscore = mysqli_fetch_assoc($qryscore);
+
+
+	echo number_format($rowscore['score'],2);
+
+	$conn->close();
+
+}
+
 
 
 ?>

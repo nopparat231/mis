@@ -47,7 +47,7 @@ function addaction($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac
 	$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_th_id ,f_ac_h_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score , f_ac_rob , f_ac_kid_from, f_ac_kid_end) VALUES ($f_ac_pam_id,$th_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac_score ,$f_ac_rob ,$f_ac_kid_from ,$f_ac_kid_end )";
 
 	if ($conn->query($sql) === TRUE) {
-		header("location:../index.php?pa2&user_c_id=$f_ac_user_c_id&type=$th_id");
+		header("location:../index.php?pa2&user_c_id=$f_ac_user_c_id&type=$th_id&save");
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}

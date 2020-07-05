@@ -96,7 +96,7 @@
 
 											<?php }else{ ?>
 												<td>ยังไม่ทำ</td>
-												<td width="5px"><a href="index.php?pa4&user_c_id=<?php echo ($rowhuser['user_id']) ?>&type=<?php echo($thid) ?>" target="_blank"><i class="fas fa-arrow-right"></i></a></td>
+												<td width="5px"><a href="index.php?pa4&user_c_id=<?php echo ($rowhuser['user_id']) ?>&type=<?php echo($thid) ?>" ><i class="fas fa-arrow-right"></i></a></td>
 
 											<?php } ?>
 

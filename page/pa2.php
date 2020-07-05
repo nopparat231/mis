@@ -1,4 +1,4 @@
-<?php include 'class_db.php'; ?>
+<?php require_once 'class_db.php'; ?>
 
  <div class="content-header">
  	<div class="container-fluid">
@@ -93,11 +93,16 @@
 
  							if (isset($_GET['type'])) {
 
+ 								if (isset($_GET['save'])) {
+ 									require_once 'class_db.php';
+ 								}
+
  								if ($_GET['type'] == 2) {
 
 
 
  									include 'pa9table.php';
+ 									include 'pa99.php';
 
  									
 

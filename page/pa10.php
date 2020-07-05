@@ -110,6 +110,12 @@ while ($rowac = $qryac->fetch_array()) {
 
     echo $rowac['f_ac_score'];
 
+    
+      if (isset($_GET['save'])) {
+    savescore($user_c_id,$type,$rowac['f_ac_h_id'],$rowac['f_ac_score']);
+  }
+  
+
   }
 
   ?>

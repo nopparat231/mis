@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2020 at 12:02 PM
+-- Generation Time: Jul 05, 2020 at 02:37 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -39,18 +39,7 @@ CREATE TABLE IF NOT EXISTS `f_action` (
   `f_ac_kid_end` int(11) NOT NULL,
   `f_ac_status` int(11) NOT NULL,
   `f_ad_time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `f_action`
---
-
-INSERT INTO `f_action` (`f_ac_id`, `f_ac_th_id`, `f_ac_pam_id`, `f_ac_h_id`, `f_ac_user_h_id`, `f_ac_user_c_id`, `f_ac_score`, `f_ac_rob`, `f_ac_kid_from`, `f_ac_kid_end`, `f_ac_status`, `f_ad_time_stamp`) VALUES
-(108, 2, 26, 3, 3, 5, 5, 1, 2020, 2020, 0, '2020-07-05 09:30:24'),
-(109, 2, 33, 4, 3, 5, 4, 1, 2020, 2020, 0, '2020-07-05 09:30:24'),
-(110, 2, 34, 9, 3, 5, 3, 1, 2020, 2020, 0, '2020-07-05 09:30:24'),
-(111, 2, 35, 10, 3, 5, 2, 1, 2020, 2020, 0, '2020-07-05 09:30:24'),
-(112, 2, 36, 11, 3, 5, 1, 1, 2020, 2020, 0, '2020-07-05 09:30:24');
+) ENGINE=InnoDB AUTO_INCREMENT=179 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -130,6 +119,21 @@ INSERT INTO `f_pam` (`f_id`, `f_th`, `f_h_id`, `f_hhh`, `f_score`, `f_pam_num`, 
 (34, 2, 9, '<table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left"> <tbody><tr>  <td valign="top" align="left" style="padding-top:0cm;padding-right:9.0pt;  padding-bottom:0cm;padding-left:9.0pt">  <h6><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">ระดับความสำเร็จในการจัดทำ<br></span><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="TH" style="font-size:  14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;font-family:&quot;TH SarabunPSK&quot;,sans-serif">ระดับที่  ๑ มี มคอ.3 และ มคอ.5 ครบทุกรายวิชา<br><o:p></o:p></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๒ เป็นไปตามระดับที่ ๑ และมีการพัฒนาสื่อการสอน<br></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๓ เป็นไปตามระดับที่ ๒ และเข้าอบรม หรือสัมมนา หรือ  ประชุมวิชาการไม่น้อยกว่า ๑ โครงการ<br> </span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๔ เป็นไปตามระดับที่ ๓ และเข้าอบรม หรือสัมมนา หรือ  ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๒ โครงการ<br></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif"><span style="font-size: 18.6667px;">&nbsp; &nbsp; &nbsp;</span><span style="font-size: 18.6667px;">ระดับที่ ๕ เป็นไปตามระดับที่ ๔ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๓ โครงการ</span></span><span style="font-family: &quot;TH SarabunPSK&quot;, sans-serif; font-size: 14pt;">&nbsp;&nbsp;</span></h6>        </td></tr></tbody></table>', 5, 1, 0),
 (35, 2, 10, '<table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left"> <tbody><tr>  <td valign="top" align="left" style="padding-top:0cm;padding-right:9.0pt;  padding-bottom:0cm;padding-left:9.0pt">  <h6><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">ระดับความสำเร็จในการจัดทำ<br></span><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="TH" style="font-size:  14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;font-family:&quot;TH SarabunPSK&quot;,sans-serif">ระดับที่  ๑ มี มคอ.3 และ มคอ.5 ครบทุกรายวิชา<br><o:p></o:p></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๒ เป็นไปตามระดับที่ ๑ และมีการพัฒนาสื่อการสอน<br></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๓ เป็นไปตามระดับที่ ๒ และเข้าอบรม หรือสัมมนา หรือ  ประชุมวิชาการไม่น้อยกว่า ๑ โครงการ<br> </span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๔ เป็นไปตามระดับที่ ๓ และเข้าอบรม หรือสัมมนา หรือ  ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๒ โครงการ<br></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif"><span style="font-size: 18.6667px;">&nbsp; &nbsp; &nbsp;</span><span style="font-size: 18.6667px;">ระดับที่ ๕ เป็นไปตามระดับที่ ๔ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๓ โครงการ</span></span><span style="font-family: &quot;TH SarabunPSK&quot;, sans-serif; font-size: 14pt;">&nbsp;&nbsp;</span></h6>        </td></tr></tbody></table>', 5, 1, 0),
 (36, 2, 11, '<table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left"> <tbody><tr>  <td valign="top" align="left" style="padding-top:0cm;padding-right:9.0pt;  padding-bottom:0cm;padding-left:9.0pt">  <h6><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">ระดับความสำเร็จในการจัดทำ<br></span><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="TH" style="font-size:  14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;font-family:&quot;TH SarabunPSK&quot;,sans-serif">ระดับที่  ๑ มี มคอ.3 และ มคอ.5 ครบทุกรายวิชา<br><o:p></o:p></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๒ เป็นไปตามระดับที่ ๑ และมีการพัฒนาสื่อการสอน<br></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๓ เป็นไปตามระดับที่ ๒ และเข้าอบรม หรือสัมมนา หรือ  ประชุมวิชาการไม่น้อยกว่า ๑ โครงการ<br> </span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;  ระดับที่ ๔ เป็นไปตามระดับที่ ๓ และเข้าอบรม หรือสัมมนา หรือ  ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๒ โครงการ<br></span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;  font-family:&quot;TH SarabunPSK&quot;,sans-serif"><span style="font-size: 18.6667px;">&nbsp; &nbsp; &nbsp;</span><span style="font-size: 18.6667px;">ระดับที่ ๕ เป็นไปตามระดับที่ ๔ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๓ โครงการ</span></span><span style="font-family: &quot;TH SarabunPSK&quot;, sans-serif; font-size: 14pt;">&nbsp;&nbsp;</span></h6>        </td></tr></tbody></table>', 5, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `f_save_score`
+--
+
+CREATE TABLE IF NOT EXISTS `f_save_score` (
+`s_id` int(11) NOT NULL,
+  `s_u_c` int(11) NOT NULL,
+  `s_f_h` int(11) NOT NULL,
+  `s_f_ac_h_id` varchar(1) NOT NULL,
+  `s_f_score` varchar(11) NOT NULL,
+  `s_status` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -226,6 +230,12 @@ ALTER TABLE `f_pam`
  ADD PRIMARY KEY (`f_id`);
 
 --
+-- Indexes for table `f_save_score`
+--
+ALTER TABLE `f_save_score`
+ ADD PRIMARY KEY (`s_id`);
+
+--
 -- Indexes for table `f_th`
 --
 ALTER TABLE `f_th`
@@ -251,7 +261,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `f_action`
 --
 ALTER TABLE `f_action`
-MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=113;
+MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=179;
 --
 -- AUTO_INCREMENT for table `f_h`
 --
@@ -262,6 +272,11 @@ MODIFY `f_h_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 ALTER TABLE `f_pam`
 MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
+--
+-- AUTO_INCREMENT for table `f_save_score`
+--
+ALTER TABLE `f_save_score`
+MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=133;
 --
 -- AUTO_INCREMENT for table `f_th`
 --

@@ -287,21 +287,34 @@ while ($rowac = $qryac->fetch_array()) {
    <?php 
 
    if ($rowac['f_ac_h_id'] == 3) {
-    echo ($rowac['f_ac_score']*30)/100;
-   }elseif ($rowac['f_ac_h_id'] == 4) {
-    echo ($rowac['f_ac_score']*30)/100;
-   }elseif ($rowac['f_ac_h_id'] == 9) {
-    echo ($rowac['f_ac_score']*15)/100;
-   }elseif ($rowac['f_ac_h_id'] == 10) {
-    echo ($rowac['f_ac_score']*10)/100;
-   }elseif ($rowac['f_ac_h_id'] == 11) {
-    echo ($rowac['f_ac_score']*15)/100;
-   }
+    $summ  = ($rowac['f_ac_score']*30)/100;
+    echo $summ;
+  }elseif ($rowac['f_ac_h_id'] == 4) {
+    $summ  = ($rowac['f_ac_score']*30)/100;
+    echo $summ;
+  }elseif ($rowac['f_ac_h_id'] == 9) {
+    $summ  = ($rowac['f_ac_score']*15)/100;
+    echo $summ;
+  }elseif ($rowac['f_ac_h_id'] == 10) {
+    $summ = ($rowac['f_ac_score']*10)/100;
+    echo $summ;
+  }elseif ($rowac['f_ac_h_id'] == 11) {
+    $summ  = ($rowac['f_ac_score']*15)/100;
+    echo $summ;
+  }
 
-   ?>
 
 
- </span></p>
+
+
+  if (isset($_GET['save'])) {
+    savescore($user_c_id,$type,$rowac['f_ac_h_id'],$summ);
+  }
+  
+  ?>
+
+
+</span></p>
 </td>
 
 </tr>
@@ -315,7 +328,9 @@ while ($rowac = $qryac->fetch_array()) {
 
 
 
-<?php } ?>
+<?php } 
+
+?>
 
 
 </table>
