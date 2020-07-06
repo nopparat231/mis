@@ -93,10 +93,10 @@
 
 
 										<td>
-											ส่วนที่ 1 <a href="index.php?ph1">ตรวจสอบ</a> ,
+											ส่วนที่ 1 <a href="#">ตรวจสอบ</a> ,
 											<?php if ($rowcheckac1 > 0) { ?>
 
-												ส่วนที่ 2 <a href="index.php?ph1&user_c_id=<?php echo ($rowhuser['user_id']) ?>&type=<?php echo($thid) ?>">องค์ประกอบที่ 1 ตรวจสอบ</a> ,
+												ส่วนที่ 2 <a href="#">องค์ประกอบที่ 1 ตรวจสอบ</a> ,
 
 											<?php }else{ ?>
 												ส่วนที่ 2 <a href="#" style="color: red;" >องค์ประกอบที่ 1 (ยังไม่ประเมิน)</a> ,
