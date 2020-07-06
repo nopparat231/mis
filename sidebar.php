@@ -89,7 +89,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="index.php?pa6" class="nav-link">
+                    <a href="index.php?pa66" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>รายงานการประเมิน</p>
                     </a>

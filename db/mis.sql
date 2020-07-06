@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2020 at 02:37 PM
+-- Generation Time: Jul 06, 2020 at 02:42 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -39,7 +39,32 @@ CREATE TABLE IF NOT EXISTS `f_action` (
   `f_ac_kid_end` int(11) NOT NULL,
   `f_ac_status` int(11) NOT NULL,
   `f_ad_time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=179 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `f_action`
+--
+
+INSERT INTO `f_action` (`f_ac_id`, `f_ac_th_id`, `f_ac_pam_id`, `f_ac_h_id`, `f_ac_user_h_id`, `f_ac_user_c_id`, `f_ac_score`, `f_ac_rob`, `f_ac_kid_from`, `f_ac_kid_end`, `f_ac_status`, `f_ad_time_stamp`) VALUES
+(1, 2, 26, 3, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:02:32'),
+(2, 2, 33, 4, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:02:32'),
+(3, 2, 34, 9, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:02:32'),
+(4, 2, 35, 10, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:02:32'),
+(5, 2, 36, 11, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:02:32'),
+(6, 3, 12, 5, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(7, 3, 13, 5, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(8, 3, 14, 5, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(9, 3, 15, 5, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(10, 3, 16, 6, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(11, 3, 17, 6, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(12, 3, 18, 6, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(13, 3, 19, 7, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(14, 3, 20, 7, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(15, 3, 21, 7, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(16, 3, 22, 7, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(17, 3, 23, 8, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(18, 3, 24, 8, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(19, 3, 25, 8, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41');
 
 -- --------------------------------------------------------
 
@@ -133,7 +158,32 @@ CREATE TABLE IF NOT EXISTS `f_save_score` (
   `s_f_ac_h_id` varchar(1) NOT NULL,
   `s_f_score` varchar(11) NOT NULL,
   `s_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `f_save_score`
+--
+
+INSERT INTO `f_save_score` (`s_id`, `s_u_c`, `s_f_h`, `s_f_ac_h_id`, `s_f_score`, `s_status`) VALUES
+(1, 4, 2, '3', '1.5', 0),
+(2, 4, 2, '4', '1.5', 0),
+(3, 4, 2, '9', '0.75', 0),
+(4, 4, 2, '1', '0.5', 0),
+(5, 4, 2, '1', '0.75', 0),
+(6, 4, 3, '5', '5', 0),
+(7, 4, 3, '5', '5', 0),
+(8, 4, 3, '5', '5', 0),
+(9, 4, 3, '5', '5', 0),
+(10, 4, 3, '6', '5', 0),
+(11, 4, 3, '6', '5', 0),
+(12, 4, 3, '6', '5', 0),
+(13, 4, 3, '7', '5', 0),
+(14, 4, 3, '7', '5', 0),
+(15, 4, 3, '7', '5', 0),
+(16, 4, 3, '7', '5', 0),
+(17, 4, 3, '8', '5', 0),
+(18, 4, 3, '8', '5', 0),
+(19, 4, 3, '8', '5', 0);
 
 -- --------------------------------------------------------
 
@@ -261,7 +311,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `f_action`
 --
 ALTER TABLE `f_action`
-MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=179;
+MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `f_h`
 --
@@ -276,7 +326,7 @@ MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
 -- AUTO_INCREMENT for table `f_save_score`
 --
 ALTER TABLE `f_save_score`
-MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=133;
+MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `f_th`
 --

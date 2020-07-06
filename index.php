@@ -35,7 +35,7 @@ session_start();
  </style>
 
 </head>
-<body class="hold-transition sidebar-mini text-sm ">
+<body class="hold-transition sidebar-collapse sidebar-mini text-sm ">
   <?php include 'banner.php'; ?>
   <div class="wrapper">
 
@@ -65,12 +65,16 @@ session_start();
         include 'page/pa5.php';
       }elseif (isset($_GET['pa6'])) {
         include 'page/pa6.php';
+      }elseif (isset($_GET['pa66'])) {
+        include 'page/pa66.php';
       }elseif (isset($_GET['pa7'])) {
         include 'page/pa7_news.php';
       }elseif (isset($_GET['pa8'])) {
         include 'page/pa8_user.php';
       }elseif (isset($_GET['addtext'])) {
         include 'page/addtext.php';
+      }elseif (isset($_GET['ph1'])) {
+        include 'page/ph1.php';
       }else{
         include 'new.php';
       }
