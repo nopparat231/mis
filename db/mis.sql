@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2020 at 02:42 PM
+-- Generation Time: Jul 12, 2020 at 10:55 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `f_action` (
   `f_ac_kid_end` int(11) NOT NULL,
   `f_ac_status` int(11) NOT NULL,
   `f_ad_time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `f_action`
@@ -64,7 +64,26 @@ INSERT INTO `f_action` (`f_ac_id`, `f_ac_th_id`, `f_ac_pam_id`, `f_ac_h_id`, `f_
 (16, 3, 22, 7, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
 (17, 3, 23, 8, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
 (18, 3, 24, 8, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
-(19, 3, 25, 8, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41');
+(19, 3, 25, 8, 3, 4, 5, 1, 2020, 2020, 0, '2020-07-06 09:03:41'),
+(20, 2, 26, 3, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:00:43'),
+(21, 2, 33, 4, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:00:43'),
+(22, 2, 34, 9, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:00:44'),
+(23, 2, 35, 10, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:00:44'),
+(24, 2, 36, 11, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:00:44'),
+(25, 3, 12, 5, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(26, 3, 13, 5, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(27, 3, 14, 5, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(28, 3, 15, 5, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(29, 3, 16, 6, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(30, 3, 17, 6, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(31, 3, 18, 6, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(32, 3, 19, 7, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(33, 3, 20, 7, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:28'),
+(34, 3, 21, 7, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:29'),
+(35, 3, 22, 7, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:29'),
+(36, 3, 23, 8, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:29'),
+(37, 3, 24, 8, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:29'),
+(38, 3, 25, 8, 4, 5, 5, 1, 2020, 2020, 0, '2020-07-12 06:01:29');
 
 -- --------------------------------------------------------
 
@@ -158,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `f_save_score` (
   `s_f_ac_h_id` varchar(1) NOT NULL,
   `s_f_score` varchar(11) NOT NULL,
   `s_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `f_save_score`
@@ -183,7 +202,26 @@ INSERT INTO `f_save_score` (`s_id`, `s_u_c`, `s_f_h`, `s_f_ac_h_id`, `s_f_score`
 (16, 4, 3, '7', '5', 0),
 (17, 4, 3, '8', '5', 0),
 (18, 4, 3, '8', '5', 0),
-(19, 4, 3, '8', '5', 0);
+(19, 4, 3, '8', '5', 0),
+(20, 5, 2, '3', '1.5', 0),
+(21, 5, 2, '4', '1.5', 0),
+(22, 5, 2, '9', '0.75', 0),
+(23, 5, 2, '1', '0.5', 0),
+(24, 5, 2, '1', '0.75', 0),
+(25, 5, 3, '5', '5', 0),
+(26, 5, 3, '5', '5', 0),
+(27, 5, 3, '5', '5', 0),
+(28, 5, 3, '5', '5', 0),
+(29, 5, 3, '6', '5', 0),
+(30, 5, 3, '6', '5', 0),
+(31, 5, 3, '6', '5', 0),
+(32, 5, 3, '7', '5', 0),
+(33, 5, 3, '7', '5', 0),
+(34, 5, 3, '7', '5', 0),
+(35, 5, 3, '7', '5', 0),
+(36, 5, 3, '8', '5', 0),
+(37, 5, 3, '8', '5', 0),
+(38, 5, 3, '8', '5', 0);
 
 -- --------------------------------------------------------
 
@@ -245,17 +283,18 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `user_tumn` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `user_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `username`, `password`, `user_tumn`, `user_status`) VALUES
-(2, 'admin', 'admin', '443322', '123456', 'ผอ.', 1),
-(3, 'Prasong', 'Ekaluck', '443323', '123456', 'จนท.', 2),
-(4, 'Traipoom', 'Chatwilai', '443324', '123456', 'พนง.', 0),
-(5, 'Traipoomppp', 'Chatwilaiiii', '443325', '123456', 'พนง.', 0);
+(2, 'admin', 'admin', '443322', '123456', 'จนท.', 1),
+(3, 'Prasong', 'Ekaluck', '443323', '123456', 'จนท.', 3),
+(4, 'Traipoom', 'Chatwilai', '443324', '123456', 'พนง.', 2),
+(5, 'Traipoomppp', 'Chatwilaiiii', '443325', '123456', 'พนง.', 0),
+(6, 'Traip', 'Chat', '443326', '123456', 'พนง.', 0);
 
 --
 -- Indexes for dumped tables
@@ -311,7 +350,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `f_action`
 --
 ALTER TABLE `f_action`
-MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+MODIFY `f_ac_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `f_h`
 --
@@ -326,7 +365,7 @@ MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
 -- AUTO_INCREMENT for table `f_save_score`
 --
 ALTER TABLE `f_save_score`
-MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `f_th`
 --
@@ -341,7 +380,7 @@ MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
