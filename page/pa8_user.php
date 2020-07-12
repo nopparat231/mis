@@ -242,6 +242,8 @@
  														<p>ผู้ดูแลระบบ</p>
  														<?php elseif ($rowhuser['user_status'] == 0): ?>
  															<p>เจ้าหน้าที่</p>
+ 															<?php elseif ($rowhuser['user_status'] == 3): ?>
+ 															<p>ยกเลิก</p>
  														<?php endif ?>
 
  													</td>

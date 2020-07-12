@@ -1,191 +1,183 @@
 
 
-<!-- Main content -->
-<div class="content">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12">
+<table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" width="0" style="border: none;">
+	<tbody><tr>
+		<td width="936" colspan="2" valign="top" style="width:701.7pt;border:none;
+		border-bottom:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+		padding:0cm 5.4pt 0cm 5.4pt">
+		<p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:.0001pt;
+		text-align:center;line-height:normal"><span lang="TH" style="font-size:20.0pt;
+		font-family:&quot;Tahoma&quot;,sans-serif">แบบประเมินผลการประฏิบัตราชการ</span><span style="font-size:20.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><o:p></o:p></span></p>
+		<p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:.0001pt;
+		text-align:center;line-height:normal"><span lang="TH" style="font-size:16.0pt;
+		font-family:&quot;Tahoma&quot;,sans-serif">มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</span><span style="font-size:16.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><o:p></o:p></span></p>
+		<p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:.0001pt;
+		text-align:center;line-height:normal"><span style="font-size:9.0pt;
+		font-family:&quot;Tahoma&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+		<p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:.0001pt;
+		text-align:center;line-height:normal"><span style="font-size:9.0pt;
+		font-family:&quot;Tahoma&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+		<p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:.0001pt;
+		text-align:center;line-height:normal"><o:p>&nbsp;</o:p></p>
+	</td>
+</tr>
+<tr>
+	<td width="85" valign="top" style="width:63.55pt;border:none;border-left:double windowtext 1.5pt;
+	mso-border-top-alt:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt">
+	<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+	normal"><b><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif"> <br> คำชี้แจง</span></b><b><span style="mso-bidi-font-size:11.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><o:p></o:p></span></b></p>
+</td>
+<td width="851" valign="top" style="width:638.15pt;border:none;border-right:double windowtext 1.5pt;
+mso-border-top-alt:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><o:p>&nbsp;</o:p></p>
+</td>
+</tr>
+<tr>
+	<td width="85" valign="top" style="width:63.55pt;border-top:none;border-left:
+	double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right:
+	none;padding:0cm 5.4pt 0cm 5.4pt">
+	<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+	normal"><o:p>&nbsp;</o:p></p>
+</td>
+<td width="851" valign="top" style="width:638.15pt;border-top:none;border-left:
+none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">แบบสรุปการประเมินผลการปฏิบัติราชการนี้มี
+</span></b><b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">3<span lang="TH"> หน้า ประกอบด้วย </span><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">ส่วนที่
+</span></b><b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">1
+</span></b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">: <span lang="TH">ข้อมูลของผู้รับการประเมิน เพื่อระบุรายละเอียดต่าง ๆ
+ที่เกี่ยวข้องกับตัวผู้รับการประเมิน</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">ส่วนที่
+</span></b><b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">2</span></b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif"> : <span lang="TH">สรุปผลการประเมิน
+ใช้เพื่อกรอกค่าคะแนนการประเมินในองค์ประกอบด้านผลสัมฤทธิ์ของงาน</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">องค์ประกอบด้านพฤติกรรมการปฏิบัติราชการ
+และน้ำหนักของทั้งสององค์ประกอบ ในแบบสรุปส่วนที่ </span><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">2<span lang="TH">
+นี้ยังใช้สำหรับการคำนวณคะแนนผลการปฏิบัติราชการรวมด้วย</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">&nbsp; - <span lang="TH">สำหรับคะแนนองค์ประกอบด้านผลสัมฤทธิ์ของงาน
+ให้นำมาจากแบบประเมินผลสัมฤทธิ์ของงานโดนให้แนบท้ายแบบสรุปฉบับนี้</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">&nbsp; - <span lang="TH">สำหรับคะแนนองค์ประกอบด้านพฤติกรรมการปฏิบัติราชการ
+ให้นำมาจากแบบประเมินสมรรคนะโดยให้แนบท้ายแบบสรุปฉบับนี้</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">ส่วนที่
+</span></b><b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">3</span></b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif"> : <span lang="TH">แผนพัฒนาการปฏิบัติราชการรายบุคคล
+ผู้ประเมินและผู้รับประเมินร่วมกันจัดทำแผนพัฒนาผลการปฏิบัติราชการ</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">ส่วนที่
+</span></b><b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">4</span></b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif"> : <span lang="TH">การรับทราบผลการประเมิน
+ผู้รับการประเมินลงนามรับทราบผลการปรเมิน</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">ส่วนที่
+</span></b><b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">5</span></b><span style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif"> : <span lang="TH">ความเห็นของผู้บังคับบัญชาเหนือขึ้นไป
+ผู้บังคับบัญชาเหนือขึ้นไปกลั่นกรองผลการประเมิน</span><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span lang="TH" style="font-size:12.0pt;font-family:&quot;Tahoma&quot;,sans-serif">แผนพัฒนาผลการปฏิบัติราชการ
+และให้ความเห็น</span><o:p></o:p></p>
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><o:p>&nbsp;</o:p></p>
+<br>
+</td>
+</tr>
+</tbody></table>
 
 
-				<div class="card card-primary card-outline ">
-					<div class="card-header noprint">
-						<h5 class="m-0">
+<?php 
+include './conn.php';
+$user_id = $_SESSION["USER_ID"];
 
-						tt
-
-						</h5>
-					</div>
-					<div class="card-body">
+$user_c_id = $_GET['user_c_id'];
+$type = $_GET['type'];
 
 
+$sqlth=" SELECT * FROM user WHERE user_id =".$user_id;
+$qryth = mysqli_query($conn,$sqlth);
+$rowth = mysqli_fetch_assoc($qryth);
+
+$sqluserc=" SELECT * FROM user WHERE user_id =".$user_c_id;
+$qryuserc = mysqli_query($conn,$sqluserc);
+$rowuserc = mysqli_fetch_assoc($qryuserc);
 
 
-						<html>
+$sqlr =" SELECT * FROM f_action WHERE f_ac_user_h_id = '$user_id' AND f_ac_user_c_id = '$user_c_id' ";
+$qryr = mysqli_query($conn,$sqlr);
+$rowr = mysqli_fetch_assoc($qryr);
 
-						<head>
-							<meta http-equiv=Content-Type content="text/html; charset=windows-874">
-							<meta name=Generator content="Microsoft Word 15 (filtered)">
-							<style>
-								<!--
-								/* Font Definitions */
-								@font-face
-								{font-family:Wingdings;
-									panose-1:5 0 0 0 0 0 0 0 0 0;}
-									@font-face
-									{font-family:"Cordia New";
-									panose-1:2 11 3 4 2 2 2 2 2 4;}
-									@font-face
-									{font-family:"Cambria Math";
-									panose-1:2 4 5 3 5 4 6 3 2 4;}
-									@font-face
-									{font-family:Calibri;
-										panose-1:2 15 5 2 2 2 4 3 2 4;}
-										@font-face
-										{font-family:"TH SarabunPSK";}
-										@font-face
-										{font-family:Tahoma;
-											panose-1:2 11 6 4 3 5 4 4 2 4;}
-											/* Style Definitions */
-											p.MsoNormal, li.MsoNormal, div.MsoNormal
-											{margin-top:0cm;
-												margin-right:0cm;
-												margin-bottom:8.0pt;
-												margin-left:0cm;
-												line-height:107%;
-												font-size:11.0pt;
-												font-family:"Calibri",sans-serif;}
-												p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-												{margin-top:0cm;
-													margin-right:0cm;
-													margin-bottom:8.0pt;
-													margin-left:36.0pt;
-													line-height:107%;
-													font-size:11.0pt;
-													font-family:"Calibri",sans-serif;}
-													p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-													{margin-top:0cm;
-														margin-right:0cm;
-														margin-bottom:0cm;
-														margin-left:36.0pt;
-														margin-bottom:.0001pt;
-														line-height:107%;
-														font-size:11.0pt;
-														font-family:"Calibri",sans-serif;}
-														p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-														{margin-top:0cm;
-															margin-right:0cm;
-															margin-bottom:0cm;
-															margin-left:36.0pt;
-															margin-bottom:.0001pt;
-															line-height:107%;
-															font-size:11.0pt;
-															font-family:"Calibri",sans-serif;}
-															p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-															{margin-top:0cm;
-																margin-right:0cm;
-																margin-bottom:8.0pt;
-																margin-left:36.0pt;
-																line-height:107%;
-																font-size:11.0pt;
-																font-family:"Calibri",sans-serif;}
-																.MsoChpDefault
-																{font-family:"Calibri",sans-serif;}
-																.MsoPapDefault
-																{margin-bottom:8.0pt;
-																	line-height:107%;}
-																	@page WordSection1
-																	{size:595.3pt 841.9pt;
-																		margin:72.0pt 72.0pt 72.0pt 72.0pt;}
-																		div.WordSection1
-																		{page:WordSection1;}
-																		/* List Definitions */
-																		ol
-																		{margin-bottom:0cm;}
-																		ul
-																		{margin-bottom:0cm;}
-																		-->
-																	</style>
+$rowcheckr = mysqli_num_rows($qryr); 
 
-																</head>
 
-																<body lang=EN-US>
 
-																	<div class=WordSection1>
 
-																		<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
-																		style='border-collapse:collapse;border:none'>
-																		<tr>
-																			<td width=211 colspan=2 valign=top style='width:450.8pt;border:none;
-																			border-bottom:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
-																			<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-																			text-align:center;line-height:normal'><span style='font-size:20.0pt;
-																			font-family:"Tahoma",sans-serif'>hhhhhhhhh</span></p>
-																			<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-																			text-align:center;line-height:normal'><span style='font-size:9.0pt;
-																			font-family:"Tahoma",sans-serif'>hhhhh</span></p>
-																			<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-																			text-align:center;line-height:normal'><span style='font-size:9.0pt;
-																			font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
-																			<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-																			text-align:center;line-height:normal'>&nbsp;</p>
-																		</td>
-																	</tr>
-																	<tr>
-																		<td width=50 valign=top style='width:63.55pt;border:none;border-left:double windowtext 1.5pt;
-																		padding:0cm 5.4pt 0cm 5.4pt'>
-																		<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-																		normal'><b><span style='font-size:12.0pt;font-family:"Tahoma",sans-serif'>ffffff</span></b></p>
-																	</td>
-																	<td width=206 valign=top style='width:387.25pt;border:none;border-right:
-																	double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-																	<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-																	normal'>&nbsp;</p>
-																</td>
-															</tr>
-															<tr>
-																<td width=50 valign=top style='width:63.55pt;border-top:none;border-left:
-																double windowtext 1.5pt;border-bottom:double windowtext 1.5pt;border-right:
-																none;padding:0cm 5.4pt 0cm 5.4pt'>
-																<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-																normal'>&nbsp;</p>
-															</td>
-															<td width=206 valign=top style='width:387.25pt;border-top:none;border-left:
-															none;border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
-															padding:0cm 5.4pt 0cm 5.4pt'>
-															<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-															normal'><b><span style='font-size:12.0pt;font-family:"Tahoma",sans-serif'>ddddd</span></b></p>
-															<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-															normal'><span style='font-size:12.0pt;font-family:"Tahoma",sans-serif'>&nbsp;</span></p>
-															<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-															normal'>jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-														</p>
-														<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-														normal'>&nbsp;</p>
-													</td>
-												</tr>
-											</table>
 
-											<p class=MsoNormal><span lang=TH style='line-height:107%;font-family:"Cordia New",sans-serif'>&nbsp;</span></p>
+?>
 
-										</div>
+<h5 >
 
-									</body>
+	<br>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="margin-left: -0.25pt; border: none;">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes;
+  height:23.65pt">
+  <td width="294" valign="top" style="width:220.5pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:23.65pt">
+  <p class="MsoNormal" style="margin-top:12.0pt;tab-stops:82.5pt"><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;
+  font-family:&quot;TH SarabunPSK&quot;,sans-serif">ส่วนที่ 1 </span><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif">:</span><span lang="TH" style="font-size:14.0pt;mso-ansi-font-size:11.0pt;line-height:107%;
+  font-family:&quot;TH SarabunPSK&quot;,sans-serif"> ข้อมูลของผู้รับการประเมิน</span><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
 
-									</html>
+<br>
 
-								</div>
 
-								<div class="card-footer">
-									<!-- <a href="#" class="btn btn-primary noprint" onclick="window.print()">พิมพ์</a> -->
+<p>รอบการประเมิน</p>
 
-								</div>
 
-							</div>
+<?php if ($rowcheckr > 0) {
 
-						</div>
-						<!-- /.col-md-6 -->
-					</div>
-					<!-- /.row -->
-				</div><!-- /.container-fluid -->
-			</div>
- <!-- /.content -->
+	if ($rowr['f_ac_rob'] == 1){ ?>
+
+		<input type="checkbox" name="rob" value="1" checked="checked" required >
+		รอบที่ 1	&nbsp;&nbsp;&nbsp;&nbsp;1  ตุลาคม &nbsp;&nbsp;
+		<input type="number" name="y1" style="width: 150px;border: none;" value="<?php echo($rowr['f_ac_kid_from']) ?>"> &nbsp;&nbsp;ถึง&nbsp;&nbsp;  31  มีนาคม&nbsp;&nbsp;
+		<input type="number" name="yy1" style="width: 150px;border: none;" value="<?php echo($rowr['f_ac_kid_end']) ?>">
+
+	<?php }else{ ?>
+			<!-- เดี๋ยวหลับมาทำ JS คลิ๊กเลือก -->
+
+			<input type="checkbox" name="rob" value="2">	
+			รอบที่ 2  &nbsp;&nbsp;&nbsp;&nbsp;1  เมษายน &nbsp;&nbsp;
+			<input type="number" name="y2" style="width: 150px;border: none;" value="<?php echo($rowr['f_ac_kid_from']) ?>">&nbsp;&nbsp;ถึง&nbsp;&nbsp;  31  มีนาคม&nbsp;&nbsp;
+			<input type="number" name="yy2" style="width: 150px;border: none;" value="<?php echo($rowr['f_ac_kid_end']) ?>">
+
+		<?php }
+
+
+	} 
+
+
+	  ?>
+
+<br><br>
+
+ชื่อผู้รับการประเมิน 	
+<input type="hidden" name="user_c_id" value="<?php echo($user_c_id) ?>">
+
+<input type="hidden" name="type" value="<?php echo($type) ?>">
+
+
+<input type="text" name="nameh" disabled style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowuserc['first_name'].' '.$rowuserc['last_name']) ?>">ตำแหน่ง/ระดับ...
+<input type="text" name="tumh" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowuserc['user_tumn']) ?>"><br><br>
+ชื่อผู้บังคับบัญชา  		
+<input type="text" name="namec" disabled  style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowth['first_name'].' '.$rowth['last_name']) ?>">ตำแหน่ง/ระดับ
+<input type="text" name="tumc" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowth['user_tumn']) ?>"><br></h5>
+
+
+<br>

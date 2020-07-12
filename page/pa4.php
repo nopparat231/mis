@@ -62,62 +62,76 @@
 
  							<h5 >
 
- 								<p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
- 								ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
- 								<p>รอบการประเมิน</p>
+ 								<?php if ($_GET['type'] == 2): ?>
+
+ 									<p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
+ 									ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
+
+ 									<?php elseif ($_GET['type'] == 3): ?>
+
+ 										<p style="text-align: center;">แบบประเมินพฤติกรรมในการปฏิบัติราชการของข้าราชการตามสมรรถนะฯ ของข้าราชการพลเรือนในสถาบันอุดมศึกษา (องค์ประกอบที่ ๒) <br>
+ 										ตำแหน่งวิชาการ มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
+ 										
+ 									<?php endif ?>
+
+ 									
 
 
- 								<input type="radio" name="rob" value="1" checked="checked" required >
- 								รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม &nbsp;&nbsp;
- 								<input type="number" name="y1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>"> &nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
- 								<input type="number" name="yy1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
- 								<br><br>
 
- 								<!-- เดี๋ยวหลับมาทำ JS คลิ๊กเลือก -->
-
- 								<input type="radio" name="rob" value="2">	
- 								รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน &nbsp;&nbsp;
- 								<input type="number" name="y2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">&nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
- 								<input type="number" name="yy2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
+ 									<p>รอบการประเมิน</p>
 
 
- 								<br><br>
+ 									<input type="radio" name="rob" value="1" checked="checked" required >
+ 									รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม &nbsp;&nbsp;
+ 									<input type="number" name="y1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>"> &nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
+ 									<input type="number" name="yy1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
+ 									<br><br>
 
- 								<br>
- 								<br>
+ 									<!-- เดี๋ยวหลับมาทำ JS คลิ๊กเลือก -->
 
-
- 								ชื่อผู้รับการประเมิน 	
- 								<input type="hidden" name="user_c_id" value="<?php echo($user_c_id) ?>">
- 								
- 								<input type="hidden" name="type" value="<?php echo($type) ?>">
-
-
- 								<input type="text" name="nameh" disabled style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowuserc['first_name'].' '.$rowuserc['last_name']) ?>">ตำแหน่ง/ระดับ...
- 								<input type="text" name="tumh" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowuserc['user_tumn']) ?>"><br><br>
- 								ชื่อผู้บังคับบัญชา  		
- 								<input type="text" name="namec" disabled  style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowth['first_name'].' '.$rowth['last_name']) ?>">ตำแหน่ง/ระดับ
- 								<input type="text" name="tumc" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowth['user_tumn']) ?>"><br></h5>
+ 									<input type="radio" name="rob" value="2">	
+ 									รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน &nbsp;&nbsp;
+ 									<input type="number" name="y2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">&nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
+ 									<input type="number" name="yy2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
 
 
- 								<br>
+ 									<br><br>
 
- 								<?php //include 'pa2table.php'; ?>
+ 									<br>
+ 									<br>
+
+
+ 									ชื่อผู้รับการประเมิน 	
+ 									<input type="hidden" name="user_c_id" value="<?php echo($user_c_id) ?>">
+ 									
+ 									<input type="hidden" name="type" value="<?php echo($type) ?>">
+
+
+ 									<input type="text" name="nameh" disabled style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowuserc['first_name'].' '.$rowuserc['last_name']) ?>">ตำแหน่ง/ระดับ...
+ 									<input type="text" name="tumh" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowuserc['user_tumn']) ?>"><br><br>
+ 									ชื่อผู้บังคับบัญชา  		
+ 									<input type="text" name="namec" disabled  style="width: 300px;border: none;text-align: center;" required value="<?php echo($rowth['first_name'].' '.$rowth['last_name']) ?>">ตำแหน่ง/ระดับ
+ 									<input type="text" name="tumc" disabled style="width: 300px;border: none;text-align: center;" value="<?php echo($rowth['user_tumn']) ?>"><br></h5>
+
+
+ 									<br>
+
+ 									<?php //include 'pa2table.php'; ?>
+
+ 								</div>
+
+ 								<div class="card-footer">
+ 									<button class="btn btn-primary">ต่อไป</button>
+ 								</div>
 
  							</div>
 
- 							<div class="card-footer">
- 								<button class="btn btn-primary">ต่อไป</button>
- 							</div>
+ 						</form>
 
- 						</div>
-
- 					</form>
-
+ 					</div>
+ 					<!-- /.col-md-6 -->
  				</div>
- 				<!-- /.col-md-6 -->
- 			</div>
- 			<!-- /.row -->
- 		</div><!-- /.container-fluid -->
- 	</div>
- 	<!-- /.content -->
+ 				<!-- /.row -->
+ 			</div><!-- /.container-fluid -->
+ 		</div>
+ 		<!-- /.content -->

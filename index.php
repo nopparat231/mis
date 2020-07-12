@@ -71,6 +71,8 @@ session_start();
         include 'page/pa7_news.php';
       }elseif (isset($_GET['pa8'])) {
         include 'page/pa8_user.php';
+      }elseif (isset($_GET['ph'])) {
+        include 'page/ph.php';
       }elseif (isset($_GET['addtext'])) {
         include 'page/addtext.php';
       }elseif (isset($_GET['ph1'])) {
