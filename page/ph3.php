@@ -173,12 +173,12 @@ normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input ty
 </tbody>
 </table>
 
-<?php if (isset($_GET['show'])) { ?>
-  
-<?php }else{ ?>
-
-<div class="card-footer">
+<?php if (isset($_GET['add'])) { ?>
+  <div class="card-footer">
   <button type="submit" class="btn btn-primary">บันทึก</button>
 </div>
+<?php }else{ ?>
+
+
 <?php } ?>
 </form>
