@@ -32,7 +32,7 @@ function showhh($user_c_id,$f_id){
 function alert($msg) {
 	echo "<script type='text/javascript'>alert('$msg');</script>";
 }
- 
+
 function gotopage($page){
 	echo "<script type='text/javascript'>window.location.href = '$page';</script>";
 }
@@ -61,17 +61,84 @@ function showscore($user_c,$type){
 
 	include './conn.php';
 
-	$sqlscore=" SELECT SUM(s_f_score) as score , s_u_c , s_f_h FROM f_save_score WHERE s_u_c = '$user_c' AND s_f_h =".$type;
+	$sqlscore=" SELECT * FROM f_save_score WHERE s_u_c = '$user_c' AND s_f_h =".$type;
 	$qryscore = mysqli_query($conn,$sqlscore);
-	$rowscore = mysqli_fetch_assoc($qryscore);
+	//$rowscore = mysqli_fetch_assoc($qryscore);
+
+	$rowcheckac = mysqli_num_rows($qryscore);
 
 
-	echo number_format($rowscore['score'],2);
+	
 
-	$conn->close();
+	if ($type == 2) {
 
-}
+		if ($rowcheckac > 0) {
+			while ($rownew = $qryscore->fetch_array()) {
+				$su += $rownew['s_f_score'];
+
+				return number_format($su/5,2);
+			}
+		}else{
+			return 0;
+		}
+
+
+		//echo number_format($score = $rowscore['score']/5);
+	}
+
+	if ($type == 3) {
+
+		if ($rowcheckac > 0) {
+			$t = 0;
+			$w = 0;
+			$n = 0;
+			$o = 0;
+
+			while ($rownew = $qryscore->fetch_array()) {
+
+				if ($rownew['s_f_score'] >= 3) {
+					$t+=1;
+				//echo $rownew['s_f_score'];
+				}elseif ($rownew['s_f_score'] <= 2) {
+					$w+=1;
+				}elseif ($rownew['s_f_score'] <= 1) {
+					$n+=1;
+				}elseif ($rownew['s_f_score'] <= 0) {
+					$o+=1;
+				}
+			}
+
+			if ($t <> 0) {
+				$t = $t*3;
+			}
+			if ($w <> 0) {
+				$w = $w*2;
+			}
+			if ($n <> 0) {
+				$n = $n*1;
+			}
+			if ($o <> 0) {
+				$o = $o*0;
+			}
+
+			$sumall = $t+$w+$n+$o;
+
+			return number_format($sumall/39,2);
+
+			}else{
+				return 0;
+			}
 
 
 
-?>
+		//echo number_format($score = $rowscore['score']/5);
+		}
+
+
+		$conn->close();
+
+	}
+
+
+
+	?>

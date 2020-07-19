@@ -100,7 +100,7 @@
 											<?php }elseif ($rowcheckac1 > 0) { ?>
 
 											<?php }else{ ?>
-												ส่วนที่ 1 <a href="#" style="color: red;">ยังไม่ประเมิน</a> ,
+												ส่วนที่ 1 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=2" style="color: red;">ยังไม่ประเมิน</a> ,
 												ส่วนที่ 2 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=2" style="color: red;" >องค์ประกอบที่ 1 (ยังไม่ประเมิน)</a> ,
 
 											<?php } ?>
@@ -110,16 +110,17 @@
 
 
 											<?php }else{ ?>
+												ส่วนที่ 1 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=3" style="color: red;">ยังไม่ประเมิน</a> ,
 												ส่วนที่ 2 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=3" style="color: red;" >องค์ประกอบที่ 2 (ยังไม่ประเมิน)</a> ,
 
 											<?php } ?>
 
 											<?php if ($rowcheckac1 > 0) { ?>
-												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> , 
+												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=2&show">ตรวจสอบ</a> , 
 												ส่วนที่ 4 <a href="index.php?ph&ph4&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> , 
 												ส่วนที่ 5 <a href="index.php?ph&ph5&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a>
 											<?php }elseif ($rowcheckac2 > 0) { ?>	
-												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=3">ตรวจสอบ</a> , 
+												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=3&show">ตรวจสอบ</a> , 
 												ส่วนที่ 4 <a href="index.php?ph&ph4&user_c_id=<?php echo($uid) ?>&type=3">ตรวจสอบ</a> , 
 												ส่วนที่ 5 <a href="index.php?ph&ph5&user_c_id=<?php echo($uid) ?>&type=3">ตรวจสอบ</a>
 											<?php }else{ ?>	
@@ -132,12 +133,12 @@
 
 
 
-											<td width="5px" style="text-align: center;" ><a href="index.php?ph&print&user_c_id=<?php echo($uid) ?>&type=2"><i class="fas fa-print"></i></a></td>
+											<td width="5px" style="text-align: center;" ><a href="index.php?ph&print&user_c_id=<?php echo($uid) ?>&type=2" target="_blank"><i class="fas fa-print"></i></a></td>
 
 										<?php }elseif ($rowcheckac2 > 0) { ?>	
 
 
-											<td width="5px" style="text-align: center;" ><a href="index.php?ph&print&user_c_id=<?php echo($uid) ?>&type=3"><i class="fas fa-print"></i></a></td>
+											<td width="5px" style="text-align: center;" ><a href="index.php?ph&print&user_c_id=<?php echo($uid) ?>&type=3" target="_blank" ><i class="fas fa-print"></i></a></td>
 										<?php }else{ ?>	
 
 
