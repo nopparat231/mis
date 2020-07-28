@@ -95,7 +95,7 @@ include './conn.php';
 $user_id = $_SESSION["USER_ID"];
 
 $user_c_id = $_GET['user_c_id'];
-$type = $_GET['type'];
+//$type = $_GET['type'];
 
 
 $sqlth=" SELECT * FROM user WHERE user_id =".$user_id;

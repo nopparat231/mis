@@ -121,7 +121,7 @@
  								</div>
 
  								<div class="card-footer">
- 									<button class="btn btn-primary">ต่อไป</button>
+ 									<button class="btn btn-primary">องค์ประกอบที่ 2 : พฤติกรรมการปฏิบัติราชการ >></button>
  								</div>
 
  							</div>

@@ -66,7 +66,7 @@ mso-ansi-font-size:11.0pt;font-family:&quot;TH SarabunPSK&quot;,sans-serif">ก�
 
 
 //echo($f_phhh_detail3);
-    $sql = "INSERT INTO f_phhh (f_phhh_user_c_id , f_phhh_type_id ,f_phhh_detail1 ,f_phhh_detail2,f_phhh_detail3, f_phhh_status) VALUES ( '$user_c_id' , '$type' , '$f_phhh_detail1','$f_phhh_detail2','$f_phhh_detail3', 0)";
+    $sql = "INSERT INTO f_phhh (f_phhh_user_c_id , f_phhh_detail1 ,f_phhh_detail2,f_phhh_detail3, f_phhh_status) VALUES ( '$user_c_id' ,  '$f_phhh_detail1','$f_phhh_detail2','$f_phhh_detail3', 0)";
 
     if ($conn->query($sql) === TRUE) {
 
@@ -78,7 +78,7 @@ mso-ansi-font-size:11.0pt;font-family:&quot;TH SarabunPSK&quot;,sans-serif">ก�
   }
   $conn->close();
 
-  $page = "index.php?ph&ph3&user_c_id=$user_c_id&type=$type&show";
+  $page = "index.php?ph&ph3&user_c_id=$user_c_id&type=$type&showph";
 
   //gotopage($page);
 
@@ -87,98 +87,99 @@ mso-ansi-font-size:11.0pt;font-family:&quot;TH SarabunPSK&quot;,sans-serif">ก�
 
 <?php } 
 
- 
 
-if (isset($_GET['user_c_id'])) {
-  
+
+if (isset($_GET['showphhh'])) {
+
  $user_c_id = $_GET['user_c_id'];
-  $type = $_GET['type'];
+  //$type = $_GET['type'];
 
-  $sqlscore = " SELECT * FROM f_phhh WHERE f_phhh_user_c_id = '$user_c_id' AND f_phhh_type_id =".$type;
-  $qryscore = mysqli_query($conn,$sqlscore);
+ $sqlscore = " SELECT * FROM f_phhh WHERE f_phhh_user_c_id = '$user_c_id'";
+ $qryscore = mysqli_query($conn,$sqlscore);
   //$rowscore = mysqli_fetch_assoc($qryscore);
 
-  $rowcheckac = mysqli_num_rows($qryscore);
+ $rowcheckac = mysqli_num_rows($qryscore);
 
-if ($rowcheckac > 0) {
+ if ($rowcheckac > 0) {
 
- 
 
-while ($rownew = $qryscore->fetch_array()) {
- $detail1 = $rownew['f_phhh_detail1'];
- $detail2 = $rownew['f_phhh_detail2'];
- $detail3 = $rownew['f_phhh_detail3'];
-  ?>
 
-  <tr>
+  while ($rownew = $qryscore->fetch_array()) {
+   $detail1 = $rownew['f_phhh_detail1'];
+   $detail2 = $rownew['f_phhh_detail2'];
+   $detail3 = $rownew['f_phhh_detail3'];
+   ?>
+
+   <tr>
     <td width="200" valign="top" style="width:150.25pt;border:solid windowtext 1.0pt;
     border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
     padding:0cm 5.4pt 0cm 5.4pt">
     <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-    normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h31[]" readonly value="<?php echo($detail1) ?>" style="border: none;"></span></p>
+    normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><?php echo($detail1) ?></span></p>
   </td>
   <td width="200" valign="top" style="width:150.25pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h32[]" readonly value="<?php echo($detail2) ?>" style="border: none;"></span></p>
+  normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><?php echo($detail2) ?></span></p>
 </td>
 <td width="200" valign="top" style="width:150.3pt;border-top:none;border-left:
 none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
 mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
 <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h33[]" readonly value="<?php echo($detail3) ?>" style="border: none;"></span></p>
+normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><?php echo($detail3) ?></span></p>
 </td>
 </tr>
 
 <?php } ?>
 
 
-<?php  }else{?>
+<?php  } }else{?>
 
-  <?php for ($i=0; $i < 6; $i++) { ?>
+ <?php for ($i=0; $i < 6; $i++) { ?>
 
-    <input type="hidden" name="user_c_id" value="<?php echo($_GET['user_c_id']) ?>">
-    <input type="hidden" name="type" value="<?php echo($_GET['type']) ?>">
-    <input type="hidden" name="saveh3" value="saveh3">
+  <input type="hidden" name="user_c_id" value="<?php echo($_GET['user_c_id']) ?>">
+  <input type="hidden" name="type" value="<?php echo($_GET['type']) ?>">
+  <input type="hidden" name="saveh3" value="saveh3">
 
-    <tr>
-      <td width="200" valign="top" style="width:150.25pt;border:solid windowtext 1.0pt;
-      border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-      padding:0cm 5.4pt 0cm 5.4pt">
-      <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-      normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h31[]" value="&nbsp;" style="border: none;"></span></p>
-    </td>
-    <td width="200" valign="top" style="width:150.25pt;border-top:none;border-left:
-    none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-    mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-    mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="200" valign="top" style="width:150.25pt;border:solid windowtext 1.0pt;
+    border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+    padding:0cm 5.4pt 0cm 5.4pt">
     <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-    normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h32[]" value="&nbsp;" style="border: none;"></span></p>
+    normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h31[]" value="&nbsp;" style="border: none;"></span></p>
   </td>
-  <td width="200" valign="top" style="width:150.3pt;border-top:none;border-left:
+  <td width="200" valign="top" style="width:150.25pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h33[]" value="&nbsp;" style="border: none;"></span></p>
+  normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h32[]" value="&nbsp;" style="border: none;"></span></p>
+</td>
+<td width="200" valign="top" style="width:150.3pt;border-top:none;border-left:
+none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h33[]" value="&nbsp;" style="border: none;"></span></p>
 </td>
 </tr>
 
-<?php } } ?>
-
-<?php } ?>
+<?php } }?>
 </tbody>
 </table>
 
 <?php if (isset($_GET['add'])) { ?>
   <div class="card-footer">
-  <button type="submit" class="btn btn-primary">บันทึก</button>
-</div>
-<?php }else{ ?>
+    <button type="submit" class="btn btn-primary">บันทึก</button>
+  </div>
+<?php }elseif (isset($_GET['showphhh'])&&isset($_GET['print']) == ''){ ?>
+ <div class="card-footer">
 
+  <a href="index.php?ph&print&user_c_id=<?php echo($user_c_id) ?>&showphhh" class="btn btn-primary noprint">ตวจสอบทั้งหมด</a>
+</div>
 
 <?php } ?>
 </form>

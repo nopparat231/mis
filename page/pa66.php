@@ -93,14 +93,15 @@
 
 
 										<td>
+											ส่วนที่ 1 <a href="index.php?ph&ph1&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> ,
 											<?php if ($rowcheckac1 > 0 && $rowcheckac2 > 0) { ?>
-												ส่วนที่ 1 <a href="index.php?ph&ph1&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> ,
+												
 												ส่วนที่ 2 <a href="index.php?ph&ph2&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> ,
 
 											<?php }elseif ($rowcheckac1 > 0) { ?>
 
 											<?php }else{ ?>
-												ส่วนที่ 1 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=2" style="color: red;">ยังไม่ประเมิน</a> ,
+												
 												ส่วนที่ 2 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=2" style="color: red;" >องค์ประกอบที่ 1 (ยังไม่ประเมิน)</a> ,
 
 											<?php } ?>
@@ -110,7 +111,7 @@
 
 
 											<?php }else{ ?>
-												ส่วนที่ 1 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=3" style="color: red;">ยังไม่ประเมิน</a> ,
+											
 												ส่วนที่ 2 <a href="index.php?pa4&user_c_id=<?php echo($uid) ?>&type=3" style="color: red;" >องค์ประกอบที่ 2 (ยังไม่ประเมิน)</a> ,
 
 											<?php } ?>

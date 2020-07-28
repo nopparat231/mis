@@ -73,6 +73,7 @@ function showscore($user_c,$type){
 	if ($type == 2) {
 
 		if ($rowcheckac > 0) {
+			$su = 0;
 			while ($rownew = $qryscore->fetch_array()) {
 				$su += $rownew['s_f_score'];
 

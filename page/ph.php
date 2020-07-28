@@ -44,6 +44,8 @@
 
 							include 'ph4.php';
 							include 'ph5.php';
+							echo "<br>";
+							echo "<a href='#' class='btn btn-primary noprint' onclick='window.print()'>พิมพ์</a>";
 
 						}else{
 
