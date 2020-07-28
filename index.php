@@ -67,6 +67,8 @@ session_start();
         include 'page/pa6.php';
       }elseif (isset($_GET['pa66'])) {
         include 'page/pa66.php';
+      }elseif (isset($_GET['pa666'])) {
+        include 'page/pa666.php';
       }elseif (isset($_GET['pa7'])) {
         include 'page/pa7_news.php';
       }elseif (isset($_GET['pa8'])) {

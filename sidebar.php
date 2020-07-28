@@ -57,7 +57,7 @@
 
 
                 <li class="nav-item">
-                  <a href="index.php?pa5" class="nav-link">
+                  <a href="index.php?pa666" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>เลือกหัวข้อหัวข้อการประเมิน</p>
                   </a>

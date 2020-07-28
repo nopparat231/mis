@@ -93,7 +93,9 @@ padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
 
-  <input type="text" name="sump2" id="sump2" value="0" readonly style="width: 50px;text-align: center;border: none;">
+<b>
+<?php echo showscore_num($user_c_id,$type,3); ?>
+</b>
 
 </span></p>
 </td>
@@ -109,7 +111,7 @@ padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
 
-  <input type="text" name="sump3" id="sump3" value="3" readonly style="width: 50px;text-align: center;border: none;">
+ <?php echo showscore_num($user_c_id,$type,31); ?>
 
 </span></p>
 </td>
@@ -124,19 +126,29 @@ normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
 border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+ <?php echo showscore_num($user_c_id,$type,2); ?>
+
+</span></p>
 </td>
 <td width=32 valign=top style='width:49.5pt;border-top:none;border-left:none;
 border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x</span></p>
 </td>
 <td width=71 valign=top style='width:53.75pt;border-top:none;border-left:
 none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+
+ <?php echo showscore_num($user_c_id,$type,21); ?>
+
+
+</span></p>
 </td>
 </tr>
 <tr>
@@ -149,19 +161,29 @@ normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
 border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+
+ <?php echo showscore_num($user_c_id,$type,1); ?>
+
+
+</span></p>
 </td>
 <td width=32 valign=top style='width:49.5pt;border-top:none;border-left:none;
 border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x</span></p>
 </td>
 <td width=71 valign=top style='width:53.75pt;border-top:none;border-left:
 none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+ <?php echo showscore_num($user_c_id,$type,11); ?>
+
+</span></p>
 </td>
 </tr>
 <tr>
@@ -174,19 +196,28 @@ normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
 border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+
+ <?php echo showscore_num($user_c_id,$type,0); ?>
+
+</span></p>
 </td>
 <td width=32 valign=top style='width:49.5pt;border-top:none;border-left:none;
 border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x</span></p>
 </td>
 <td width=71 valign=top style='width:53.75pt;border-top:none;border-left:
 none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
+normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+
+ <?php echo showscore_num($user_c_id,$type,10); ?>
+
+</span></p>
 </td>
 </tr>
 <tr>
@@ -213,7 +244,7 @@ padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
 
-<input type="text" name="sump4" id="sump4" value="0" readonly style="width: 50px;text-align: center;border: none;">
+  <?php echo showscore_num($user_c_id,$type,44); ?>
 
 </span></p>
 </td>
@@ -228,9 +259,9 @@ normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
   style='font-family:"TH SarabunPSK",sans-serif'>
   <U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    <label id="sump5"></label>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U>  <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <label id="sump6"></label>x<label id="sump7">3</label>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U>  <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <label id="sump6"></label>x<label id="sump7">3</label>
 </span></p>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'>
@@ -264,7 +295,7 @@ none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  
+
   <label id="sump8" style="text-align: center;"></label>
 
 </span></p>

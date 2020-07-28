@@ -142,7 +142,7 @@
 
 						</div>
 						<div class="card-footer">
-							<?php if ($type=3): ?>
+							<?php if ($type==3): ?>
 								<a href="index.php?ph&user_c_id=<?php echo($user_c_id) ?>&ph3&add" class="btn btn-primary noprint">ส่วนที่ 3 : แผนพัฒนาการปฏิบัติราชการรายบุคคล >> </a>
 								<?php else: ?>
 

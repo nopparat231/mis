@@ -120,9 +120,15 @@
 
  								</div>
 
+ 								<?php if ($_GET['type'] == 2): ?>
+ 									<div class="card-footer">
+ 										<button class="btn btn-primary">องค์ประกอบที่ 1 : พฤติกรรมการปฏิบัติราชการ >></button>
+ 									</div>
+ 								<?php else: ?>
  								<div class="card-footer">
  									<button class="btn btn-primary">องค์ประกอบที่ 2 : พฤติกรรมการปฏิบัติราชการ >></button>
  								</div>
+ 								<?php endif ?>
 
  							</div>
 

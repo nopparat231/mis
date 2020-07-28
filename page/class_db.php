@@ -77,8 +77,9 @@ function showscore($user_c,$type){
 			while ($rownew = $qryscore->fetch_array()) {
 				$su += $rownew['s_f_score'];
 
-				return number_format($su/5,2);
+				
 			}
+			return number_format($su/5,2);
 		}else{
 			return 0;
 		}
@@ -126,20 +127,129 @@ function showscore($user_c,$type){
 
 			return number_format($sumall/39,2);
 
-			}else{
-				return 0;
-			}
+		}else{
+			return 0;
+		}
 
 
 
 		//echo number_format($score = $rowscore['score']/5);
-		}
-
-
-		$conn->close();
-
 	}
 
 
+	$conn->close();
 
-	?>
+}
+
+
+
+function showscore_num($user_c,$type,$num){
+
+	include './conn.php';
+
+	$sqlscore=" SELECT * FROM f_save_score WHERE s_u_c = '$user_c' AND s_f_h =".$type;
+	$qryscore = mysqli_query($conn,$sqlscore);
+	//$rowscore = mysqli_fetch_assoc($qryscore);
+
+	$rowcheckac = mysqli_num_rows($qryscore);
+
+
+	
+
+	if ($type == 2) {
+
+		if ($rowcheckac > 0) {
+			$su = 0;
+			while ($rownew = $qryscore->fetch_array()) {
+				$su += $rownew['s_f_score'];
+
+				
+			}
+			return number_format($su/5,2);
+		}else{
+			return 0;
+		}
+
+
+		//echo number_format($score = $rowscore['score']/5);
+	}
+
+	if ($type == 3) {
+
+		if ($rowcheckac > 0) {
+			$t = 0;
+			$w = 0;
+			$n = 0;
+			$o = 0;
+
+			while ($rownew = $qryscore->fetch_array()) {
+
+				if ($rownew['s_f_score'] >= 3) {
+					$t+=1;
+				//echo $rownew['s_f_score'];
+				}elseif ($rownew['s_f_score'] <= 2) {
+					$w+=1;
+				}elseif ($rownew['s_f_score'] <= 1) {
+					$n+=1;
+				}elseif ($rownew['s_f_score'] <= 0) {
+					$o+=1;
+				}
+			}
+
+
+			if ($num == 3) {
+				return $t;
+			}elseif ($num == 2) {
+				return $w;
+			}elseif ($num == 1) {
+				return $n;
+			}elseif ($num == 0) {
+				return $o;
+			}
+
+			if ($t <> 0) {
+				$t = $t*3;
+			}
+			if ($w <> 0) {
+				$w = $w*2;
+			}
+			if ($n <> 0) {
+				$n = $n*1;
+			}
+			if ($o <> 0) {
+				$o = $o*0;
+			}
+
+			$sumall = $t+$w+$n+$o;
+
+			if ($num == 31) {
+				return $t;
+			}elseif ($num == 21) {
+				return $w;
+			}elseif ($num == 11) {
+				return $n;
+			}elseif ($num == 10) {
+				return $o;
+			}elseif ($num == 44) {
+				return $sumall;
+			}
+
+			//return number_format($sumall/39,2);
+
+		}else{
+			return 0;
+		}
+
+
+
+		//echo number_format($score = $rowscore['score']/5);
+	}
+
+
+	$conn->close();
+
+}
+
+
+
+?>

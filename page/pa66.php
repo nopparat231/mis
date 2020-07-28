@@ -93,7 +93,7 @@
 
 
 										<td>
-											ส่วนที่ 1 <a href="index.php?ph&ph1&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> ,
+											ส่วนที่ 1 <a href="index.php?ph&ph1&user_c_id=<?php echo($uid) ?>">ตรวจสอบ</a> ,
 											<?php if ($rowcheckac1 > 0 && $rowcheckac2 > 0) { ?>
 												
 												ส่วนที่ 2 <a href="index.php?ph&ph2&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> ,
@@ -117,15 +117,15 @@
 											<?php } ?>
 
 											<?php if ($rowcheckac1 > 0) { ?>
-												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=2&show">ตรวจสอบ</a> , 
+												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=2&showphhh">ตรวจสอบ</a> , 
 												ส่วนที่ 4 <a href="index.php?ph&ph4&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a> , 
 												ส่วนที่ 5 <a href="index.php?ph&ph5&user_c_id=<?php echo($uid) ?>&type=2">ตรวจสอบ</a>
 											<?php }elseif ($rowcheckac2 > 0) { ?>	
-												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=3&show">ตรวจสอบ</a> , 
+												ส่วนที่ 3 <a href="index.php?ph&ph3&user_c_id=<?php echo($uid) ?>&type=3&showphhh">ตรวจสอบ</a> , 
 												ส่วนที่ 4 <a href="index.php?ph&ph4&user_c_id=<?php echo($uid) ?>&type=3">ตรวจสอบ</a> , 
 												ส่วนที่ 5 <a href="index.php?ph&ph5&user_c_id=<?php echo($uid) ?>&type=3">ตรวจสอบ</a>
 											<?php }else{ ?>	
-												ส่วนที่ 3 <a href="#" style="color: red;">ยังไม่ประเมิน</a> , 
+												ส่วนที่ 3 <a href="index.php?ph&user_c_id=<?php echo($uid) ?>&ph3&add" style="color: red;">ยังไม่ประเมิน</a> , 
 												ส่วนที่ 4 <a href="#" style="color: red;">ยังไม่ประเมิน</a> , 
 												ส่วนที่ 5 <a href="#" style="color: red;">ยังไม่ประเมิน</a>
 											<?php } ?>	

@@ -14,7 +14,7 @@
 
 <br>
 
-<form action="#" method="post" >
+<form action="page/ph3_db.php" method="post" >
 
 
   <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border: none;">
@@ -46,46 +46,7 @@ text-align:center;line-height:normal"><span lang="TH" style="font-size:14.0pt;
 mso-ansi-font-size:11.0pt;font-family:&quot;TH SarabunPSK&quot;,sans-serif">การพัฒนา</span><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><o:p></o:p></span></p>
 </td>
 </tr>
-
-<?php if (isset($_POST['saveh3'])){
-
-
-  $h31 = $_POST['h31'];
-  $h32 = $_POST['h32'];
-  $h33 = $_POST['h33'];
-
-  $user_c_id = $_POST['user_c_id'];
-  $type = $_POST['type'];
-  //print_r($h31);
-
-  for ($i=0; $i < COUNT($h31); $i++){ 
-
-    $f_phhh_detail1 = $h31[$i];
-    $f_phhh_detail2 = $h32[$i];
-    $f_phhh_detail3 = $h33[$i];
-
-
-//echo($f_phhh_detail3);
-    $sql = "INSERT INTO f_phhh (f_phhh_user_c_id , f_phhh_detail1 ,f_phhh_detail2,f_phhh_detail3, f_phhh_status) VALUES ( '$user_c_id' ,  '$f_phhh_detail1','$f_phhh_detail2','$f_phhh_detail3', 0)";
-
-    if ($conn->query($sql) === TRUE) {
-
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-
-  }
-  $conn->close();
-
-  $page = "index.php?ph&ph3&user_c_id=$user_c_id&type=$type&showph";
-
-  //gotopage($page);
-
-  
-  ?>
-
-<?php } 
+<?php
 
 
 
