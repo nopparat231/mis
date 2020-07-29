@@ -119,6 +119,7 @@
  							$user_statusck1 = '';
  							$user_statusck2 = '';
  							$user_statusck3 = '';
+ 							$user_statusck4 = '';
 
  							if ($user_status == 1) {
  								$user_statusck1 = 'selected';
@@ -126,6 +127,8 @@
  								$user_statusck2 = 'selected';
  							}elseif ($user_status == 0) {
  								$user_statusck3 = 'selected';
+ 							}elseif ($user_status == 3) {
+ 								$user_statusck4 = 'selected';
  							}
 
  							?>
@@ -179,6 +182,7 @@
  												<option <?php echo $user_statusck1; ?> value="1">ผู้ดูแลระบบ</option>
  												<option <?php echo $user_statusck2; ?> value="2">ผู้ประเมิน</option>
  												<option <?php echo $user_statusck3; ?> value="0">ผู้ถูกประเมิน</option>
+ 												<option <?php echo $user_statusck4; ?> value="3">ยกเลิก</option>
  											</select>
 
  										</div>
@@ -241,16 +245,19 @@
  													<?php if ($rowhuser['user_status'] == 1): ?>
  														<p>ผู้ดูแลระบบ</p>
  														<?php elseif ($rowhuser['user_status'] == 0): ?>
- 															<p>เจ้าหน้าที่</p>
+ 															<p>ผู้ถูกประเมิน</p>
+ 															<?php elseif ($rowhuser['user_status'] == 2): ?>
+ 															<p>ผู้ประเมิน</p>
  															<?php elseif ($rowhuser['user_status'] == 3): ?>
- 															<p>ยกเลิก</p>
+ 															<p><font color="red">ยกเลิก</font></p>
  														<?php endif ?>
 
  													</td>
 
  													<td width="10px">
  														<?php if ($rowhuser['user_status'] == 3): ?>
- 															<p style="color: red;" 	>ยกเลิก</p>
+ 															<a href="index.php?pa8&edit_user&user_id=<?php echo($uid) ?>"><i class="far fa-edit"></i></a>&nbsp;&nbsp;
+ 																<a href="page/pa8_user_db.php?del_user&user_id=<?php echo($uid) ?>"><i class="far fa-trash-alt"></i></a>
  															<?php else: ?>
  																<a href="index.php?pa8&edit_user&user_id=<?php echo($uid) ?>"><i class="far fa-edit"></i></a>&nbsp;&nbsp;
  																<a href="page/pa8_user_db.php?del_user&user_id=<?php echo($uid) ?>"><i class="far fa-trash-alt"></i></a>
