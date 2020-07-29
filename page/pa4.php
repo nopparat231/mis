@@ -64,12 +64,12 @@
 
  								<?php if ($_GET['type'] == 2): ?>
 
- 									<p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
+ 									<p style="text-align: center;">แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ 1)<br>
  									ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
 
  									<?php elseif ($_GET['type'] == 3): ?>
 
- 										<p style="text-align: center;">แบบประเมินพฤติกรรมในการปฏิบัติราชการของข้าราชการตามสมรรถนะฯ ของข้าราชการพลเรือนในสถาบันอุดมศึกษา (องค์ประกอบที่ ๒) <br>
+ 										<p style="text-align: center;">แบบประเมินพฤติกรรมในการปฏิบัติราชการของข้าราชการตามสมรรถนะฯ ของข้าราชการพลเรือนในสถาบันอุดมศึกษา (องค์ประกอบที่ 2) <br>
  										ตำแหน่งวิชาการ มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ</p>
  										
  									<?php endif ?>
@@ -82,16 +82,16 @@
 
 
  									<input type="radio" name="rob" value="1" checked="checked" required >
- 									รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม &nbsp;&nbsp;
- 									<input type="number" name="y1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>"> &nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
+ 									รอบที่ 1	&nbsp;&nbsp;&nbsp;&nbsp;1  ตุลาคม &nbsp;&nbsp;
+ 									<input type="number" name="y1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>"> &nbsp;&nbsp;ถึง&nbsp;&nbsp;  31  มีนาคม&nbsp;&nbsp;
  									<input type="number" name="yy1" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
  									<br><br>
 
  									<!-- เดี๋ยวหลับมาทำ JS คลิ๊กเลือก -->
 
  									<input type="radio" name="rob" value="2">	
- 									รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน &nbsp;&nbsp;
- 									<input type="number" name="y2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">&nbsp;&nbsp;ถึง&nbsp;&nbsp;  ๓๑  มีนาคม&nbsp;&nbsp;
+ 									รอบที่ 2  &nbsp;&nbsp;&nbsp;&nbsp;1  เมษายน &nbsp;&nbsp;
+ 									<input type="number" name="y2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">&nbsp;&nbsp;ถึง&nbsp;&nbsp;  31  มีนาคม&nbsp;&nbsp;
  									<input type="number" name="yy2" style="width: 150px;border: none;" value="<?php echo(date('Y')) ?>">
 
 

@@ -47,10 +47,10 @@ $rowuserchh = mysqli_fetch_assoc($qryuserchh);
 <p>รอบการประเมิน</p>
 
 <?php if ($rob == '1'): ?>
-	รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. <?php echo($kid_from); ?> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. <?php echo($kid_end); ?> ..
+	รอบที่ 1	&nbsp;&nbsp;&nbsp;&nbsp;1  ตุลาคม  .. <?php echo($kid_from); ?> ..  ถึง&nbsp;&nbsp;  31  มีนาคม  .. <?php echo($kid_end); ?> ..
 
 	<?php elseif ($rob == '2'): ?>	
-		รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  .. <?php echo($kid_from); ?> ..  ถึง &nbsp;&nbsp; ๓๐  กันยายน  .. <?php echo($kid_end); ?> ..
+		รอบที่ 2  &nbsp;&nbsp;&nbsp;&nbsp;1  เมษายน  .. <?php echo($kid_from); ?> ..  ถึง &nbsp;&nbsp; 30  กันยายน  .. <?php echo($kid_end); ?> ..
 	<?php endif ?>
 	
 	<br><br>

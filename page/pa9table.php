@@ -94,7 +94,7 @@
                       <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
                       text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
                       <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-                      text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๑)กิจกรรม/โครงงาน/งาน</span></p>
+                      text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(1)กิจกรรม/โครงงาน/งาน</span></p>
                       <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
                       text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
                       <p class=MsoListParagraph align=center style='margin:0cm;margin-bottom:.0001pt;
@@ -105,7 +105,7 @@
                     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
                     text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
                     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-                    text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๒) ตัวชี้วัด/เกณฑ์การประเมิน</span></p>
+                    text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(2) ตัวชี้วัด/เกณฑ์การประเมิน</span></p>
                     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
                     text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
                     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
@@ -114,26 +114,26 @@
                   <td width=119 colspan=5 valign=top style='width:88.95pt;border:solid windowtext 1.0pt;
                   border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
                   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-                  text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๓) ระดับค่าเป้าหมาย</span></p>
+                  text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(3) ระดับค่าเป้าหมาย</span></p>
                 </td>
                 <td width=66 valign=top style='width:49.35pt;border:solid windowtext 1.0pt;
                 border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-                text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๔) คะแนนที่ได้</span></p>
+                text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(4) คะแนนที่ได้</span></p>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
                 text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>   </span></p>
               </td>
               <td width=79 valign=top style='width:59.6pt;border:solid windowtext 1.0pt;
               border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
               <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๕) น้ำหนัก(ความสำคัญ/ความยากง่ายของงาน)</span></p>
+              text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(5) น้ำหนัก(ความสำคัญ/ความยากง่ายของงาน)</span></p>
               <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
               text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>                  </span></p>
             </td>
             <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
             border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
             <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๖) ค่าคะแนนถ่วงน้ำหนัก <br> (๓)*(๕) /(๑๐๐)</span></p>
+            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(6) ค่าคะแนนถ่วงน้ำหนัก <br> (3)*(5) /(100)</span></p>
             <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
             text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>                  </span></p>
           </td>

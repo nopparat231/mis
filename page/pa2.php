@@ -65,17 +65,17 @@
 
 							<h5 >
 								<p style="text-align: center;">
-									แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ ๑)<br>
+									แบบข้อตกลงการประเมินผลสัมฤทธิ์ของงานของข้าราชการพลเรือนในสถาบันอุดมศึกษา/พนักงานมหาวิทยาลัย (องค์ประกอบที่ 1)<br>
 									ตำแหน่งประเภทผู้บริหาร มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ <br>
 
 								</p>
 
 
 								<?php if ($rowacrob['f_ac_rob'] == '1'): ?>
-									รอบที่ ๑	&nbsp;&nbsp;&nbsp;&nbsp;๑  ตุลาคม  .. <?php echo($rowacrob['f_ac_kid_from']); ?> ..  ถึง&nbsp;&nbsp;  ๓๑  มีนาคม  .. <?php echo($rowacrob['f_ac_kid_end']); ?> ..
+									รอบที่ 1	&nbsp;&nbsp;&nbsp;&nbsp;1  ตุลาคม  .. <?php echo($rowacrob['f_ac_kid_from']); ?> ..  ถึง&nbsp;&nbsp;  31  มีนาคม  .. <?php echo($rowacrob['f_ac_kid_end']); ?> ..
 
 									<?php elseif ($rowacrob['f_ac_rob'] == '2'): ?>	
-										รอบที่ ๒  &nbsp;&nbsp;&nbsp;&nbsp;๑  เมษายน  .. <?php echo($rowacrob['f_ac_kid_from']); ?> ..  ถึง &nbsp;&nbsp; ๓๐  กันยายน  .. <?php echo($rowacrob['f_ac_kid_end']); ?> ..
+										รอบที่ 2  &nbsp;&nbsp;&nbsp;&nbsp;1  เมษายน  .. <?php echo($rowacrob['f_ac_kid_from']); ?> ..  ถึง &nbsp;&nbsp; 30  กันยายน  .. <?php echo($rowacrob['f_ac_kid_end']); ?> ..
 									<?php endif ?>
 									<br>
 
