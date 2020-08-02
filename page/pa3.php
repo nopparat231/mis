@@ -15,7 +15,9 @@
      </div><!-- /.container-fluid -->
  </div>
  <!-- /.content-header -->
-
+<style>
+textarea { border: none; }
+</style>
 
  <!-- Main content -->
  <div class="content">
@@ -78,7 +80,7 @@
  									?>
 
                                  <tr>
-                                     <td height="30" colspan="6" bgcolor="#F4F4F4">
+                                     <td height="30" colspan="11" bgcolor="#F4F4F4">
                                          <strong>&nbsp; <?php echo $rowh['f_hdetail']; ?> </strong>
                                      </td>
                                  </tr>
@@ -113,6 +115,11 @@
                                      <td width="5%" align="center"><strong>50</strong></td>
                                      <td width="5%" align="center"><strong>20</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
 
@@ -135,7 +142,23 @@
                                              value="20" /></td>
                                      <td height="30" align="center">
                                          <input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"
-                                             value="0" /></td>
+                                             value="0" />
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com1" id="" rows="15"  >com1</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com2" id="" rows="15"  >com2</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com3" id="" rows="15"  >com3</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com4" id="" rows="15"  >com4</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com5" id="" rows="15"  >com5</textarea>
+                                     </td>
                                  </tr>
 
                                  <?php }elseif ($rowf['f_score'] >= 50){ ?>
@@ -146,6 +169,11 @@
                                      <td width="5%" align="center"><strong>30</strong></td>
                                      <td width="5%" align="center"><strong>20</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
 
@@ -168,7 +196,23 @@
                                              value="20" /></td>
                                      <td height="30" align="center">
                                          <input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"
-                                             value="0" /></td>
+                                             value="0" />
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com1" id="" rows="15"  >com1</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com2" id="" rows="15"  >com2</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com3" id="" rows="15"  >com3</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com4" id="" rows="15"  >com4</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com5" id="" rows="15"  >com5</textarea>
+                                     </td>
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 30){ ?>
@@ -179,6 +223,11 @@
                                      <td width="5%" align="center"><strong>10</strong></td>
                                      <td width="5%" align="center"><strong>5</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
 
@@ -201,7 +250,23 @@
                                              value="5" /></td>
                                      <td height="30" align="center">
                                          <input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"
-                                             value="0" /></td>
+                                             value="0" />
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com1" id="" rows="15"  >com1</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com2" id="" rows="15"  >com2</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com3" id="" rows="15"  >com3</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com4" id="" rows="15"  >com4</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com5" id="" rows="15"  >com5</textarea>
+                                     </td>
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 20){ ?>
@@ -212,6 +277,11 @@
                                      <td width="5%" align="center"><strong>10</strong></td>
                                      <td width="5%" align="center"><strong>5</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
                                  <tr>
@@ -233,7 +303,23 @@
                                              value="5" /></td>
                                      <td height="30" align="center">
                                          <input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"
-                                             value="0" /></td>
+                                             value="0" />
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com1" id="" rows="15"  >com1</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com2" id="" rows="15"  >com2</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com3" id="" rows="15"  >com3</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com4" id="" rows="15"  >com4</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com5" id="" rows="15"  >com5</textarea>
+                                     </td>
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 10){ ?>
@@ -244,6 +330,11 @@
                                      <td width="5%" align="center"><strong>5</strong></td>
                                      <td width="5%" align="center"><strong>2</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
                                  <tr>
@@ -265,7 +356,23 @@
                                              value="2" /></td>
                                      <td height="30" align="center">
                                          <input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"
-                                             value="0" /></td>
+                                             value="0" />
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com1" id="" rows="15"  >com1</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com2" id="" rows="15"  >com2</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com3" id="" rows="15"  >com3</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com4" id="" rows="15"  >com4</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com5" id="" rows="15"  >com5</textarea>
+                                     </td>
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 5){ ?>
@@ -276,6 +383,11 @@
                                      <td width="5%" align="center"><strong>3</strong></td>
                                      <td width="5%" align="center"><strong>2</strong></td>
                                      <td width="5%" align="center"><strong>1</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
 
@@ -298,11 +410,33 @@
                                              value="2" /></td>
                                      <td height="30" align="center">
                                          <input type="radio" name="a<?php echo $rowf['f_id'].$rowf['f_h_id']; ?>"
-                                             value="1" /></td>
+                                             value="1" />
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com1" id="" rows="15"  >com1</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com2" id="" rows="15"  >com2</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com3" id="" rows="15"  >com3</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com4" id="" rows="15"  >com4</textarea>
+                                     </td>
+                                     <td height="30" align="center">
+                                         <textarea name="com5" id="" rows="15"  >com5</textarea>
+                                     </td>
                                  </tr>
 
 
-                                 <?php } } } ?>
+                                 <?php } ?>
+
+
+                                 <?php } ?>
+
+
+                                 <?php } ?>
 
 
                              </table>
