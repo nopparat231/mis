@@ -15,7 +15,7 @@
         <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
         text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
         <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-        text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๑)กิจกรรม/โครงงาน/งาน</span></p>
+        text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(1)กิจกรรม/โครงงาน/งาน</span></p>
         <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
         text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
         <p class=MsoListParagraph align=center style='margin:0cm;margin-bottom:.0001pt;
@@ -26,7 +26,7 @@
       <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
       text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
       <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-      text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๒) ตัวชี้วัด/เกณฑ์การประเมิน</span></p>
+      text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(2) ตัวชี้วัด/เกณฑ์การประเมิน</span></p>
       <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
       text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
       <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
@@ -35,26 +35,26 @@
     <td width=119 colspan=5 valign=top style='width:88.95pt;border:solid windowtext 1.0pt;
     border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-    text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๓) ระดับค่าเป้าหมาย</span></p>
+    text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(3) ระดับค่าเป้าหมาย</span></p>
   </td>
   <td width=66 valign=top style='width:49.35pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๔) คะแนนที่ได้</span></p>
+  text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(4) คะแนนที่ได้</span></p>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>   </span></p>
 </td>
 <td width=79 valign=top style='width:59.6pt;border:solid windowtext 1.0pt;
 border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๕) น้ำหนัก(ความสำคัญ/ความยากง่ายของงาน)</span></p>
+text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(5) น้ำหนัก(ความสำคัญ/ความยากง่ายของงาน)</span></p>
 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
 text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>                  </span></p>
 </td>
 <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
 border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๖) ค่าคะแนนถ่วงน้ำหนัก <br> (๓)*(๕) /(๑๐๐)</span></p>
+text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>(๖) ค่าคะแนนถ่วงน้ำหนัก <br> (3)*(5) /(100)</span></p>
 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
 text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>                  </span></p>
 </td>
@@ -114,7 +114,7 @@ normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
   <td width=147 valign=top style='width:110.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>๑. งานสอน</span></p>
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>1. งานสอน</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
 </td>
@@ -123,11 +123,11 @@ none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>ระดับความสำเร็จในการจัดทำ <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๑ มี มคอ.3 และ มคอ.5 ครบทุกรายวิชา <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๒ เป็นไปตามระดับที่ ๑ และมีการพัฒนาสื่อการสอน <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๓ เป็นไปตามระดับที่ ๒ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการไม่น้อยกว่า ๑ โครงการ  <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๔ เป็นไปตามระดับที่ ๓ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๒ โครงการ <br>
- &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ ๕ เป็นไปตามระดับที่ ๔ และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า ๓ โครงการ <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ 1 มี มคอ.3 และ มคอ.5 ครบทุกรายวิชา <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ 2 เป็นไปตามระดับที่ 1 และมีการพัฒนาสื่อการสอน <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ 3 เป็นไปตามระดับที่ 2 และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการไม่น้อยกว่า 1 โครงการ  <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ 4 เป็นไปตามระดับที่ 3 และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า 2 โครงการ <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;ระดับที่ 5 เป็นไปตามระดับที่ 4 และเข้าอบรม หรือสัมมนา หรือ ประชุมวิชาการนับรวมกันไม่น้อยกว่า 3 โครงการ <br>
 
 </span></p>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -215,7 +215,7 @@ text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",s
   <td width=147 valign=top style='width:110.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>๒. งานวิจัยและงานวิชาการ</span></p>
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>2. งานวิจัยและงานวิชาการ</span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
 </td>
@@ -224,8 +224,8 @@ none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 padding:0cm 5.4pt 0cm 5.4pt'>
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>ระดับความสำเร็จในการจัดทำ <br>
-  &nbsp;&nbsp;&nbsp;&nbsp; ระดับที่ ๑ มีหัวข้องานวิจัย (สิ่งประดิษฐ์) และผลการทดลองหรือข้อมูลเบื้องต้นที่จะนำไปสู่หัวข้องานวิจัย (สิ่งประดิษฐ์) <br>
-  &nbsp;&nbsp;&nbsp;&nbsp; หรือ มีการกำหนดชื่อตำรา (หนังสือ) จำนวนบท และชื่อบททุกบท พร้อมทั้งมีฉบับร่างที่มีเนื้อหาไม่ต่ำกว่าร้อยละ ๒๐ <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; ระดับที่ 1 มีหัวข้องานวิจัย (สิ่งประดิษฐ์) และผลการทดลองหรือข้อมูลเบื้องต้นที่จะนำไปสู่หัวข้องานวิจัย (สิ่งประดิษฐ์) <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; หรือ มีการกำหนดชื่อตำรา (หนังสือ) จำนวนบท และชื่อบททุกบท พร้อมทั้งมีฉบับร่างที่มีเนื้อหาไม่ต่ำกว่าร้อยละ 20 <br>
 </span></p>
 </td>
 <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
