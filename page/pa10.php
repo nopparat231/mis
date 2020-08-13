@@ -36,6 +36,59 @@
   </span></span><span
   style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
 </td>
+
+<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span class=SpellE><span
+    style='font-family:"TH SarabunPSK",sans-serif'>
+    <b>  หมายเหตุ1</b> 
+  </span></span><span
+  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+</td>
+<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span class=SpellE><span
+    style='font-family:"TH SarabunPSK",sans-serif'>
+    <b>  หมายเหตุ2</b> 
+  </span></span><span
+  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+</td>
+<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span class=SpellE><span
+    style='font-family:"TH SarabunPSK",sans-serif'>
+    <b>  หมายเหตุ3</b> 
+  </span></span><span
+  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+</td>
+<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span class=SpellE><span
+    style='font-family:"TH SarabunPSK",sans-serif'>
+    <b>  หมายเหตุ4</b> 
+  </span></span><span
+  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+</td>
+<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span class=SpellE><span
+    style='font-family:"TH SarabunPSK",sans-serif'>
+    <b>  หมายเหตุ5</b> 
+  </span></span><span
+  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
+</td>
+
+
 </tr>
 
 <?php 
@@ -109,7 +162,88 @@ while ($rowac = $qryac->fetch_array()) {
 
 
     echo $rowac['f_ac_score'];
+?>
 
+
+</o:p></span></p>
+</td>
+
+
+<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
+    <br><br>
+    &nbsp;&nbsp;
+   
+  <?php echo $rowac['f_ac_comment1']; ?>
+
+</o:p></span></p>
+</td>
+
+
+<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
+    <br><br>
+    &nbsp;&nbsp;
+   
+  <?php echo $rowac['f_ac_comment2']; ?>
+
+</o:p></span></p>
+</td>
+
+
+<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
+    <br><br>
+    &nbsp;&nbsp;
+   
+  <?php echo $rowac['f_ac_comment3']; ?>
+
+</o:p></span></p>
+</td>
+
+
+<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
+    <br><br>
+    &nbsp;&nbsp;
+   
+  <?php echo $rowac['f_ac_comment4']; ?>
+
+</o:p></span></p>
+</td>
+
+<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
+    <br><br>
+    &nbsp;&nbsp;
+   
+  <?php echo $rowac['f_ac_comment5']; ?>
+
+</o:p></span></p>
+</td>
+
+
+    <?php
     
       if (isset($_GET['save'])) {
     savescore($user_c_id,$type,$rowac['f_ac_h_id'],$rowac['f_ac_score']);
@@ -121,8 +255,6 @@ while ($rowac = $qryac->fetch_array()) {
   ?>
 <input type="hidden" name="fidp<?php echo $f_ac_pam_id ?>" id="fidp<?php echo $f_ac_pam_id ?>" value="<?php showhh($user_c_id,$f_ac_pam_id) ?>">
 
-</o:p></span></p>
-</td>
 </tr>
 
 <?php } ?>

@@ -88,7 +88,7 @@ ul
 lang=TH style='font-size:14.0pt;line-height:107%;font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 align=left
- width=0 style='width:647.55pt;border-collapse:collapse;border:none;margin-left:
+ width=0 style='width:1000pt;border-collapse:collapse;border:none;margin-left:
  6.75pt;margin-right:6.75pt'>
  <tr>
   <td width=707 colspan=2 valign=top style='width:530.25pt;border:solid windowtext 1.0pt;

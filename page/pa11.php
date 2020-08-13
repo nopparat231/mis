@@ -50,7 +50,7 @@
           <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
           style='border-collapse:collapse;border:none'>
           <tr>
-            <td width=533 rowspan=2 valign=top style='width:490.25pt;border:solid windowtext 1.0pt;
+            <td width=1000 rowspan=2 valign=top style='width:490.25pt;border:solid windowtext 1.0pt;
             padding:0cm 5.4pt 0cm 5.4pt'>
             <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
             text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>หลักเกณฑ์การประเมิน</span></p>
