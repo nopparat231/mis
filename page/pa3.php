@@ -142,19 +142,19 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  >com1</textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  >com2</textarea>
+                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  >com3</textarea>
+                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  >com4</textarea>
+                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  >com5</textarea>
+                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                  </tr>
 
@@ -196,19 +196,19 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  >com1</textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  >com2</textarea>
+                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  >com3</textarea>
+                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  >com4</textarea>
+                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  >com5</textarea>
+                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                  </tr>
 
@@ -250,19 +250,19 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  >com1</textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  >com2</textarea>
+                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  >com3</textarea>
+                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  >com4</textarea>
+                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  >com5</textarea>
+                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                  </tr>
 
@@ -303,19 +303,19 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  >com1</textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  >com2</textarea>
+                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  >com3</textarea>
+                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  >com4</textarea>
+                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  >com5</textarea>
+                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                  </tr>
 
@@ -356,19 +356,19 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  >com1</textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  >com2</textarea>
+                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  >com3</textarea>
+                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  >com4</textarea>
+                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  >com5</textarea>
+                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                  </tr>
 
@@ -410,19 +410,19 @@ textarea { border: none; }
                                              value="1" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  >com1</textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  >com2</textarea>
+                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  >com3</textarea>
+                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  >com4</textarea>
+                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  >com5</textarea>
+                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
                                      </td>
                                  </tr>
 
