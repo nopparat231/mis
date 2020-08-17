@@ -10,6 +10,7 @@ session_start();
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>MIS</title>
+  <!-- ใส่ข้อมูลในดาตาเบสไปครับ -->
  <!-- test test  -->
  <!-- กหฟกา -->
   <!-- Font Awesome Icons -->
