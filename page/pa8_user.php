@@ -40,6 +40,37 @@
                          <?php if (isset($_GET['add'])): ?>
 
 
+                         <?php 
+    
+    function Show_kana($conn){
+
+        $sqlkana=" SELECT * FROM kana ";
+        $qrykana = mysqli_query($conn,$sqlkana);
+
+echo "<option selected>เลือกคณะ</option>";
+        while ($rowkana = $qrykana->fetch_array()) {
+            
+                 echo "<option value='".$rowkana['kana_id']."'>".$rowkana['kana_detail']."</option>";
+                              
+        }
+
+    }
+    function Show_saka($conn){
+
+        $sqlsaka=" SELECT * FROM saka ";
+        $qrysaka = mysqli_query($conn,$sqlsaka);
+
+     echo "<option selected>เลือกสาขาวิชา/หลักสูตร</option>";   
+        while ($rowsaka = $qrysaka->fetch_array()) {
+
+                echo "<option value='".$rowsaka['saka_id']."'>".$rowsaka['saka_detail']." / ".$rowsaka['saka_laksut']."</option>";
+ 
+           
+        }
+
+     }
+    
+                        ?>
 
                          <form role="form" action="page/pa8_user_db.php" method="post">
 
@@ -98,6 +129,32 @@
                                      </div>
                                  </div>
 
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>คณะ</label>
+                                         <select class="custom-select" name="user_kana">
+
+                                             <?php Show_kana($conn,$user_kana_id); ?>
+
+                                         </select>
+
+                                     </div>
+                                 </div>
+
+                                 <div class="col-sm-8">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สาขาวิชา/หลักสูตร</label>
+                                         <select class="custom-select" name="user_saka">
+
+                                             <?php Show_saka($conn,$user_saka_id); ?>
+
+                                         </select>
+
+                                     </div>
+                                 </div>
+
 
 
                                  <div class="card-footer">
@@ -113,14 +170,16 @@
 
                          <?php elseif (isset($_GET['edit_user'])):
 
- 							$user_id = $_GET['user_id'];
+                            $user_id = $_GET['user_id'];
 
-
+                   
  							$sqlhuser=" SELECT * FROM user WHERE user_id =".$user_id;
  							$qryhuser = mysqli_query($conn,$sqlhuser);
  							$rowuser = mysqli_fetch_assoc($qryhuser);
 
- 							$user_status = $rowuser['user_status'];
+                             $user_status = $rowuser['user_status'];
+                             $user_kana_id = $rowuser['user_kana_id'];
+                             $user_saka_id = $rowuser['user_saka_id'];
 
  							$user_statusck1 = '';
  							$user_statusck2 = '';
@@ -135,7 +194,40 @@
  								$user_statusck3 = 'selected';
  							}elseif ($user_status == 3) {
  								$user_statusck4 = 'selected';
- 							}
+                             }
+                             
+                             function Show_kana($conn,$user_kana_id){
+
+                                $sqlkana=" SELECT * FROM kana ";
+                                $qrykana = mysqli_query($conn,$sqlkana);
+                                while ($rowkana = $qrykana->fetch_array()) {
+
+                                    if ($user_kana_id == $rowkana['kana_id']) {
+                                        echo "<option selected value='".$rowkana['kana_id']."'>".$rowkana['kana_detail']."</option>";
+                                     }else{
+                                         echo "<option value='".$rowkana['kana_id']."'>".$rowkana['kana_detail']."</option>";
+                                    }
+                                                                       
+                                }
+
+                            }
+                            function Show_saka($conn,$user_saka_id){
+
+                                $sqlsaka=" SELECT * FROM saka ";
+                                $qrysaka = mysqli_query($conn,$sqlsaka);
+                                while ($rowsaka = $qrysaka->fetch_array()) {
+
+                                    if ($user_saka_id == $rowsaka['saka_id']) {
+                                        echo "<option selected value='".$rowsaka['saka_id']."'>".$rowsaka['saka_detail']." / ".$rowsaka['saka_laksut']."</option>";
+                                     }else{
+                                        echo "<option value='".$rowsaka['saka_id']."'>".$rowsaka['saka_detail']." / ".$rowsaka['saka_laksut']."</option>";
+                                    }
+
+                                   
+                                }
+
+                            }
+                                 
 
  							?>
 
@@ -183,8 +275,8 @@
                                          <input type="password" name="password" class="form-control"
                                              value="<?php echo($rowuser['password']) ?>" placeholder="Enter ...">
                                      </div>
-								 </div>
-								 
+                                 </div>
+
                                  <div class="col-sm-4">
                                      <!-- text input -->
                                      <div class="form-group">
@@ -198,37 +290,33 @@
                                          </select>
 
                                      </div>
-								 </div>
+                                 </div>
 
-								 <div class="col-sm-3">
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>คณะ</label>
-                                         <select class="custom-select" name="user_status">
+                                         <select class="custom-select" name="user_kana">
 
-                                             <option <?php echo $user_statusck1; ?> value="1">ผู้ดูแลระบบ</option>
-                                             <option <?php echo $user_statusck2; ?> value="2">ผู้ประเมิน</option>
-                                             <option <?php echo $user_statusck3; ?> value="0">ผู้ถูกประเมิน</option>
-                                             <option <?php echo $user_statusck4; ?> value="3">ยกเลิก</option>
+                                             <?php Show_kana($conn,$user_kana_id); ?>
+
                                          </select>
 
                                      </div>
-								 </div>
+                                 </div>
 
-								 <div class="col-sm-4">
+                                 <div class="col-sm-8">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>สาขาวิชา/หลักสูตร</label>
-                                         <select class="custom-select" name="user_status">
+                                         <select class="custom-select" name="user_saka">
 
-                                             <option <?php echo $user_statusck1; ?> value="1">ผู้ดูแลระบบ</option>
-                                             <option <?php echo $user_statusck2; ?> value="2">ผู้ประเมิน</option>
-                                             <option <?php echo $user_statusck3; ?> value="0">ผู้ถูกประเมิน</option>
-                                             <option <?php echo $user_statusck4; ?> value="3">ยกเลิก</option>
+                                             <?php Show_saka($conn,$user_saka_id); ?>
+
                                          </select>
 
                                      </div>
-								 </div>
+                                 </div>
 
 
                              </div>
