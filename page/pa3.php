@@ -1,4 +1,3 @@
- <?php require_once("model_upfile.php"); ?>
  <!-- Content Header (Page header) -->
  <div class="content-header">
      <div class="container-fluid">
@@ -28,7 +27,7 @@ textarea {
          <div class="row">
              <div class="col-lg-12">
 
-                 <form id="frmdb" name="frmdb" method="get" action="page/pa3_db.php">
+                 <form id="frmdb" name="frmdb" method="post" action="page/pa3_db.php" enctype="multipart/form-data">
                      <div class="card card-primary card-outline">
                          <div class="card-header">
                              <h5 class="m-0">ฟอร์มประเมิน</h5>
@@ -144,12 +143,11 @@ textarea {
                                      <td height="30" align="center">
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
-                                         <button type="button" class="btn btn-default" data-toggle="modal"
-                                             data-target="#modal-default">
-                                             อัพโหลดไฟล์
-                                         </button>
-                                         <div id="err"></div>
-                                         <div id="preview"></div>
+
+                                         <input type="file" name="fileToUpload<?= $rowf['f_id']; ?>"
+                                             id="fileToUpload<?= $rowf['f_id']; ?>">
+
+
 
                                      </td>
 
@@ -191,12 +189,9 @@ textarea {
                                      <td height="30" align="center">
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
-                                         <button type="button" class="btn btn-default" data-toggle="modal"
-                                             data-target="#modal-default">
-                                             อัพโหลดไฟล์
-                                         </button>
-                                         <div id="err"></div>
-                                         <div id="preview"></div>
+                                         <input type="file" name="fileToUpload<?= $rowf['f_id']; ?>"
+                                             id="fileToUpload<?= $rowf['f_id']; ?>">
+
 
                                      </td>
 
@@ -239,12 +234,9 @@ textarea {
                                      <td height="30" align="center">
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
-                                         <button type="button" class="btn btn-default" data-toggle="modal"
-                                             data-target="#modal-default">
-                                             อัพโหลดไฟล์
-                                         </button>
-                                         <div id="err"></div>
-                                         <div id="preview"></div>
+                                         <input type="file" name="fileToUpload<?= $rowf['f_id']; ?>"
+                                             id="fileToUpload<?= $rowf['f_id']; ?>">
+
 
                                      </td>
 
@@ -286,12 +278,9 @@ textarea {
                                      <td height="30" align="center">
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
-                                         <button type="button" class="btn btn-default" data-toggle="modal"
-                                             data-target="#modal-default">
-                                             อัพโหลดไฟล์
-                                         </button>
-                                         <div id="err"></div>
-                                         <div id="preview"></div>
+                                         <input type="file" name="fileToUpload<?= $rowf['f_id']; ?>"
+                                             id="fileToUpload<?= $rowf['f_id']; ?>">
+
 
                                      </td>
 
@@ -333,12 +322,9 @@ textarea {
                                      <td height="30" align="center">
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
-                                         <button type="button" class="btn btn-default" data-toggle="modal"
-                                             data-target="#modal-default">
-                                             อัพโหลดไฟล์
-                                         </button>
-                                         <div id="err"></div>
-                                         <div id="preview"></div>
+                                         <input type="file" name="fileToUpload<?= $rowf['f_id']; ?>"
+                                             id="fileToUpload<?= $rowf['f_id']; ?>">
+
 
                                      </td>
 
@@ -381,12 +367,9 @@ textarea {
                                      <td height="30" align="center">
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
-                                         <button type="button" class="btn btn-default" data-toggle="modal"
-                                             data-target="#modal-default">
-                                             อัพโหลดไฟล์
-                                         </button>
-                                         <div id="err"></div>
-                                         <div id="preview"></div>
+                                         <input type="file" name="fileToUpload<?= $rowf['f_id']; ?>"
+                                             id="fileToUpload<?= $rowf['f_id']; ?>">
+
 
                                      </td>
 

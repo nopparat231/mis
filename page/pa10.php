@@ -1,58 +1,57 @@
-
 <body lang=EN-US style='tab-interval:36.0pt'>
 
-  <div class=WordSection1>
+    <div class=WordSection1>
 
-    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
-    style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+        <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
     mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
-    <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-      <td width=111 valign=top style='width:94.25pt;border:solid windowtext 1.0pt;
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td width=111 valign=top style='width:94.25pt;border:solid windowtext 1.0pt;
       mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-      <p class=MsoListParagraph align=center style='margin:0cm;margin-bottom:.0001pt;
+                    <p class=MsoListParagraph align=center style='margin:0cm;margin-bottom:.0001pt;
       mso-add-space:auto;text-align:center;line-height:normal'><span class=SpellE><span
-        style='font-family:"TH SarabunPSK",sans-serif'>
-       <b> (๑)กิจกรรม/โครงงาน/ งาน </b> 
-      </span></span><span
-      style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-    </td>
-    <td width=500 valign=top style='width:472.5pt;border:solid windowtext 1.0pt;
+                                style='font-family:"TH SarabunPSK",sans-serif'>
+                                <b> (๑)กิจกรรม/โครงงาน/ งาน </b>
+                            </span></span><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p></o:p>
+                        </span></p>
+                </td>
+                <td width=500 valign=top style='width:472.5pt;border:solid windowtext 1.0pt;
     border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
     solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-    text-align:center;line-height:normal'><span class=SpellE><span
-      style='font-family:"TH SarabunPSK",sans-serif'>
-     <b>  (๒)พฤติกรรมในการปฏิบัติราชการของพนักงานมหาวิทยาลัยตามสมรรถนะ </b> 
-    </span></span><span
-    style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-  </td>
-  <td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
+                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+    text-align:center;line-height:normal'><span class=SpellE><span style='font-family:"TH SarabunPSK",sans-serif'>
+                                <b> (๒)พฤติกรรมในการปฏิบัติราชการของพนักงานมหาวิทยาลัยตามสมรรถนะ </b>
+                            </span></span><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p></o:p>
+                        </span></p>
+                </td>
+                <td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span class=SpellE><span
-    style='font-family:"TH SarabunPSK",sans-serif'>
-    <b>  (๓)จำนวนพฤติกรรมที่ทำได้ </b> 
-  </span></span><span
-  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-</td>
+                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span class=SpellE><span style='font-family:"TH SarabunPSK",sans-serif'>
+                                <b> (๓)จำนวนพฤติกรรมที่ทำได้ </b>
+                            </span></span><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p></o:p>
+                        </span></p>
+                </td>
 
-<td width=150 valign=top style='width:250pt;border:solid windowtext 1.0pt;
+                <td width=150 valign=top style='width:250pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span class=SpellE><span
-    style='font-family:"TH SarabunPSK",sans-serif'>
-    <b>  หมายเหตุ1</b> 
-  </span></span><span
-  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-</td>
+                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span class=SpellE><span style='font-family:"TH SarabunPSK",sans-serif'>
+                                <b> หมายเหตุ1</b>
+                            </span></span><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p></o:p>
+                        </span></p>
+                </td>
 
 
 
-</tr>
+            </tr>
 
-<?php 
+            <?php 
 
 $user_c_id = $_GET['user_c_id'];
 $type = $_GET['type'];
@@ -76,14 +75,14 @@ while ($rowac = $qryac->fetch_array()) {
     ?>
 
 
-    <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
-      <td width=111 valign=top style='width:94.25pt;border:solid windowtext 1.0pt;
+            <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+                <td width=111 valign=top style='width:94.25pt;border:solid windowtext 1.0pt;
       border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
       padding:0cm 5.4pt 0cm 5.4pt'>
-      <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
       normal'><span class=SpellE><span style='font-family:"TH SarabunPSK",sans-serif'>
 
-        <?php 
+                                <?php 
 
         $sqlh=" SELECT * FROM f_h WHERE f_h_id = '$hid' ";
         $qryh = mysqli_query($conn,$sqlh);
@@ -97,55 +96,71 @@ while ($rowac = $qryac->fetch_array()) {
 
         ?>
 
-      </span></span><span
-      style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-    </td>
-    <td width=500 valign=top style='width:472.5pt;border-top:none;border-left:
+                            </span></span><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p></o:p>
+                        </span></p>
+                </td>
+                <td width=500 valign=top style='width:472.5pt;border-top:none;border-left:
     none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
     mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
     mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-    normal'><span class=SpellE><span style='font-family:"TH SarabunPSK",sans-serif'><?php echo $rowpam['f_hhh']; ?></span></span><span
-    style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-    normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>&nbsp;</o:p></span></p>
-  </td>
-  <td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+    normal'><span class=SpellE><span
+                                style='font-family:"TH SarabunPSK",sans-serif'><?php echo $rowpam['f_hhh']; ?></span></span><span
+                            style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p></o:p>
+                        </span></p>
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+    normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p>&nbsp;</o:p>
+                        </span></p>
+                </td>
+                <td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
-    <br><br><br><br><br><br><br><br><br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p>
+                                <br><br><br><br><br><br><br><br><br><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <?php 
+                                <?php 
 
 
     echo $rowac['f_ac_score'];
 ?>
 
 
-</o:p></span></p>
-</td>
+                            </o:p>
+                        </span></p>
+                </td>
 
 
-<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
+                <td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
-    <br><br>
-    &nbsp;&nbsp;
-   
-  <?php echo $rowac['f_ac_comment1']; ?>
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"TH SarabunPSK",sans-serif'>
+                            <o:p>
+                                <br><br>
+                                &nbsp;&nbsp;
 
-</o:p></span></p>
-</td>
+                                <?php echo $rowac['f_ac_comment1']; ?>
+                                <br>
+                                <a href="uploads/<?= $rowac['f_af_upfile']; ?>" download>
+                                    <?php if ($rowac['f_af_upfile'] == "") {
+                              echo "";
+                            }else {
+                              echo "โหลดไฟล์";
+                            } ?>
+                            </o:p>
+                        </span></p>
+                </td>
 
 
-    <?php
+                <?php
     
       if (isset($_GET['save'])) {
     savescore($user_c_id,$type,$rowac['f_ac_h_id'],$rowac['f_ac_score']);
@@ -155,15 +170,16 @@ while ($rowac = $qryac->fetch_array()) {
   }
 
   ?>
-<input type="hidden" name="fidp<?php echo $f_ac_pam_id ?>" id="fidp<?php echo $f_ac_pam_id ?>" value="<?php showhh($user_c_id,$f_ac_pam_id) ?>">
+                <input type="hidden" name="fidp<?php echo $f_ac_pam_id ?>" id="fidp<?php echo $f_ac_pam_id ?>"
+                    value="<?php showhh($user_c_id,$f_ac_pam_id) ?>">
 
-</tr>
+            </tr>
 
-<?php } ?>
+            <?php } ?>
 
 
-</table>
+        </table>
 
-</div>
+    </div>
 
 </body>

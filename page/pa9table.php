@@ -166,13 +166,14 @@
                 <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
             border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
                     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>หมายเหตุ1</span></p>
+            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>หมายเหตุ1</span>
+                    </p>
                     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
             text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'> </span></p>
                 </td>
-            
-         
-               
+
+
+
             </tr>
             <tr>
                 <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
@@ -229,7 +230,7 @@ padding:0cm 5.4pt 0cm 5.4pt'>
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
                 </td>
-                
+
 
 
             </tr>
@@ -372,6 +373,15 @@ while ($rowac = $qryac->fetch_array()) {
                         <span style='font-family:"TH SarabunPSK",sans-serif'>
                             <br><br><br><br><br>
                             <?php  echo "<b>".$rowac['f_ac_comment1']."</b>"; ?>
+                            <br>
+                            <a href="uploads/<?= $rowac['f_af_upfile']; ?>" download>
+                                <?php if ($rowac['f_af_upfile'] == "") {
+                              echo "";
+                            }else {
+                              echo "โหลดไฟล์";
+                            } ?>
+
+                            </a>
                         </span></p>
                 </td>
 
