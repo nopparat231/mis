@@ -170,34 +170,9 @@
                     <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
             text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'> </span></p>
                 </td>
-                <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
-            border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>หมายเหตุ2</span></p>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'> </span></p>
-                </td>
-                <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
-            border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>หมายเหตุ3</span></p>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'> </span></p>
-                </td>
-                <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
-            border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>หมายเหตุ4</span></p>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'> </span></p>
-                </td>
-                <td width=77 valign=top style='width:57.7pt;border:solid windowtext 1.0pt;
-            border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:63.3pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'>หมายเหตุ5</span></p>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-            text-align:center;line-height:normal'><span style='font-family:"TH SarabunPSK",sans-serif'> </span></p>
-                </td>
+            
+         
+               
             </tr>
             <tr>
                 <td width=23 valign=top style='width:16.95pt;border-top:none;border-left:
@@ -254,28 +229,7 @@ padding:0cm 5.4pt 0cm 5.4pt'>
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
                 </td>
-                <td width=77 valign=top style='width:57.7pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-                </td><td width=77 valign=top style='width:57.7pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-                </td><td width=77 valign=top style='width:57.7pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-                </td>
-                <td width=77 valign=top style='width:57.7pt;border-top:none;border-left:none;
-border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><span style='font-family:"TH SarabunPSK",sans-serif'>&nbsp;</span></p>
-                </td>
+                
 
 
             </tr>
@@ -422,49 +376,6 @@ while ($rowac = $qryac->fetch_array()) {
                 </td>
 
 
-                <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'>
-                        <span style='font-family:"TH SarabunPSK",sans-serif'>
-                            <br><br><br><br><br>
-                            <?php  echo "<b>".$rowac['f_ac_comment2']."</b>"; ?>
-                        </span></p>
-                </td>
-
-                <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'>
-                        <span style='font-family:"TH SarabunPSK",sans-serif'>
-                            <br><br><br><br><br>
-                            <?php  echo "<b>".$rowac['f_ac_comment3']."</b>"; ?>
-                        </span></p>
-                </td>
-
-                <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'>
-                        <span style='font-family:"TH SarabunPSK",sans-serif'>
-                            <br><br><br><br><br>
-                            <?php  echo "<b>".$rowac['f_ac_comment4']."</b>"; ?>
-                        </span></p>
-                </td>
-
-                <td width=79 valign=top style='width:59.6pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-                    <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'>
-                        <span style='font-family:"TH SarabunPSK",sans-serif'>
-                            <br><br><br><br><br>
-                            <?php  echo "<b>".$rowac['f_ac_comment5']."</b>"; ?>
-                        </span></p>
-                </td>
 
                 </td>
 
