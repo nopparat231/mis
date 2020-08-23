@@ -1,5 +1,4 @@
- 
-<?php require_once("model_upfile.php"); ?>
+ <?php require_once("model_upfile.php"); ?>
  <!-- Content Header (Page header) -->
  <div class="content-header">
      <div class="container-fluid">
@@ -146,12 +145,14 @@ textarea {
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
                                          <button type="button" class="btn btn-default" data-toggle="modal"
-                                         data-target="#modal-default">
-                                         อัพโหลดไฟล์
-                                     </button>
+                                             data-target="#modal-default">
+                                             อัพโหลดไฟล์
+                                         </button>
+                                         <div id="err"></div>
+                                         <div id="preview"></div>
 
                                      </td>
-                                     
+
                                  </tr>
 
                                  <?php }elseif ($rowf['f_score'] >= 50){ ?>
@@ -191,9 +192,11 @@ textarea {
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
                                          <button type="button" class="btn btn-default" data-toggle="modal"
-                                         data-target="#modal-default">
-                                         อัพโหลดไฟล์
-                                     </button>
+                                             data-target="#modal-default">
+                                             อัพโหลดไฟล์
+                                         </button>
+                                         <div id="err"></div>
+                                         <div id="preview"></div>
 
                                      </td>
 
@@ -237,9 +240,11 @@ textarea {
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
                                          <button type="button" class="btn btn-default" data-toggle="modal"
-                                         data-target="#modal-default">
-                                         อัพโหลดไฟล์
-                                     </button>
+                                             data-target="#modal-default">
+                                             อัพโหลดไฟล์
+                                         </button>
+                                         <div id="err"></div>
+                                         <div id="preview"></div>
 
                                      </td>
 
@@ -282,9 +287,11 @@ textarea {
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
                                          <button type="button" class="btn btn-default" data-toggle="modal"
-                                         data-target="#modal-default">
-                                         อัพโหลดไฟล์
-                                     </button>
+                                             data-target="#modal-default">
+                                             อัพโหลดไฟล์
+                                         </button>
+                                         <div id="err"></div>
+                                         <div id="preview"></div>
 
                                      </td>
 
@@ -327,9 +334,11 @@ textarea {
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
                                          <button type="button" class="btn btn-default" data-toggle="modal"
-                                         data-target="#modal-default">
-                                         อัพโหลดไฟล์
-                                     </button>
+                                             data-target="#modal-default">
+                                             อัพโหลดไฟล์
+                                         </button>
+                                         <div id="err"></div>
+                                         <div id="preview"></div>
 
                                      </td>
 
@@ -373,9 +382,11 @@ textarea {
                                          <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
                                          <br>
                                          <button type="button" class="btn btn-default" data-toggle="modal"
-                                         data-target="#modal-default">
-                                         อัพโหลดไฟล์
-                                     </button>
+                                             data-target="#modal-default">
+                                             อัพโหลดไฟล์
+                                         </button>
+                                         <div id="err"></div>
+                                         <div id="preview"></div>
 
                                      </td>
 
