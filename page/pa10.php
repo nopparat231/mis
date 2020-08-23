@@ -37,7 +37,7 @@
   style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
 </td>
 
-<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
+<td width=150 valign=top style='width:250pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
@@ -47,46 +47,7 @@
   </span></span><span
   style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
 </td>
-<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span class=SpellE><span
-    style='font-family:"TH SarabunPSK",sans-serif'>
-    <b>  หมายเหตุ2</b> 
-  </span></span><span
-  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-</td>
-<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span class=SpellE><span
-    style='font-family:"TH SarabunPSK",sans-serif'>
-    <b>  หมายเหตุ3</b> 
-  </span></span><span
-  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-</td>
-<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span class=SpellE><span
-    style='font-family:"TH SarabunPSK",sans-serif'>
-    <b>  หมายเหตุ4</b> 
-  </span></span><span
-  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-</td>
-<td width=95 valign=top style='width:80.75pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><span class=SpellE><span
-    style='font-family:"TH SarabunPSK",sans-serif'>
-    <b>  หมายเหตุ5</b> 
-  </span></span><span
-  style='font-family:"TH SarabunPSK",sans-serif'><o:p></o:p></span></p>
-</td>
+
 
 
 </tr>
@@ -179,65 +140,6 @@ while ($rowac = $qryac->fetch_array()) {
     &nbsp;&nbsp;
    
   <?php echo $rowac['f_ac_comment1']; ?>
-
-</o:p></span></p>
-</td>
-
-
-<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
-    <br><br>
-    &nbsp;&nbsp;
-   
-  <?php echo $rowac['f_ac_comment2']; ?>
-
-</o:p></span></p>
-</td>
-
-
-<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
-    <br><br>
-    &nbsp;&nbsp;
-   
-  <?php echo $rowac['f_ac_comment3']; ?>
-
-</o:p></span></p>
-</td>
-
-
-<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
-    <br><br>
-    &nbsp;&nbsp;
-   
-  <?php echo $rowac['f_ac_comment4']; ?>
-
-</o:p></span></p>
-</td>
-
-<td width=95 valign=top style='width:80.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"TH SarabunPSK",sans-serif'><o:p>
-    <br><br>
-    &nbsp;&nbsp;
-   
-  <?php echo $rowac['f_ac_comment5']; ?>
 
 </o:p></span></p>
 </td>

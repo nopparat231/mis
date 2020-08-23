@@ -1,3 +1,5 @@
+ 
+<?php require_once("model_upfile.php"); ?>
  <!-- Content Header (Page header) -->
  <div class="content-header">
      <div class="container-fluid">
@@ -15,9 +17,11 @@
      </div><!-- /.container-fluid -->
  </div>
  <!-- /.content-header -->
-<style>
-textarea { border: none; }
-</style>
+ <style>
+textarea {
+    border: none;
+}
+ </style>
 
  <!-- Main content -->
  <div class="content">
@@ -61,11 +65,11 @@ textarea { border: none; }
 
                              <b> <?php echo $rowth['f_thdettail']; ?> </b><br>
 
-                             <input type="hidden" name="kid_from" value=" <?php echo($kid_from) ?> ">
-                             <input type="hidden" name="kid_end" value=" <?php echo($kid_end) ?> ">
+                             <input type="hidden" name="kid_from" value="<?php echo($kid_from) ?>">
+                             <input type="hidden" name="kid_end" value="<?php echo($kid_end) ?>">
                              <input type="hidden" name="rob" value="<?php echo($rob); ?>">
 
-                             <input type="hidden" name="user_c_id" value=" <?php echo($user_c_id) ?> ">
+                             <input type="hidden" name="user_c_id" value="<?php echo($user_c_id) ?>">
                              <input type="hidden" name="user_id" value="<?php echo($user_id); ?>">
 
                              <input type="hidden" name="th_id" value="<?php echo($type); ?>">
@@ -80,7 +84,7 @@ textarea { border: none; }
  									?>
 
                                  <tr>
-                                     <td height="30" colspan="11" bgcolor="#F4F4F4">
+                                     <td height="30" colspan="8" bgcolor="#F4F4F4">
                                          <strong>&nbsp; <?php echo $rowh['f_hdetail']; ?> </strong>
                                      </td>
                                  </tr>
@@ -112,11 +116,8 @@ textarea { border: none; }
                                      <td width="5%" align="center"><strong>50</strong></td>
                                      <td width="5%" align="center"><strong>20</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="10%" align="center"><strong>หมายเหตุ</strong></td>
+
                                  </tr>
 
 
@@ -142,20 +143,15 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
+                                         <br>
+                                         <button type="button" class="btn btn-default" data-toggle="modal"
+                                         data-target="#modal-default">
+                                         อัพโหลดไฟล์
+                                     </button>
+
                                      </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
+                                     
                                  </tr>
 
                                  <?php }elseif ($rowf['f_score'] >= 50){ ?>
@@ -166,11 +162,7 @@ textarea { border: none; }
                                      <td width="5%" align="center"><strong>30</strong></td>
                                      <td width="5%" align="center"><strong>20</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+                                     <td width="10%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
 
@@ -196,20 +188,15 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
+                                         <br>
+                                         <button type="button" class="btn btn-default" data-toggle="modal"
+                                         data-target="#modal-default">
+                                         อัพโหลดไฟล์
+                                     </button>
+
                                      </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
+
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 30){ ?>
@@ -220,11 +207,8 @@ textarea { border: none; }
                                      <td width="5%" align="center"><strong>10</strong></td>
                                      <td width="5%" align="center"><strong>5</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+
+                                     <td width="10%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
 
@@ -250,20 +234,15 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
+                                         <br>
+                                         <button type="button" class="btn btn-default" data-toggle="modal"
+                                         data-target="#modal-default">
+                                         อัพโหลดไฟล์
+                                     </button>
+
                                      </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
+
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 20){ ?>
@@ -274,11 +253,8 @@ textarea { border: none; }
                                      <td width="5%" align="center"><strong>10</strong></td>
                                      <td width="5%" align="center"><strong>5</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+
+                                     <td width="10%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
                                  <tr>
@@ -303,20 +279,15 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
+                                         <br>
+                                         <button type="button" class="btn btn-default" data-toggle="modal"
+                                         data-target="#modal-default">
+                                         อัพโหลดไฟล์
+                                     </button>
+
                                      </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
+
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 10){ ?>
@@ -327,11 +298,8 @@ textarea { border: none; }
                                      <td width="5%" align="center"><strong>5</strong></td>
                                      <td width="5%" align="center"><strong>2</strong></td>
                                      <td width="5%" align="center"><strong>0</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+
+                                     <td width="10%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
                                  <tr>
@@ -356,20 +324,15 @@ textarea { border: none; }
                                              value="0" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
+                                         <br>
+                                         <button type="button" class="btn btn-default" data-toggle="modal"
+                                         data-target="#modal-default">
+                                         อัพโหลดไฟล์
+                                     </button>
+
                                      </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
+
                                  </tr>
 
                                  <?php	}elseif ($rowf['f_score'] >= 5){ ?>
@@ -380,11 +343,8 @@ textarea { border: none; }
                                      <td width="5%" align="center"><strong>3</strong></td>
                                      <td width="5%" align="center"><strong>2</strong></td>
                                      <td width="5%" align="center"><strong>1</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
-                                     <td width="5%" align="center"><strong>หมายเหตุ</strong></td>
+
+                                     <td width="10%" align="center"><strong>หมายเหตุ</strong></td>
                                  </tr>
 
 
@@ -410,20 +370,15 @@ textarea { border: none; }
                                              value="1" />
                                      </td>
                                      <td height="30" align="center">
-                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
+                                         <textarea name="com1<?php echo $rowf['f_id']; ?>" rows="15"></textarea>
+                                         <br>
+                                         <button type="button" class="btn btn-default" data-toggle="modal"
+                                         data-target="#modal-default">
+                                         อัพโหลดไฟล์
+                                     </button>
+
                                      </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com2<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com3<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com4<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
-                                     <td height="30" align="center">
-                                         <textarea name="com5<?php echo $rowf['f_id']; ?>" rows="15"  ></textarea>
-                                     </td>
+
                                  </tr>
 
 

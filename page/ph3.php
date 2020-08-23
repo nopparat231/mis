@@ -139,7 +139,7 @@ normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input ty
 <?php }elseif (isset($_GET['showphhh'])&&isset($_GET['print']) == ''){ ?>
  <div class="card-footer">
 
-  <a href="index.php?ph&print&user_c_id=<?php echo($user_c_id) ?>&showphhh" class="btn btn-primary noprint">ตวจสอบทั้งหมด</a>
+  <a href="index.php?ph&print&user_c_id=<?= $user_c_id ?>&showphhh" class="btn btn-primary noprint">ตวจสอบทั้งหมด</a>
 </div>
 
 <?php } ?>
