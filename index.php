@@ -81,6 +81,8 @@ session_start();
         include 'page/addtext.php';
       }elseif (isset($_GET['ph1'])) {
         include 'page/ph1.php';
+      }elseif (isset($_GET['pla'])) {
+        include 'page/pla.php';
       }else{
         include 'new.php';
       }

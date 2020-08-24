@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2020 at 05:10 PM
+-- Generation Time: Aug 24, 2020 at 04:49 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -331,6 +331,31 @@ INSERT INTO `kana` (`kana_id`, `kana_detail`, `kana_status`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kan_la`
+--
+
+CREATE TABLE IF NOT EXISTS `kan_la` (
+`la_id` int(11) NOT NULL,
+  `la_user_id` int(11) NOT NULL,
+  `la_type` int(11) NOT NULL,
+  `la_start` date NOT NULL,
+  `la_end` date NOT NULL,
+  `la_total` int(11) NOT NULL,
+  `la_balance` int(11) NOT NULL,
+  `la_status` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `kan_la`
+--
+
+INSERT INTO `kan_la` (`la_id`, `la_user_id`, `la_type`, `la_start`, `la_end`, `la_total`, `la_balance`, `la_status`) VALUES
+(1, 10, 2, '2020-08-01', '2020-08-03', 5, 12, 0),
+(2, 11, 1, '2020-08-03', '2020-08-08', 5, 12, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `news`
 --
 
@@ -512,6 +537,12 @@ ALTER TABLE `kana`
  ADD PRIMARY KEY (`kana_id`);
 
 --
+-- Indexes for table `kan_la`
+--
+ALTER TABLE `kan_la`
+ ADD PRIMARY KEY (`la_id`);
+
+--
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
@@ -574,6 +605,11 @@ MODIFY `f_thid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 ALTER TABLE `kana`
 MODIFY `kana_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `kan_la`
+--
+ALTER TABLE `kan_la`
+MODIFY `la_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `news`
 --
