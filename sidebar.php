@@ -12,7 +12,7 @@
 
           include './conn.php';
 
-          $sqlhusercc=" SELECT * FROM user WHERE username =".$user;
+          $sqlhusercc=" SELECT * FROM user WHERE username = '$user' ";
           $qryhusercc = mysqli_query($conn,$sqlhusercc);
           $rowhusercc = mysqli_fetch_assoc($qryhusercc);
 
