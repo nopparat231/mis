@@ -4,56 +4,61 @@ session_start();
 //error_reporting(0);
 ?>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>MIS</title>
-  <!-- ใส่ข้อมูลในดาตาเบสไปครับ -->
- <!-- test test  -->
- <!-- กหฟกา -->
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="adminlte3/plugins/fontawesome-free/css/all.min.css">
-  <!-- Theme style -->
+    <title>MIS</title>
+    <!-- ใส่ข้อมูลในดาตาเบสไปครับ -->
+    <!-- test test  -->
+    <!-- กหฟกา -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="adminlte3/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
 
-  <!-- DataTables -->
-  <link rel="stylesheet" href="adminlte3/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="adminlte3/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="adminlte3/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="adminlte3/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 
-  <link rel="stylesheet" href="adminlte3/dist/css/adminlte.min.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="adminlte3/plugins/summernote/summernote-bs4.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <!-- mycss -->
-  <link rel="stylesheet" type="text/css" href="css/cuttom.css">
+    <link rel="stylesheet" href="adminlte3/dist/css/adminlte.min.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="adminlte3/plugins/summernote/summernote-bs4.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- mycss -->
+    <link rel="stylesheet" type="text/css" href="css/cuttom.css">
 
-  <style type="text/css">
-    @media print{
-     .noprint{
-       display:none;
-     }
-   }
- </style>
+    <style type="text/css">
+    @media print {
+        .noprint {
+            display: none;
+        }
+    }
+    </style>
 
 </head>
+
 <body class="hold-transition sidebar-collapse sidebar-mini text-sm ">
-  <?php include 'banner.php'; ?>
-  <div class="wrapper">
+    <?php include 'banner.php'; ?>
+    <div class="wrapper">
 
 
-    <?php 
+        <?php 
 
     include 'navbar.php';
     include 'sidebar.php';
 
     ?>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
 
 
-      <?php
+            <?php
 
       if (isset($_GET['pa1'])) {
         include 'page/pa1.php';
@@ -90,53 +95,56 @@ session_start();
       ?>
 
 
+        </div>
+        <!-- /.content-wrapper -->
+
+
+
+        <!-- Main Footer -->
+        <footer class="main-footer noprint">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+                RMUTK MIS
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2020 </strong>
+        </footer>
     </div>
-    <!-- /.content-wrapper -->
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="adminlte3/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="adminlte3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Select2 -->
+    <script src="adminlte3/plugins/select2/js/select2.full.min.js"></script>
+    <!-- DataTables -->
+    <script src="adminlte3/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="adminlte3/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <!-- Summernote -->
+    <script src="adminlte3/plugins/summernote/summernote-bs4.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="adminlte3/dist/js/adminlte.min.js"></script>
+
+    <script>
+    $(function() {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+        });
 
 
-
-    <!-- Main Footer -->
-    <footer class="main-footer noprint">
-      <!-- To the right -->
-      <div class="float-right d-none d-sm-inline">
-        RMUTK MIS
-      </div>
-      <!-- Default to the left -->
-      <strong>Copyright &copy; 2020 </strong>
-    </footer>
-  </div>
-  <!-- ./wrapper -->
-
-  <!-- REQUIRED SCRIPTS -->
-
-  <!-- jQuery -->
-  <script src="adminlte3/plugins/jquery/jquery.min.js"></script>
-  <!-- Bootstrap 4 -->
-  <script src="adminlte3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- DataTables -->
-  <script src="adminlte3/plugins/datatables/jquery.dataTables.js"></script>
-  <script src="adminlte3/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-  <!-- Summernote -->
-  <script src="adminlte3/plugins/summernote/summernote-bs4.min.js"></script>
-
-  <!-- AdminLTE App -->
-  <script src="adminlte3/dist/js/adminlte.min.js"></script>
-
-  <script>
-    $(function () {
-      $("#example1").DataTable();
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-      });
     });
-
-  </script>
+    $('.select2').select2()
+    </script>
 
 
 
@@ -146,52 +154,53 @@ session_start();
     ?>
 
     <script>
-      $(window).on('load',function(){
+    $(window).on('load', function() {
         $('#showModel').modal('show');
-      });
+    });
     </script>
 
     <?php
   }
 
   ?>
-  <script>
-    $(function () {
-    // Summernote
-    $('.textarea').summernote()
-  })
-</script>
+    <script>
+    $(function() {
+        // Summernote
+        $('.textarea').summernote()
+    })
+    </script>
 
-<script>
-$(document).ready(function(e) {
-  $("#form").on('submit',(function(e) {
-  e.preventDefault();
-        $.ajax({
-            url: "page/ajaxupload.php",
-            type: "POST",
-            data: new FormData(this),
-            contentType: false,
-            cache: false,
-            processData: false,
-            beforeSend: function() {
-                //$("#preview").fadeOut();
-                $("#err").fadeOut();
-            },
-            success: function(data) {
+    <script>
+    $(document).ready(function(e) {
+        $("#form").on('submit', (function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: "page/ajaxupload.php",
+                type: "POST",
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                beforeSend: function() {
+                    //$("#preview").fadeOut();
+                    $("#err").fadeOut();
+                },
+                success: function(data) {
 
-                // view uploaded file.
-                $("#preview").html(data).fadeIn();
-                $("#form")[0].reset();
-                $('#modal-default').modal('hide')
+                    // view uploaded file.
+                    $("#preview").html(data).fadeIn();
+                    $("#form")[0].reset();
+                    $('#modal-default').modal('hide')
 
-            },
-            error: function(e) {
-                $("#err").html(e).fadeIn();
-            }
-          });
- }));
-});
- </script>
+                },
+                error: function(e) {
+                    $("#err").html(e).fadeIn();
+                }
+            });
+        }));
+    });
+    </script>
 
 </body>
+
 </html>

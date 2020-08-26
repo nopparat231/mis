@@ -90,7 +90,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
          <?php 
         $i = 1;
         while ($rowhkan_la = $qryhkan_la->fetch_array()) {
-        $uid = $rowhkan_la['la_id'];
+        $la_id = $rowhkan_la['la_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
@@ -117,13 +117,13 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
 
              <td width="10px">
                  <?php if ($rowhkan_la['la_type'] == 3): ?>
-                 <a href="index.php?pla&edit_user&user_id=<?php echo($uid) ?>"><i
+                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&user_id=<?php echo($uid) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?pla&edit_user&user_id=<?php echo($uid) ?>"><i
+                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&user_id=<?php echo($uid) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php endif ?>
              </td>
 
@@ -141,12 +141,196 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
 
  function add()
  {
-    echo "add";
+
+    include './conn.php';
+    $sqlhuser = " SELECT * FROM user ";
+ 	$qryhuser = mysqli_query($conn,$sqlhuser);
+ 	//$rowuser = mysqli_fetch_assoc($qryhuser);
+
+    ?>
+
+ <form role="form" action="page/pla_db.php" method="post">
+
+     <div class="row">
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ชื่อ-นามสกุล</label>
+                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
+                    <option selected="selected">เลือกชื่อผู้ใช้</option>
+
+                    <?php
+
+                        while ($rowuser = $qryhuser->fetch_array()) {
+                            $usid = $rowuser["user_id"];
+                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
+                        }
+
+                    ?>
+                  
+                  </select>
+             </div>
+         </div>
+
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ประเภทการลา</label>
+                 <select class="custom-select" name="la_type">
+                     <option selected>เลือกประเภทการลา</option>
+                     <option value="0">พักร้อน</option>
+                     <option value="1">กิจ</option>
+                     <option value="3">ป่วย</option>
+                     <option value="3">ยกเลิก</option>
+                 </select>
+             </div>
+         </div>
+
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>วันที่เริ่มลา</label>
+                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>วันที่สิ้นสุดการลา</label>
+                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>จำนวนวันที่ลา</label>
+                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>จำนวนวันคงเหลือ</label>
+                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+     </div>
+
+     <div class="card-footer">
+         <button type="submit" class="btn btn-primary">Submit</button>
+         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+     </div>
+
+     <input type="hidden" name="add_pla">
+
+ </form>
+
+ <?php
  }
 
  function edit()
  {
-    echo "edit";
+   
+ include './conn.php';
+    $sqlhuser = " SELECT * FROM user ";
+ 	$qryhuser = mysqli_query($conn,$sqlhuser);
+ 	//$rowuser = mysqli_fetch_assoc($qryhuser);
+
+    ?>
+
+ <form role="form" action="page/pla_db.php" method="post">
+
+     <div class="row">
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ชื่อ-นามสกุล</label>
+                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
+                    <option selected="selected">เลือกชื่อผู้ใช้</option>
+
+                    <?php
+
+                        while ($rowuser = $qryhuser->fetch_array()) {
+                            $usid = $rowuser["user_id"];
+                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
+                        }
+
+                    ?>
+                  
+                  </select>
+             </div>
+         </div>
+
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ประเภทการลา</label>
+                 <select class="custom-select" name="la_type">
+                     <option selected>เลือกประเภทการลา</option>
+                     <option value="0">พักร้อน</option>
+                     <option value="1">กิจ</option>
+                     <option value="3">ป่วย</option>
+                     <option value="3">ยกเลิก</option>
+                 </select>
+             </div>
+         </div>
+
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>วันที่เริ่มลา</label>
+                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>วันที่สิ้นสุดการลา</label>
+                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>จำนวนวันที่ลา</label>
+                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>จำนวนวันคงเหลือ</label>
+                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+
+
+     </div>
+
+     <div class="card-footer">
+         <button type="submit" class="btn btn-primary">Submit</button>
+         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+     </div>
+
+     <input type="hidden" name="add_pla">
+
+ </form>
+
+ <?php
  }
  
  function del()
