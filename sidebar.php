@@ -147,7 +147,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="index.php?pteaching" class="nav-link">
+                      <a href="index.php?kanzon" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>การจัดการสอน</p>
                       </a>

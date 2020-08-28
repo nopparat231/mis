@@ -66,7 +66,7 @@ function shows()
 {
 
 include './conn.php';
-$sqlhkan_la = " SELECT * FROM kan_la INNER JOIN user ON kan_la.la_user_id = user.user_id ORDER BY la_id desc ";
+$sqlhkan_la = " SELECT * FROM kanzon ";
 $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
 
 ?>
@@ -74,49 +74,33 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
  <table id="example1" class="table table-bordered table-hover">
      <thead>
          <tr align="center">
-             <th width="3px">ลำดับ</th>
+             <th width="3px">การสอนไอดี</th>
              <th>ชื่อ-นามสกุลของผู้สอน</th>
              <th>รายละเอียดการสอน</th>
              <th>เทอมที่สอน</th>
-             <th>-</th>
-             <th>-</th>
-             <th>-</th>
-             <th>-</th>
-             <th>แก้ไข</th>
-
+             <th>สถานะ</th>
+             
          </tr>
      </thead>
      <tbody>
          <?php 
         $i = 1;
         while ($rowhkan_la = $qryhkan_la->fetch_array()) {
-        $la_id = $rowhkan_la['la_id'];
+        $la_id = $rowhkan_la['kanzon_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
-             <td><?php echo $rowhkan_la['first_name']."  ".$rowhkan_la['last_name']; ?></td>
-             <td><?php echo $rowhkan_la['user_tumn']; ?></td>
-             <td>
-                 <?php if ($rowhkan_la['la_type'] == 0): ?>
-                 <p>พักร้อน</p>
-                 <?php elseif ($rowhkan_la['la_type'] == 1): ?>
-                 <p>กิจ</p>
-                 <?php elseif ($rowhkan_la['la_type'] == 2): ?>
-                 <p>ปวย</p>
-                 <?php elseif ($rowhkan_la['la_type'] == 3): ?>
-                 <p>
-                     <font color="red">ยกเลิก</font>
-                 </p>
-                 <?php endif ?>
-
-             </td>
-             <td><?php echo $rowhkan_la['la_start']; ?></td>
-             <td><?php echo $rowhkan_la['la_end']; ?></td>
-             <td><?php echo $rowhkan_la['la_total']; ?></td>
-             <td><?php echo $rowhkan_la['la_balance']; ?></td>
+             <td><?php echo $rowhkan_la['kanzon_name']; ?></td>
+             <td><?php echo $rowhkan_la['kanzon_detail']; ?></td>
+             
+             
+             <td><?php echo $rowhkan_la['kanzon_status']; ?></td>
+             
+             
+             
 
              <td width="10px">
-                 <?php if ($rowhkan_la['la_type'] == 3): ?>
+                 <?php if ($rowhkan_la['kanzon_status'] == 3): ?>
                  <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
                  <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>

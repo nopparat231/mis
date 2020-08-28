@@ -88,6 +88,10 @@ session_start();
         include 'page/ph1.php';
       }elseif (isset($_GET['pla'])) {
         include 'page/pla.php';
+
+      }elseif (isset($_GET['kanzon'])) {
+        include 'page/kanzon.php';
+        
       }else{
         include 'new.php';
       }
