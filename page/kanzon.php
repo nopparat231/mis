@@ -66,8 +66,8 @@ function shows()
 {
 
 include './conn.php';
-$sqlhkan_la = " SELECT * FROM kanzon ";
-$qryhkan_la = mysqli_query($conn,$sqlhkan_la);
+$sqlkanzon = " SELECT * FROM kanzon ";
+$qrykanzon = mysqli_query($conn,$sqlkanzon);
 
 ?>
 
@@ -85,22 +85,22 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
      <tbody>
          <?php 
         $i = 1;
-        while ($rowhkan_la = $qryhkan_la->fetch_array()) {
-        $la_id = $rowhkan_la['kanzon_id'];
+        while ($rowkanzon = $qrykanzon->fetch_array()) {
+        $la_id = $rowkanzon['kanzon_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
-             <td><?php echo $rowhkan_la['kanzon_name']; ?></td>
-             <td><?php echo $rowhkan_la['kanzon_detail']; ?></td>
+             <td><?php echo $rowkanzon['kanzon_name']; ?></td>
+             <td><?php echo $rowkanzon['kanzon_detail']; ?></td>
              
              
-             <td><?php echo $rowhkan_la['kanzon_status']; ?></td>
+             <td><?php echo $rowkanzon['kanzon_status']; ?></td>
              
              
              
 
              <td width="10px">
-                 <?php if ($rowhkan_la['kanzon_status'] == 3): ?>
+                 <?php if ($rowkanzon['kanzon_status'] == 3): ?>
                  <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
                  <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
