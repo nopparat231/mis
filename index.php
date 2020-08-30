@@ -92,6 +92,12 @@ session_start();
       }elseif (isset($_GET['kanzon'])) {
         include 'page/kanzon.php';
         
+      }elseif (isset($_GET['kan_research'])) {
+        include 'page/kan_research.php';
+
+      }elseif (isset($_GET['kan_activity'])) {
+        include 'page/kan_activity.php';
+
       }else{
         include 'new.php';
       }

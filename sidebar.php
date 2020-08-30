@@ -154,9 +154,16 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="index.php?presearch" class="nav-link">
+                      <a href="index.php?kan_research" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>การจัดการงานวิจัย</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kan_activity" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการกิจกรรม</p>
                       </a>
                     </li>
 
