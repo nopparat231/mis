@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2020 at 05:48 PM
+-- Generation Time: Aug 31, 2020 at 03:57 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -356,9 +356,10 @@ INSERT INTO `kana` (`kana_id`, `kana_detail`, `kana_status`) VALUES
 
 CREATE TABLE `kanzon` (
   `kanzon_id` int(11) NOT NULL,
-  `kanzon_name` varchar(100) NOT NULL,
+  `kanzon_user_id` int(11) NOT NULL,
   `kanzon_detail` varchar(100) NOT NULL,
-  `kanzon_ term` int(11) NOT NULL,
+  `kanzon_term` int(11) NOT NULL,
+  `kanzon_file` varchar(255) NOT NULL,
   `kanzon_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -366,8 +367,8 @@ CREATE TABLE `kanzon` (
 -- Dumping data for table `kanzon`
 --
 
-INSERT INTO `kanzon` (`kanzon_id`, `kanzon_name`, `kanzon_detail`, `kanzon_ term`, `kanzon_status`) VALUES
-(1, 'นายอธิชา พันธุ์แก่นเพชร', 'สอนภาคเรียนที่ 1 ตารางสอน', 1, 1);
+INSERT INTO `kanzon` (`kanzon_id`, `kanzon_user_id`, `kanzon_detail`, `kanzon_term`, `kanzon_file`, `kanzon_status`) VALUES
+(1, 11, 'สอนภาคเรียนที่ 1 ตารางสอน', 1, 'excal', 1);
 
 -- --------------------------------------------------------
 

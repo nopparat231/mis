@@ -56,12 +56,68 @@
               <?php if ($status == 2): ?>
 
 
-                <li class="nav-item">
-                  <a href="index.php?pa666" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>เลือกหัวข้อหัวข้อการประเมิน</p>
-                  </a>
-                </li>
+                    <li class="nav-item">
+                      <a href="index.php?pa666" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>เลือกหัวข้อหัวข้อการประเมิน</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?pa8" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>เพิ่มผู้ใช้</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?pa7" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>เพิ่มเพิ่มประกาศ</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?pla" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการการลา</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?porder" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการคำสั่ง</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kanzon" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการสอน</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kan_research" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการงานวิจัย</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kan_activity" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการกิจกรรม</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kan_activity" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการศิลปวัฒนธรรม </p>
+                      </a>
+                    </li>
 
                 <?php else: ?>
 
@@ -88,12 +144,69 @@
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
+                  
                   <li class="nav-item">
                     <a href="index.php?pa66" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>รายงานการประเมิน</p>
                     </a>
                   </li>
+                  
+                  <li class="nav-item">
+                      <a href="index.php?pa8" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>เพิ่มผู้ใช้</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?pa7" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>เพิ่มเพิ่มประกาศ</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?pla" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการการลา</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?porder" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการคำสั่ง</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kanzon" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการสอน</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kan_research" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการงานวิจัย</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kan_activity" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการกิจกรรม</p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?kan_activity" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการศิลปวัฒนธรรม </p>
+                      </a>
+                    </li>
 
 
 

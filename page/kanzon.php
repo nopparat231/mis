@@ -41,7 +41,7 @@
                         else:
                         
                         ?>
-                         <a href="./index.php?pla&add" class="btn btn-success float-right"><i
+                         <a href="./index.php?kanzon&add" class="btn btn-success float-right"><i
                                  class="fas fa-plus"></i></a>
                          <?php shows(); ?>
 
@@ -66,7 +66,7 @@ function shows()
 {
 
 include './conn.php';
-$sqlkanzon = " SELECT * FROM kanzon ";
+$sqlkanzon = " SELECT * FROM kanzon  INNER JOIN user ON kanzon.kanzon_user_id = user.user_id ORDER BY kanzon_id desc ";
 $qrykanzon = mysqli_query($conn,$sqlkanzon);
 
 ?>
@@ -78,6 +78,7 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              <th>ชื่อ-นามสกุลของผู้สอน</th>
              <th>รายละเอียดการสอน</th>
              <th>เทอมที่สอน</th>
+             <th>ไฟล์</th>
              <th>สถานะ</th>
              
          </tr>
@@ -86,28 +87,28 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
          <?php 
         $i = 1;
         while ($rowkanzon = $qrykanzon->fetch_array()) {
-        $la_id = $rowkanzon['kanzon_id'];
+        $kanzon_id = $rowkanzon['kanzon_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
-             <td><?php echo $rowkanzon['kanzon_name']; ?></td>
+             <td><?php echo $rowkanzon['first_name']."  ".$rowkanzon['last_name']; ?></td>
              <td><?php echo $rowkanzon['kanzon_detail']; ?></td>
-             
-             
-             <td><?php echo $rowkanzon['kanzon_status']; ?></td>
+                    
+             <td><?php echo $rowkanzon['kanzon_term']; ?></td>
+             <td><?php echo $rowkanzon['kanzon_file']; ?></td>  
              
              
              
 
              <td width="10px">
                  <?php if ($rowkanzon['kanzon_status'] == 3): ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
+                 <a href="index.php?kanzon&edit_user&kanzon_id=<?php echo($kanzon_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="index.php?kanzon&del_la&kanzon_id=<?php echo($kanzon_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
+                 <a href="index.php?kanzon&edit_user&kanzon_id=<?php echo($kanzon_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="index.php?kanzon&del_la&kanzon_id=<?php echo($kanzon_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php endif ?>
              </td>
 
@@ -133,7 +134,7 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/kanzon_db.php" method="post">
 
      <div class="row">
 
@@ -157,62 +158,45 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              </div>
          </div>
 
+          <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>รายละเอียดการสอน</label>
+                 <input type="text" name="kanzon_detail" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ประเภทการลา</label>
-                 <select class="custom-select" name="la_type">
-                     <option selected>เลือกประเภทการลา</option>
-                     <option value="0">พักร้อน</option>
-                     <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
-                     <option value="3">ยกเลิก</option>
+                 <label>เทอมที่สอน</label>
+                 <select class="custom-select" name="kanzon_term">
+                     <option selected>เลือก</option>
+                     <option value="0">1</option>
+                     <option value="1">2</option>
+                     
                  </select>
              </div>
          </div>
 
-
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>วันที่เริ่มลา</label>
-                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+                 <label>เพื่มไฟล์ข้อมูล</label>
+                 <input type="file" name="kanzon_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>วันที่สิ้นสุดการลา</label>
-                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันที่ลา</label>
-                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันคงเหลือ</label>
-                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
 
      </div>
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?kanzon">cancel</a>
      </div>
 
-     <input type="hidden" name="add_pla">
+     <input type="hidden" name="add_kanzon">
 
  </form>
 
@@ -229,7 +213,7 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/kanzon_db.php" method="post">
 
      <div class="row">
 
@@ -253,64 +237,45 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              </div>
          </div>
 
+          <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>รายละเอียดการสอน</label>
+                 <input type="text" name="kanzon_detail" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ประเภทการลา</label>
-                 <select class="custom-select" name="la_type">
-                     <option selected>เลือกประเภทการลา</option>
-                     <option value="0">พักร้อน</option>
-                     <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
-                     <option value="3">ยกเลิก</option>
+                 <label>เทอมที่สอน</label>
+                 <select class="custom-select" name="kanzon_term">
+                     <option selected>เลือก</option>
+                     <option value="0">1</option>
+                     <option value="1">2</option>
+                     
                  </select>
              </div>
          </div>
 
-
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>วันที่เริ่มลา</label>
-                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+                 <label>เพื่มไฟล์ข้อมูล</label>
+                 <input type="file" name="kanzon_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>วันที่สิ้นสุดการลา</label>
-                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันที่ลา</label>
-                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันคงเหลือ</label>
-                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
 
 
      </div>
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?kanzon">cancel</a>
      </div>
 
-     <input type="hidden" name="add_pla">
+     <input type="hidden" name="add_kanzon">
 
  </form>
 
