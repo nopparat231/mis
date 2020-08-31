@@ -34,7 +34,7 @@
 
                          if (isset($_GET['add'])):
                             add();
-                        elseif (isset($_GET['edit_user'])):
+                        elseif (isset($_GET['edit_la'])):
                             edit();
                         elseif (isset($_GET['del_la'])):
                             del();
@@ -82,6 +82,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <th>วันสิ้นสุดการลา</th>
              <th>จำนวนวันที่ลา</th>
              <th>จำนวนคงเหลือ</th>
+             <th>ไฟล์</th>
              <th>แก้ไข</th>
 
          </tr>
@@ -115,15 +116,20 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <td><?php echo $rowhkan_la['la_total']; ?></td>
              <td><?php echo $rowhkan_la['la_balance']; ?></td>
 
+             <td>
+                 <?php if ($rowhkan_la['la_file'] == "ไม่มีไฟล์") {
+                    echo "ไม่มีไฟล์";
+                 }else{ ?>
+                 <a href="uploads/<?php echo $rowhkan_la['la_file']; ?>" download><?php echo $rowhkan_la['la_file']; ?>
+                     <?php } ?>
+             </td>
+
              <td width="10px">
-                 <?php if ($rowhkan_la['la_type'] == 3): ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <?php if ($rowhkan_la['la_status'] == 0): ?>
+                 <a href="index.php?pla&edit_la&la_id=<?php echo($la_id) ?>"><i class="far fa-edit"></i></a>&nbsp;&nbsp;
+                 <a href="page/pla_db.php?del_pla&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
              </td>
 
@@ -149,7 +155,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/pla_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -157,10 +163,10 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
+                 <select class="form-control select2" name="la_user_id" style="width: 100%;">
+                     <option selected="selected">เลือกชื่อผู้ใช้</option>
 
-                    <?php
+                     <?php
 
                         while ($rowuser = $qryhuser->fetch_array()) {
                             $usid = $rowuser["user_id"];
@@ -168,11 +174,10 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
                         }
 
                     ?>
-                  
-                  </select>
+
+                 </select>
              </div>
          </div>
-
 
          <div class="col-sm-4">
              <!-- text input -->
@@ -182,7 +187,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
                      <option selected>เลือกประเภทการลา</option>
                      <option value="0">พักร้อน</option>
                      <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
+                     <option value="2">ป่วย</option>
                      <option value="3">ยกเลิก</option>
                  </select>
              </div>
@@ -218,6 +223,14 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <div class="form-group">
                  <label>จำนวนวันคงเหลือ</label>
                  <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>เพิ่มไฟล์</label>
+                 <input type="file" name="la_file" class="form-control" required placeholder="Enter ...">
              </div>
          </div>
 
@@ -239,13 +252,14 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
  {
    
  include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
+    $la_id = $_GET['la_id'];
+    $sqlhuser = " SELECT * FROM kan_la INNER JOIN user ON kan_la.la_user_id = user.user_id WHERE kan_la.la_id = '$la_id' ";
  	$qryhuser = mysqli_query($conn,$sqlhuser);
- 	//$rowuser = mysqli_fetch_assoc($qryhuser);
+ 	$rowuser = mysqli_fetch_assoc($qryhuser);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/pla_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -253,19 +267,11 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
+                 <select class="form-control select2" name="la_user_id" style="width: 100%;">
+                     <option selected="selected" value="<?= $rowuser['la_user_id'] ?>" >
+                         <?= $rowuser['first_name']."  ".$rowuser['last_name']; ?></option>
 
-                    <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-                  
-                  </select>
+                 </select>
              </div>
          </div>
 
@@ -275,10 +281,12 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <div class="form-group">
                  <label>ประเภทการลา</label>
                  <select class="custom-select" name="la_type">
-                     <option selected>เลือกประเภทการลา</option>
+                     <option selected value="<?= $rowuser['la_type'] ?>">
+                         <?php if($rowuser['la_type'] == '0'):echo 'พักร้อน';elseif($rowuser['la_type'] == '1'):echo 'กิจ';elseif($rowuser['la_type'] == '2'):echo 'ป่วย';elseif($rowuser['la_type'] == '3'):echo 'ยกเลิก'; endif?>
+                     </option>
                      <option value="0">พักร้อน</option>
                      <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
+                     <option value="2">ป่วย</option>
                      <option value="3">ยกเลิก</option>
                  </select>
              </div>
@@ -289,7 +297,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <!-- text input -->
              <div class="form-group">
                  <label>วันที่เริ่มลา</label>
-                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+                 <input type="date" name="la_start" value="<?= $rowuser['la_start'] ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -297,7 +305,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <!-- text input -->
              <div class="form-group">
                  <label>วันที่สิ้นสุดการลา</label>
-                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
+                 <input type="date" name="la_end" value="<?= $rowuser['la_end'] ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -305,7 +313,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <!-- text input -->
              <div class="form-group">
                  <label>จำนวนวันที่ลา</label>
-                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
+                 <input type="number" name="la_total" value="<?= $rowuser['la_total'] ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -313,10 +321,17 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <!-- text input -->
              <div class="form-group">
                  <label>จำนวนวันคงเหลือ</label>
-                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
+                 <input type="number" name="la_balance" value="<?= $rowuser['la_balance'] ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>เพิ่มไฟล์</label>
+                 <input type="file" name="la_file" value="uploads/<?= $rowuser['la_file'] ?>" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
 
 
      </div>
@@ -326,16 +341,12 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
          <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
      </div>
 
-     <input type="hidden" name="add_pla">
+     <input type="hidden" name="edit_pla">
+     <input type="hidden" name="la_id" value="<?= $rowuser['la_id'] ?>">
 
  </form>
 
  <?php
  }
- 
- function del()
- {
-    echo "del";
- }
- 
+
  ?>
