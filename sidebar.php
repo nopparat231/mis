@@ -113,7 +113,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="index.php?kan_activity" class="nav-link">
+                      <a href="index.php?arts_and_culture" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>การจัดการศิลปวัฒนธรรม </p>
                       </a>

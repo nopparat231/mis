@@ -98,6 +98,9 @@ session_start();
       }elseif (isset($_GET['kan_activity'])) {
         include 'page/kan_activity.php';
 
+      }elseif (isset($_GET['arts_and_culture'])) {
+        include 'page/arts_and_culture.php';
+
       }else{
         include 'new.php';
       }
