@@ -41,7 +41,7 @@
                         else:
                         
                         ?>
-                         <a href="./index.php?pla&add" class="btn btn-success float-right"><i
+                         <a href="./index.php?kan_activity&add" class="btn btn-success float-right"><i
                                  class="fas fa-plus"></i></a>
                          <?php shows(); ?>
 
@@ -67,7 +67,7 @@ function shows()
 
 include './conn.php';
 $sqlkan_activity = " SELECT * FROM kan_activity ";
-$qrykanzon = mysqli_query($conn,$sqlkan_activity);
+$qrykan_activity = mysqli_query($conn,$sqlkan_activity);
 
 ?>
 
@@ -77,6 +77,7 @@ $qrykanzon = mysqli_query($conn,$sqlkan_activity);
              <th width="3px">งานกิจกรรมที่</th>
              <th>ชื่อกิจกรรม</th>
              <th>รายละเอียดกิจกรรม</th>
+             <th>ไฟล์</th>
              <th>สถานะ</th>
              
              
@@ -85,13 +86,15 @@ $qrykanzon = mysqli_query($conn,$sqlkan_activity);
      <tbody>
          <?php 
         $i = 1;
-        while ($rowkanzon = $qrykanzon->fetch_array()) {
-        $la_id = $rowkanzon['kan_activity_id'];
+        while ($rowkan_activity = $qrykan_activity->fetch_array()) {
+        $la_id = $rowkan_activity['kan_activity_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
-             <td><?php echo $rowkanzon['name_activity']; ?></td>
-             <td><?php echo $rowkanzon['detail']; ?></td>
+             <td><?php echo $rowkan_activity['name_activity']; ?></td>
+             <td><?php echo $rowkan_activity['detail']; ?></td>
+             <td><?php echo $rowkan_activity['activity_file']; ?></td>
+
              
              
             
@@ -100,14 +103,14 @@ $qrykanzon = mysqli_query($conn,$sqlkan_activity);
              
 
              <td width="10px">
-                 <?php if ($rowkanzon['kan_activity_id'] == 3): ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
+                 <?php if ($rowkan_activity['kan_activity_id'] == 3): ?>
+                 <a href="index.php?kan_activity&edit_user&kan_activity_id=<?php echo($kan_activity_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="index.php?kan_activity&del_la&kan_activity_id=<?php echo($kan_activity_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
+                 <a href="index.php?kan_activity&edit_user&kan_activity_id=<?php echo($kan_activity_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="index.php?kan_activity&del_la&kan_activity_id=<?php echo($kan_activity_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php endif ?>
              </td>
 
@@ -133,83 +136,41 @@ $qrykanzon = mysqli_query($conn,$sqlkan_activity);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/kan_activity_db.php" method="post">
 
      <div class="row">
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
-
-                    <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-                  
-                  </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>ประเภทการลา</label>
-                 <select class="custom-select" name="la_type">
-                     <option selected>เลือกประเภทการลา</option>
-                     <option value="0">พักร้อน</option>
-                     <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
-                     <option value="3">ยกเลิก</option>
-                 </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>วันที่เริ่มลา</label>
-                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+                 <label>ชื่อกิจกรรม</label>
+                 <input type="text" name="name_activity" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>วันที่สิ้นสุดการลา</label>
-                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
+                 <label>รายละเอียดกิจกรรม</label>
+                 <input type="text" name="detail" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>จำนวนวันที่ลา</label>
-                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
+                 <label>ไฟล์</label>
+                 <input type="file" name="activity_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันคงเหลือ</label>
-                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
+         
 
      </div>
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?kan_activity">cancel</a>
      </div>
 
      <input type="hidden" name="add_pla">
@@ -229,85 +190,41 @@ $qrykanzon = mysqli_query($conn,$sqlkan_activity);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/kan_activity_db.php" method="post">
 
      <div class="row">
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
-
-                    <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-                  
-                  </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>ประเภทการลา</label>
-                 <select class="custom-select" name="la_type">
-                     <option selected>เลือกประเภทการลา</option>
-                     <option value="0">พักร้อน</option>
-                     <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
-                     <option value="3">ยกเลิก</option>
-                 </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>วันที่เริ่มลา</label>
-                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+                 <label>ชื่อกิจกรรม</label>
+                 <input type="text" name="name_activity" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>วันที่สิ้นสุดการลา</label>
-                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
+                 <label>รายละเอียดกิจกรรม</label>
+                 <input type="text" name="detail" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>จำนวนวันที่ลา</label>
-                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
+                 <label>ไฟล์</label>
+                 <input type="file" name="activity_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันคงเหลือ</label>
-                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
-
+         
 
      </div>
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?kan_activity">cancel</a>
      </div>
 
      <input type="hidden" name="add_pla">

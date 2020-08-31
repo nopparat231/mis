@@ -41,7 +41,7 @@
                         else:
                         
                         ?>
-                         <a href="./index.php?pla&add" class="btn btn-success float-right"><i
+                         <a href="./index.php?kan_research&add" class="btn btn-success float-right"><i
                                  class="fas fa-plus"></i></a>
                          <?php shows(); ?>
 
@@ -67,7 +67,7 @@ function shows()
 
 include './conn.php';
 $sqlkan_research = " SELECT * FROM kan_research ";
-$qrykanzon = mysqli_query($conn,$sqlkan_research);
+$qryresearch = mysqli_query($conn,$sqlkan_research);
 
 ?>
 
@@ -77,6 +77,7 @@ $qrykanzon = mysqli_query($conn,$sqlkan_research);
              <th width="3px">งานวิจัยที่</th>
              <th>ชื่องานวิจัย</th>
              <th>รายละเอียดงานวิจัย</th>
+             <th>ไฟล์</th>
              <th>สถานะ</th>
              
              
@@ -85,13 +86,14 @@ $qrykanzon = mysqli_query($conn,$sqlkan_research);
      <tbody>
          <?php 
         $i = 1;
-        while ($rowkanzon = $qrykanzon->fetch_array()) {
-        $la_id = $rowkanzon['kan_research_id'];
+        while ($rowresearch = $qryresearch->fetch_array()) {
+        $la_id = $rowresearch['kan_research_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
-             <td><?php echo $rowkanzon['name_th']; ?></td>
-             <td><?php echo $rowkanzon['detail']; ?></td>
+             <td><?php echo $rowresearch['name_th']; ?></td>
+             <td><?php echo $rowresearch['detail']; ?></td>
+             <td><?php echo $rowresearch['research_file']; ?></td>
              
              
             
@@ -100,7 +102,7 @@ $qrykanzon = mysqli_query($conn,$sqlkan_research);
              
 
              <td width="10px">
-                 <?php if ($rowkanzon['kan_research_id'] == 3): ?>
+                 <?php if ($rowresearch['kan_research_id'] == 3): ?>
                  <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
                  <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
@@ -133,75 +135,31 @@ $qrykanzon = mysqli_query($conn,$sqlkan_research);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/kan_research_db.php" method="post">
 
      <div class="row">
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
-
-                    <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-                  
-                  </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>ประเภทการลา</label>
-                 <select class="custom-select" name="la_type">
-                     <option selected>เลือกประเภทการลา</option>
-                     <option value="0">พักร้อน</option>
-                     <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
-                     <option value="3">ยกเลิก</option>
-                 </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>วันที่เริ่มลา</label>
-                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+                 <label>ชื่องานวิจัย</label>
+                 <input type="text" name="name_th" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>วันที่สิ้นสุดการลา</label>
-                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
+                 <label>รายละเอียดงานวิจัย</label>
+                 <input type="text" name="detail" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>จำนวนวันที่ลา</label>
-                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันคงเหลือ</label>
-                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
+                 <label>ไฟล์</label>
+                 <input type="file" name="research_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -229,79 +187,33 @@ $qrykanzon = mysqli_query($conn,$sqlkan_research);
 
     ?>
 
- <form role="form" action="page/pla_db.php" method="post">
+ <form role="form" action="page/kan_research_db.php" method="post">
 
      <div class="row">
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
-
-                    <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-                  
-                  </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>ประเภทการลา</label>
-                 <select class="custom-select" name="la_type">
-                     <option selected>เลือกประเภทการลา</option>
-                     <option value="0">พักร้อน</option>
-                     <option value="1">กิจ</option>
-                     <option value="3">ป่วย</option>
-                     <option value="3">ยกเลิก</option>
-                 </select>
-             </div>
-         </div>
-
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>วันที่เริ่มลา</label>
-                 <input type="date" name="la_start" class="form-control" placeholder="Enter ...">
+                 <label>ชื่องานวิจัย</label>
+                 <input type="text" name="name_th" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>วันที่สิ้นสุดการลา</label>
-                 <input type="date" name="la_end" class="form-control" placeholder="Enter ...">
+                 <label>รายละเอียดงานวิจัย</label>
+                 <input type="text" name="detail" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>จำนวนวันที่ลา</label>
-                 <input type="number" name="la_total" class="form-control" placeholder="Enter ...">
+                 <label>ไฟล์</label>
+                 <input type="file" name="research_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
-
-         <div class="col-sm-4">
-             <!-- text input -->
-             <div class="form-group">
-                 <label>จำนวนวันคงเหลือ</label>
-                 <input type="number" name="la_balance" class="form-control" placeholder="Enter ...">
-             </div>
-         </div>
-
-
 
      </div>
 

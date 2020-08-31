@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2020 at 03:57 PM
+-- Generation Time: Aug 31, 2020 at 07:16 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -29,17 +29,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `arts_and_culture` (
   `artsculture_id` int(11) NOT NULL,
+  `art_and_culture_user_id` int(11) NOT NULL,
   `name_artculture` varchar(255) NOT NULL,
-  `detail` varchar(255) NOT NULL
+  `detail` varchar(255) NOT NULL,
+  `art_and_culture_file` varchar(255) NOT NULL,
+  `art_and_culture_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `arts_and_culture`
 --
 
-INSERT INTO `arts_and_culture` (`artsculture_id`, `name_artculture`, `detail`) VALUES
-(1, 'งานศิลปวัฒนธรรม', 'รายละเอียดของานศิลปะวัฒนธรรม'),
-(2, 'รายละเอียดของานศิลปะวัฒนธรรม ', 'งานศิลปวัฒนธรรม2');
+INSERT INTO `arts_and_culture` (`artsculture_id`, `art_and_culture_user_id`, `name_artculture`, `detail`, `art_and_culture_file`, `art_and_culture_status`) VALUES
+(1, 11, 'งานศิลปวัฒนธรรม', 'รายละเอียดของานศิลปะวัฒนธรรม', 'word', 1),
+(2, 10, 'รายละเอียดของานศิลปะวัฒนธรรม ', 'งานศิลปวัฒนธรรม2', 'excal', 1);
 
 -- --------------------------------------------------------
 
@@ -368,7 +371,8 @@ CREATE TABLE `kanzon` (
 --
 
 INSERT INTO `kanzon` (`kanzon_id`, `kanzon_user_id`, `kanzon_detail`, `kanzon_term`, `kanzon_file`, `kanzon_status`) VALUES
-(1, 11, 'สอนภาคเรียนที่ 1 ตารางสอน', 1, 'excal', 1);
+(1, 11, 'สอนภาคเรียนที่ 1 ตารางสอน', 1, 'excal', 1),
+(2, 2, 'การเรียนการสอนภาคฤดูร้อน 2563 ', 1, '', 1);
 
 -- --------------------------------------------------------
 
@@ -379,16 +383,17 @@ INSERT INTO `kanzon` (`kanzon_id`, `kanzon_user_id`, `kanzon_detail`, `kanzon_te
 CREATE TABLE `kan_activity` (
   `kan_activity_id` int(11) NOT NULL,
   `name_activity` varchar(200) NOT NULL,
-  `detail` varchar(255) NOT NULL
+  `detail` varchar(255) NOT NULL,
+  `activity_file` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kan_activity`
 --
 
-INSERT INTO `kan_activity` (`kan_activity_id`, `name_activity`, `detail`) VALUES
-(1, 'กิจกรรมพัฒนาศักยภาพบุคลากร', 'มอบหมายหน้าที่ให้คณะบริหารธุรกิจ'),
-(2, 'กิจกรรมบริจาคโลหิต', 'มอบหมายให้จัดหาคนดูแล');
+INSERT INTO `kan_activity` (`kan_activity_id`, `name_activity`, `detail`, `activity_file`) VALUES
+(1, 'กิจกรรมพัฒนาศักยภาพบุคลากร', 'มอบหมายหน้าที่ให้คณะบริหารธุรกิจ', 'excal'),
+(2, 'กิจกรรมบริจาคโลหิต', 'มอบหมายให้จัดหาคนดูแล', 'word');
 
 -- --------------------------------------------------------
 
@@ -424,6 +429,7 @@ INSERT INTO `kan_la` (`la_id`, `la_user_id`, `la_type`, `la_start`, `la_end`, `l
 CREATE TABLE `kan_research` (
   `kan_research_id` int(11) NOT NULL,
   `name_th` varchar(200) NOT NULL,
+  `research_file` varchar(255) NOT NULL,
   `detail` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -431,9 +437,9 @@ CREATE TABLE `kan_research` (
 -- Dumping data for table `kan_research`
 --
 
-INSERT INTO `kan_research` (`kan_research_id`, `name_th`, `detail`) VALUES
-(1, 'งานวิจัยเรื่องการประเมินงานบุคลครกร', 'รายละเอียดของงานวิจัย'),
-(2, 'เรื่องการวิเคราะห์ข้อมูลของมหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ', 'รายละเอียด');
+INSERT INTO `kan_research` (`kan_research_id`, `name_th`, `research_file`, `detail`) VALUES
+(1, 'งานวิจัยเรื่องการประเมินงานบุคลครกร', 'excal', 'รายละเอียดของงานวิจัย'),
+(2, 'เรื่องการวิเคราะห์ข้อมูลของมหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ', 'word', 'รายละเอียด');
 
 -- --------------------------------------------------------
 
@@ -728,7 +734,7 @@ ALTER TABLE `kana`
 -- AUTO_INCREMENT for table `kanzon`
 --
 ALTER TABLE `kanzon`
-  MODIFY `kanzon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `kanzon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kan_activity`
