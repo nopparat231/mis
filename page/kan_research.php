@@ -32,16 +32,16 @@
 
                          <?php 
 
-                         if (isset($_GET['add'])):
+                         if (isset($_GET['add_kan_research'])):
                             add();
-                        elseif (isset($_GET['edit_user'])):
+                        elseif (isset($_GET['edit_kan_research'])):
                             edit();
-                        elseif (isset($_GET['del_la'])):
+                        elseif (isset($_GET['del_kan_research'])):
                             del();
                         else:
                         
                         ?>
-                         <a href="./index.php?kan_research&add" class="btn btn-success float-right"><i
+                         <a href="./index.php?kan_research&add_kan_research" class="btn btn-success float-right"><i
                                  class="fas fa-plus"></i></a>
                          <?php shows(); ?>
 
@@ -87,29 +87,28 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
          <?php 
         $i = 1;
         while ($rowresearch = $qryresearch->fetch_array()) {
-        $la_id = $rowresearch['kan_research_id'];
+        $kan_research_id = $rowresearch['kan_research_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
              <td><?php echo $rowresearch['name_th']; ?></td>
              <td><?php echo $rowresearch['detail']; ?></td>
-             <td><?php echo $rowresearch['research_file']; ?></td>
-             
-             
-            
-             
-             
-             
+             <td>
+                 <?php if ($rowresearch['research_file'] == "ไม่มีไฟล์" || $rowresearch['research_file'] == "") {
+                    echo "ไม่มีไฟล์";
+                 }else{ ?>
+                 <a href="uploads/<?php echo $rowresearch['research_file']; ?>"
+                     download><?php echo $rowresearch['research_file']; ?>
+                     <?php } ?>
+             </td>
 
              <td width="10px">
-                 <?php if ($rowresearch['kan_research_id'] == 0): ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
+                 <?php if ($rowresearch['research_status'] == 0): ?>
+                 <a href="index.php?kan_research&edit_kan_research&kan_research_id=<?php echo($kan_research_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="page/kan_research_db.php?del_kan_research&kan_research_id=<?php echo($kan_research_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
+                    <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
              </td>
 
@@ -128,14 +127,9 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
  function add()
  {
 
-    include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
-    $qryhuser = mysqli_query($conn,$sqlhuser);
-    //$rowuser = mysqli_fetch_assoc($qryhuser);
-
     ?>
 
- <form role="form" action="page/kan_research_db.php" method="post">
+ <form role="form" action="page/kan_research_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -167,10 +161,10 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?kan_research">cancel</a>
      </div>
 
-     <input type="hidden" name="add_pla">
+     <input type="hidden" name="add_kan_research">
 
  </form>
 
@@ -181,13 +175,14 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
  {
    
  include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
+    $kan_research_id = $_GET['kan_research_id'];
+    $sqlhuser = " SELECT * FROM kan_research WHERE kan_research_id = '$kan_research_id' ";
     $qryhuser = mysqli_query($conn,$sqlhuser);
-    //$rowuser = mysqli_fetch_assoc($qryhuser);
+    $rowuser = mysqli_fetch_assoc($qryhuser);
 
     ?>
 
- <form role="form" action="page/kan_research_db.php" method="post">
+ <form role="form" action="page/kan_research_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -195,7 +190,7 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่องานวิจัย</label>
-                 <input type="text" name="name_th" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="name_th"  value="<?= $rowuser['name_th']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -203,7 +198,7 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
              <!-- text input -->
              <div class="form-group">
                  <label>รายละเอียดงานวิจัย</label>
-                 <input type="text" name="detail" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="detail" value="<?= $rowuser['detail']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -211,7 +206,7 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
              <!-- text input -->
              <div class="form-group">
                  <label>ไฟล์</label>
-                 <input type="file" name="research_file" class="form-control" placeholder="Enter ...">
+                 <input type="file" name="research_file" value="<?= $rowuser['research_file']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -219,19 +214,15 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?pla">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?kan_research">cancel</a>
      </div>
 
-     <input type="hidden" name="add_pla">
+     <input type="hidden" name="edit_kan_research">
+     <input type="hidden" name="kan_research_id" value="<?= $rowuser['kan_research_id'] ?>">
 
  </form>
 
  <?php
- }
- 
- function del()
- {
-    echo "del";
  }
  
  ?>
