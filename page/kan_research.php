@@ -102,7 +102,7 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
              
 
              <td width="10px">
-                 <?php if ($rowresearch['kan_research_id'] == 3): ?>
+                 <?php if ($rowresearch['kan_research_id'] == 0): ?>
                  <a href="index.php?pla&edit_user&la_id=<?php echo($la_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
                  <a href="index.php?pla&del_la&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>

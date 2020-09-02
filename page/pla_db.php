@@ -46,6 +46,16 @@ if (isset($_POST['add_pla'])) {
     $la_end = $_POST['la_end'];
     $la_total = $_POST['la_total'];
 	$la_balance = $_POST['la_balance'];
+
+	$target_dir = "../uploads/";
+	$file_tmp = $_FILES["la_file"]["tmp_name"];
+	$file_name = basename($_FILES["la_file"]["name"]);
+	$la_file = rand(1000,1000000).$file_name;
+    $target_file = $target_dir . $la_file;
+    
+	if(isset($file_name) and !empty($file_name)){
+        move_uploaded_file($file_tmp, $target_file);
+
 	
 	$sql = "UPDATE kan_la SET 
 	la_user_id = '$la_user_id' , 
@@ -53,13 +63,36 @@ if (isset($_POST['add_pla'])) {
 	la_start ='$la_start' , 
 	la_end = '$la_end' , 
 	la_total = '$la_total' , 
-	la_balance = '$la_balance'
+	la_balance = '$la_balance' ,
+	la_file = '$la_file'	
 	WHERE la_id =".$la_id;
 
 	if ($conn->query($sql) === TRUE) {
 		header("location:../index.php?pla");
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+
+	}else{
+
+		$la_file = "ไม่มีไฟล์";
+
+		$sql = "UPDATE kan_la SET 
+		la_user_id = '$la_user_id' , 
+		la_type  = '$la_type' , 
+		la_start ='$la_start' , 
+		la_end = '$la_end' , 
+		la_total = '$la_total' , 
+		la_balance = '$la_balance' ,
+		la_file = '$la_file'
+		WHERE la_id =".$la_id;
+	
+		if ($conn->query($sql) === TRUE) {
+			header("location:../index.php?pla");
+		} else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+
 	}
 
 	$conn->close();

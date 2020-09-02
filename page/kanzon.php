@@ -80,7 +80,7 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              <th>เทอมที่สอน</th>
              <th>ไฟล์</th>
              <th>สถานะ</th>
-             
+
          </tr>
      </thead>
      <tbody>
@@ -93,22 +93,27 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              <td align="center"><?php echo $i; ?></td>
              <td><?php echo $rowkanzon['first_name']."  ".$rowkanzon['last_name']; ?></td>
              <td><?php echo $rowkanzon['kanzon_detail']; ?></td>
-                    
+
              <td><?php echo $rowkanzon['kanzon_term']; ?></td>
-             <td><?php echo $rowkanzon['kanzon_file']; ?></td>  
-             
-             
-             
+
+             <td>
+                 <?php if ($rowkanzon['kanzon_file'] == "ไม่มีไฟล์" || $rowkanzon['kanzon_file'] == "") {
+                    echo "ไม่มีไฟล์";
+                 }else{ ?>
+                 <a href="uploads/<?php echo $rowkanzon['kanzon_file']; ?>"
+                     download><?php echo $rowkanzon['kanzon_file']; ?>
+                     <?php } ?>
+             </td>
+
 
              <td width="10px">
-                 <?php if ($rowkanzon['kanzon_status'] == 3): ?>
+                 <?php if ($rowkanzon['kanzon_status'] == 0): ?>
                  <a href="index.php?kanzon&edit_user&kanzon_id=<?php echo($kanzon_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?kanzon&del_la&kanzon_id=<?php echo($kanzon_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <a href="page/kanzon_db.php?del_kanzon&kanzon_id=<?php echo($kanzon_id) ?>"><i
+                         class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?kanzon&edit_user&kanzon_id=<?php echo($kanzon_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?kanzon&del_la&kanzon_id=<?php echo($kanzon_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
              </td>
 
@@ -134,7 +139,7 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
 
     ?>
 
- <form role="form" action="page/kanzon_db.php" method="post">
+ <form role="form" action="page/kanzon_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -142,10 +147,10 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
+                 <select class="form-control select2" name="kanzon_user_id" style="width: 100%;">
+                     <option selected="selected">เลือกชื่อผู้ใช้</option>
 
-                    <?php
+                     <?php
 
                         while ($rowuser = $qryhuser->fetch_array()) {
                             $usid = $rowuser["user_id"];
@@ -153,12 +158,12 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
                         }
 
                     ?>
-                  
-                  </select>
+
+                 </select>
              </div>
          </div>
 
-          <div class="col-sm-4">
+         <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
                  <label>รายละเอียดการสอน</label>
@@ -175,7 +180,7 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
                      <option selected>เลือก</option>
                      <option value="0">1</option>
                      <option value="1">2</option>
-                     
+
                  </select>
              </div>
          </div>
@@ -206,14 +211,16 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
  function edit()
  {
    
- include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
+    include './conn.php';
+
+    $kanzon_id = $_GET['kanzon_id'];
+    $sqlhuser = " SELECT * FROM kanzon INNER JOIN user ON kanzon.kanzon_user_id = user.user_id WHERE kanzon.kanzon_id = '$kanzon_id' ";
  	$qryhuser = mysqli_query($conn,$sqlhuser);
- 	//$rowuser = mysqli_fetch_assoc($qryhuser);
+ 	$rowuser = mysqli_fetch_assoc($qryhuser);
 
     ?>
 
- <form role="form" action="page/kanzon_db.php" method="post">
+ <form role="form" action="page/kanzon_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -221,27 +228,22 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
+                 <select class="form-control select2" name="kanzon_user_id" style="width: 100%;">
 
-                    <?php
+                     <option selected="selected" value="<?= $rowuser['kanzon_user_id']; ?>">
+                         <?= $rowuser['first_name']."  ".$rowuser['last_name']; ?>
+                     </option>
 
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-                  
-                  </select>
+                 </select>
              </div>
          </div>
 
-          <div class="col-sm-4">
+         <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
                  <label>รายละเอียดการสอน</label>
-                 <input type="text" name="kanzon_detail" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="kanzon_detail" value="<?= $rowuser['kanzon_detail']; ?>" class="form-control"
+                     placeholder="Enter ...">
              </div>
          </div>
 
@@ -251,10 +253,10 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
              <div class="form-group">
                  <label>เทอมที่สอน</label>
                  <select class="custom-select" name="kanzon_term">
-                     <option selected>เลือก</option>
-                     <option value="0">1</option>
-                     <option value="1">2</option>
-                     
+                     <option value="<?= $rowuser['kanzon_term']; ?>" selected><?= $rowuser['kanzon_term']; ?></option>
+                     <option >------</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
                  </select>
              </div>
          </div>
@@ -275,7 +277,8 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
          <a type="submit" class="btn btn-danger" href="./index.php?kanzon">cancel</a>
      </div>
 
-     <input type="hidden" name="add_kanzon">
+     <input type="hidden" name="edit_kanzon">
+     <input type="hidden" name="kanzon_id" value="<?= $rowuser['kanzon_id'] ?>">
 
  </form>
 
