@@ -32,16 +32,16 @@
 
                          <?php 
 
-                         if (isset($_GET['add'])):
+                         if (isset($_GET['add_arts_and_culture'])):
                             add();
-                        elseif (isset($_GET['edit_user'])):
+                        elseif (isset($_GET['edit_arts_and_culture'])):
                             edit();
-                        elseif (isset($_GET['del_la'])):
+                        elseif (isset($_GET['del_arts_and_culture'])):
                             del();
                         else:
                         
                         ?>
-                         <a href="./index.php?arts_and_culture&add" class="btn btn-success float-right"><i
+                         <a href="./index.php?arts_and_culture&add_arts_and_culture" class="btn btn-success float-right"><i
                                  class="fas fa-plus"></i></a>
                          <?php shows(); ?>
 
@@ -95,20 +95,24 @@ $qryart = mysqli_query($conn,$sqlart);
              <td><?php echo $rowart['name_artculture']; ?></td>
                     
              <td><?php echo $rowart['detail']; ?></td>
-             <td><?php echo $rowart['art_and_culture_file']; ?></td>  
-             
-             
-             
+
+             <td>
+                 <?php if ($rowart['art_and_culture_file'] == "ไม่มีไฟล์") {
+                    echo "ไม่มีไฟล์";
+                 }else{ ?>
+                 <a href="uploads/<?php echo $rowart['art_and_culture_file']; ?>" download><?php echo $rowart['art_and_culture_file']; ?>
+                     <?php } ?>
+             </td>
+
 
              <td width="10px">
-                 <?php if ($rowart['art_and_culture_status'] == 3): ?>
-                 <a href="index.php?kanzon&edit_user&artsculture_id=<?php echo($artsculture_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?kanzon&del_la&artsculture_id=<?php echo($artsculture_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <?php if ($rowart['art_and_culture_status'] == 0): ?>
+                 <a href="index.php?arts_and_culture&edit_arts_and_culture&artsculture_id=<?php echo($artsculture_id) ?>">
+                 <i class="far fa-edit"></i></a>&nbsp;&nbsp;
+                 <a href="page/arts_and_culture_db.php?art_and_culture&del_arts_and_culture&artsculture_id=<?php echo($artsculture_id) ?>">
+                 <i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?kanzon&edit_user&artsculture_id=<?php echo($artsculture_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?kanzon&del_la&artsculture_id=<?php echo($artsculture_id) ?>"><i class="far fa-trash-alt"></i></a>
+                    <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
              </td>
 
@@ -134,7 +138,7 @@ $qryart = mysqli_query($conn,$sqlart);
 
     ?>
 
- <form role="form" action="page/arts_and_culture.php" method="post">
+ <form role="form" action="page/arts_and_culture_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -142,7 +146,7 @@ $qryart = mysqli_query($conn,$sqlart);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
+                  <select class="form-control select2" name="art_and_culture_user_id" style="width: 100%;">
                     <option selected="selected">เลือกชื่อผู้ใช้</option>
 
                     <?php
@@ -202,14 +206,15 @@ $qryart = mysqli_query($conn,$sqlart);
  function edit()
  {
    
- include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
-    $qryhuser = mysqli_query($conn,$sqlhuser);
-    //$rowuser = mysqli_fetch_assoc($qryhuser);
+    include './conn.php';
+    $artsculture_id = $_GET['artsculture_id'];
+    $sqlhuser = " SELECT * FROM arts_and_culture INNER JOIN user ON arts_and_culture.art_and_culture_user_id = user.user_id WHERE arts_and_culture.artsculture_id = '$artsculture_id' ";
+ 	$qryhuser = mysqli_query($conn,$sqlhuser);
+    $rowuser = mysqli_fetch_assoc($qryhuser);
+     
+?>
 
-    ?>
-
- <form role="form" action="page/arts_and_culture_db.php" method="post">
+ <form role="form" action="page/arts_and_culture_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -217,19 +222,11 @@ $qryart = mysqli_query($conn,$sqlart);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
-                  <select class="form-control select2" name="la_user_id" style="width: 100%;">
-                    <option selected="selected">เลือกชื่อผู้ใช้</option>
+                 <select class="form-control select2" name="art_and_culture_user_id" style="width: 100%;">
+                     <option selected="selected" value="<?= $rowuser['art_and_culture_user_id'] ?>" >
+                         <?= $rowuser['first_name']."  ".$rowuser['last_name']; ?></option>
 
-                    <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-                  
-                  </select>
+                 </select>
              </div>
          </div>
 
@@ -237,7 +234,7 @@ $qryart = mysqli_query($conn,$sqlart);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อศิลปวัฒนธรรม</label>
-                 <input type="text" name="name_artculture" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="name_artculture" value="<?= $rowuser['name_artculture'] ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -245,7 +242,7 @@ $qryart = mysqli_query($conn,$sqlart);
              <!-- text input -->
              <div class="form-group">
                  <label>รายละเอียด</label>
-                 <input type="text" name="detail" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="detail" value="<?= $rowuser['detail'] ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -255,7 +252,7 @@ $qryart = mysqli_query($conn,$sqlart);
              <!-- text input -->
              <div class="form-group">
                  <label>เพื่มไฟล์ข้อมูล</label>
-                 <input type="file" name="art_and_culture_file" class="form-control" placeholder="Enter ...">
+                 <input type="file" name="art_and_culture_file" value="<?= $rowuser['art_and_culture_file'] ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -267,16 +264,12 @@ $qryart = mysqli_query($conn,$sqlart);
          <a type="submit" class="btn btn-danger" href="./index.php?arts_and_culture">cancel</a>
      </div>
 
-     <input type="hidden" name="add_arts_and_culture">
+     <input type="hidden" name="edit_arts_and_culture">
+     <input type="hidden" name="artsculture_id" value="<?= $rowuser['artsculture_id'] ?>">
 
  </form>
 
  <?php
  }
- 
- function del()
- {
-    echo "del";
- }
- 
+
  ?>

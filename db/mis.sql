@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2020 at 04:06 PM
+-- Generation Time: Sep 07, 2020 at 05:01 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -33,15 +33,15 @@ CREATE TABLE IF NOT EXISTS `arts_and_culture` (
   `detail` varchar(255) NOT NULL,
   `art_and_culture_file` varchar(255) NOT NULL,
   `art_and_culture_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `arts_and_culture`
 --
 
 INSERT INTO `arts_and_culture` (`artsculture_id`, `art_and_culture_user_id`, `name_artculture`, `detail`, `art_and_culture_file`, `art_and_culture_status`) VALUES
-(1, 11, 'งานศิลปวัฒนธรรม', 'รายละเอียดของานศิลปะวัฒนธรรม', 'word', 1),
-(2, 10, 'รายละเอียดของานศิลปะวัฒนธรรม ', 'งานศิลปวัฒนธรรม2', 'excal', 1);
+(1, 11, 'งานศิลปวัฒนธรรม2', 'รายละเอียดของานศิลปะวัฒนธรรม', '162398_test2.xlsx', 0),
+(2, 10, 'รายละเอียดของานศิลปะวัฒนธรรม ', 'งานศิลปวัฒนธรรม', '545377_851711test.xlsx', 0);
 
 -- --------------------------------------------------------
 
@@ -689,7 +689,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `arts_and_culture`
 --
 ALTER TABLE `arts_and_culture`
-MODIFY `artsculture_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `artsculture_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `f_action`
 --

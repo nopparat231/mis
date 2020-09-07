@@ -2,94 +2,104 @@
 include '../conn.php';
 include 'class_db.php';
 
-if (isset($_POST['add_user'])) {
-	
-	$user_tumn = $_POST['user_tumn'];
-	$first_name = $_POST['first_name'];
-	$last_name = $_POST['last_name'];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$user_status = $_POST['user_status'];
-	$user_kana_id = $_POST['user_kana'];
-	$user_saka_id = $_POST['user_saka'];
+if (isset($_POST['add_arts_and_culture'])) {
 
-	$sqlhuser=" SELECT * FROM user WHERE username =".$username;
-	$qryhuser = mysqli_query($conn,$sqlhuser);
-	$rowuser = mysqli_fetch_assoc($qryhuser);
-	$rowcheckuser = mysqli_num_rows($qryhuser); 
+	$art_and_culture_user_id = $_POST['art_and_culture_user_id'];
+    $name_artculture = $_POST['name_artculture'];
+    $detail = $_POST['detail'];
+    //$art_and_culture_file = $_POST['art_and_culture_file'];
+    
+    
+	$target_dir = "../uploads/";
+	$file_tmp = $_FILES["art_and_culture_file"]["tmp_name"];
+	$file_name = basename($_FILES["art_and_culture_file"]["name"]);
+	$art_and_culture_file = rand(1000,1000000)."_".$file_name;
+    $target_file = $target_dir . $art_and_culture_file;
+    
+	if(isset($file_name) and !empty($file_name)){
+        move_uploaded_file($file_tmp, $target_file);
 
-	if ($rowcheckuser == 0) {
-
-		$sql = "INSERT INTO user ( user_tumn , first_name , last_name , username , password , user_kana_id , user_saka_id , user_status) VALUES ( '$user_tumn' , '$first_name','$last_name','$username','$password','$user_kana_id','$user_saka_id','$user_status')";
+        $sql = "INSERT INTO arts_and_culture ( art_and_culture_user_id , name_artculture , detail , art_and_culture_file )
+        VALUES ( '$art_and_culture_user_id' , '$name_artculture' , '$detail' , '$art_and_culture_file')";
 
 		if ($conn->query($sql) === TRUE) {
-			header("location:../index.php?pa8");
+			header("location:../index.php?arts_and_culture");
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
-		}
+        }
+
+    }
+    
+	$conn->close();
+
+
+}elseif (isset($_POST['edit_arts_and_culture'])) {
+
+	$artsculture_id = $_POST['artsculture_id'];
+
+	$art_and_culture_user_id = $_POST['art_and_culture_user_id'];
+    $name_artculture = $_POST['name_artculture'];
+    $detail = $_POST['detail'];
+    //$art_and_culture_file = $_POST['art_and_culture_file'];
+    
+    
+	$target_dir = "../uploads/";
+	$file_tmp = $_FILES["art_and_culture_file"]["tmp_name"];
+	$file_name = basename($_FILES["art_and_culture_file"]["name"]);
+	$art_and_culture_file = rand(1000,1000000)."_".$file_name;
+	$target_file = $target_dir . $art_and_culture_file;
+	
+	if(isset($file_name) and !empty($file_name)){
+    move_uploaded_file($file_tmp, $target_file);
+	
+	$sql = "UPDATE arts_and_culture SET 
+	art_and_culture_user_id = '$art_and_culture_user_id' , 
+	name_artculture = '$name_artculture' , 
+	detail  = '$detail' , 
+	art_and_culture_file  = '$art_and_culture_file'
+	WHERE artsculture_id = '$artsculture_id' ";
+
+	if ($conn->query($sql) === TRUE) {
+		header("location:../index.php?arts_and_culture");
+	} else {
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
 
 	}else{
-
-		$message = 'มีชื่อผู้ใช้นี้แล้ว';
-		echo "<script type='text/javascript'>alert('$message');</script>";
-
-	}
-
 	
-	$conn->close();
-
-
-
-}elseif (isset($_POST['edit_user'])) {
-	
-	$user_id = $_POST['user_id'];
-	$user_tumn = $_POST['user_tumn'];
-	$first_name = $_POST['first_name'];
-	$last_name = $_POST['last_name'];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$user_status = $_POST['user_status'];
-	$user_kana_id = $_POST['user_kana'];
-	$user_saka_id = $_POST['user_saka'];
-
-	$sql = "UPDATE user SET 
-	user_tumn = '$user_tumn' , 
-	first_name  = '$first_name' , 
-	last_name ='$last_name' , 
-	username = '$username' , 
-	password = '$password' , 
-	user_kana_id = '$user_kana_id' , 
-	user_saka_id = '$user_saka_id' , 
-	user_status = '$user_status' 
-	WHERE user_id =".$user_id;
+	$art_and_culture_file = "ไม่มีไฟล์";
+		
+	$sql = "UPDATE arts_and_culture SET 
+	art_and_culture_user_id = '$art_and_culture_user_id' , 
+	name_artculture = '$name_artculture' , 
+	detail  = '$detail' , 
+	art_and_culture_file  = '$art_and_culture_file'
+	WHERE artsculture_id = '$artsculture_id' ";
 
 	if ($conn->query($sql) === TRUE) {
-		header("location:../index.php?pa8");
+		header("location:../index.php?arts_and_culture");
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
-
+	}
 
 	$conn->close();
 
 
 
-}elseif (isset($_GET['del_user'])) {
+}elseif (isset($_GET['del_arts_and_culture'])) {
 	
-	$user_id = $_GET['user_id'];
+	$artsculture_id = $_GET['artsculture_id'];
 
-
-	$sql =  "UPDATE user SET user_status = 3 WHERE user_id =".$user_id;
+	$sql =  "UPDATE arts_and_culture SET art_and_culture_status = 1 WHERE artsculture_id = '$artsculture_id' ";
 	if ($conn->query($sql) === TRUE) {
-		header("location:../index.php?pa8");
+		header("location:../index.php?arts_and_culture");
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
 	$conn->close();
-
-
 
 }
 
