@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2020 at 04:48 PM
+-- Generation Time: Sep 07, 2020 at 04:06 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -384,16 +384,17 @@ CREATE TABLE IF NOT EXISTS `kan_activity` (
 `kan_activity_id` int(11) NOT NULL,
   `name_activity` varchar(200) NOT NULL,
   `detail` varchar(255) NOT NULL,
-  `activity_file` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+  `activity_file` varchar(255) NOT NULL,
+  `kan_activity_status` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kan_activity`
 --
 
-INSERT INTO `kan_activity` (`kan_activity_id`, `name_activity`, `detail`, `activity_file`) VALUES
-(1, 'กิจกรรมพัฒนาศักยภาพบุคลากร', 'มอบหมายหน้าที่ให้คณะบริหารธุรกิจ', 'excal'),
-(2, 'กิจกรรมบริจาคโลหิต', 'มอบหมายให้จัดหาคนดูแล', 'word');
+INSERT INTO `kan_activity` (`kan_activity_id`, `name_activity`, `detail`, `activity_file`, `kan_activity_status`) VALUES
+(1, 'กิจกรรมพัฒนาศักยภาพบุคลากร', 'มอบหมายหน้าที่ให้คณะบริหารธุรกิจ', '72492_test2.xlsx', 0),
+(2, 'กิจกรรมบริจาคโลหิต', 'มอบหมายให้จัดหาคนดูแล', '802444_test.xlsx', 0);
 
 -- --------------------------------------------------------
 
@@ -733,7 +734,7 @@ MODIFY `kanzon_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `kan_activity`
 --
 ALTER TABLE `kan_activity`
-MODIFY `kan_activity_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `kan_activity_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `kan_la`
 --

@@ -32,16 +32,16 @@
 
                          <?php 
 
-                         if (isset($_GET['add'])):
+                         if (isset($_GET['add_kan_activity'])):
                             add();
-                        elseif (isset($_GET['edit_user'])):
+                        elseif (isset($_GET['edit_kan_activity'])):
                             edit();
-                        elseif (isset($_GET['del_la'])):
+                        elseif (isset($_GET['del_kan_activity'])):
                             del();
                         else:
                         
                         ?>
-                         <a href="./index.php?kan_activity&add" class="btn btn-success float-right"><i
+                         <a href="./index.php?kan_activity&add_kan_activity" class="btn btn-success float-right"><i
                                  class="fas fa-plus"></i></a>
                          <?php shows(); ?>
 
@@ -66,7 +66,7 @@ function shows()
 {
 
 include './conn.php';
-$sqlkan_activity = " SELECT * FROM kan_activity ";
+$sqlkan_activity = " SELECT * FROM kan_activity ORDER BY kan_activity_id desc";
 $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
 
 ?>
@@ -87,30 +87,29 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
          <?php 
         $i = 1;
         while ($rowkan_activity = $qrykan_activity->fetch_array()) {
-        $la_id = $rowkan_activity['kan_activity_id'];
+        $kan_activity_id = $rowkan_activity['kan_activity_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
              <td><?php echo $rowkan_activity['name_activity']; ?></td>
              <td><?php echo $rowkan_activity['detail']; ?></td>
-             <td><?php echo $rowkan_activity['activity_file']; ?></td>
-
-             
-             
-            
-             
-             
-             
+             <td>
+                 <?php if ($rowkan_activity['activity_file'] == "ไม่มีไฟล์" || $rowkan_activity['activity_file'] == "") {
+                    echo "ไม่มีไฟล์";
+                 }else{ ?>
+                 <a href="uploads/<?php echo $rowkan_activity['activity_file']; ?>"
+                     download><?php echo $rowkan_activity['activity_file']; ?>
+                     <?php } ?>
+             </td>
 
              <td width="10px">
-                 <?php if ($rowkan_activity['kan_activity_id'] == 3): ?>
-                 <a href="index.php?kan_activity&edit_user&kan_activity_id=<?php echo($kan_activity_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?kan_activity&del_la&kan_activity_id=<?php echo($kan_activity_id) ?>"><i class="far fa-trash-alt"></i></a>
+                 <?php if ($rowkan_activity['kan_activity_status'] == 0): ?>
+                 <a href="index.php?kan_activity&edit_kan_activity&kan_activity_id=<?php echo($kan_activity_id) ?>">
+                 <i class="far fa-edit"></i></a>&nbsp;&nbsp;
+                 <a href="page/kan_activity_db.php?del_kan_activity&kan_activity_id=<?php echo($kan_activity_id) ?>">
+                 <i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
-                 <a href="index.php?kan_activity&edit_user&kan_activity_id=<?php echo($kan_activity_id) ?>"><i
-                         class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="index.php?kan_activity&del_la&kan_activity_id=<?php echo($kan_activity_id) ?>"><i class="far fa-trash-alt"></i></a>
+                    <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
              </td>
 
@@ -128,15 +127,9 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
 
  function add()
  {
+ ?>
 
-    include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
-    $qryhuser = mysqli_query($conn,$sqlhuser);
-    //$rowuser = mysqli_fetch_assoc($qryhuser);
-
-    ?>
-
- <form role="form" action="page/kan_activity_db.php" method="post">
+ <form role="form" action="page/kan_activity_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -173,7 +166,7 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
          <a type="submit" class="btn btn-danger" href="./index.php?kan_activity">cancel</a>
      </div>
 
-     <input type="hidden" name="add_pla">
+     <input type="hidden" name="add_kan_activity">
 
  </form>
 
@@ -183,14 +176,15 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
  function edit()
  {
    
- include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
+    include './conn.php';
+    $kan_activity_id = $_GET['kan_activity_id'];
+    $sqlhuser = " SELECT * FROM kan_activity WHERE kan_activity_id = '$kan_activity_id' ";
     $qryhuser = mysqli_query($conn,$sqlhuser);
-    //$rowuser = mysqli_fetch_assoc($qryhuser);
+    $rowuser = mysqli_fetch_assoc($qryhuser);
 
-    ?>
+ ?>
 
- <form role="form" action="page/kan_activity_db.php" method="post">
+ <form role="form" action="page/kan_activity_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -198,7 +192,7 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อกิจกรรม</label>
-                 <input type="text" name="name_activity" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="name_activity" value="<?= $rowuser['name_activity']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -206,7 +200,7 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
              <!-- text input -->
              <div class="form-group">
                  <label>รายละเอียดกิจกรรม</label>
-                 <input type="text" name="detail" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="detail" value="<?= $rowuser['detail']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -214,7 +208,7 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
              <!-- text input -->
              <div class="form-group">
                  <label>ไฟล์</label>
-                 <input type="file" name="activity_file" class="form-control" placeholder="Enter ...">
+                 <input type="file" name="activity_file" value="<?= $rowuser['activity_file']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -227,16 +221,13 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
          <a type="submit" class="btn btn-danger" href="./index.php?kan_activity">cancel</a>
      </div>
 
-     <input type="hidden" name="add_pla">
+     <input type="hidden" name="edit_kan_activity">
+     <input type="hidden" name="kan_activity_id" value="<?= $rowuser['kan_activity_id'] ?>">
 
  </form>
 
  <?php
  }
- 
- function del()
- {
-    echo "del";
- }
+
  
  ?>
