@@ -85,7 +85,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="index.php?porder" class="nav-link">
+                      <a href="index.php?order_management" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>การจัดการคำสั่ง</p>
                       </a>
@@ -174,7 +174,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="index.php?porder" class="nav-link">
+                      <a href="index.php?order_management" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>การจัดการคำสั่ง</p>
                       </a>
@@ -253,7 +253,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="index.php?porder" class="nav-link">
+                      <a href="index.php?order_management" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>การจัดการคำสั่ง</p>
                       </a>

@@ -101,6 +101,9 @@ session_start();
       }elseif (isset($_GET['arts_and_culture'])) {
         include 'page/arts_and_culture.php';
 
+      }elseif (isset($_GET['order_management'])) {
+        include 'page/order_management.php';
+
       }else{
         include 'new.php';
       }
