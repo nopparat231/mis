@@ -173,17 +173,19 @@ $qryorder = mysqli_query($conn,$sqlorder);
              </div>
          </div>
 
+        <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>คำสั่งจาก</label>
+                 <input type="text" name="order_where" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>เทอมที่สอน</label>
-                 <select class="custom-select" name="kanzon_term">
-                     <option selected>เลือก</option>
-                     <option value="0">1</option>
-                     <option value="1">2</option>
-
-                 </select>
+                 <label>รายละเอียด</label>
+                 <input type="text" name="order_detail" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -191,7 +193,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>เพื่มไฟล์ข้อมูล</label>
-                 <input type="file" name="kanzon_file" class="form-control" placeholder="Enter ...">
+                 <input type="file" name="order_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -203,7 +205,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
          <a type="submit" class="btn btn-danger" href="./index.php?kanzon">cancel</a>
      </div>
 
-     <input type="hidden" name="add_kanzon">
+     <input type="hidden" name="add_order">
 
  </form>
 
@@ -215,14 +217,14 @@ $qryorder = mysqli_query($conn,$sqlorder);
    
     include './conn.php';
 
-    $kanzon_id = $_GET['kanzon_id'];
-    $sqlhuser = " SELECT * FROM kanzon INNER JOIN user ON kanzon.kanzon_user_id = user.user_id WHERE kanzon.kanzon_id = '$kanzon_id' ";
+    $kanzon_id = $_GET['order_id'];
+    $sqlhuser = " SELECT * FROM order_management INNER JOIN user ON order_management.order_user_id = user.user_id WHERE order.order_id = '$order_id' ";
  	$qryhuser = mysqli_query($conn,$sqlhuser);
  	$rowuser = mysqli_fetch_assoc($qryhuser);
 
     ?>
 
- <form role="form" action="page/kanzon_db.php" method="post" enctype="multipart/form-data">
+ <form role="form" action="page/order_management_db.php" method="post" enctype="multipart/form-data">
 
      <div class="row">
 
@@ -230,11 +232,17 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
-                 <select class="form-control select2" name="kanzon_user_id" style="width: 100%;">
+                 <select class="form-control select2" name="order_user_id" style="width: 100%;">
+                     <option selected="selected">เลือกชื่อผู้ใช้</option>
 
-                     <option selected="selected" value="<?= $rowuser['kanzon_user_id']; ?>">
-                         <?= $rowuser['first_name']."  ".$rowuser['last_name']; ?>
-                     </option>
+                     <?php
+
+                        while ($rowuser = $qryhuser->fetch_array()) {
+                            $usid = $rowuser["user_id"];
+                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
+                        }
+
+                    ?>
 
                  </select>
              </div>
@@ -243,23 +251,24 @@ $qryorder = mysqli_query($conn,$sqlorder);
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>รายละเอียดการสอน</label>
-                 <input type="text" name="kanzon_detail" value="<?= $rowuser['kanzon_detail']; ?>" class="form-control"
-                     placeholder="Enter ...">
+                 <label>วันที่</label>
+                 <input type="text" name="order_time" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
+        <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>คำสั่งจาก</label>
+                 <input type="text" name="order_where" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
 
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>เทอมที่สอน</label>
-                 <select class="custom-select" name="kanzon_term">
-                     <option value="<?= $rowuser['kanzon_term']; ?>" selected><?= $rowuser['kanzon_term']; ?></option>
-                     <option >------</option>
-                     <option value="1">1</option>
-                     <option value="2">2</option>
-                 </select>
+                 <label>รายละเอียด</label>
+                 <input type="text" name="order_detail" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -267,7 +276,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>เพื่มไฟล์ข้อมูล</label>
-                 <input type="file" name="kanzon_file" class="form-control" placeholder="Enter ...">
+                 <input type="file" name="order_file" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -279,8 +288,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
          <a type="submit" class="btn btn-danger" href="./index.php?kanzon">cancel</a>
      </div>
 
-     <input type="hidden" name="edit_kanzon">
-     <input type="hidden" name="kanzon_id" value="<?= $rowuser['kanzon_id'] ?>">
+     <input type="hidden" name="add_order">
 
  </form>
 
