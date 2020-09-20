@@ -119,6 +119,42 @@
                       </a>
                     </li>
 
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการเกณฑ์การประเมิน </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการประเมินตนเอง </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการประเมินหัวหน้า </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการประเมินของคณะ/สำนัก/กอง </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?pa8" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการการเข้าใช้งาน </p>
+                      </a>
+                    </li>
+
+
                 <?php else: ?>
 
 
@@ -207,7 +243,40 @@
                         <p>การจัดการศิลปวัฒนธรรม </p>
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการเกณฑ์การประเมิน </p>
+                      </a>
+                    </li>
 
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการประเมินตนเอง </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการประเมินหัวหน้า </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการประเมินของคณะ/สำนัก/กอง </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="index.php?pa8" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>การจัดการการเข้าใช้งาน </p>
+                      </a>
+                    </li>
 
 
                 </ul>
