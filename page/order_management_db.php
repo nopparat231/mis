@@ -2,28 +2,29 @@
 include '../conn.php';
 include 'class_db.php';
 
-if (isset($_POST['add_kanzon'])) {
+if (isset($_POST['add_order'])) {
 	
-    $kanzon_user_id = $_POST['kanzon_user_id'];
-    $kanzon_detail = $_POST['kanzon_detail'];
-    $kanzon_term = $_POST['kanzon_term'];
-    //$kanzon_file = $_POST['kanzon_file'];
+    $order_user_id = $_POST['order_user_id'];
+    $order_time = $_POST['order_time'];
+	$order_where = $_POST['order_where'];
+	$order_detail = $_POST['order_detail'];
+    //$order_file = $_POST['order_file'];
   
     
 	$target_dir = "../uploads/";
-	$file_tmp = $_FILES["kanzon_file"]["tmp_name"];
-	$file_name = basename($_FILES["kanzon_file"]["name"]);
-	$kanzon_file = rand(1000,1000000)."_".$file_name;
-    $target_file = $target_dir . $kanzon_file;
+	$file_tmp = $_FILES["order_file"]["tmp_name"];
+	$file_name = basename($_FILES["order_file"]["name"]);
+	$order_file = rand(1000,1000000)."_".$file_name;
+    $target_file = $target_dir . $order_file;
     
 	if(isset($file_name) and !empty($file_name)){
         move_uploaded_file($file_tmp, $target_file);
 
-        $sql = "INSERT INTO kan_la ( kanzon_user_id , kanzon_detail , kanzon_term , kanzon_file )
-        VALUES ( '$kanzon_user_id' , '$kanzon_detail','$kanzon_term','$kanzon_file')";
+        $sql = "INSERT INTO order_management ( order_user_id , order_time , order_where , order_detail , order_file )
+        VALUES ( '$order_user_id' , '$order_time','$order_where','$order_detail' , '$order_file')";
 
 		if ($conn->query($sql) === TRUE) {
-			header("location:../index.php?kanzon");
+			header("location:../index.php?order_management");
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -33,50 +34,53 @@ if (isset($_POST['add_kanzon'])) {
 	$conn->close();
 
 
-}elseif (isset($_POST['edit_kanzon'])) {
+}elseif (isset($_POST['edit_order'])) {
 
-	$kanzon_id = $_POST['kanzon_id'];
+	$order_id = $_POST['order_id'];
 
-	$kanzon_user_id = $_POST['kanzon_user_id'];
-    $kanzon_detail = $_POST['kanzon_detail'];
-    $kanzon_term = $_POST['kanzon_term'];
-	//$kanzon_file = $_POST['kanzon_file'];
+    $order_user_id = $_POST['order_user_id'];
+    $order_time = $_POST['order_time'];
+	$order_where = $_POST['order_where'];
+	$order_detail = $_POST['order_detail'];
+	//$order_file = $_POST['order_file'];
 	
 	$target_dir = "../uploads/";
-	$file_tmp = $_FILES["kanzon_file"]["tmp_name"];
-	$file_name = basename($_FILES["kanzon_file"]["name"]);
-	$kanzon_file = rand(1000,1000000)."_".$file_name;
-	$target_file = $target_dir . $kanzon_file;
+	$file_tmp = $_FILES["order_file"]["tmp_name"];
+	$file_name = basename($_FILES["order_file"]["name"]);
+	$order_file = rand(1000,1000000)."_".$file_name;
+	$target_file = $target_dir . $order_file;
 	
 	if(isset($file_name) and !empty($file_name)){
     move_uploaded_file($file_tmp, $target_file);
 	
-	$sql = "UPDATE kanzon SET 
-	kanzon_user_id = '$kanzon_user_id' , 
-	kanzon_detail  = '$kanzon_detail' , 
-	kanzon_term = '$kanzon_term' ,
-	kanzon_file  = '$kanzon_file'
-	WHERE kanzon_id = '$kanzon_id' ";
+	$sql = "UPDATE order_management SET 
+	order_user_id = '$order_user_id' , 
+	order_time  = '$order_time' , 
+	order_where = '$order_where' ,
+	order_detail  = '$order_detail' ,
+	order_file  = '$order_file'
+	WHERE order_id = '$order_id' ";
 
 	if ($conn->query($sql) === TRUE) {
-		header("location:../index.php?kanzon");
+		header("location:../index.php?order_management");
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
 	}else{
 	
-	$kanzon_file = "ไม่มีไฟล์";
+	$order_filell = $_POST['order_file'];
 
-	$sql = "UPDATE kanzon SET 
-	kanzon_user_id = '$kanzon_user_id' , 
-	kanzon_detail  = '$kanzon_detail' , 
-	kanzon_term ='$kanzon_term' ,
-	kanzon_file  = '$kanzon_file'
-	WHERE kanzon_id = '$kanzon_id' ";
+	$sql = "UPDATE order_management SET 
+	order_user_id = '$order_user_id' , 
+	order_time  = '$order_time' , 
+	order_where = '$order_where' ,
+	order_detail  = '$order_detail' ,
+	order_file  = '$order_filell'
+	WHERE order_id = '$order_id' ";
 
 	if ($conn->query($sql) === TRUE) {
-		header("location:../index.php?kanzon");
+		header("location:../index.php?order_management");
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
@@ -87,13 +91,13 @@ if (isset($_POST['add_kanzon'])) {
 
 
 
-}elseif (isset($_GET['del_kanzon'])) {
+}elseif (isset($_GET['del_order'])) {
 	
-	$kanzon_id = $_GET['kanzon_id'];
+	$order_id = $_GET['order_id'];
 
-	$sql =  "UPDATE kanzon SET kanzon_status = 1 WHERE kanzon_id = '$kanzon_id' ";
+	$sql =  "UPDATE order_management SET order_status = 1 WHERE order_id = '$order_id' ";
 	if ($conn->query($sql) === TRUE) {
-		header("location:../index.php?kanzon");
+		header("location:../index.php?order_management");
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}

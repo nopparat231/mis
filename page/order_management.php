@@ -34,7 +34,7 @@
 
                          if (isset($_GET['add'])):
                             add();
-                        elseif (isset($_GET['edit_user'])):
+                        elseif (isset($_GET['edit_order'])):
                             edit();
                         elseif (isset($_GET['del_la'])):
                             del();
@@ -110,9 +110,9 @@ $qryorder = mysqli_query($conn,$sqlorder);
 
              <td width="10px">
                  <?php if ($roworder['order_status'] == 0): ?>
-                 <a href="index.php?order&edit_user&order_id=<?php echo($order_id) ?>"><i
+                 <a href="index.php?order_management&edit_order&order_id=<?php echo($order_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="page/order_db.php?del_order&order_id=<?php echo($order_id) ?>"><i
+                 <a href="page/order_management_db.php?del_order&order_id=<?php echo($order_id) ?>"><i
                          class="far fa-trash-alt"></i></a>
                  <?php else: ?>
                  <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
@@ -169,11 +169,11 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>วันที่</label>
-                 <input type="text" name="order_time" class="form-control" placeholder="Enter ...">
+                 <input type="date" name="order_time" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
-        <div class="col-sm-4">
+         <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
                  <label>คำสั่งจาก</label>
@@ -202,7 +202,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?kanzon">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?order_management">cancel</a>
      </div>
 
      <input type="hidden" name="add_order">
@@ -217,8 +217,8 @@ $qryorder = mysqli_query($conn,$sqlorder);
    
     include './conn.php';
 
-    $kanzon_id = $_GET['order_id'];
-    $sqlhuser = " SELECT * FROM order_management INNER JOIN user ON order_management.order_user_id = user.user_id WHERE order.order_id = '$order_id' ";
+    $order_id = $_GET['order_id'];
+    $sqlhuser = " SELECT * FROM order_management INNER JOIN user ON order_management.order_user_id = user.user_id WHERE order_management.order_id = '$order_id' ";
  	$qryhuser = mysqli_query($conn,$sqlhuser);
  	$rowuser = mysqli_fetch_assoc($qryhuser);
 
@@ -233,16 +233,10 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
                  <select class="form-control select2" name="order_user_id" style="width: 100%;">
-                     <option selected="selected">เลือกชื่อผู้ใช้</option>
 
-                     <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
+                     <option selected="selected" value="<?= $rowuser['order_user_id']; ?>">
+                         <?= $rowuser['first_name']."  ".$rowuser['last_name']; ?>
+                     </option>
 
                  </select>
              </div>
@@ -252,15 +246,15 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>วันที่</label>
-                 <input type="text" name="order_time" class="form-control" placeholder="Enter ...">
+                 <input type="date" name="order_time" value="<?= $rowuser['order_time']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
-        <div class="col-sm-4">
+         <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
                  <label>คำสั่งจาก</label>
-                 <input type="text" name="order_where" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="order_where" value="<?= $rowuser['order_where']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -268,7 +262,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>รายละเอียด</label>
-                 <input type="text" name="order_detail" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="order_detail" value="<?= $rowuser['order_detail']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -276,7 +270,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>เพื่มไฟล์ข้อมูล</label>
-                 <input type="file" name="order_file" class="form-control" placeholder="Enter ...">
+                 <input type="file" name="order_file" value="<?= $rowuser['order_file']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -285,10 +279,11 @@ $qryorder = mysqli_query($conn,$sqlorder);
 
      <div class="card-footer">
          <button type="submit" class="btn btn-primary">Submit</button>
-         <a type="submit" class="btn btn-danger" href="./index.php?kanzon">cancel</a>
+         <a type="submit" class="btn btn-danger" href="./index.php?order_management">cancel</a>
      </div>
 
-     <input type="hidden" name="add_order">
+     <input type="hidden" name="edit_order">
+     <input type="hidden" name="order_id" value="<?= $rowuser['order_id']; ?>">
 
  </form>
 
