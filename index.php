@@ -104,6 +104,9 @@ session_start();
       }elseif (isset($_GET['order_management'])) {
         include 'page/order_management.php';
 
+      }elseif (isset($_GET['my_rate'])) {
+        include 'page/my_rate.php';
+
       }else{
         include 'new.php';
       }
