@@ -121,7 +121,7 @@
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?" class="nav-link">
+                              <a href="index.php?p_rate" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการเกณฑ์การประเมิน </p>
                               </a>
@@ -245,7 +245,7 @@
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="index.php?my_rate" class="nav-link">
+                              <a href="index.php?p_rate" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการเกณฑ์การประเมิน </p>
                               </a>
