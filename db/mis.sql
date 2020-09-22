@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2020 at 04:39 PM
+-- Generation Time: Sep 22, 2020 at 04:58 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -372,7 +372,8 @@ CREATE TABLE `kanzon` (
 
 INSERT INTO `kanzon` (`kanzon_id`, `kanzon_user_id`, `kanzon_detail`, `kanzon_term`, `kanzon_file`, `kanzon_status`) VALUES
 (1, 11, 'สอนภาคเรียนที่ 1 ตารางสอน', 2, '539920_test.xlsx', 0),
-(2, 2, 'การเรียนการสอนภาคฤดูร้อน 2563 ', 1, '', 0);
+(2, 2, 'การเรียนการสอนภาคฤดูร้อน 2563 ', 1, '', 0),
+(3, 4, 'งานวิชาการ', 1, '428857_BDDSMid_61605180032-7.docx', 0);
 
 -- --------------------------------------------------------
 
@@ -394,7 +395,8 @@ CREATE TABLE `kan_activity` (
 
 INSERT INTO `kan_activity` (`kan_activity_id`, `name_activity`, `detail`, `activity_file`, `kan_activity_status`) VALUES
 (1, 'กิจกรรมพัฒนาศักยภาพบุคลากร', 'มอบหมายหน้าที่ให้คณะบริหารธุรกิจ', '72492_test2.xlsx', 0),
-(2, 'กิจกรรมบริจาคโลหิต', 'มอบหมายให้จัดหาคนดูแล', '802444_test.xlsx', 0);
+(2, 'กิจกรรมบริจาคโลหิต', 'มอบหมายให้จัดหาคนดูแล', '802444_test.xlsx', 0),
+(4, 'กิจกรรมบริจาคโลหิต', 'เวลา วันที่', '213884_BDDSMid_61605180032-7.docx', 0);
 
 -- --------------------------------------------------------
 
@@ -420,7 +422,8 @@ CREATE TABLE `kan_la` (
 
 INSERT INTO `kan_la` (`la_id`, `la_user_id`, `la_type`, `la_start`, `la_end`, `la_total`, `la_balance`, `la_file`, `la_status`) VALUES
 (1, 10, 2, '2020-08-01', '2020-08-03', 5, 12, 'ไม่มีไฟล์', 0),
-(2, 11, 1, '2020-08-03', '2020-08-08', 5, 12, 'ไม่มีไฟล์', 0);
+(2, 11, 1, '2020-08-03', '2020-08-08', 5, 12, 'ไม่มีไฟล์', 0),
+(3, 2, 0, '2020-09-23', '2020-09-24', 1, 3, '282497BDDSMid_61605180032-7.docx', 0);
 
 -- --------------------------------------------------------
 
@@ -442,7 +445,8 @@ CREATE TABLE `kan_research` (
 
 INSERT INTO `kan_research` (`kan_research_id`, `name_th`, `research_file`, `detail`, `research_status`) VALUES
 (1, 'งานวิจัยเรื่องการประเมินงานบุคลครกร', '290048_test.xlsx', 'รายละเอียดของงานวิจัย 1', 0),
-(2, 'เรื่องการวิเคราะห์ข้อมูลของมหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ', '564919_test2.xlsx', 'รายละเอียด', 0);
+(2, 'เรื่องการวิเคราะห์ข้อมูลของมหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ', '564919_test2.xlsx', 'รายละเอียด', 0),
+(3, 'งานวิจัยพัฒนาเว็บไซต์', '666958_BDDSMid_61605180032-7.docx', 'ทดสสอบบ', 0);
 
 -- --------------------------------------------------------
 
@@ -466,7 +470,8 @@ CREATE TABLE `news` (
 INSERT INTO `news` (`n_id`, `n_user_id`, `n_head`, `n_detail`, `n_status`, `n_time`) VALUES
 (1, 2, 'ประกาศ สำหรับ นักศึกษาชั้นปีที่ 1', '<p><b>นักศึกษาชั้นปีที่ 1 สามารถเข้าใช้งานระบบประเมินการสอนได้ดังต่อไปนี้</b></p><p>1.เข้าไปที่ mis.rmutk.ac.th</p><p>2.ให้กรอก Username และ Password ในการเข้าใช้งานดังต่อไปนี้               Username : รหัสนักศึกษาไม่มีขีด    Password  : รหัสบัตรประชาชนไม่มีขีด</p><p>3.แล้วคลิกที่ปุ่ม Login สีเขียว</p><p>4.แล้วคลิกที่ปุ่ม \"ประเมินการสอน\"หมายเหตุ : ถ้าลองแล้วยังใช้งานไม่ได้ ให้แจ้งปัญหามาที่ \"gg.gg/misregis\"กรอกข้อมูลให้ครบทุกช่อง เพื่อที่เจ้าหน้าที่จะดำเนินการแก้ไขให้</p><p><br></p>', 0, '2020-06-16 13:47:18'),
 (2, 2, 'teste 413', '<blockquote class=\"blockquote\"><p>estestet</p></blockquote><ol><li>asdasdas</li><li>asdsad</li><li>112</li></ol>', 1, '2020-06-16 13:47:18'),
-(3, 2, 'ประกาศ ระบบการประเมินการสอน ปีการศึกษา 1/2563', '<p><span style=\"color: rgb(255, 0, 255); font-family: Arial, Helvetica, sans-serif; font-size: 13px;\"><b>สามารถประเมินการสอน 1/2563 ได้ตั้งแต่วันที่ 10 ตุลาคม 2563 เวลา 9.00 น. เป็นต้นไป</b></span><br></p><div style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 13px;\"><span mce_style=\"color: #ff00ff;\" style=\"color: rgb(255, 0, 255);\"></span><span mce_style=\"color: #0000ff;\" style=\"color: rgb(0, 0, 255);\">นักศึกษาที่ไม่สามารถเข้าสู่ระบบเพื่อประเมินการสอน หรือ ไม่สามารถเล่นอินเตอร์เน็ตภายในมหาวิทยาลัยได้</span><span mce_style=\"color: #0000ff;\"><span mce_style=\"color: #ff0000;\" style=\"color: rgb(255, 0, 0);\">&nbsp;<br>สามารถเข้าไปที่<br>1.ให้ login เข้า Wifi ของมหาวิทยาลัย<br>&nbsp; &nbsp;Username : รหัสนักศึกษาไม่มีขีด<br>&nbsp; &nbsp;Password &nbsp;: รหัสบัตรประชาชนไม่มีขีด<br>2.เข้าไปที่ \"gg.gg/misregis\"</span></span></div><p><span mce_style=\"color: #ff0000;\" style=\"font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: rgb(255, 0, 0);\">3.กรอกข้อมูลให้เรียบร้อย<br>4.Username และ Password จะใช้งานได้ภายในวันที่ 20 ธันวาคม 2563<br>หมายเหตุ : ให้ใช้โทรศัพท์มือถือหรือคอมพิวเตอร์ในการใช้งาน</span></p><p><br></p><p> 							</p>', 0, '2020-06-16 13:47:18');
+(3, 2, 'ประกาศ ระบบการประเมินการสอน ปีการศึกษา 1/2563', '<p><span style=\"color: rgb(255, 0, 255); font-family: Arial, Helvetica, sans-serif; font-size: 13px;\"><b>สามารถประเมินการสอน 1/2563 ได้ตั้งแต่วันที่ 10 ตุลาคม 2563 เวลา 9.00 น. เป็นต้นไป</b></span><br></p><div style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 13px;\"><span mce_style=\"color: #ff00ff;\" style=\"color: rgb(255, 0, 255);\"></span><span mce_style=\"color: #0000ff;\" style=\"color: rgb(0, 0, 255);\">นักศึกษาที่ไม่สามารถเข้าสู่ระบบเพื่อประเมินการสอน หรือ ไม่สามารถเล่นอินเตอร์เน็ตภายในมหาวิทยาลัยได้</span><span mce_style=\"color: #0000ff;\"><span mce_style=\"color: #ff0000;\" style=\"color: rgb(255, 0, 0);\">&nbsp;<br>สามารถเข้าไปที่<br>1.ให้ login เข้า Wifi ของมหาวิทยาลัย<br>&nbsp; &nbsp;Username : รหัสนักศึกษาไม่มีขีด<br>&nbsp; &nbsp;Password &nbsp;: รหัสบัตรประชาชนไม่มีขีด<br>2.เข้าไปที่ \"gg.gg/misregis\"</span></span></div><p><span mce_style=\"color: #ff0000;\" style=\"font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: rgb(255, 0, 0);\">3.กรอกข้อมูลให้เรียบร้อย<br>4.Username และ Password จะใช้งานได้ภายในวันที่ 20 ธันวาคม 2563<br>หมายเหตุ : ให้ใช้โทรศัพท์มือถือหรือคอมพิวเตอร์ในการใช้งาน</span></p><p><br></p><p> 							</p>', 0, '2020-06-16 13:47:18'),
+(4, 2, 'แจ้งประกาศ', 'เรื่องทดสอบ', 0, '2020-09-22 14:50:01');
 
 -- --------------------------------------------------------
 
@@ -490,7 +495,8 @@ CREATE TABLE `order_management` (
 
 INSERT INTO `order_management` (`order_id`, `order_user_id`, `order_time`, `order_where`, `order_detail`, `order_file`, `order_status`) VALUES
 (4, 2, 'วันที่ 19 เมษายน 2563 ', 'คณบดี,คณะบริหารธุรกิจ', 'มอบหมายงานให้ ตามคำสี่งเลขที่ ......', 'excal', 1),
-(5, 5, 'วันที่ 10 เมษายน 2563 ', 'จากสำนักงบประมาณ,คณะบดี', 'คั่งสั่งเลขที่ 1/2563 ...........', 'word.xlsx', 1);
+(5, 5, 'วันที่ 10 เมษายน 2563 ', 'จากสำนักงบประมาณ,คณะบดี', 'คั่งสั่งเลขที่ 1/2563 ...........', 'word.xlsx', 1),
+(7, 10, '2020-09-23', 'คณะบริหาร', 'ทดสอบ', '389208_BDDSMid_61605180032-7.docx', 0);
 
 -- --------------------------------------------------------
 
@@ -570,6 +576,29 @@ CREATE TABLE `upload` (
   `upload_detail` varchar(250) NOT NULL,
   `upload_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `used_time`
+--
+
+CREATE TABLE `used_time` (
+  `used_time_id` int(11) NOT NULL,
+  `used_time_user_id` int(11) NOT NULL,
+  `used_date` varchar(255) NOT NULL,
+  `used_time_detail` varchar(255) NOT NULL,
+  `used_time_status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `used_time`
+--
+
+INSERT INTO `used_time` (`used_time_id`, `used_time_user_id`, `used_date`, `used_time_detail`, `used_time_status`) VALUES
+(1, 2, '20 กันยายน 2563', 'เข้าสู่ระบบสำเร็จ', 0),
+(2, 2, '19 กันยายน 2563', 'เข้าสู่ระบบสำเร็จ', 0),
+(3, 3, '15 กันยายน 2563', 'เข้าสู่ระบบสำเร็จ', 0);
 
 -- --------------------------------------------------------
 
@@ -706,6 +735,12 @@ ALTER TABLE `upload`
   ADD PRIMARY KEY (`upload_id`);
 
 --
+-- Indexes for table `used_time`
+--
+ALTER TABLE `used_time`
+  ADD PRIMARY KEY (`used_time_id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -767,37 +802,37 @@ ALTER TABLE `kana`
 -- AUTO_INCREMENT for table `kanzon`
 --
 ALTER TABLE `kanzon`
-  MODIFY `kanzon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kanzon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kan_activity`
 --
 ALTER TABLE `kan_activity`
-  MODIFY `kan_activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `kan_activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kan_la`
 --
 ALTER TABLE `kan_la`
-  MODIFY `la_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `la_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kan_research`
 --
 ALTER TABLE `kan_research`
-  MODIFY `kan_research_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kan_research_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `order_management`
 --
 ALTER TABLE `order_management`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `saka`
@@ -810,6 +845,12 @@ ALTER TABLE `saka`
 --
 ALTER TABLE `upload`
   MODIFY `upload_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `used_time`
+--
+ALTER TABLE `used_time`
+  MODIFY `used_time_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
