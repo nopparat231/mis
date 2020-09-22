@@ -19,7 +19,7 @@ if (isset($_POST['add_kanzon'])) {
 	if(isset($file_name) and !empty($file_name)){
         move_uploaded_file($file_tmp, $target_file);
 
-        $sql = "INSERT INTO kan_la ( kanzon_user_id , kanzon_detail , kanzon_term , kanzon_file )
+        $sql = "INSERT INTO kanzon ( kanzon_user_id , kanzon_detail , kanzon_term , kanzon_file )
         VALUES ( '$kanzon_user_id' , '$kanzon_detail','$kanzon_term','$kanzon_file')";
 
 		if ($conn->query($sql) === TRUE) {

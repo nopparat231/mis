@@ -178,7 +178,7 @@ $qryused = mysqli_query($conn,$sqlused);
          <a type="submit" class="btn btn-danger" href="./index.php?used_time">cancel</a>
      </div>
 
-     <input type="hidden" name="add_used_time">
+     <input type="hidden" name="add">
 
  </form>
 
