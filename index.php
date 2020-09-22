@@ -107,6 +107,9 @@ session_start();
       }elseif (isset($_GET['my_rate'])) {
         include 'page/my_rate.php';
 
+      }elseif (isset($_GET['used_time'])) {
+        include 'page/used_time.php';
+
       }else{
         include 'new.php';
       }
