@@ -34,7 +34,7 @@
 
                          if (isset($_GET['add'])):
                             add();
-                        elseif (isset($_GET['edit_user'])):
+                        elseif (isset($_GET['edit_used_time'])):
                             edit();
                         elseif (isset($_GET['del_la'])):
                             del();
@@ -86,7 +86,7 @@ $qryused = mysqli_query($conn,$sqlused);
          <?php 
         $i = 1;
         while ($rowused = $qryused->fetch_array()) {
-        $kanzon_id = $rowused['used_time_id'];
+        $used_time_id = $rowused['used_time_id'];
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
@@ -96,9 +96,9 @@ $qryused = mysqli_query($conn,$sqlused);
 
              <td width="10px">
                  <?php if ($rowused['used_time_status'] == 0): ?>
-                 <a href="index.php?used_time&edit_user&used_time_id=<?php echo($used_time_id) ?>"><i
+                 <a href="index.php?used_time&edit_used_time&used_time_id=<?php echo($used_time_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
-                 <a href="page/used_time_db.php?del_used_time&used_time_id=<?php echo($used_time_id) ?>"><i
+                 <a href="page/used_time_db.php?del&used_time_id=<?php echo($used_time_id) ?>"><i
                          class="far fa-trash-alt"></i></a>
                  <?php else: ?>
                  <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
@@ -190,8 +190,8 @@ $qryused = mysqli_query($conn,$sqlused);
    
     include './conn.php';
 
-    $kanzon_id = $_GET['kanzon_id'];
-    $sqlhuser = " SELECT * FROM kanzon INNER JOIN user ON kanzon.used_time_user_id = user.user_id WHERE kanzon.kanzon_id = '$kanzon_id' ";
+    $used_time_id = $_GET['used_time_id'];
+    $sqlhuser = " SELECT * FROM used_time INNER JOIN user ON used_time.used_time_user_id = user.user_id WHERE used_time.used_time_id = '$used_time_id' ";
  	$qryhuser = mysqli_query($conn,$sqlhuser);
  	$rowuser = mysqli_fetch_assoc($qryhuser);
 
@@ -211,7 +211,7 @@ $qryused = mysqli_query($conn,$sqlused);
                      <?php
 
                         while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
+                            $usid = $rowuser["used_time_user_id"];
                             echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
                         }
 
@@ -248,7 +248,7 @@ $qryused = mysqli_query($conn,$sqlused);
          <a type="submit" class="btn btn-danger" href="./index.php?used_time">cancel</a>
      </div>
 
-     <input type="hidden" name="add_used_time">
+     <input type="hidden" name="add">
 
  </form>
 

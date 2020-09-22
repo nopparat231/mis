@@ -13,8 +13,7 @@ if (isset($_POST['add'])) {
     
 	
     
-	if(isset($file_name) and !empty($file_name)){
-        move_uploaded_file($file_tmp, $target_file);
+	
 
         $sql = "INSERT INTO used_time ( used_time_user_id , used_date , used_time_detail)
         VALUES ( '$used_time_user_id' , '$used_date','$used_time_detail')";
@@ -25,7 +24,7 @@ if (isset($_POST['add'])) {
 			echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
-    }
+    
     
 	$conn->close();
 
@@ -41,8 +40,7 @@ if (isset($_POST['add'])) {
 	
 	
 	
-	if(isset($file_name) and !empty($file_name)){
-    move_uploaded_file($file_tmp, $target_file);
+	
 	
 	$sql = "UPDATE used_time SET 
 	used_time_user_id = '$used_time_user_id' , 
@@ -80,7 +78,7 @@ if (isset($_POST['add'])) {
 
 
 
-}elseif (isset($_GET['del_order'])) {
+}elseif (isset($_GET['del'])) {
 	
 	$used_time_user_id = $_GET['used_time_user_id'];
 
