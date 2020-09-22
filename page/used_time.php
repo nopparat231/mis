@@ -141,11 +141,11 @@ $qryused = mysqli_query($conn,$sqlused);
                      <?php
 
                         while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["used_time_user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
+                            $usid = $rowuser["user_id"];
+                     ?>
+                        <option value='<?= $usid ?>'><?= $rowuser['first_name'].'  '.$rowuser['last_name']?></option>
 
-                    ?>
+                       <?php } ?>
 
                  </select>
              </div>
@@ -155,7 +155,7 @@ $qryused = mysqli_query($conn,$sqlused);
              <!-- text input -->
              <div class="form-group">
                  <label>วันที่</label>
-                 <input type="text" name="used_date" class="form-control" placeholder="Enter ...">
+                 <input type="date" name="used_date" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -206,14 +206,11 @@ $qryused = mysqli_query($conn,$sqlused);
              <div class="form-group">
                  <label>ชื่อ-นามสกุล</label>
                  <select class="form-control select2" name="used_time_user_id" style="width: 100%;">
-                     <option selected="selected">เลือกชื่อผู้ใช้</option>
-
                      <?php
 
-                        while ($rowuser = $qryhuser->fetch_array()) {
                             $usid = $rowuser["used_time_user_id"];
                             echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
+
 
                     ?>
 
@@ -225,7 +222,7 @@ $qryused = mysqli_query($conn,$sqlused);
              <!-- text input -->
              <div class="form-group">
                  <label>วันที่</label>
-                 <input type="text" name="used_date" class="form-control" placeholder="Enter ...">
+                 <input type="date" name="used_date" value="<?= $rowuser['used_date']; ?>" class="form-control" placeholder="Enter ...">
              </div>
          </div>
 
@@ -233,7 +230,7 @@ $qryused = mysqli_query($conn,$sqlused);
              <!-- text input -->
              <div class="form-group">
                  <label>หมายเหตุ</label>
-                 <input type="text" name="used_time_detail" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="used_time_detail" value="<?= $rowuser['used_time_detail']; ?>"  class="form-control" placeholder="Enter ...">
              </div>
           </div>
 
@@ -248,7 +245,8 @@ $qryused = mysqli_query($conn,$sqlused);
          <a type="submit" class="btn btn-danger" href="./index.php?used_time">cancel</a>
      </div>
 
-     <input type="hidden" name="add">
+     <input type="hidden" name="edit">
+     <input type="hidden" name="used_time_id" value="<?= $rowuser['used_time_id']; ?>">
 
  </form>
 
