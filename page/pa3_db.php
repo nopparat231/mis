@@ -70,8 +70,13 @@ function addaction($f_ac_pam_id,$f_ac_h_id,$f_ac_user_h_id,$f_ac_user_c_id,$f_ac
 {
 	include '../conn.php';
 
+	if ($f_ac_user_h_id == $f_ac_user_c_id) {
+		$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_th_id ,f_ac_h_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score , f_ac_rob , f_ac_kid_from, f_ac_kid_end, f_ac_comment1 ,f_af_upfile,f_ac_status) VALUES ('$f_ac_pam_id','$th_id','$f_ac_h_id','$f_ac_user_h_id','$f_ac_user_c_id','$f_ac_score','$f_ac_rob','$f_ac_kid_from','$f_ac_kid_end', '$com11' , '$target_file',1)";
+	}else{
+		$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_th_id ,f_ac_h_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score , f_ac_rob , f_ac_kid_from, f_ac_kid_end, f_ac_comment1 ,f_af_upfile) VALUES ('$f_ac_pam_id','$th_id','$f_ac_h_id','$f_ac_user_h_id','$f_ac_user_c_id','$f_ac_score','$f_ac_rob','$f_ac_kid_from','$f_ac_kid_end', '$com11' , '$target_file')";
 
-	$sql = "INSERT INTO f_action (f_ac_pam_id , f_ac_th_id ,f_ac_h_id , f_ac_user_h_id , f_ac_user_c_id , f_ac_score , f_ac_rob , f_ac_kid_from, f_ac_kid_end, f_ac_comment1 ,f_af_upfile) VALUES ('$f_ac_pam_id','$th_id','$f_ac_h_id','$f_ac_user_h_id','$f_ac_user_c_id','$f_ac_score','$f_ac_rob','$f_ac_kid_from','$f_ac_kid_end', '$com11' , '$target_file')";
+	}
+
 
 	if ($conn->query($sql) === TRUE) {
 		header("location:../index.php?pa2&user_c_id=$f_ac_user_c_id&type=$th_id&save");

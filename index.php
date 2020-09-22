@@ -38,6 +38,12 @@ session_start();
             display: none;
         }
     }
+    .isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
     </style>
 
 </head>

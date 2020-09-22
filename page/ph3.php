@@ -53,11 +53,23 @@ mso-ansi-font-size:11.0pt;font-family:&quot;TH SarabunPSK&quot;,sans-serif">à¸à
 if (isset($_GET['showphhh'])) {
 
  $user_c_id = $_GET['user_c_id'];
+
+ $sqlacdd =" SELECT * FROM f_action WHERE f_ac_user_c_id = '$user_c_id' AND f_ac_status LIKE '1' ";
+$qryacdd = mysqli_query($conn,$sqlacdd);
+$rowscdd = mysqli_fetch_assoc($qryacdd);
+$rowcheckac = mysqli_num_rows($qryacdd);
+
+if ($rowcheckac > 0) {
   //$type = $_GET['type'];
 
- $sqlscore = " SELECT * FROM f_phhh WHERE f_phhh_user_c_id = '$user_c_id'";
+ $sqlscore = " SELECT * FROM f_phhh WHERE f_phhh_user_c_id = '$user_c_id' AND f_phhh_status = 1";
  $qryscore = mysqli_query($conn,$sqlscore);
   //$rowscore = mysqli_fetch_assoc($qryscore);
+}else{
+  $sqlscore = " SELECT * FROM f_phhh WHERE f_phhh_user_c_id = '$user_c_id'";
+ $qryscore = mysqli_query($conn,$sqlscore);
+}
+
 
  $rowcheckac = mysqli_num_rows($qryscore);
 

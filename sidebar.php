@@ -5,7 +5,7 @@
           <span class="brand-text font-weight-light"><b>
 
                   <?php
-        $status = "";
+        $status = "5";
         if (isset($_SESSION["USERNAME"])){
 
           $user = $_SESSION["USERNAME"];
@@ -245,7 +245,7 @@
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="index.php?" class="nav-link">
+                              <a href="index.php?my_rate" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการเกณฑ์การประเมิน </p>
                               </a>
@@ -259,14 +259,14 @@
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?" class="nav-link">
+                              <a href="index.php?my_rate" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินหัวหน้า </p>
                               </a>
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?" class="nav-link">
+                              <a href="index.php?my_rate" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินของคณะ/สำนัก/กอง </p>
                               </a>
@@ -350,7 +350,7 @@
                               </a>
                           </li>
 
-                           <li class="nav-item">
+                          <li class="nav-item">
                               <a href="index.php?used_time" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการเข้าใช้งาน </p>
@@ -362,12 +362,28 @@
                   </li>
                   <?php elseif($status == 0): ?>
 
+
                   <li class="nav-item">
                       <a href="index.php?my_rate" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
                           <p>การจัดการประเมินตนเอง </p>
                       </a>
                   </li>
+
+                  <li class="nav-item">
+                      <a href="index.php?my_rate" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>การจัดการประเมินหัวหน้า </p>
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="index.php?my_rate" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>การจัดการประเมินของคณะ/สำนัก/กอง </p>
+                      </a>
+                  </li>
+
 
                   <?php else: ?>
 

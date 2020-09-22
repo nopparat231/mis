@@ -44,7 +44,13 @@ function goblack(){
 function savescore($user_c,$type,$f_ac_h_id,$score){
 	include './conn.php';
 
-	$sql = "INSERT INTO f_save_score (s_id , s_u_c , s_f_h , s_f_ac_h_id , s_f_score , s_status) VALUES (null , '$user_c' , '$type' , $f_ac_h_id , '$score' , 0)";
+	$sqlscore=" SELECT * FROM f_save_score WHERE s_u_c = '$user_c' ";
+	$qryscore = mysqli_query($conn,$sqlscore);
+	$rowscore = mysqli_fetch_assoc($qryscore);
+
+	if($rowscore['s_status'] == 0){
+		
+	$sql = "INSERT INTO f_save_score (s_id , s_u_c , s_f_h , s_f_ac_h_id , s_f_score , s_status) VALUES (null , '$user_c' , '$type' , $f_ac_h_id , '$score' , 1)";
 
 	if ($conn->query($sql) === false) {
 		echo "Error: " . $sql . "<br>" . $conn->error;
@@ -52,8 +58,20 @@ function savescore($user_c,$type,$f_ac_h_id,$score){
 		gotopage("index.php?pa2&user_c_id=$user_c&type=$type");
 	}
 
-	$conn->close();
+	
+	}else{
 
+		$sql = "INSERT INTO f_save_score (s_id , s_u_c , s_f_h , s_f_ac_h_id , s_f_score , s_status) VALUES (null , '$user_c' , '$type' , $f_ac_h_id , '$score' , 0)";
+
+		if ($conn->query($sql) === false) {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+		}else{
+			gotopage("index.php?pa2&user_c_id=$user_c&type=$type");
+		}
+	
+
+	}
+$conn->close();
 }
 
 
