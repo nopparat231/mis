@@ -241,8 +241,22 @@ $user_c_id = $_GET['user_c_id'];
 $type = $_GET['type'];
 
 
-$sqlac=" SELECT * FROM f_action WHERE f_ac_user_c_id = '$user_c_id' ";
+$sqlacdd =" SELECT * FROM f_action WHERE f_ac_user_c_id = '$user_c_id' ";
+$qryacdd = mysqli_query($conn,$sqlacdd);
+//$rowscdd = mysqli_fetch_assoc($qryacdd);
+
+while ($rowscdd = $qryacdd->fetch_array()) {
+$f_ac_status = $rowscdd['f_ac_status'];
+
+if($f_ac_status == 1){
+  $sqlac=" SELECT * FROM f_action WHERE f_ac_user_c_id = '$user_c_id' AND f_ac_status = 1 ";
 $qryac = mysqli_query($conn,$sqlac);
+}else{
+  $sqlac=" SELECT * FROM f_action WHERE f_ac_user_c_id = '$user_c_id' ";
+$qryac = mysqli_query($conn,$sqlac);
+}
+
+}
 
 while ($rowac = $qryac->fetch_array()) {
 

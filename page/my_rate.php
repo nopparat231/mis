@@ -121,19 +121,19 @@
                                      <?php }elseif ($rowcheckac1 > 0 && $rowcheckac2 > 0 && $rowcheckac3 <= 0 ){ ?>
                                      <td>หัวหน้ายังประเมินไม่ครบ</td>
                                      <td width="5px"><a href="index.php?ph&user_c_id=<?php echo($uid) ?>&ph3&add"><i
-                                                 class="fas fa-arrow-right"></i></a></td>
+                                                 class="fas fa-arrow-right isDisabled"></i></a></td>
 
                                      <?php }elseif ($rowcheckac1 > 0 && $rowcheckac2 <= 0 && $rowcheckac3 <= 0 ){ ?>
                                      <td>หัวหน้ายังประเมินไม่ครบ</td>
                                      <td width="5px"><a
                                              href="index.php?pa4&user_c_id=<?php echo ($rowhuser['user_id']) ?>&type=3"><i
-                                                 class="fas fa-arrow-right"></i></a></td>
+                                                 class="fas fa-arrow-right isDisabled"></i></a></td>
 
                                      <?php }else{ ?>
                                      <td>หัวหน้ายังไม่ประเมิน</td>
                                      <td width="5px"><a
                                              href="index.php?pa4&user_c_id=<?php echo ($rowhuser['user_id']) ?>&type=2"><i
-                                                 class="fas fa-arrow-right"></i></a></td>
+                                                 class="fas fa-arrow-right isDisabled"></i></a></td>
 
                                      <?php } ?>
                                  </tr>
@@ -146,7 +146,7 @@
                                     $f_ac_user_h_idr = $rowhuserrr['f_ac_user_h_id'];
                                     $f_ac_statusr = $rowhuserrr['f_ac_status'];
 
-                                 if ($f_ac_user_h_idr == $user_id || $f_ac_statusr == 1){?>
+                                 if ($f_ac_user_h_idr == $user_id && $f_ac_statusr == 1){?>
                                  <tr>
                                      <td><?php echo $rowhusere['user_tumn']; ?></td>
                                      <td><?php echo $rowhusere['first_name']; ?></td>
