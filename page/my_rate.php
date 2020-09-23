@@ -52,6 +52,15 @@
 						 $qryhusere = mysqli_query($conn,$sqlhusere);
                          $rowhusere = mysqli_fetch_assoc($qryhusere);
 
+                         $sqlhuserehh =" SELECT * FROM user WHERE user_id = '$user_id' ";
+						 $qryhuserehh = mysqli_query($conn,$sqlhuserehh);
+                         $rowhuserehh = mysqli_fetch_assoc($qryhuserehh);
+                         $huser_id = $rowhuserehh['user_head'];
+
+                         $sqlhuserehhrr =" SELECT * FROM user WHERE user_id = '$huser_id' ";
+						 $qryhuserehhrr = mysqli_query($conn,$sqlhuserehhrr);
+                         $rowhuserehhrr = mysqli_fetch_assoc($qryhuserehhrr);
+
     
 						?>
 
@@ -141,7 +150,32 @@
                                     $f_ac_user_h_idr = $rowhuserrr['f_ac_user_h_id'];
                                     $f_ac_statusr = $rowhuserrr['f_ac_status'];
 
-                                 if ($f_ac_user_h_idr == $user_id && $f_ac_statusr == 1){?>
+                                    if ($f_ac_user_h_idr == $user_id && $f_ac_statusr == 2){ ?>
+                                        <tr>
+                                            <td><?php echo $rowhuserehhrr['user_tumn']; ?></td>
+                                            <td><?php echo $rowhuserehhrr['first_name']; ?></td>
+                                            <td><?php echo $rowhuserehhrr['last_name']; ?></td>
+                                            <td>ประเมินหัวหน้าแล้ว</td>
+                                            <td width="5px" style="text-align: center;"><a
+                                                    href="index.php?ph&print&showphhh&user_c_id=<?php echo($user_id) ?>"
+                                                    target="_blank"><i class="fas fa-print"></i></a></td>
+       
+                                        </tr>
+                                        <?php }else{ ?>
+                                        <tr>
+                                            <td><?php echo $rowhuserehhrr['user_tumn']; ?></td>
+                                            <td><?php echo $rowhuserehhrr['first_name']; ?></td>
+                                            <td><?php echo $rowhuserehhrr['last_name']; ?></td>
+                                            <td>ยังไม่ประเมินหัวหน้า</td>
+       
+                                            <td width="5px"><a
+                                                    href="index.php?pa4&user_c_id=<?php echo ($rowhuserehhrr['user_id']) ?>&type=2&my=<?php echo ($rowhuserehhrr['user_id']) ?>">
+                                                    <i class="fas fa-arrow-right"></i></a>
+                                            </td>
+                                        </tr>
+                                        <?php }  ?>
+
+                              <?php   if ($f_ac_user_h_idr == $user_id && $f_ac_statusr == 1){ ?>
                                  <tr>
                                      <td><?php echo $rowhusere['user_tumn']; ?></td>
                                      <td><?php echo $rowhusere['first_name']; ?></td>
