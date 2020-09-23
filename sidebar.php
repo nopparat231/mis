@@ -128,21 +128,21 @@
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?my_rate" class="nav-link">
+                              <a href="index.php?my_rate&p_my" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินตนเอง </p>
                               </a>
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?my_rate" class="nav-link">
+                              <a href="index.php?my_rate&p_head" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินหัวหน้า </p>
                               </a>
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?my_rate" class="nav-link">
+                              <a href="index.php?p_kana" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินของคณะ/สำนัก/กอง </p>
                               </a>
@@ -252,21 +252,21 @@
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?my_rate" class="nav-link">
+                              <a href="index.php?my_rate&p_my" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินตนเอง </p>
                               </a>
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?my_rate" class="nav-link">
+                              <a href="index.php?my_rate&p_head" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินหัวหน้า </p>
                               </a>
                           </li>
 
                           <li class="nav-item">
-                              <a href="index.php?my_rate" class="nav-link">
+                              <a href="index.php?p_kana" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>การจัดการประเมินของคณะ/สำนัก/กอง </p>
                               </a>
@@ -364,21 +364,21 @@
 
 
                   <li class="nav-item">
-                      <a href="index.php?my_rate" class="nav-link">
+                      <a href="index.php?my_rate&p_my" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
                           <p>การจัดการประเมินตนเอง </p>
                       </a>
                   </li>
 
                   <li class="nav-item">
-                      <a href="index.php?my_rate" class="nav-link">
+                      <a href="index.php?my_rate&p_head" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
                           <p>การจัดการประเมินหัวหน้า </p>
                       </a>
                   </li>
 
                   <li class="nav-item">
-                      <a href="index.php?my_rate" class="nav-link">
+                      <a href="index.php?p_kana" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
                           <p>การจัดการประเมินของคณะ/สำนัก/กอง </p>
                       </a>

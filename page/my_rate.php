@@ -5,12 +5,12 @@
      <div class="container-fluid">
          <div class="row mb-2">
              <div class="col-sm-6">
-                 <h1 class="m-0 text-dark">รายงานการประเมินตนเอง</h1>
+                 <h1 class="m-0 text-dark">รายงานการประเมิน</h1>
              </div><!-- /.col -->
              <div class="col-sm-6">
                  <ol class="breadcrumb float-sm-right">
                      <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
-                     <li class="breadcrumb-item active">รายงานการประเมินตนเอง</li>
+                     <li class="breadcrumb-item active">รายงานการประเมิน</li>
                  </ol>
              </div><!-- /.col -->
          </div><!-- /.row -->
@@ -29,7 +29,7 @@
                  <div class="card card-primary card-outline ">
                      <div class="card-header noprint">
                          <h5 class="m-0">
-                             เลือกรายชื่อประเมินตนเอง
+                             เลือกรายชื่อประเมิน
                          </h5>
                      </div>
                      <div class="card-body">
@@ -150,32 +150,34 @@
                                     $f_ac_user_h_idr = $rowhuserrr['f_ac_user_h_id'];
                                     $f_ac_statusr = $rowhuserrr['f_ac_status'];
 
+                                    if (isset($_GET['p_head'])) {
+    
                                     if ($f_ac_user_h_idr == $user_id && $f_ac_statusr == 2){ ?>
-                                        <tr>
-                                            <td><?php echo $rowhuserehhrr['user_tumn']; ?></td>
-                                            <td><?php echo $rowhuserehhrr['first_name']; ?></td>
-                                            <td><?php echo $rowhuserehhrr['last_name']; ?></td>
-                                            <td>ประเมินหัวหน้าแล้ว</td>
-                                            <td width="5px" style="text-align: center;"><a
-                                                    href="index.php?ph&print&showphhh&user_c_id=<?php echo($user_id) ?>"
-                                                    target="_blank"><i class="fas fa-print"></i></a></td>
-       
-                                        </tr>
-                                        <?php }else{ ?>
-                                        <tr>
-                                            <td><?php echo $rowhuserehhrr['user_tumn']; ?></td>
-                                            <td><?php echo $rowhuserehhrr['first_name']; ?></td>
-                                            <td><?php echo $rowhuserehhrr['last_name']; ?></td>
-                                            <td>ยังไม่ประเมินหัวหน้า</td>
-       
-                                            <td width="5px"><a
-                                                    href="index.php?pa4&user_c_id=<?php echo ($rowhuserehhrr['user_id']) ?>&type=2&my=<?php echo ($rowhuserehhrr['user_id']) ?>">
-                                                    <i class="fas fa-arrow-right"></i></a>
-                                            </td>
-                                        </tr>
-                                        <?php }  ?>
+                                 <tr>
+                                     <td><?php echo $rowhuserehhrr['user_tumn']; ?></td>
+                                     <td><?php echo $rowhuserehhrr['first_name']; ?></td>
+                                     <td><?php echo $rowhuserehhrr['last_name']; ?></td>
+                                     <td>ประเมินหัวหน้าแล้ว</td>
+                                     <td width="5px" style="text-align: center;"><a
+                                             href="index.php?ph&print&showphhh&user_c_id=<?php echo($user_id) ?>"
+                                             target="_blank"><i class="fas fa-print"></i></a></td>
 
-                              <?php   if ($f_ac_user_h_idr == $user_id && $f_ac_statusr == 1){ ?>
+                                 </tr>
+                                 <?php }else{ ?>
+                                 <tr>
+                                     <td><?php echo $rowhuserehhrr['user_tumn']; ?></td>
+                                     <td><?php echo $rowhuserehhrr['first_name']; ?></td>
+                                     <td><?php echo $rowhuserehhrr['last_name']; ?></td>
+                                     <td>ยังไม่ประเมินหัวหน้า</td>
+
+                                     <td width="5px"><a
+                                             href="index.php?pa4&user_c_id=<?php echo ($rowhuserehhrr['user_id']) ?>&type=2&my=<?php echo ($rowhuserehhrr['user_id']) ?>">
+                                             <i class="fas fa-arrow-right"></i></a>
+                                     </td>
+                                 </tr>
+                                 <?php }  }elseif(isset($_GET['p_my'])){?>
+
+                                 <?php   if ($f_ac_user_h_idr == $user_id && $f_ac_statusr == 1){ ?>
                                  <tr>
                                      <td><?php echo $rowhusere['user_tumn']; ?></td>
                                      <td><?php echo $rowhusere['first_name']; ?></td>
@@ -198,7 +200,7 @@
                                              <i class="fas fa-arrow-right"></i></a>
                                      </td>
                                  </tr>
-                                 <?php }  ?>
+                                 <?php } } ?>
 
                              </tbody>
                          </table>

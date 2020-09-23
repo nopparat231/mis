@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2020 at 04:59 PM
+-- Generation Time: Sep 23, 2020 at 07:14 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -501,6 +501,20 @@ INSERT INTO `order_management` (`order_id`, `order_user_id`, `order_time`, `orde
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `p_kana`
+--
+
+CREATE TABLE IF NOT EXISTS `p_kana` (
+`p_kana_id` int(11) NOT NULL,
+  `p_kana_id_kana_id` int(11) NOT NULL,
+  `p_kana_user_id` int(11) NOT NULL,
+  `p_kana_ac` int(11) NOT NULL,
+  `p_kana_status` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `saka`
 --
 
@@ -724,6 +738,12 @@ ALTER TABLE `order_management`
  ADD PRIMARY KEY (`order_id`);
 
 --
+-- Indexes for table `p_kana`
+--
+ALTER TABLE `p_kana`
+ ADD PRIMARY KEY (`p_kana_id`);
+
+--
 -- Indexes for table `saka`
 --
 ALTER TABLE `saka`
@@ -821,6 +841,11 @@ MODIFY `n_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 ALTER TABLE `order_management`
 MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `p_kana`
+--
+ALTER TABLE `p_kana`
+MODIFY `p_kana_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `saka`
 --

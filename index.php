@@ -119,6 +119,9 @@ session_start();
       }elseif (isset($_GET['p_rate'])) {
         include 'page/p_rate.php';
 
+      }elseif (isset($_GET['p_kana'])) {
+        include 'page/p_kana.php';
+
       }else{
         include 'new.php';
       }
