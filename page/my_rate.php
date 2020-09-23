@@ -120,20 +120,15 @@
 
                                      <?php }elseif ($rowcheckac1 > 0 && $rowcheckac2 > 0 && $rowcheckac3 <= 0 ){ ?>
                                      <td>หัวหน้ายังประเมินไม่ครบ</td>
-                                     <td width="5px"><a href="index.php?ph&user_c_id=<?php echo($uid) ?>&ph3&add"><i
-                                                 class="fas fa-arrow-right isDisabled"></i></a></td>
+                                     <td width="5px"><i class="fas fa-arrow-right isDisabled"></i></td>
 
                                      <?php }elseif ($rowcheckac1 > 0 && $rowcheckac2 <= 0 && $rowcheckac3 <= 0 ){ ?>
                                      <td>หัวหน้ายังประเมินไม่ครบ</td>
-                                     <td width="5px"><a
-                                             href="index.php?pa4&user_c_id=<?php echo ($rowhuser['user_id']) ?>&type=3"><i
-                                                 class="fas fa-arrow-right isDisabled"></i></a></td>
+                                     <td width="5px"><i class="fas fa-arrow-right isDisabled"></i></td>
 
                                      <?php }else{ ?>
                                      <td>หัวหน้ายังไม่ประเมิน</td>
-                                     <td width="5px"><a
-                                             href="index.php?pa4&user_c_id=<?php echo ($rowhuser['user_id']) ?>&type=2"><i
-                                                 class="fas fa-arrow-right isDisabled"></i></a></td>
+                                     <td width="5px"><i class="fas fa-arrow-right isDisabled"></i></td>
 
                                      <?php } ?>
                                  </tr>
