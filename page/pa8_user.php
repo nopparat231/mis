@@ -121,7 +121,7 @@ echo "<option selected>เลือกคณะ</option>";
                                          <label>สถานะ</label>
                                          <select class="custom-select" name="user_status">
                                              <option selected>เลือกสถานะ</option>
-                                             <option value="1">ผู้ดูแลระบบ</option>
+                                             
                                              <option value="2">ผู้ประเมิน</option>
                                              <option value="0">ผู้ถูกประเมิน</option>
                                          </select>
@@ -283,7 +283,7 @@ echo "<option selected>เลือกคณะ</option>";
                                          <label>สถานะ</label>
                                          <select class="custom-select" name="user_status">
 
-                                             <option <?php echo $user_statusck1; ?> value="1">ผู้ดูแลระบบ</option>
+                                             
                                              <option <?php echo $user_statusck2; ?> value="2">ผู้ประเมิน</option>
                                              <option <?php echo $user_statusck3; ?> value="0">ผู้ถูกประเมิน</option>
                                              <option <?php echo $user_statusck4; ?> value="3">ยกเลิก</option>
@@ -335,7 +335,7 @@ echo "<option selected>เลือกคณะ</option>";
  								include './conn.php';
 
 
- 								$sqlhuser=" SELECT * FROM user ORDER BY user_id desc ";
+ 								$sqlhuser=" SELECT * FROM user WHERE user_status <> 1 ORDER BY user_id desc ";
  								$qryhuser = mysqli_query($conn,$sqlhuser);
 
 
@@ -370,9 +370,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <td><?php echo $rowhuser['first_name']; ?></td>
                                      <td><?php echo $rowhuser['last_name']; ?></td>
                                      <td>
-                                         <?php if ($rowhuser['user_status'] == 1): ?>
-                                         <p>ผู้ดูแลระบบ</p>
-                                         <?php elseif ($rowhuser['user_status'] == 0): ?>
+                                         <?php if ($rowhuser['user_status'] == 0): ?>
                                          <p>ผู้ถูกประเมิน</p>
                                          <?php elseif ($rowhuser['user_status'] == 2): ?>
                                          <p>ผู้ประเมิน</p>

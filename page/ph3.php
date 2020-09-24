@@ -122,21 +122,21 @@ normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><?php ech
     border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
     padding:0cm 5.4pt 0cm 5.4pt">
     <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-    normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h31[]" value="&nbsp;" style="border: none;"></span></p>
+    normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="textarea" name="h31[]" value="&nbsp;" style="border: none;"></span></p>
   </td>
   <td width="200" valign="top" style="width:150.25pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h32[]" value="&nbsp;" style="border: none;"></span></p>
+  normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="textarea" name="h32[]" value="&nbsp;" style="border: none;"></span></p>
 </td>
 <td width="200" valign="top" style="width:150.3pt;border-top:none;border-left:
 none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
 mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
 mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
 <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="text" name="h33[]" value="&nbsp;" style="border: none;"></span></p>
+normal"><span style="font-family:&quot;TH SarabunPSK&quot;,sans-serif"><input type="textarea" name="h33[]" value="&nbsp;" style="border: none;"></span></p>
 </td>
 </tr>
 
