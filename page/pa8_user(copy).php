@@ -277,8 +277,6 @@ echo "<option selected>เลือกคณะ</option>";
                                      </div>
                                  </div>
 
-
-
                                  <div class="col-sm-4">
                                      <!-- text input -->
                                      <div class="form-group">
@@ -337,7 +335,7 @@ echo "<option selected>เลือกคณะ</option>";
  								include './conn.php';
 
 
- 								$sqlhuser=" SELECT * FROM user,user_data WHERE user_status <> 1 ORDER BY user_id desc ";
+ 								$sqlhuser=" SELECT * FROM user WHERE user_status <> 1 ORDER BY user_id desc ";
  								$qryhuser = mysqli_query($conn,$sqlhuser);
 
 
@@ -346,43 +344,12 @@ echo "<option selected>เลือกคณะ</option>";
 
 
                          <table id="example1" class="table table-bordered table-hover">
-                             <thead bgcolor="blue">
+                             <thead>
                                  <tr>
                                      <th>ลำดับ</th>
                                      <th>ตำแหน่ง</th>
                                      <th>ชื่อ</th>
                                      <th>นามสกุล</th>
-                                     <th>รหัสประจำตัวประชาชน</th>
-                                     <th>เพศ</th>
-                                     <th>สัญชาติ</th>
-                                     <th>วัดเดือนปีเกิด</th>
-                                     <th>เลขที่บ้าน</th>
-                                     <th>หมู่ที่</th>
-                                     <th>ถนน</th>
-                                     <th>ตำบล/แขวง</th>
-                                     <th>อำเภอ/เขต</th>
-                                     <th>จังหวัด</th>
-                                     <th>เบอร์โทรศัพท์</th>
-                                     <th>รหัสไปรษณีย์</th>
-                                     <th>คณะ/หน่วยงานที่สังกัด</th>
-                                     <th>ภาควิชา</th>
-                                     <th>สาขา</th>
-                                     <th>กลุ่มสาขาวิชาที่สอน</th>
-                                     <th>ประเภทบุคลการ</th>
-                                     <th>ประเภทบุคลากรย่อย</th>
-                                     <th>ตำแหน่งทางวิชาการ/ชำนาญการ</th>
-                                     <th>ตำแหน่งทางบริหาร</th>
-                                     <th>ชื่อตำแหน่งในสายงาน</th>
-                                     <th>ระดับตำแหน่งข้าราชการ</th>
-                                     <th>วัดเดือนปีที่เข้าทำงาน(พ.ศ.)</th>
-                                     <th>ระยะเวลาการจ้างงาน</th>
-                                     <th>เงินจ้างงาน</th>
-                                     <th>ระดับการศึกษาที่จบสูงสุด</th>
-                                     <th>ชื่อหลักสูตรที่จบการศึกษาสูงสุด</th>
-                                     <th>กลุ่มสาขาวิชาที่จบการศึกษาสูงสุด</th>
-                                     <th>สาขาวิชาที่จบการศึกษาสูงสุด</th>
-                                     <th>ชื่อสถาบันที่จบการศึกษาสูงสุด</th>
-                                     <th>ประเทศที่จบการศึกษาสูงสุด</th>
                                      <th>สถานะ</th>
                                      <th>แก้ไข</th>
 
@@ -402,37 +369,6 @@ echo "<option selected>เลือกคณะ</option>";
                                      <td><?php echo $rowhuser['user_tumn']; ?></td>
                                      <td><?php echo $rowhuser['first_name']; ?></td>
                                      <td><?php echo $rowhuser['last_name']; ?></td>
-                                     <td><?php echo $rowhuser['id']; ?></td>
-                                     <td><?php echo $rowhuser['sex']; ?></td>
-                                     <td><?php echo $rowhuser['nationality']; ?></td>
-                                     <td><?php echo $rowhuser['date of birth']; ?></td>
-                                     <td><?php echo $rowhuser['house number']; ?></td>
-                                     <td><?php echo $rowhuser['moo']; ?></td>
-                                     <td><?php echo $rowhuser['road']; ?></td>
-                                     <td><?php echo $rowhuser['district']; ?></td>
-                                     <td><?php echo $rowhuser['area']; ?></td>
-                                     <td><?php echo $rowhuser['province']; ?></td>
-                                     <td><?php echo $rowhuser['phone']; ?></td>
-                                     <td><?php echo $rowhuser['post code']; ?></td>
-                                     <td><?php echo $rowhuser['faculty']; ?></td>
-                                     <td><?php echo $rowhuser['department']; ?></td>
-                                     <td><?php echo $rowhuser['branch']; ?></td>
-                                     <td><?php echo $rowhuser['teaching disciplines']; ?></td>
-                                     <td><?php echo $rowhuser['personnel type']; ?></td>
-                                     <td><?php echo $rowhuser['sub-personnel type']; ?></td>
-                                     <td><?php echo $rowhuser['academic position']; ?></td>
-                                     <td><?php echo $rowhuser['administrative position']; ?></td>
-                                     <td><?php echo $rowhuser['name of position']; ?></td>
-                                     <td><?php echo $rowhuser['civil servant level']; ?></td>
-                                     <td><?php echo $rowhuser['date of employment']; ?></td>
-                                     <td><?php echo $rowhuser['term of employment']; ?></td>
-                                     <td><?php echo $rowhuser['employment money']; ?></td>
-                                     <td><?php echo $rowhuser['highest graduate level']; ?></td>
-                                     <td><?php echo $rowhuser['course name']; ?></td>
-                                     <td><?php echo $rowhuser['graduate disciplines']; ?></td>
-                                     <td><?php echo $rowhuser['major graduate disciplines']; ?></td>
-                                     <td><?php echo $rowhuser['graduate institution name']; ?></td>
-                                     <td><?php echo $rowhuser['country of graduation']; ?></td>
                                      <td>
                                          <?php if ($rowhuser['user_status'] == 0): ?>
                                          <p>ผู้ถูกประเมิน</p>
@@ -470,30 +406,7 @@ echo "<option selected>เลือกคณะ</option>";
                          </table>
 
 
-                                <html>
-                                <body>
 
-                                <h1>The fieldset element</h1>
-
-                                <form action="/action_page.php">
-                                 <fieldset>
-                                  <legend>Personalia:</legend>
-                                  <label for="fsong">song name:</label>
-                                  <input type="text" id="fsong" name="fsong"><br><br>
-                                  <label for="fname">First name:</label>
-                                  <input type="text" id="fname" name="fname"><br><br>
-                                  <label for="lname">Last name:</label>
-                                  <input type="text" id="lname" name="lname"><br><br>
-                                  <label for="email">Email:</label>
-                                  <input type="email" id="email" name="email"><br><br>
-                                  <label for="birthday">Birthday:</label>
-                                  <input type="date" id="birthday" name="birthday"><br><br>
-                                  <input type="submit" value="Submit">
-                                 </fieldset>
-                                </form>
-
-                                </body>
-                                </html>
                          <?php endif ?>
 
                      </div>
