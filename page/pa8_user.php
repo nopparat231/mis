@@ -78,27 +78,268 @@ echo "<option selected>เลือกคณะ</option>";
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
-                                         <label>ตำแหน่ง</label>
-                                         <input type="text" name="user_tumn" class="form-control"
+                                         <label>รหัสบัตรประชาชน</label>
+                                         <input type="text" name="id" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
-                                 <div class="col-sm-4">
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ชื่อ</label>
-                                         <input type="text" name="first_name" class="form-control"
+                                         <input type="text" name="name" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
-                                 <div class="col-sm-4">
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>นามสกุล</label>
-                                         <input type="text" name="last_name" class="form-control"
+                                         <input type="text" name="surname" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
+                                 <div class="col-sm-1">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เพศ</label>
+                                         <input type="text" name="sex" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>วันเดือนปีเกิด</label>
+                                         <input type="text" name="date of birth" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สัญชาติ</label>
+                                         <input type="text" name="nationality" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>บ้านเลขที่</label>
+                                         <input type="text" name="house number" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>หมู่ที่</label>
+                                         <input type="text" name="moo" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ถนน</label>
+                                         <input type="text" name="road" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>แขวง</label>
+                                         <input type="text" name="district" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เขต</label>
+                                         <input type="text" name="area" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>จังหวัด</label>
+                                         <input type="text" name="province" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เบอร์โทร</label>
+                                         <input type="text" name="phone" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>รหัสไปษณีย์</label>
+                                         <input type="text" name="post code" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>คณะ</label>
+                                         <input type="text" name="faculty" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>หลักสูตร</label>
+                                         <input type="text" name="department" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สาขา</label>
+                                         <input type="text" name="branch" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สาขาการสอน</label>
+                                         <input type="text" name="teaching disciplines" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ประเภทบุคลากร</label>
+                                         <input type="text" name="personnel type" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ประเภทบุคลากรย่อย</label>
+                                         <input type="text" name="sub-personnel type" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อตำแหน่งทางวิชาการ</label>
+                                         <input type="text" name="academic position" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ตำแหน่งทางบริหาร</label>
+                                         <input type="text" name="administrative position" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อตำแหน่งในสายงานครู</label>
+                                         <input type="text" name="name of position" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ระดับตำแหน่งข้าราชการ</label>
+                                         <input type="text" name="civil servant level" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>วันเดือนปีที่เข้าทำงาน</label>
+                                         <input type="text" name="date of employment" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ระยะเวลาการจ้างทำงาน</label>
+                                         <input type="text" name="term of employment" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เงินจ้างงาน</label>
+                                         <input type="text" name="employment money" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ระดับการศึกษาที่จบสูงสุด</label>
+                                         <input type="text" name="highest graduate level" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อหลักสูตรที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="course name" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>กลุ่มสาขาวิชาที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="graduate disciplines" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สาขาที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="major graduate disciplines" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อสถาบันที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="graduate institution name" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ประเทศที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="country of graduation" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
