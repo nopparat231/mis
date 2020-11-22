@@ -174,6 +174,9 @@ session_start();
             "info": true,
             "autoWidth": false,
         });
+        $('#example3').DataTable({
+          "scrollX": true
+        });
 
 
     });

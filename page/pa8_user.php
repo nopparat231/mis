@@ -24,7 +24,7 @@
              <div class="col-lg-12">
 
 
-                 <div class="card card-primary card-outline ">
+                 <div class="card">
                      <div class="card-header noprint">
                          <h5 class="m-0">เพิ่มผู้ใช้งาน</h5>
                      </div>
@@ -79,7 +79,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>รหัสบัตรประชาชน</label>
-                                         <input type="text" name="id" class="form-control"
+                                         <input type="text" name="user_data_id_card" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -87,7 +87,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ชื่อ</label>
-                                         <input type="text" name="name" class="form-control"
+                                         <input type="text" name="first_name" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -95,7 +95,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>นามสกุล</label>
-                                         <input type="text" name="surname" class="form-control"
+                                         <input type="text" name="last_name" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -103,8 +103,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>เพศ</label>
-                                         <input type="text" name="sex" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="sex" class="form-control" placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -135,16 +134,14 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>หมู่ที่</label>
-                                         <input type="text" name="moo" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="moo" class="form-control" placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ถนน</label>
-                                         <input type="text" name="road" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="road" class="form-control" placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -159,8 +156,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>เขต</label>
-                                         <input type="text" name="area" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="area" class="form-control" placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -175,8 +171,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>เบอร์โทร</label>
-                                         <input type="text" name="phone" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="phone" class="form-control" placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -191,8 +186,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>คณะ</label>
-                                         <input type="text" name="faculty" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="faculty" class="form-control" placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -207,8 +201,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>สาขา</label>
-                                         <input type="text" name="branch" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="branch" class="form-control" placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -339,20 +332,28 @@ echo "<option selected>เลือกคณะ</option>";
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
-                                 
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ตำแหน่ง</label>
+                                         <input type="text" name="user_tumn" class="form-control"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>Username</label>
-                                         <input type="text" name="username" class="form-control"
+                                         <input type="text" name="username" autocomplete="off" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
-                                 <div class="col-sm-4">
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>Password</label>
-                                         <input type="password" name="password" class="form-control"
+                                         <input type="password" name="password" autocomplete="off" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -362,7 +363,7 @@ echo "<option selected>เลือกคณะ</option>";
                                          <label>สถานะ</label>
                                          <select class="custom-select" name="user_status">
                                              <option selected>เลือกสถานะ</option>
-                                             
+
                                              <option value="2">ผู้ประเมิน</option>
                                              <option value="0">ผู้ถูกประเมิน</option>
                                          </select>
@@ -526,7 +527,7 @@ echo "<option selected>เลือกคณะ</option>";
                                          <label>สถานะ</label>
                                          <select class="custom-select" name="user_status">
 
-                                             
+
                                              <option <?php echo $user_statusck2; ?> value="2">ผู้ประเมิน</option>
                                              <option <?php echo $user_statusck3; ?> value="0">ผู้ถูกประเมิน</option>
                                              <option <?php echo $user_statusck4; ?> value="3">ยกเลิก</option>
@@ -578,7 +579,7 @@ echo "<option selected>เลือกคณะ</option>";
  								include './conn.php';
 
 
- 								$sqlhuser=" SELECT * FROM user,user_data WHERE user_status <> 1 ORDER BY user_id desc ";
+ 								$sqlhuser=" SELECT * FROM user INNER JOIN user_data ON user.user_id = user_data.user_id WHERE user.user_status <> 1 ORDER BY user.user_id desc ";
  								$qryhuser = mysqli_query($conn,$sqlhuser);
 
 
@@ -586,8 +587,8 @@ echo "<option selected>เลือกคณะ</option>";
 
 
 
-                         <table id="example1" class="table table-bordered table-hover">
-                             <thead bgcolor="blue">
+                         <table id="example3" class="table table-bordered table-hover">
+                             <thead>
                                  <tr>
                                      <th>ลำดับ</th>
                                      <th>ตำแหน่ง</th>
@@ -639,42 +640,42 @@ echo "<option selected>เลือกคณะ</option>";
 
 
                                  <tr>
-                                     <td><?php echo $i; ?></td>
-                                     <td><?php echo $rowhuser['user_tumn']; ?></td>
-                                     <td><?php echo $rowhuser['first_name']; ?></td>
-                                     <td><?php echo $rowhuser['last_name']; ?></td>
-                                     <td><?php echo $rowhuser['id']; ?></td>
-                                     <td><?php echo $rowhuser['sex']; ?></td>
-                                     <td><?php echo $rowhuser['nationality']; ?></td>
-                                     <td><?php echo $rowhuser['date of birth']; ?></td>
-                                     <td><?php echo $rowhuser['house number']; ?></td>
-                                     <td><?php echo $rowhuser['moo']; ?></td>
-                                     <td><?php echo $rowhuser['road']; ?></td>
-                                     <td><?php echo $rowhuser['district']; ?></td>
-                                     <td><?php echo $rowhuser['area']; ?></td>
-                                     <td><?php echo $rowhuser['province']; ?></td>
-                                     <td><?php echo $rowhuser['phone']; ?></td>
-                                     <td><?php echo $rowhuser['post code']; ?></td>
-                                     <td><?php echo $rowhuser['faculty']; ?></td>
-                                     <td><?php echo $rowhuser['department']; ?></td>
-                                     <td><?php echo $rowhuser['branch']; ?></td>
-                                     <td><?php echo $rowhuser['teaching disciplines']; ?></td>
-                                     <td><?php echo $rowhuser['personnel type']; ?></td>
-                                     <td><?php echo $rowhuser['sub-personnel type']; ?></td>
-                                     <td><?php echo $rowhuser['academic position']; ?></td>
-                                     <td><?php echo $rowhuser['administrative position']; ?></td>
-                                     <td><?php echo $rowhuser['name of position']; ?></td>
-                                     <td><?php echo $rowhuser['civil servant level']; ?></td>
-                                     <td><?php echo $rowhuser['date of employment']; ?></td>
-                                     <td><?php echo $rowhuser['term of employment']; ?></td>
-                                     <td><?php echo $rowhuser['employment money']; ?></td>
-                                     <td><?php echo $rowhuser['highest graduate level']; ?></td>
-                                     <td><?php echo $rowhuser['course name']; ?></td>
-                                     <td><?php echo $rowhuser['graduate disciplines']; ?></td>
-                                     <td><?php echo $rowhuser['major graduate disciplines']; ?></td>
-                                     <td><?php echo $rowhuser['graduate institution name']; ?></td>
-                                     <td><?php echo $rowhuser['country of graduation']; ?></td>
+                                     <td><?=$rowhuser['user_tumn'];?></td>
+                                     <td><?=$rowhuser['first_name'];?></td>
+                                     <td><?=$rowhuser['last_name'];?></td>
+                                     <td><?=$rowhuser['user_data_id_card'];?></td>
+                                     <td><?=$rowhuser['sex'];?></td>
+                                     <td><?=$rowhuser['nationality'];?></td>
+                                     <td><?=$rowhuser['date_of_birth'];?></td>
+                                     <td><?=$rowhuser['house_number'];?></td>
+                                     <td><?=$rowhuser['moo'];?></td>
+                                     <td><?=$rowhuser['road'];?></td>
+                                     <td><?=$rowhuser['district'];?></td>
+                                     <td><?=$rowhuser['area'];?></td>
+                                     <td><?=$rowhuser['province'];?></td>
+                                     <td><?=$rowhuser['phone'];?></td>
+                                     <td><?=$rowhuser['post_code'];?></td>
+                                     <td><?=$rowhuser['faculty'];?></td>
+                                     <td><?=$rowhuser['department'];?></td>
+                                     <td><?=$rowhuser['branch'];?></td>
+                                     <td><?=$rowhuser['teaching_disciplines'];?></td>
+                                     <td><?=$rowhuser['personnel_type'];?></td>
+                                     <td><?=$rowhuser['sub_personnel_type'];?></td>
+                                     <td><?=$rowhuser['academic_position'];?></td>
+                                     <td><?=$rowhuser['administrative_position'];?></td>
+                                     <td><?=$rowhuser['name_of_position'];?></td>
+                                     <td><?=$rowhuser['civil_servant_level'];?></td>
+                                     <td><?=$rowhuser['date_of_employment'];?></td>
+                                     <td><?=$rowhuser['term_of_employment'];?></td>
+                                     <td><?=$rowhuser['employment_money'];?></td>
+                                     <td><?=$rowhuser['highest_graduate_level'];?></td>
+                                     <td><?=$rowhuser['course_name'];?></td>
+                                     <td><?=$rowhuser['graduate_disciplines'];?></td>
+                                     <td><?=$rowhuser['major_graduate_disciplines'];?></td>
+                                     <td><?=$rowhuser['graduate_institution_name'];?></td>
+                                     <td><?=$rowhuser['country_of_graduation'];?></td>
                                      <td>
+
                                          <?php if ($rowhuser['user_status'] == 0): ?>
                                          <p>ผู้ถูกประเมิน</p>
                                          <?php elseif ($rowhuser['user_status'] == 2): ?>
@@ -710,31 +711,6 @@ echo "<option selected>เลือกคณะ</option>";
                              </tbody>
                          </table>
 
-
-                                <html>
-                                <body>
-
-                                <h1>The fieldset element</h1>
-
-                                <form action="/action_page.php">
-                                 <fieldset>
-                                  <legend>Personalia:</legend>
-                                  <label for="fsong">song name:</label>
-                                  <input type="text" id="fsong" name="fsong"><br><br>
-                                  <label for="fname">First name:</label>
-                                  <input type="text" id="fname" name="fname"><br><br>
-                                  <label for="lname">Last name:</label>
-                                  <input type="text" id="lname" name="lname"><br><br>
-                                  <label for="email">Email:</label>
-                                  <input type="email" id="email" name="email"><br><br>
-                                  <label for="birthday">Birthday:</label>
-                                  <input type="date" id="birthday" name="birthday"><br><br>
-                                  <input type="submit" value="Submit">
-                                 </fieldset>
-                                </form>
-
-                                </body>
-                                </html>
                          <?php endif ?>
 
                      </div>
