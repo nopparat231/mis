@@ -30,7 +30,9 @@
                      </div>
                      <div class="card-body">
 
-                         <?php if (isset($_GET['add'])||isset($_GET['edit_user'])): ?>
+                         <?php
+                         include 'class_db.php';
+                         if (isset($_GET['add'])||isset($_GET['edit_user'])): ?>
 
                          <?php else: ?>
                          <a href="./index.php?pa8&add" class="btn btn-success float-right"><i
@@ -43,40 +45,6 @@
                             ?>
 
 
-                         <?php 
-    
-    function Show_kana($conn){
-
-        $sqlkana=" SELECT * FROM kana ";
-        $qrykana = mysqli_query($conn,$sqlkana);
-
-echo "<option selected>เลือกคณะ</option>";
-        while ($rowkana = $qrykana->fetch_array()) {
-            
-                 echo "<option value='".$rowkana['kana_id']."'>".$rowkana['kana_detail']."</option>";
-                              
-        }
-
-    }
-    function Show_saka($conn){
-
-        $sqlsaka=" SELECT * FROM saka ";
-        $qrysaka = mysqli_query($conn,$sqlsaka);
-
-     echo "<option selected>เลือกสาขาวิชา/หลักสูตร</option>";   
-        while ($rowsaka = $qrysaka->fetch_array()) {
-
-                echo "<option value='".$rowsaka['saka_id']."'>".$rowsaka['saka_detail']." / ".$rowsaka['saka_laksut']."</option>";
- 
-           
-        }
-
-     }
-
-
-    
-                        ?>
-
                          <form role="form" action="page/pa8_user_db.php" method="post">
 
                              <div class="row">
@@ -84,8 +52,9 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>รหัสบัตรประชาชน</label>
-                                         <input type="number" name="user_data_id_card" maxlength="13" class="form-control"
-                                             placeholder="Enter ..." oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                         <input type="number" name="user_data_id_card" maxlength="13"
+                                             class="form-control" placeholder="Enter ..."
+                                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -176,7 +145,9 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>เบอร์โทร</label>
-                                         <input type="text" name="phone" class="form-control" maxlength="10" placeholder="Enter ..." oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                         <input type="text" name="phone" class="form-control" maxlength="10"
+                                             placeholder="Enter ..."
+                                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -184,7 +155,8 @@ echo "<option selected>เลือกคณะ</option>";
                                      <div class="form-group">
                                          <label>รหัสไปษณีย์</label>
                                          <input type="number" name="post_code" class="form-control" maxlength="5"
-                                             placeholder="Enter ..." oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                             placeholder="Enter ..."
+                                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -334,7 +306,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <div class="form-group">
                                          <label>ประเทศที่จบการศึกษาสูงสุด</label>
                                          <input type="text" name="country_of_graduation" class="form-control"
-                                         placeholder="Enter ...">
+                                             placeholder="Enter ...">
                                      </div>
                                  </div>
 
@@ -347,13 +319,16 @@ echo "<option selected>เลือกคณะ</option>";
                                      </div>
                                  </div>
 
-                                 <div class="col-sm-8">
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ผู้บังคับบัญชา</label>
                                          <select class="custom-select" name="user_head">
 
-                                             <?php Show_h_user_all($u_id); ?>
+                                             <?php
+                                              $u_id = $_SESSION["USER_ID"];
+                                              Show_h_user_all($u_id);
+                                              ?>
 
                                          </select>
 
@@ -376,7 +351,7 @@ echo "<option selected>เลือกคณะ</option>";
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
-                                 <div class="col-sm-4">
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>สถานะ</label>
@@ -396,7 +371,7 @@ echo "<option selected>เลือกคณะ</option>";
                                          <label>คณะ</label>
                                          <select class="custom-select" name="user_kana">
 
-                                             <?php Show_kana($conn,$user_kana_id); ?>
+                                             <?php Show_kana_all(); ?>
 
                                          </select>
 
@@ -409,22 +384,25 @@ echo "<option selected>เลือกคณะ</option>";
                                          <label>สาขาวิชา/หลักสูตร</label>
                                          <select class="custom-select" name="user_saka">
 
-                                             <?php Show_saka($conn,$user_saka_id); ?>
+                                             <?php Show_saka_all(); ?>
 
                                          </select>
 
                                      </div>
                                  </div>
 
+                                 <div class="col-sm-8">
+                                     <!-- text input -->
+                                     <div class="form-group">
 
+                                         <div class="card-footer">
+                                             <button type="submit" class="btn btn-primary">Submit</button>
+                                             <a type="submit" class="btn btn-danger" href="./index.php?pa8">cancel</a>
+                                         </div>
 
-                                 <div class="card-footer">
-                                     <button type="submit" class="btn btn-primary">Submit</button>
-                                     <a type="submit" class="btn btn-danger" href="./index.php?pa8">cancel</a>
+                                     </div>
                                  </div>
-
                              </div>
-
                              <input type="hidden" name="add_user">
 
                          </form>
@@ -434,7 +412,7 @@ echo "<option selected>เลือกคณะ</option>";
                             $user_id = $_GET['user_id'];
 
                    
- 							$sqlhuser=" SELECT * FROM user WHERE user_id =".$user_id;
+ 							$sqlhuser=" SELECT * FROM user INNER JOIN user_data ON user.user_id = user_data.user_id WHERE user.user_id = '$user_id' ";
  							$qryhuser = mysqli_query($conn,$sqlhuser);
  							$rowuser = mysqli_fetch_assoc($qryhuser);
 
@@ -472,6 +450,7 @@ echo "<option selected>เลือกคณะ</option>";
                                 }
 
                             }
+
                             function Show_saka($conn,$user_saka_id){
 
                                 $sqlsaka=" SELECT * FROM saka ";
@@ -495,63 +474,335 @@ echo "<option selected>เลือกคณะ</option>";
  							?>
 
 
-
                          <form role="form" action="page/pa8_user_db.php" method="post">
 
-                             <div class="row">
+                         <div class="row">
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>รหัสบัตรประชาชน</label>
+                                         <input type="number" name="user_data_id_card" maxlength="13"
+                                             class="form-control" placeholder="Enter ..." value="<?=$rowuser['user_data_id_card']?>"
+                                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อ</label>
+                                         <input type="text" name="first_name" class="form-control" value="<?=$rowuser['first_name']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>นามสกุล</label>
+                                         <input type="text" name="last_name" class="form-control" value="<?=$rowuser['last_name']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-1">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เพศ</label>
+                                         <input type="text" name="sex" class="form-control" value="<?=$rowuser['sex']?>"
+                                          placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>วันเดือนปีเกิด</label>
+                                         <input type="date" name="date_of_birth" class="form-control" value="<?=$rowuser['date_of_birth']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สัญชาติ</label>
+                                         <input type="text" name="nationality" class="form-control" value="<?=$rowuser['nationality']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>บ้านเลขที่</label>
+                                         <input type="text" name="house_number" class="form-control" value="<?=$rowuser['house_number']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>หมู่ที่</label>
+                                         <input type="text" name="moo" class="form-control" value="<?=$rowuser['moo']?>"
+                                          placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ถนน</label>
+                                         <input type="text" name="road" class="form-control" value="<?=$rowuser['road']?>"
+                                          placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>แขวง</label>
+                                         <input type="text" name="district" class="form-control" value="<?=$rowuser['district']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เขต</label>
+                                         <input type="text" name="area" class="form-control"  value="<?=$rowuser['area']?>"
+                                          placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>จังหวัด</label>
+                                         <input type="text" name="province" class="form-control" value="<?=$rowuser['province']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เบอร์โทร</label>
+                                         <input type="text" name="phone" class="form-control" maxlength="10"  value="<?=$rowuser['phone']?>"
+                                             placeholder="Enter ..."
+                                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>รหัสไปษณีย์</label>
+                                         <input type="number" name="post_code" class="form-control" maxlength="5" value="<?=$rowuser['post_code']?>"
+                                             placeholder="Enter ..."
+                                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>คณะ</label>
+                                         <input type="text" name="faculty" class="form-control" maxlength="5" value="<?=$rowuser['faculty']?>"
+                                          placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>หลักสูตร</label>
+                                         <input type="text" name="department" class="form-control" value="<?=$rowuser['department']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สาขา</label>
+                                         <input type="text" name="branch" class="form-control" value="<?=$rowuser['branch']?>"
+                                          placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สาขาการสอน</label>
+                                         <input type="text" name="teaching_disciplines" class="form-control" value="<?=$rowuser['teaching_disciplines']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ประเภทบุคลากร</label>
+                                         <input type="text" name="personnel_type" class="form-control" value="<?=$rowuser['personnel_type']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ประเภทบุคลากรย่อย</label>
+                                         <input type="text" name="sub_personnel_type" class="form-control" value="<?=$rowuser['sub_personnel_type']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อตำแหน่งทางวิชาการ</label>
+                                         <input type="text" name="academic_position" class="form-control" value="<?=$rowuser['academic_position']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ตำแหน่งทางบริหาร</label>
+                                         <input type="text" name="administrative_position" class="form-control" value="<?=$rowuser['administrative_position']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อตำแหน่งในสายงานครู</label>
+                                         <input type="text" name="name_of_position" class="form-control" value="<?=$rowuser['name_of_position']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ระดับตำแหน่งข้าราชการ</label>
+                                         <input type="text" name="civil_servant_level" class="form-control" value="<?=$rowuser['civil_servant_level']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>วันเดือนปีที่เข้าทำงาน</label>
+                                         <input type="date" name="date_of_employment" class="form-control" value="<?=$rowuser['date_of_employment']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ระยะเวลาการจ้างทำงาน</label>
+                                         <input type="text" name="term_of_employment" class="form-control" value="<?=$rowuser['term_of_employment']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>เงินจ้างงาน</label>
+                                         <input type="text" name="employment_money" class="form-control" value="<?=$rowuser['employment_money']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ระดับการศึกษาที่จบสูงสุด</label>
+                                         <input type="text" name="highest_graduate_level" class="form-control" value="<?=$rowuser['highest_graduate_level']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อหลักสูตรที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="course_name" class="form-control" value="<?=$rowuser['course_name']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>กลุ่มสาขาวิชาที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="graduate_disciplines" class="form-control" value="<?=$rowuser['graduate_disciplines']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>สาขาที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="major_graduate_disciplines" class="form-control" value="<?=$rowuser['major_graduate_disciplines']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ชื่อสถาบันที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="graduate_institution_name" class="form-control" value="<?=$rowuser['graduate_institution_name']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ประเทศที่จบการศึกษาสูงสุด</label>
+                                         <input type="text" name="country_of_graduation" class="form-control" value="<?=$rowuser['country_of_graduation']?>"
+                                             placeholder="Enter ...">
+                                     </div>
+                                 </div>
+
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ตำแหน่ง</label>
-                                         <input type="text" name="user_tumn" class="form-control"
-                                             value="<?php echo($rowuser['user_tumn']) ?>" placeholder="Enter ...">
+                                         <input type="text" name="user_tumn" class="form-control"  value="<?=$rowuser['user_tumn']?>"
+                                             placeholder="Enter ...">
                                      </div>
                                  </div>
-                                 <div class="col-sm-4">
+
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
-                                         <label>ชื่อ</label>
-                                         <input type="text" name="first_name" class="form-control"
-                                             value="<?php echo($rowuser['first_name']) ?>" placeholder="Enter ...">
+                                         <label>ผู้บังคับบัญชา</label>
+                                         <select class="custom-select" name="user_head">
+
+                                             <?php
+                                              $u_id = $_SESSION["USER_ID"];
+                                              ?>
+                                              <option value="<?=$rowuser['user_head']?>" selected>
+                                              <?php
+                                              Show_h_user($rowuser['user_head']);
+                                              ?>
+                                              </option>
+                                              <?php
+                                              Show_h_user_all($u_id);
+                   
+                                              ?>
+
+                                         </select>
+
                                      </div>
                                  </div>
-                                 <div class="col-sm-4">
+
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
-                                         <label>นามสกุล</label>
-                                         <input type="text" name="last_name" class="form-control"
-                                             value="<?php echo($rowuser['last_name']) ?>" placeholder="Enter ...">
+                                         <label>Username</label>
+                                         <input type="text" name="username" autocomplete="off" class="form-control" value="<?=$rowuser['username']?>"
+                                             placeholder="Enter ...">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
-                                         <label>Username</label>
-                                         <input type="text" name="username" class="form-control"
-                                             value="<?php echo($rowuser['username']) ?>" placeholder="Enter ...">
-                                     </div>
-                                 </div>
-                                 <div class="col-sm-4">
-                                     <!-- text input -->
-                                     <div class="form-group">
                                          <label>Password</label>
-                                         <input type="password" name="password" class="form-control"
-                                             value="<?php echo($rowuser['password']) ?>" placeholder="Enter ...">
+                                         <input type="password" name="password" autocomplete="off" class="form-control" value="<?=$rowuser['password']?>"
+                                             placeholder="Enter ...">
                                      </div>
                                  </div>
-
-
-
-                                 <div class="col-sm-4">
+                                 <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>สถานะ</label>
                                          <select class="custom-select" name="user_status">
-
-
-                                             <option <?php echo $user_statusck2; ?> value="2">ผู้ประเมิน</option>
-                                             <option <?php echo $user_statusck3; ?> value="0">ผู้ถูกประเมิน</option>
-                                             <option <?php echo $user_statusck4; ?> value="3">ยกเลิก</option>
+                                             <option selected>เลือกสถานะ</option>
+                                            <?php echo '<option '.($rowuser['username'] == 2 ? "value='2' selected >ผู้ประเมิน" : ($rowuser['username'] == 0 ? "value='0' selected >ผู้ถูกประเมิน":"value='1' selected >ยกเลิกใช้งาน")).'</opton>' ?>
+                                             <option value="2">ผู้ประเมิน</option>
+                                             <option value="0">ผู้ถูกประเมิน</option>
                                          </select>
 
                                      </div>
@@ -562,7 +813,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <div class="form-group">
                                          <label>คณะ</label>
                                          <select class="custom-select" name="user_kana">
-
+                                         
                                              <?php Show_kana($conn,$user_kana_id); ?>
 
                                          </select>
@@ -583,14 +834,20 @@ echo "<option selected>เลือกคณะ</option>";
                                      </div>
                                  </div>
 
+                                 <div class="col-sm-8">
+                                     <!-- text input -->
+                                     <div class="form-group">
 
-                             </div>
-                             <div class="card-footer">
-                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                 <a type="submit" class="btn btn-danger" href="./index.php?pa8">cancel</a>
+                                         <div class="card-footer">
+                                             <button type="submit" class="btn btn-primary">Submit</button>
+                                             <a type="submit" class="btn btn-danger" href="./index.php?pa8">cancel</a>
+                                         </div>
+
+                                     </div>
+                                 </div>
                              </div>
                              <input type="hidden" name="edit_user">
-                             <input type="hidden" name="user_id" value="<?php echo($user_id) ?>">
+                             <input type="hidden" name="user_id" value="<?=$user_id?>">
 
                          </form>
 
@@ -607,8 +864,7 @@ echo "<option selected>เลือกคณะ</option>";
  								?>
 
 
-
-                         <table id="example3" class="table table-bordered table-hover">
+                         <table id="example3" class="table table-bordered table-hover" >
                              <thead>
                                  <tr>
                                      <th>ลำดับ</th>
@@ -648,7 +904,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <th>ประเทศที่จบการศึกษาสูงสุด</th>
                                      <th>ผู้บังคับบัญชา</th>
                                      <th>สถานะ</th>
-                                     <th>แก้ไข</th>
+                                     <th >แก้ไข</th>
 
                                  </tr>
                              </thead>

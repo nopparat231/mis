@@ -45,6 +45,7 @@ if (isset($_POST['add_user'])) {
 	$major_graduate_disciplines = $_POST['major_graduate_disciplines'];
 	$graduate_institution_name = $_POST['graduate_institution_name'];
 	$country_of_graduation = $_POST['country_of_graduation'];
+	$user_head = $_POST['user_head'];
 
 	$sqlhuser=" SELECT * FROM user WHERE username = '$username' ";
 	$qryhuser = mysqli_query($conn,$sqlhuser);
@@ -52,7 +53,7 @@ if (isset($_POST['add_user'])) {
 
 	if ($rowcheckuser == 0) {
 
-		$sql = "INSERT INTO user ( user_tumn , first_name , last_name , username , password , user_kana_id , user_saka_id , user_status) VALUES ( '$user_tumn' , '$first_name','$last_name','$username','$password','$user_kana_id','$user_saka_id','$user_status')";
+		$sql = "INSERT INTO user ( user_tumn , first_name , last_name , username , password , user_kana_id , user_saka_id , user_head , user_status) VALUES ( '$user_tumn' , '$first_name','$last_name','$username','$password','$user_kana_id','$user_saka_id', '$user_head' ,'$user_status')";
 
 		if ($conn->query($sql) === TRUE) {
 
@@ -62,10 +63,10 @@ if (isset($_POST['add_user'])) {
 			$user_id = $maxx["maximum"];
 			
 
-			$sql_user_data = "INSERT INTO user_data (user_data_id_card , user_id , nationality , date_of_birth , house_number , moo , road , district , area , province , phone , post_code ,
+			$sql_user_data = "INSERT INTO user_data (user_data_id_card , user_id , sex , date_of_birth  , nationality , house_number , moo , road , district , area , province , phone , post_code ,
 			faculty , department , branch , teaching_disciplines , personnel_type , sub_personnel_type , academic_position , administrative_position ,
 			name_of_position , civil_servant_level , date_of_employment , term_of_employment , employment_money , highest_graduate_level , course_name ,
-			graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation ) VALUE ( '$user_data_id_card','$user_id','$nationality','$date_of_birth','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
+			graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation ) VALUE ( '$user_data_id_card','$user_id', '$sex' , '$date_of_birth' , '$nationality','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
 			'$faculty','$department','$branch','$teaching_disciplines','$personnel_type','$sub_personnel_type','$academic_position','$administrative_position',
 			'$name_of_position','$civil_servant_level','$date_of_employment','$term_of_employment','$employment_money','$highest_graduate_level','$course_name',
 			'$graduate_disciplines','$major_graduate_disciplines','$graduate_institution_name','$country_of_graduation' ) ";

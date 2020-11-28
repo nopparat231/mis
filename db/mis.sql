@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2020 at 02:17 PM
+-- Generation Time: Nov 28, 2020 at 04:49 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -631,7 +631,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_saka_id` int(11) NOT NULL,
   `user_head` int(11) NOT NULL,
   `user_status` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
@@ -648,7 +648,9 @@ INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `username`, `password`
 (9, 'sadsadsad', 'sadsadsadsa', 'a123456', '123456', 'dsadsadsa', 7, 43, 4, 0),
 (10, 'ทรงวุฒิ', 'ใจดี', 'abc', '123456', 'บุคลากร', 1, 12, 4, 0),
 (11, 'สมชาย', 'สมศรี', 'dfg', '123456', 'รองผู้ช่วย', 1, 2, 4, 2),
-(15, 'ทดสอบชื่อ', 'ทดสอบสกุล', 'user21', 'Aa123456', 'ป.ตรี', 3, 21, 4, 2);
+(15, 'ทดสอบชื่อ', 'ทดสอบสกุล', 'user21', 'Aa123456', 'ป.ตรี', 3, 21, 4, 2),
+(16, 'ทดสอบชื่อ1', 'ทดสอบสกุล1', 'user22', 'Aa123456', 'บุคลากร', 3, 21, 4, 2),
+(17, 'ทดสอบชื่อ2', 'ทดสอบสกุล2', 'user23', 'Aa123456', 'บุคลากร', 5, 19, 10, 2);
 
 -- --------------------------------------------------------
 
@@ -690,7 +692,7 @@ CREATE TABLE IF NOT EXISTS `user_data` (
   `major_graduate_disciplines` varchar(100) NOT NULL,
   `graduate_institution_name` varchar(100) NOT NULL,
   `country_of_graduation` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user_data`
@@ -699,7 +701,9 @@ CREATE TABLE IF NOT EXISTS `user_data` (
 INSERT INTO `user_data` (`user_data_id`, `user_data_id_card`, `user_id`, `sex`, `date_of_birth`, `nationality`, `house_number`, `moo`, `road`, `district`, `area`, `province`, `phone`, `post_code`, `faculty`, `department`, `branch`, `teaching_disciplines`, `personnel_type`, `sub_personnel_type`, `academic_position`, `administrative_position`, `name_of_position`, `civil_servant_level`, `date_of_employment`, `term_of_employment`, `employment_money`, `highest_graduate_level`, `course_name`, `graduate_disciplines`, `major_graduate_disciplines`, `graduate_institution_name`, `country_of_graduation`) VALUES
 (1, '1234567890123', 10, 'ชาย', '16/07/2020', 'ไทย', '201/490', '2', '-', 'คลองถนน', 'สายไหม', 'กรุงเทพมหานคร', '02-2867005', '10220', 'คณะบริหารธุรกิจ', 'การตลาดและการจัดการ', 'ระบบสารสนเทศทางคอมพิวเตอร์', 'ระบบสารสนเทศทางคอมพิวเตอร์', 'ข้าราชการ', 'วิชาการ (มีหน้าที่สอน)', 'ผู้ช่วยศาสตราจารย์', 'หัวหน้าหน่วยงาน(คณะ)', 'ข้าราชการครู', 'ระดับ 8', '20/11/2534', 'ระยะเวลาจ้างงานมากกว่า 10 ปี', 'งบประมาณแผ่นดิน', 'ปริญญาเอก', 'ปร.ด. (เทคโนโลยีสารสนเทศ)', 'คอมพิวเตอร์', 'เทคโนโลยีสารสนเทศ', 'มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ', 'ไทย'),
 (2, '1234567890112', 11, 'ชาย', '16/07/2020', 'ไทย', '201/490', '2', '-', 'คลองถนน', 'สายไหม', 'กรุงเทพมหานคร', '02-2867005', '10220', 'คณะบริหารธุรกิจ', 'การตลาดและการจัดการ', 'ระบบสารสนเทศทางคอมพิวเตอร์', 'ระบบสารสนเทศทางคอมพิวเตอร์', 'ข้าราชการ', 'วิชาการ (มีหน้าที่สอน)', 'ผู้ช่วยศาสตราจารย์', 'หัวหน้าหน่วยงาน(คณะ)', 'ข้าราชการครู', 'ระดับ 8', '20/11/2534', 'ระยะเวลาจ้างงานมากกว่า 10 ปี', 'งบประมาณแผ่นดิน', 'ปริญญาเอก', 'ปร.ด. (เทคโนโลยีสารสนเทศ)', 'คอมพิวเตอร์', 'เทคโนโลยีสารสนเทศ', 'มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ', 'ไทย'),
-(3, '1324400055553', 15, 'ชาย', '2020-11-26', 'ไทย', '451/240', '10', '-', '-', '-', 'สมุทรปราการ', '0982445357', '21202', 'cs', 'csc', 'cs', 'cs', 'cs', 'cs', 'css', 'cs', 'cs', 'cs', '11/26/2020', '4', '2500', 'ป.ตรี', 'ป.ตรี', 'cs', 'cs', 'cs', 'css');
+(3, '1324400055553', 15, 'ชาย', '2020-11-26', 'ไทย', '451/240', '10', '-', '-', '-', 'สมุทรปราการ', '0982445357', '21202', 'cs', 'csc', 'cs', 'cs', 'cs', 'cs', 'css', 'cs', 'cs', 'cs', '11/26/2020', '4', '2500', 'ป.ตรี', 'ป.ตรี', 'cs', 'cs', 'cs', 'css'),
+(4, '1102835465788', 16, 'ชาย', '2020-11-26', 'ไทย', 'ไทย', '10', '-', '-', '-', 'สมุทรปราการ', '0982445357', '21202', 'cs', 'csc', 'cs', 'cs', 'cs', 'cs', 'css', 'cs', 'cs', 'cs', '2020-11-27', '4', '2500', 'ป.ตรี', 'ป.ตรี', 'cs', 'cs', 'cs', 'css'),
+(5, '1451257454555', 17, 'หญิง', '2020-11-26', 'ไทย', 'ไทย', '10', '-', '-', '-', 'สมุทรปราการ', '0982445357', '21202', 'cs', 'csc', 'cs', 'cs', 'cs', 'cs', 'css', 'cs', 'cs', 'cs', '2020-11-13', '4', '2500', 'ป.ตรี', 'ป.ตรี', 'cs', 'cs', 'cs', 'css');
 
 --
 -- Indexes for dumped tables
@@ -923,12 +927,12 @@ MODIFY `used_time_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `user_data`
 --
 ALTER TABLE `user_data`
-MODIFY `user_data_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `user_data_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

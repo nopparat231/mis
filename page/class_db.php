@@ -1,5 +1,5 @@
 <?php 
-$u_id = $_SESSION["USER_ID"];
+
 
 function showth($thid){
 
@@ -284,20 +284,54 @@ function Show_h_user($u_id){
 
  function Show_h_user_all($u_id){
 
-	include './conn.php';
-	$sqluser=" SELECT * FROM user WHERE user_id <> '$u_id' AND user_satus <> 1 ";
-	$qryuser = mysqli_query($conn,$sqluser);
-	//$user = mysqli_fetch_assoc($qryuser);
+											include './conn.php';
+                                            
+                                             $sqluserer =" SELECT * FROM user WHERE user_id <> '$u_id' AND user_status <> 1 ";
+                                             $qryuserer = mysqli_query($conn,$sqluserer);
+                                             //$user = mysqli_fetch_assoc($qryuser);
+                                         
+                                          echo "<option >เลือกผู้บังคับบัญชา</option>";   
+                                             while ($qryuserr = $qryuserer->fetch_array()) {
+                                         
+                                                     echo "<option value='".$qryuserr['user_id']."'>".$qryuserr['first_name']."  ".$qryuserr['last_name']."</option>";
+                                         
+                                                
+											 }
+											}
 
- echo "<option selected>เลือกผู้บังคับบัญชา</option>";   
-	while ($qryuserr = $qryuser->fetch_array()) {
 
-			echo "<option value='".$qryuserr['user_id']."'>".$qryuserr['first_name']."  ".$qryuserr['last_name']."</option>";
 
-	   
-	}
+											function Show_kana_all(){
+												include './conn.php';
+												$sqlkana=" SELECT * FROM kana ";
+												$qrykana = mysqli_query($conn,$sqlkana);
+										
+										echo "<option selected>เลือกคณะ</option>";
+												while ($rowkana = $qrykana->fetch_array()) {
+													
+														 echo "<option value='".$rowkana['kana_id']."'>".$rowkana['kana_detail']."</option>";
+																	  
+												}
+										
+											}
+											function Show_saka_all(){
+										
+												include './conn.php';
+												$sqlsaka=" SELECT * FROM saka ";
+												$qrysaka = mysqli_query($conn,$sqlsaka);
+										
+											 echo "<option selected>เลือกสาขาวิชา/หลักสูตร</option>";   
+												while ($rowsaka = $qrysaka->fetch_array()) {
+										
+														echo "<option value='".$rowsaka['saka_id']."'>".$rowsaka['saka_detail']." / ".$rowsaka['saka_laksut']."</option>";
+										 
+												   
+												}
+										
+											 }
+										
+										
 
- }
 
 
 ?>
