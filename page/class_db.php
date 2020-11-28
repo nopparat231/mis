@@ -1,5 +1,5 @@
 <?php 
-
+$u_id = $_SESSION["USER_ID"];
 
 function showth($thid){
 
@@ -268,6 +268,36 @@ function showscore_num($user_c,$type,$num){
 
 }
 
+
+function Show_h_user($u_id){
+
+	include './conn.php';
+
+	$sqluser=" SELECT * FROM user WHERE user_id = '$u_id' ";
+	$qryuser = mysqli_query($conn,$sqluser);
+	$user = mysqli_fetch_assoc($qryuser);
+
+ echo $user['first_name'].'  '.$user['last_name'];   
+
+
+ }
+
+ function Show_h_user_all($u_id){
+
+	include './conn.php';
+	$sqluser=" SELECT * FROM user WHERE user_id <> '$u_id' AND user_satus <> 1 ";
+	$qryuser = mysqli_query($conn,$sqluser);
+	//$user = mysqli_fetch_assoc($qryuser);
+
+ echo "<option selected>เลือกผู้บังคับบัญชา</option>";   
+	while ($qryuserr = $qryuser->fetch_array()) {
+
+			echo "<option value='".$qryuserr['user_id']."'>".$qryuserr['first_name']."  ".$qryuserr['last_name']."</option>";
+
+	   
+	}
+
+ }
 
 
 ?>

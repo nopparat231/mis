@@ -46,9 +46,8 @@ if (isset($_POST['add_user'])) {
 	$graduate_institution_name = $_POST['graduate_institution_name'];
 	$country_of_graduation = $_POST['country_of_graduation'];
 
-	$sqlhuser=" SELECT * FROM user WHERE username =".$username;
+	$sqlhuser=" SELECT * FROM user WHERE username = '$username' ";
 	$qryhuser = mysqli_query($conn,$sqlhuser);
-	$rowuser = mysqli_fetch_assoc($qryhuser);
 	$rowcheckuser = mysqli_num_rows($qryhuser); 
 
 	if ($rowcheckuser == 0) {
@@ -66,13 +65,15 @@ if (isset($_POST['add_user'])) {
 			$sql_user_data = "INSERT INTO user_data (user_data_id_card , user_id , nationality , date_of_birth , house_number , moo , road , district , area , province , phone , post_code ,
 			faculty , department , branch , teaching_disciplines , personnel_type , sub_personnel_type , academic_position , administrative_position ,
 			name_of_position , civil_servant_level , date_of_employment , term_of_employment , employment_money , highest_graduate_level , course_name ,
-			graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation ,) VALUE ( '$user_data_id_card','$user_id''$nationality','$date_of_birth','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
+			graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation ) VALUE ( '$user_data_id_card','$user_id','$nationality','$date_of_birth','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
 			'$faculty','$department','$branch','$teaching_disciplines','$personnel_type','$sub_personnel_type','$academic_position','$administrative_position',
 			'$name_of_position','$civil_servant_level','$date_of_employment','$term_of_employment','$employment_money','$highest_graduate_level','$course_name',
-			'$graduate_disciplines','$major_graduate_disciplines','$graduate_institution_name','$country_of_graduation', ) ";
+			'$graduate_disciplines','$major_graduate_disciplines','$graduate_institution_name','$country_of_graduation' ) ";
 
 			if ($conn->query($sql_user_data) === TRUE) {
 				header("location:../index.php?pa8");	
+			} else {
+				echo "Error: " . $sql_user_data . "<br>" . $conn->error;
 			}
 
 			
@@ -84,6 +85,7 @@ if (isset($_POST['add_user'])) {
 
 		$message = 'มีชื่อผู้ใช้นี้แล้ว';
 		echo "<script type='text/javascript'>alert('$message');</script>";
+		header("location:../index.php?pa8");
 
 	}
 

@@ -37,7 +37,10 @@
                                  class="fas fa-plus"></i></a>
                          <?php endif ?>
 
-                         <?php if (isset($_GET['add'])): ?>
+                         <?php if (isset($_GET['add'])):
+                            
+                            
+                            ?>
 
 
                          <?php 
@@ -69,6 +72,8 @@ echo "<option selected>เลือกคณะ</option>";
         }
 
      }
+
+
     
                         ?>
 
@@ -79,8 +84,8 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>รหัสบัตรประชาชน</label>
-                                         <input type="text" name="user_data_id_card" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="number" name="user_data_id_card" maxlength="13" class="form-control"
+                                             placeholder="Enter ..." oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -110,7 +115,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>วันเดือนปีเกิด</label>
-                                         <input type="text" name="date of birth" class="form-control"
+                                         <input type="date" name="date_of_birth" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -126,7 +131,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>บ้านเลขที่</label>
-                                         <input type="text" name="house number" class="form-control"
+                                         <input type="text" name="house_number" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -171,15 +176,15 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>เบอร์โทร</label>
-                                         <input type="text" name="phone" class="form-control" placeholder="Enter ...">
+                                         <input type="text" name="phone" class="form-control" maxlength="10" placeholder="Enter ..." oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>รหัสไปษณีย์</label>
-                                         <input type="text" name="post code" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="number" name="post_code" class="form-control" maxlength="5"
+                                             placeholder="Enter ..." oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                      </div>
                                  </div>
                                  <div class="col-sm-3">
@@ -208,7 +213,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>สาขาการสอน</label>
-                                         <input type="text" name="teaching disciplines" class="form-control"
+                                         <input type="text" name="teaching_disciplines" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -216,7 +221,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ประเภทบุคลากร</label>
-                                         <input type="text" name="personnel type" class="form-control"
+                                         <input type="text" name="personnel_type" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -224,7 +229,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ประเภทบุคลากรย่อย</label>
-                                         <input type="text" name="sub-personnel type" class="form-control"
+                                         <input type="text" name="sub_personnel_type" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -232,7 +237,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ชื่อตำแหน่งทางวิชาการ</label>
-                                         <input type="text" name="academic position" class="form-control"
+                                         <input type="text" name="academic_position" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -240,7 +245,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ตำแหน่งทางบริหาร</label>
-                                         <input type="text" name="administrative position" class="form-control"
+                                         <input type="text" name="administrative_position" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -248,7 +253,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ชื่อตำแหน่งในสายงานครู</label>
-                                         <input type="text" name="name of position" class="form-control"
+                                         <input type="text" name="name_of_position" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -256,7 +261,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ระดับตำแหน่งข้าราชการ</label>
-                                         <input type="text" name="civil servant level" class="form-control"
+                                         <input type="text" name="civil_servant_level" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -264,7 +269,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>วันเดือนปีที่เข้าทำงาน</label>
-                                         <input type="text" name="date of employment" class="form-control"
+                                         <input type="date" name="date_of_employment" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -272,7 +277,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ระยะเวลาการจ้างทำงาน</label>
-                                         <input type="text" name="term of employment" class="form-control"
+                                         <input type="text" name="term_of_employment" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -280,7 +285,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>เงินจ้างงาน</label>
-                                         <input type="text" name="employment money" class="form-control"
+                                         <input type="text" name="employment_money" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -288,7 +293,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ระดับการศึกษาที่จบสูงสุด</label>
-                                         <input type="text" name="highest graduate level" class="form-control"
+                                         <input type="text" name="highest_graduate_level" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -296,7 +301,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ชื่อหลักสูตรที่จบการศึกษาสูงสุด</label>
-                                         <input type="text" name="course name" class="form-control"
+                                         <input type="text" name="course_name" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -304,7 +309,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>กลุ่มสาขาวิชาที่จบการศึกษาสูงสุด</label>
-                                         <input type="text" name="graduate disciplines" class="form-control"
+                                         <input type="text" name="graduate_disciplines" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -312,7 +317,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>สาขาที่จบการศึกษาสูงสุด</label>
-                                         <input type="text" name="major graduate disciplines" class="form-control"
+                                         <input type="text" name="major_graduate_disciplines" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -320,7 +325,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ชื่อสถาบันที่จบการศึกษาสูงสุด</label>
-                                         <input type="text" name="graduate institution name" class="form-control"
+                                         <input type="text" name="graduate_institution_name" class="form-control"
                                              placeholder="Enter ...">
                                      </div>
                                  </div>
@@ -328,16 +333,30 @@ echo "<option selected>เลือกคณะ</option>";
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ประเทศที่จบการศึกษาสูงสุด</label>
-                                         <input type="text" name="country of graduation" class="form-control"
-                                             placeholder="Enter ...">
+                                         <input type="text" name="country_of_graduation" class="form-control"
+                                         placeholder="Enter ...">
                                      </div>
                                  </div>
+
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
                                          <label>ตำแหน่ง</label>
                                          <input type="text" name="user_tumn" class="form-control"
                                              placeholder="Enter ...">
+                                     </div>
+                                 </div>
+
+                                 <div class="col-sm-8">
+                                     <!-- text input -->
+                                     <div class="form-group">
+                                         <label>ผู้บังคับบัญชา</label>
+                                         <select class="custom-select" name="user_head">
+
+                                             <?php Show_h_user_all($u_id); ?>
+
+                                         </select>
+
                                      </div>
                                  </div>
 
@@ -469,6 +488,8 @@ echo "<option selected>เลือกคณะ</option>";
                                 }
 
                             }
+
+                            
                                  
 
  							?>
@@ -625,6 +646,7 @@ echo "<option selected>เลือกคณะ</option>";
                                      <th>สาขาวิชาที่จบการศึกษาสูงสุด</th>
                                      <th>ชื่อสถาบันที่จบการศึกษาสูงสุด</th>
                                      <th>ประเทศที่จบการศึกษาสูงสุด</th>
+                                     <th>ผู้บังคับบัญชา</th>
                                      <th>สถานะ</th>
                                      <th>แก้ไข</th>
 
@@ -635,11 +657,12 @@ echo "<option selected>เลือกคณะ</option>";
  										$i = 1;
  										while ($rowhuser = $qryhuser->fetch_array()) {
  											$uid = $rowhuser['user_id'];
-
+                                            $user_head = $rowhuser['user_head'];
  											?>
 
 
                                  <tr>
+                                     <td><?= $i; ?></td>
                                      <td><?=$rowhuser['user_tumn'];?></td>
                                      <td><?=$rowhuser['first_name'];?></td>
                                      <td><?=$rowhuser['last_name'];?></td>
@@ -674,6 +697,15 @@ echo "<option selected>เลือกคณะ</option>";
                                      <td><?=$rowhuser['major_graduate_disciplines'];?></td>
                                      <td><?=$rowhuser['graduate_institution_name'];?></td>
                                      <td><?=$rowhuser['country_of_graduation'];?></td>
+                                     <td><?php 
+                                     
+                                     $sqluser =" SELECT * FROM user WHERE user_id = '$user_head' ";
+                                     $qryuser = mysqli_query($conn,$sqluser);
+                                     $user = mysqli_fetch_assoc($qryuser);
+                                 
+                                        echo $user['first_name'].'  '.$user['last_name'];   
+                                     
+                                     ?></td>
                                      <td>
 
                                          <?php if ($rowhuser['user_status'] == 0): ?>
