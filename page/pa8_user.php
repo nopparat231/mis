@@ -15,7 +15,7 @@
      </div><!-- /.container-fluid -->
  </div>
  <!-- /.content-header -->
-
+<?php include 'pa8_user_model.php'; ?>
 
  <!-- Main content -->
  <div class="content">
@@ -37,6 +37,8 @@
                          <?php else: ?>
                          <a href="./index.php?pa8&add" class="btn btn-success float-right"><i
                                  class="fas fa-plus"></i></a>
+                                 <button href="./index.php?pa8&add" class="btn btn-success float-right mr-2" data-toggle="modal" data-target="#modal-default_upf">
+                                 <i class="fas fa-file-upload"></i></button>
                          <?php endif ?>
 
                          <?php if (isset($_GET['add'])):
@@ -799,8 +801,8 @@
                                      <div class="form-group">
                                          <label>สถานะ</label>
                                          <select class="custom-select" name="user_status">
-                                             <option selected>เลือกสถานะ</option>
-                                            <?php echo '<option '.($rowuser['username'] == 2 ? "value='2' selected >ผู้ประเมิน" : ($rowuser['username'] == 0 ? "value='0' selected >ผู้ถูกประเมิน":"value='1' selected >ยกเลิกใช้งาน")).'</opton>' ?>
+                                            <?php echo '<option '.($rowuser['user_status'] == 2 ? "value='2' selected >ผู้ประเมิน" : "value='0' selected >ผู้ถูกประเมิน").'</opton>';
+                                             ?>
                                              <option value="2">ผู้ประเมิน</option>
                                              <option value="0">ผู้ถูกประเมิน</option>
                                          </select>
