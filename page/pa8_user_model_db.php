@@ -1,6 +1,6 @@
 <?php 
 include '../conn.php';
-
+include 'class_db.php';
 require './excel/vendor/autoload.php';
 
 if (isset($_POST["import"])) {
@@ -31,7 +31,10 @@ if (isset($_POST["import"])) {
                  Exit ('There is no data in the Excel table');
         }
          
-        $sql = "INSERT INTO user ( first_name , last_name , username , password , user_tumn ,  user_kana_id , user_saka_id , user_head , user_status) VALUES ";
+        $sql = "INSERT INTO user ( first_name , last_name , username , password , user_tumn ,  user_kana_id , user_saka_id , user_head , user_status , user_data_id_card , sex , date_of_birth  , nationality , house_number , moo , road , district , area , province , phone , post_code ,
+        faculty , department , branch , teaching_disciplines , personnel_type , sub_personnel_type , academic_position , administrative_position ,
+        name_of_position , civil_servant_level , date_of_employment , term_of_employment , employment_money , highest_graduate_level , course_name ,
+        graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation) VALUES ";
          
         for ($row = 2; $row <= $highestRow; ++$row) {
                  //$name = $worksheet->getCellByColumnAndRow(1, $row)->getValue(); //Name
@@ -80,33 +83,18 @@ if (isset($_POST["import"])) {
                  
 
          
-            $sql .= "('$first_name','$last_name','$username','$password', '$user_tumn' , '$user_kana_id','$user_saka_id', '$user_head' ,'$user_status'),";
+            $sql .= "('$first_name','$last_name','$username','$password', '$user_tumn' , '$user_kana_id','$user_saka_id', '$user_head' ,'$user_status' , '$user_data_id_card', '$sex' , '$date_of_birth' , '$nationality','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
+			      '$faculty','$department','$branch','$teaching_disciplines','$personnel_type','$sub_personnel_type','$academic_position','$administrative_position',
+			      '$name_of_position','$civil_servant_level','$date_of_employment','$term_of_employment','$employment_money','$highest_graduate_level','$course_name',
+			      '$graduate_disciplines','$major_graduate_disciplines','$graduate_institution_name','$country_of_graduation'),";
         }
          $sql = rtrim($sql, ","); //Remove the last one,
         try {
             
           if ($conn->query($sql) === TRUE) {
-
-            $strmax = "SELECT MAX(user_id) maximum FROM user";
-            $qrymax = mysqli_query($conn,$strmax);
-            $maxx = mysqli_fetch_assoc($qrymax);
-            $user_id = $maxx["maximum"];
-
-            $sql_user_data = "INSERT INTO user_data (user_data_id_card , user_id , sex , date_of_birth  , nationality , house_number , moo , road , district , area , province , phone , post_code ,
-			      faculty , department , branch , teaching_disciplines , personnel_type , sub_personnel_type , academic_position , administrative_position ,
-			      name_of_position , civil_servant_level , date_of_employment , term_of_employment , employment_money , highest_graduate_level , course_name ,
-			      graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation ) VALUE ( '$user_data_id_card','$user_id', '$sex' , '$date_of_birth' , '$nationality','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
-			      '$faculty','$department','$branch','$teaching_disciplines','$personnel_type','$sub_personnel_type','$academic_position','$administrative_position',
-			      '$name_of_position','$civil_servant_level','$date_of_employment','$term_of_employment','$employment_money','$highest_graduate_level','$course_name',
-			      '$graduate_disciplines','$major_graduate_disciplines','$graduate_institution_name','$country_of_graduation' ) ";
-
-            if ($conn->query($sql_user_data) === TRUE) {
               $message = 'Import ข้อมูลสำเร็จ';
               echo "<script type='text/javascript'>alert('$message');</script>";
               header("location:../index.php?pa8");	
-            } else {
-             echo "Error: " . $sql_user_data . "<br>" . $conn->error;
-            }
 
           } else {
             echo "Error: " . $sql . "<br>" . $conn->error;

@@ -414,7 +414,7 @@
                             $user_id = $_GET['user_id'];
 
                    
- 							$sqlhuser=" SELECT * FROM user INNER JOIN user_data ON user.user_id = user_data.user_id WHERE user.user_id = '$user_id' ";
+ 							$sqlhuser=" SELECT * FROM user WHERE user_id = '$user_id' ";
  							$qryhuser = mysqli_query($conn,$sqlhuser);
  							$rowuser = mysqli_fetch_assoc($qryhuser);
 
@@ -859,7 +859,7 @@
  								include './conn.php';
 
 
- 								$sqlhuser=" SELECT * FROM user INNER JOIN user_data ON user.user_id = user_data.user_id WHERE user.user_status <> 1 ORDER BY user.user_id desc ";
+ 								$sqlhuser=" SELECT * FROM user WHERE user_status <> 1 ORDER BY user_id desc ";
  								$qryhuser = mysqli_query($conn,$sqlhuser);
 
 

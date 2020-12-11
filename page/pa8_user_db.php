@@ -53,31 +53,18 @@ if (isset($_POST['add_user'])) {
 
 	if ($rowcheckuser == 0) {
 
-		$sql = "INSERT INTO user ( user_tumn , first_name , last_name , username , password , user_kana_id , user_saka_id , user_head , user_status) VALUES ( '$user_tumn' , '$first_name','$last_name','$username','$password','$user_kana_id','$user_saka_id', '$user_head' ,'$user_status')";
+		$sql = "INSERT INTO user ( user_tumn , first_name , last_name , username , password , user_kana_id , user_saka_id , user_head , user_status , user_data_id_card , sex , date_of_birth  , nationality , house_number , moo , road , district , area , province , phone , post_code ,
+		faculty , department , branch , teaching_disciplines , personnel_type , sub_personnel_type , academic_position , administrative_position ,
+		name_of_position , civil_servant_level , date_of_employment , term_of_employment , employment_money , highest_graduate_level , course_name ,
+		graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation ) VALUES ( '$user_tumn' , '$first_name','$last_name','$username','$password','$user_kana_id','$user_saka_id', '$user_head' ,'$user_status' ,'$user_data_id_card','$sex' , '$date_of_birth' , '$nationality','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
+			'$faculty','$department','$branch','$teaching_disciplines','$personnel_type','$sub_personnel_type','$academic_position','$administrative_position',
+			'$name_of_position','$civil_servant_level','$date_of_employment','$term_of_employment','$employment_money','$highest_graduate_level','$course_name',
+			'$graduate_disciplines','$major_graduate_disciplines','$graduate_institution_name','$country_of_graduation' )";
 
 		if ($conn->query($sql) === TRUE) {
 
-			$strmax = "SELECT MAX(user_id) maximum FROM user";
-			$qrymax = mysqli_query($conn,$strmax);
-			$maxx = mysqli_fetch_assoc($qrymax);
-			$user_id = $maxx["maximum"];
-			
+			header("location:../index.php?pa8");	
 
-			$sql_user_data = "INSERT INTO user_data (user_data_id_card , user_id , sex , date_of_birth  , nationality , house_number , moo , road , district , area , province , phone , post_code ,
-			faculty , department , branch , teaching_disciplines , personnel_type , sub_personnel_type , academic_position , administrative_position ,
-			name_of_position , civil_servant_level , date_of_employment , term_of_employment , employment_money , highest_graduate_level , course_name ,
-			graduate_disciplines , major_graduate_disciplines , graduate_institution_name , country_of_graduation ) VALUE ( '$user_data_id_card','$user_id', '$sex' , '$date_of_birth' , '$nationality','$house_number','$moo','$road','$district','$area','$province','$phone','$post_code',
-			'$faculty','$department','$branch','$teaching_disciplines','$personnel_type','$sub_personnel_type','$academic_position','$administrative_position',
-			'$name_of_position','$civil_servant_level','$date_of_employment','$term_of_employment','$employment_money','$highest_graduate_level','$course_name',
-			'$graduate_disciplines','$major_graduate_disciplines','$graduate_institution_name','$country_of_graduation' ) ";
-
-			if ($conn->query($sql_user_data) === TRUE) {
-				header("location:../index.php?pa8");	
-			} else {
-				echo "Error: " . $sql_user_data . "<br>" . $conn->error;
-			}
-
-			
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
@@ -149,13 +136,8 @@ if (isset($_POST['add_user'])) {
 	user_kana_id = '$user_kana_id' , 
 	user_saka_id = '$user_saka_id' , 
 	user_head = '$user_head' ,
-	user_status = '$user_status' 
-	WHERE user_id =".$user_id;
-
-	if ($conn->query($sql) === TRUE) {
-		
-		$sqlu = "UPDATE user_data SET 
-		user_data_id_card = '$user_data_id_card' , 
+	user_status = '$user_status' ,
+	user_data_id_card = '$user_data_id_card' , 
 		sex = '$sex' , 
 		date_of_birth = '$date_of_birth' , 
 		nationality = '$nationality' , 
@@ -185,14 +167,12 @@ if (isset($_POST['add_user'])) {
 		graduate_institution_name = '$graduate_institution_name' , 
 		country_of_graduation = '$country_of_graduation' 
 
-		WHERE user_id =".$user_id;
+	WHERE user_id =".$user_id;
 
-		if ($conn->query($sqlu) === TRUE) {
-			header("location:../index.php?pa8");
-		}else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
-	}
+	if ($conn->query($sql) === TRUE) {
 
+		header("location:../index.php?pa8");
+		
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}

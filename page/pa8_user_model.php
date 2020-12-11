@@ -10,7 +10,7 @@
             <form action="page/pa8_user_model_db.php" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="input-group mb-6">
-                        <div class="alert alert-danger alert-dismissible" role="alert">
+                        <div class="alert alert-danger alert-dismissible " role="alert" style="width: 100%;">
                             กรุณาโหลดตัวอย่างข้อมูล เพื่อใช้ในการอัพโหลด
                               <a href="./uploads/template.xlsx" class="btn btn-success"><i class="fas fa-file-download" download ></i></a>
                         </div>
@@ -28,7 +28,7 @@
                 <input type="hidden" name="import" value="import">
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" >Save changes</button>
+                    <button type="submit" class="btn btn-primary" >Upload</button>
                 </div>
 
             </form>
