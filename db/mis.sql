@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2020 at 04:28 PM
+-- Generation Time: Dec 12, 2020 at 05:38 PM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -670,7 +670,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `username`, `password`, `user_tumn`, `user_kana_id`, `user_saka_id`, `user_head`, `user_status`, `user_data_id_card`, `sex`, `date_of_birth`, `nationality`, `house_number`, `moo`, `road`, `district`, `area`, `province`, `phone`, `post_code`, `faculty`, `department`, `branch`, `teaching_disciplines`, `personnel_type`, `sub_personnel_type`, `academic_position`, `administrative_position`, `name_of_position`, `civil_servant_level`, `date_of_employment`, `term_of_employment`, `employment_money`, `highest_graduate_level`, `course_name`, `graduate_disciplines`, `major_graduate_disciplines`, `graduate_institution_name`, `country_of_graduation`) VALUES
 (2, 'admin', 'admin', '443322', '123456', 'จนท.', 1, 2, 3, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(3, 'Prasong', 'Ekaluck', '443323', '123456', 'จนท.', 1, 2, 3, 3, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(3, 'Prasong', 'Ekaluck', '443323', '123456', 'จนท.', 1, 2, 3, 3, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(29, 'อธิชา', 'พันธุ์แก่นเพชร', 'pond12345', '123456', 'ไม่มี', 6, 39, 3, 0, '1100702672073', 'ชาย', '1998-03-03', 'ไทย', '12/27', '2', 'จอมทอง', 'จอมทอง', 'จอมทอง', 'กรุงเทพ', '0988729052', '10150', 'บริหารธุรกิจ', 'เทคโนโลยีสารสนเทศทางธุรกิจและธุรกิจดิจิตอล', 'เทคโนโลยีสารสนเทศทางธุรกิจและธุรกิจดิจิตอล', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', '2560-03-03', 'มากกว่า 20 ปี', 'เงินภาษีประชาชน', 'ปวส.', 'คอมพิวเตอร์ธุรกิจ', 'คอมพิวเตอร์', 'คอมพิวเตอร์ธุรกิจ', 'วิทยาลัยพณิชยการเชตุพน', 'ไทย'),
+(30, 'สุภาศิษท์', 'มงคลชัยพิพัฒน์', 'abc', '123456', 'เจ้าหน้าที่', 6, 45, 3, 2, '1100702672077', 'ชาย', '1997-12-18', 'ไทย', '18/57', '1', 'บางบอน', 'บางบอน', 'บางบอน', 'กรุงเทพ', '012345678', '10151', 'บริหารธุรกิจ', 'เทคโนโลยีสารสนเทศทางธุรกิจและธุรกิจดิจิตอล', 'เทคโนโลยีสารสนเทศทางธุรกิจและธุรกิจดิจิตอล', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', 'ไม่มี', '2560-12-12', 'มากกว่า10ปี', '15000', 'ปริญาตรี', 'คอมพิวเตอร์ธุรกิจ', 'คอมพิวเตอร์', 'คอมพิวเตอร์ธุรกิจ', 'วิทยาลัยพณิชยการเชตุพน', 'ไทย');
 
 -- --------------------------------------------------------
 
@@ -966,7 +968,7 @@ ALTER TABLE `used_time`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `user_data`
