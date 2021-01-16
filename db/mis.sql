@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2020 at 05:38 PM
+-- Generation Time: Jan 16, 2021 at 05:58 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -372,8 +372,9 @@ CREATE TABLE `kanzon` (
 
 INSERT INTO `kanzon` (`kanzon_id`, `kanzon_user_id`, `kanzon_detail`, `kanzon_term`, `kanzon_file`, `kanzon_status`) VALUES
 (1, 11, 'สอนภาคเรียนที่ 1 ตารางสอน', 2, '539920_test.xlsx', 0),
-(2, 2, 'การเรียนการสอนภาคฤดูร้อน 2563 ', 1, '', 0),
-(3, 4, 'งานวิชาการ', 1, '428857_BDDSMid_61605180032-7.docx', 0);
+(2, 2, 'การเรียนการสอนภาคฤดูร้อน 2563 ', 1, '', 1),
+(3, 4, 'งานวิชาการ', 1, '428857_BDDSMid_61605180032-7.docx', 0),
+(4, 30, 'ประจำปี 2564', 0, '127943_จัดตารางสอนแบบใช้สูตรอย่างเดียว.xlsx', 0);
 
 -- --------------------------------------------------------
 
@@ -423,7 +424,8 @@ CREATE TABLE `kan_la` (
 INSERT INTO `kan_la` (`la_id`, `la_user_id`, `la_type`, `la_start`, `la_end`, `la_total`, `la_balance`, `la_file`, `la_status`) VALUES
 (1, 10, 2, '2020-08-01', '2020-08-03', 5, 12, 'ไม่มีไฟล์', 0),
 (2, 11, 1, '2020-08-03', '2020-08-08', 5, 12, 'ไม่มีไฟล์', 0),
-(3, 2, 0, '2020-09-23', '2020-09-24', 1, 3, '282497BDDSMid_61605180032-7.docx', 0);
+(3, 2, 0, '2020-09-23', '2020-09-24', 1, 3, '282497BDDSMid_61605180032-7.docx', 0),
+(4, 30, 1, '2564-11-11', '2564-12-11', 1, 2, '603416ประเมินเข้มครูผู้ช่วย ครูแปป.docx', 0);
 
 -- --------------------------------------------------------
 
@@ -908,7 +910,7 @@ ALTER TABLE `kana`
 -- AUTO_INCREMENT for table `kanzon`
 --
 ALTER TABLE `kanzon`
-  MODIFY `kanzon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `kanzon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kan_activity`
@@ -920,7 +922,7 @@ ALTER TABLE `kan_activity`
 -- AUTO_INCREMENT for table `kan_la`
 --
 ALTER TABLE `kan_la`
-  MODIFY `la_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `la_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kan_research`
