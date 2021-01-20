@@ -122,6 +122,9 @@ session_start();
       }elseif (isset($_GET['p_kana'])) {
         include 'page/p_kana.php';
 
+      }elseif (isset($_GET['print'])) {
+        include 'page/print.php';
+
       }else{
         include 'new.php';
       }

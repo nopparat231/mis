@@ -84,6 +84,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <th>จำนวนคงเหลือ</th>
              <th>ไฟล์</th>
              <th>แก้ไข</th>
+             <th>พิมพ์</th>
 
          </tr>
      </thead>
@@ -131,6 +132,9 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
                  <?php else: ?>
                  <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+             </td>
+             <td>
+             <a href="./index.php?print&pla_id=<?=$la_id?>" target="_blank"><i class="fas fa-print"></i></a>
              </td>
 
          </tr>
