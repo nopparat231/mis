@@ -66,7 +66,7 @@ function shows()
 {
 
 include './conn.php';
-$sqlorder = " SELECT * FROM order_management  INNER JOIN user ON order_management.order_user_id = user.user_id ORDER BY order_id desc ";
+$sqlorder = " SELECT * FROM order_management  INNER JOIN user ON order_management.order_user_id = user.user_id  WHERE user.user_status <> 1 AND user.user_status <> 3 ORDER BY order_id desc ";
 $qryorder = mysqli_query($conn,$sqlorder);
 
 ?>

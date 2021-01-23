@@ -168,7 +168,9 @@ session_start();
 
     <script>
     $(function() {
-        $("#example1").DataTable();
+        $("#example1").DataTable({
+          "scrollX": true
+        });
         $('#example2').DataTable({
             "paging": true,
             "lengthChange": false,

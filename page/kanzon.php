@@ -66,7 +66,7 @@ function shows()
 {
 
 include './conn.php';
-$sqlkanzon = " SELECT * FROM kanzon  INNER JOIN user ON kanzon.kanzon_user_id = user.user_id ORDER BY kanzon_id desc ";
+$sqlkanzon = " SELECT * FROM kanzon  INNER JOIN user ON kanzon.kanzon_user_id = user.user_id WHERE user.user_status <> 1 ORDER BY kanzon_id desc ";
 $qrykanzon = mysqli_query($conn,$sqlkanzon);
 
 ?>
@@ -76,8 +76,11 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
          <tr align="center">
              <th width="3px">การสอนไอดี</th>
              <th>ชื่อ-นามสกุลของผู้สอน</th>
-             <th>รายละเอียดการสอน</th>
+             <th>คณะ</th>
+             <th>หลักสูตร</th>
+             <th>สาขา</th>
              <th>เทอมที่สอน</th>
+             <th>รายละเอียดการสอน</th>
              <th>ไฟล์</th>
              <th>สถานะ</th>
 
@@ -92,10 +95,13 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
              <td><?php echo $rowkanzon['first_name']."  ".$rowkanzon['last_name']; ?></td>
-             <td><?php echo $rowkanzon['kanzon_detail']; ?></td>
+             
+             <td><?php echo $rowkanzon['department']; ?></td>
+             <td><?php echo $rowkanzon['course_name']; ?></td>
+             <td><?php echo $rowkanzon['branch']; ?></td>
 
              <td><?php echo $rowkanzon['kanzon_term']; ?></td>
-
+             <td><?php echo $rowkanzon['kanzon_detail']; ?></td>
              <td>
                  <?php if ($rowkanzon['kanzon_file'] == "ไม่มีไฟล์" || $rowkanzon['kanzon_file'] == "") {
                     echo "ไม่มีไฟล์";
@@ -115,6 +121,8 @@ $qrykanzon = mysqli_query($conn,$sqlkanzon);
                  <?php else: ?>
                  <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+                 
+                 <a href="./index.php?print&kanzon_id=<?=$kanzon_id?>" target="_blank"><i class="fas fa-print"></i></a>
              </td>
 
          </tr>

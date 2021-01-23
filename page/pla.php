@@ -66,7 +66,7 @@ function shows()
 {
 
 include './conn.php';
-$sqlhkan_la = " SELECT * FROM kan_la INNER JOIN user ON kan_la.la_user_id = user.user_id ORDER BY la_id desc ";
+$sqlhkan_la = " SELECT * FROM kan_la INNER JOIN user ON kan_la.la_user_id = user.user_id WHERE user.user_status <> 1 ORDER BY la_id desc ";
 $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
 
 ?>
@@ -83,8 +83,7 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
              <th>จำนวนวันที่ลา</th>
              <th>จำนวนคงเหลือ</th>
              <th>ไฟล์</th>
-             <th>แก้ไข</th>
-             <th>พิมพ์</th>
+             <th width="25px">แก้ไข</th>
 
          </tr>
      </thead>
@@ -125,17 +124,16 @@ $qryhkan_la = mysqli_query($conn,$sqlhkan_la);
                      <?php } ?>
              </td>
 
-             <td width="10px">
+             <td width="25px">
                  <?php if ($rowhkan_la['la_status'] == 0): ?>
                  <a href="index.php?pla&edit_la&la_id=<?php echo($la_id) ?>"><i class="far fa-edit"></i></a>&nbsp;&nbsp;
                  <a href="page/pla_db.php?del_pla&la_id=<?php echo($la_id) ?>"><i class="far fa-trash-alt"></i></a>
                  <?php else: ?>
                  <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+                 <a href="./index.php?print&pla_id=<?=$la_id?>" target="_blank"><i class="fas fa-print"></i></a>
              </td>
-             <td>
-             <a href="./index.php?print&pla_id=<?=$la_id?>" target="_blank"><i class="fas fa-print"></i></a>
-             </td>
+      
 
          </tr>
 

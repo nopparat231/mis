@@ -26,7 +26,7 @@
 
                  <div class="card">
                      <div class="card-header noprint">
-                         <h5 class="m-0">เพิ่มผู้ใช้งาน</h5>
+                         <h5 class="m-0">ข้อมูลผู้ใช้งาน</h5>
                      </div>
                      <div class="card-body">
 
@@ -477,8 +477,9 @@
 
 
                          <form role="form" action="page/pa8_user_db.php" method="post">
-
+                            <h2>ระเบียนประวัติ</h2> <br/>
                          <div class="row">
+                         
                                  <div class="col-sm-3">
                                      <!-- text input -->
                                      <div class="form-group">
@@ -841,8 +842,9 @@
                                      <div class="form-group">
 
                                          <div class="card-footer">
-                                             <button type="submit" class="btn btn-primary">Submit</button>
-                                             <a type="submit" class="btn btn-danger" href="./index.php?pa8">cancel</a>
+                                             <button type="submit" class="btn btn-primary noprint">Submit</button>
+                                             <a type="submit" class="btn btn-danger noprint" href="./index.php?pa8">cancel</a>
+                                             <a onClick="window.print()" class="btn btn-info noprint" ><i class="fas fa-print"></i></a>
                                          </div>
 
                                      </div>
@@ -852,7 +854,10 @@
                              <input type="hidden" name="user_id" value="<?=$user_id?>">
 
                          </form>
-
+                            <?php if(isset($_GET['print-user']) <> ''){
+                                echo "<script>window.print()</script>";
+                            }
+                            ?>
                          <?php else: ?>
 
                          <?php 
@@ -978,7 +983,7 @@
 
                                      </td>
 
-                                     <td width="10px">
+                                     <td width="30px">
                                          <?php if ($rowhuser['user_status'] == 3): ?>
                                          <a href="index.php?pa8&edit_user&user_id=<?php echo($uid) ?>"><i
                                                  class="far fa-edit"></i></a>&nbsp;&nbsp;
@@ -990,9 +995,11 @@
                                          <a href="page/pa8_user_db.php?del_user&user_id=<?php echo($uid) ?>"><i
                                                  class="far fa-trash-alt"></i></a>
                                          <?php endif ?>
-
+                                          
+                                         <a href="index.php?pa8&print-user&edit_user&user_id=<?php echo($uid) ?>"><i class="fas fa-print"></i></a>
+                                                
                                      </td>
-
+                                     
                                  </tr>
 
                                  <?php $i++; } ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2021 at 05:58 PM
+-- Generation Time: Jan 23, 2021 at 07:09 PM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -374,7 +374,7 @@ INSERT INTO `kanzon` (`kanzon_id`, `kanzon_user_id`, `kanzon_detail`, `kanzon_te
 (1, 11, 'สอนภาคเรียนที่ 1 ตารางสอน', 2, '539920_test.xlsx', 0),
 (2, 2, 'การเรียนการสอนภาคฤดูร้อน 2563 ', 1, '', 1),
 (3, 4, 'งานวิชาการ', 1, '428857_BDDSMid_61605180032-7.docx', 0),
-(4, 30, 'ประจำปี 2564', 0, '127943_จัดตารางสอนแบบใช้สูตรอย่างเดียว.xlsx', 0);
+(4, 30, 'ประจำปี 2564', 1, '127943_จัดตารางสอนแบบใช้สูตรอย่างเดียว.xlsx', 0);
 
 -- --------------------------------------------------------
 
@@ -496,8 +496,8 @@ CREATE TABLE `order_management` (
 --
 
 INSERT INTO `order_management` (`order_id`, `order_user_id`, `order_time`, `order_where`, `order_detail`, `order_file`, `order_status`) VALUES
-(4, 2, 'วันที่ 19 เมษายน 2563 ', 'คณบดี,คณะบริหารธุรกิจ', 'มอบหมายงานให้ ตามคำสี่งเลขที่ ......', 'excal', 1),
-(5, 5, 'วันที่ 10 เมษายน 2563 ', 'จากสำนักงบประมาณ,คณะบดี', 'คั่งสั่งเลขที่ 1/2563 ...........', 'word.xlsx', 1),
+(5, 29, 'วันที่ 19 เมษายน 2563 ', 'คณบดี,คณะบริหารธุรกิจ', 'มอบหมายงานให้ ตามคำสี่งเลขที่ ......', 'excal', 0),
+(6, 30, 'วันที่ 10 เมษายน 2563 ', 'จากสำนักงบประมาณ,คณะบดี', 'คั่งสั่งเลขที่ 1/2563 ...........', 'word.xlsx', 0),
 (7, 10, '2020-09-23', 'คณะบริหาร', 'ทดสอบ', '389208_BDDSMid_61605180032-7.docx', 0);
 
 -- --------------------------------------------------------
@@ -940,7 +940,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `order_management`
 --
 ALTER TABLE `order_management`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `p_kana`

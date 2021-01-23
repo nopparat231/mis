@@ -84,27 +84,54 @@
                                 </table>
 
                             <?php } elseif (isset($_GET['kanzon_id']) <> '') {
-                                // include './conn.php';
-                                // $la_id = $_GET['pla_id'];
-                                // $sqlhkan_la = " SELECT * FROM kanzon INNER JOIN user ON kan_la.la_user_id = user.user_id WHERE la_id = '$la_id' ";
-                                // $qryhkan_la = mysqli_query($conn, $sqlhkan_la);
-                                // $la = mysqli_fetch_assoc($qryhkan_la);
+                                
+                                include './conn.php';
+                                $kanzon_id = $_GET['kanzon_id'];
+                                $sqlhkan_zon = " SELECT * FROM kanzon INNER JOIN user ON kanzon.kanzon_user_id = user.user_id WHERE kanzon_id = '$kanzon_id' ";
+                                $qryhkan_zon = mysqli_query($conn, $sqlhkan_zon);
+                                $zon = mysqli_fetch_assoc($qryhkan_zon);
 
                             ?>
 
+                            <h3 style="margin-left:3rem;margin-bottom:2rem">รายงานข้อมูลการสอน</h3>
+                                <table class="font-weight-bold">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">รหัสบัตรประชาชน</td>
+                                            <td>: <u><?= $zon['user_data_id_card']; ?></u> </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">ชื่อ</td>
+                                            <td>:  <u><?= $zon['first_name'] . '&nbsp;&nbsp;&nbsp;' . $zon['last_name']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">คณะ</td>
+                                            <td>: <u> <?= $zon['department']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">หลักสูตร</td>
+                                            <td>: <u> <?= $zon['course_name']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">สาขา </td>
+                                            <td>: <u> <?= $zon['branch']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">เทอมที่สอน </td>
+                                            <td>: <u> <?= $zon['kanzon_term']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">รายละเอียดการสอน </td>
+                                            <td>: <u> <?= $zon['kanzon_detail']; ?></u></td>
+                                        </tr>
 
-                                <h3 style="margin-left:3rem;margin-bottom:3rem">รายงานข้อมูลการสอน</h3>
+                                    </tbody>
+                                </table>
 
-                                <p class="font-weight-bold">รหัสบัตรประชาชน : <?= $la['user_data_id_card']; ?> </p>
-                                <p class="font-weight-bold">ชื่อ : <?= $la['user_data_id_card']; ?> </p>
-                                <p class="font-weight-bold">ประเภทการลา : <?= $la['la_start']; ?> </p>
-                                <p class="font-weight-bold">วันที่เริ่มลาวันที่สิ้นสุดการลา : <?= $la['la_end']; ?> </p>
-                                <p class="font-weight-bold">จำนวนวันที่ลา : <?= $la['la_total']; ?> </p>
-                                <p class="font-weight-bold">จำนวนวันคงเหลือ : <?= $la['la_balance']; ?> </p>
 
 
                             <?php } else {
-                                echo 'ไม่มีข้อมูลการลา';
+                                echo '<h1>ไม่พบข้อมูล</h1>';
                             } ?>
 
                         </div>
