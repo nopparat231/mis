@@ -114,6 +114,7 @@ $qryart = mysqli_query($conn,$sqlart);
                  <?php else: ?>
                     <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+                 <a href="./index.php?print&artsculture_id=<?=$artsculture_id?>" target="_blank"><i class="fas fa-print"></i></a>
              </td>
 
          </tr>

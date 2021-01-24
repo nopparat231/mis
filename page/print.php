@@ -130,6 +130,138 @@
 
 
 
+                            <?php }elseif (isset($_GET['order_id']) <> '') {
+                                
+                                include './conn.php';
+                                $order_id = $_GET['order_id'];
+                                $sqlhkan_order = " SELECT * FROM order_management WHERE order_id = '$order_id' ";
+                                $qryhkan_order = mysqli_query($conn, $sqlhkan_order);
+                                $order = mysqli_fetch_assoc($qryhkan_order);
+
+                            ?>
+
+                            <h3 style="margin-left:3rem;margin-bottom:2rem">รายงานข้อมูลคำสั่ง</h3>
+                                <table class="font-weight-bold">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">คำสั่งเรื่อง</td>
+                                            <td>: <u><?= $order['order_name']; ?></u> </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">วันที่</td>
+                                            <td>:  <u><?= $order['order_time']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">คำสั่งจาก</td>
+                                            <td>: <u> <?= $order['order_where']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">ประเภทคำสั่ง</td>
+                                            <td>: <u> <?= $order['order_type']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">ประธาน</td>
+                                            <td>: <u> <?= $order['order_head']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">รายละเอียด </td>
+                                            <td>: <u> <?= $order['order_detail']; ?></u></td>
+                                        </tr>
+                                      
+
+                                    </tbody>
+                                </table>
+
+
+
+                            <?php }elseif (isset($_GET['kan_research_id']) <> '') {
+                                
+                                include './conn.php';
+                                $kan_research_id = $_GET['kan_research_id'];
+                                $sqlhkan_order = " SELECT * FROM kan_research WHERE kan_research_id = '$kan_research_id' ";
+                                $qryhkan_order = mysqli_query($conn, $sqlhkan_order);
+                                $order = mysqli_fetch_assoc($qryhkan_order);
+
+                            ?>
+
+                            <h3 style="margin-left:3rem;margin-bottom:2rem">รายงานข้อมูลงานวิจัย</h3>
+                                <table class="font-weight-bold">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">ชื่องานวิจัย</td>
+                                            <td>: <u><?= $order['name_th']; ?></u> </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">รายละเอียดงานวิจัย</td>
+                                            <td>:  <u><?= $order['detail']; ?></u></td>
+                                        </tr>
+                                       
+
+                                    </tbody>
+                                </table>
+
+
+
+                            <?php }elseif (isset($_GET['kan_activity_id']) <> '') {
+                                
+                                include './conn.php';
+                                $kan_activity_id = $_GET['kan_activity_id'];
+                                $sqlhkan_order = " SELECT * FROM kan_activity WHERE kan_activity_id = '$kan_activity_id' ";
+                                $qryhkan_order = mysqli_query($conn, $sqlhkan_order);
+                                $order = mysqli_fetch_assoc($qryhkan_order);
+
+                            ?>
+
+                            <h3 style="margin-left:3rem;margin-bottom:2rem">รายงานข้อมูลกิจกรรม</h3>
+                                <table class="font-weight-bold">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">ชื่อกิจกรรม</td>
+                                            <td>: <u><?= $order['name_activity']; ?></u> </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">รายละเอียดกิจกรรม</td>
+                                            <td>:  <u><?= $order['detail']; ?></u></td>
+                                        </tr>
+                                       
+
+                                    </tbody>
+                                </table>
+
+
+
+                            <?php }elseif (isset($_GET['artsculture_id']) <> '') {
+                                
+                                include './conn.php';
+                                $artsculture_id = $_GET['artsculture_id'];
+                                $sqlhkan_order = " SELECT * FROM arts_and_culture INNER JOIN user ON arts_and_culture.art_and_culture_user_id = user.user_id WHERE artsculture_id = '$artsculture_id' ";
+                                $qryhkan_order = mysqli_query($conn, $sqlhkan_order);
+                                $order = mysqli_fetch_assoc($qryhkan_order);
+
+                            ?>
+
+                            <h3 style="margin-left:3rem;margin-bottom:2rem">รายงานข้อมูลกิจกรรม</h3>
+                                <table class="font-weight-bold">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">ชื่อ-นามสกุล</td>
+                                            <td>: <u><?= $order['first_name']."  ".$order['last_name']; ?></u> </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">ชื่อศิลปวัฒนธรรม</td>
+                                            <td>:  <u><?= $order['name_artculture']; ?></u></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;height:40px">รายละเอียด</td>
+                                            <td>:  <u><?= $order['detail']; ?></u></td>
+                                        </tr>
+                                       
+
+                                    </tbody>
+                                </table>
+
+
+
                             <?php } else {
                                 echo '<h1>ไม่พบข้อมูล</h1>';
                             } ?>

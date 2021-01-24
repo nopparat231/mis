@@ -140,6 +140,7 @@
                                      <td width="5px"><i class="fas fa-arrow-right isDisabled"></i></td>
 
                                      <?php } ?>
+                                     
                                  </tr>
 
                                  <?php } ?>

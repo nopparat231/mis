@@ -78,7 +78,7 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
              <th>ชื่องานวิจัย</th>
              <th>รายละเอียดงานวิจัย</th>
              <th>ไฟล์</th>
-             <th>สถานะ</th>
+             <th>จัดการ</th>
              
              
          </tr>
@@ -110,6 +110,7 @@ $qryresearch = mysqli_query($conn,$sqlkan_research);
                  <?php else: ?>
                     <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+                 <a href="./index.php?print&kan_research_id=<?=$kan_research_id?>" target="_blank"><i class="fas fa-print"></i></a>
              </td>
 
          </tr>

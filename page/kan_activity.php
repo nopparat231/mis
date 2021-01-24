@@ -111,6 +111,7 @@ $qrykan_activity = mysqli_query($conn,$sqlkan_activity);
                  <?php else: ?>
                     <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+                 <a href="./index.php?print&kan_activity_id=<?=$kan_activity_id?>" target="_blank"><i class="fas fa-print"></i></a>
              </td>
 
          </tr>

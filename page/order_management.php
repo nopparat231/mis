@@ -66,7 +66,7 @@ function shows()
 {
 
 include './conn.php';
-$sqlorder = " SELECT * FROM order_management  INNER JOIN user ON order_management.order_user_id = user.user_id  WHERE user.user_status <> 1 AND user.user_status <> 3 ORDER BY order_id desc ";
+$sqlorder = " SELECT * FROM order_management ORDER BY order_id desc ";
 $qryorder = mysqli_query($conn,$sqlorder);
 
 ?>
@@ -74,10 +74,12 @@ $qryorder = mysqli_query($conn,$sqlorder);
  <table id="example1" class="table table-bordered table-hover">
      <thead>
          <tr align="center">
-             <th width="3px">คำสั่งที่</th>
-             <th>ชื่อ-นามสกุล</th>
+             <th>คำสั่งที่</th>
+             <th>คำสั่งเรื่อง</th>
              <th>วันที่</th>
              <th>คำสั่งจาก</th>
+             <th>ประเภทคำสั่ง</th>
+             <th>ประธาน</th>
              <th>รายละเอียด</th>
              <th>ไฟล์</th>
              <th>สถานะ</th>
@@ -93,10 +95,13 @@ $qryorder = mysqli_query($conn,$sqlorder);
         ?>
          <tr align="center">
              <td align="center"><?php echo $i; ?></td>
-             <td><?php echo $roworder['first_name']."  ".$roworder['last_name']; ?></td>
+             <td><?php echo $roworder['order_name']; ?></td>
              <td><?php echo $roworder['order_time']; ?></td>
 
              <td><?php echo $roworder['order_where']; ?></td>
+             <td><?php echo $roworder['order_type']; ?></td>
+             <td><?php echo $roworder['order_head']; ?></td>
+
              <td><?php echo $roworder['order_detail']; ?></td>
              <td>
                  <?php if ($roworder['order_file'] == "ไม่มีไฟล์" || $roworder['order_file'] == "") {
@@ -108,7 +113,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              </td>
 
 
-             <td width="10px">
+             <td>
                  <?php if ($roworder['order_status'] == 0): ?>
                  <a href="index.php?order_management&edit_order&order_id=<?php echo($order_id) ?>"><i
                          class="far fa-edit"></i></a>&nbsp;&nbsp;
@@ -117,6 +122,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
                  <?php else: ?>
                  <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+                 <a href="./index.php?print&order_id=<?=$order_id?>" target="_blank"><i class="fas fa-print"></i></a>
              </td>
 
          </tr>
@@ -134,10 +140,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
  function add()
  {
 
-    include './conn.php';
-    $sqlhuser = " SELECT * FROM user ";
- 	$qryhuser = mysqli_query($conn,$sqlhuser);
- 	//$rowuser = mysqli_fetch_assoc($qryhuser);
+
 
     ?>
 
@@ -148,20 +151,8 @@ $qryorder = mysqli_query($conn,$sqlorder);
          <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ชื่อ-นามสกุล</label>
-                 <select class="form-control select2" name="order_user_id" style="width: 100%;">
-                     <option selected="selected">เลือกชื่อผู้ใช้</option>
-
-                     <?php
-
-                        while ($rowuser = $qryhuser->fetch_array()) {
-                            $usid = $rowuser["user_id"];
-                            echo "<option value='$usid'>".$rowuser['first_name']."  ".$rowuser['last_name']."</option>";
-                        }
-
-                    ?>
-
-                 </select>
+             <label>คำสั่งเรื่อง</label>
+                 <input type="text" name="order_name" class="form-control" placeholder="คำสั่งเรื่อง">
              </div>
          </div>
 
@@ -169,7 +160,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>วันที่</label>
-                 <input type="date" name="order_time" class="form-control" placeholder="Enter ...">
+                 <input type="date" name="order_time" class="form-control" placeholder="วันที่">
              </div>
          </div>
 
@@ -177,7 +168,23 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>คำสั่งจาก</label>
-                 <input type="text" name="order_where" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="order_where" class="form-control" placeholder="คำสั่งจาก">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ประเภทคำสั่ง</label>
+                 <input type="text" name="order_type" class="form-control" placeholder="ประเภทคำสั่ง">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ประธาน</label>
+                 <input type="text" name="order_head" class="form-control" placeholder="ประธาน">
              </div>
          </div>
 
@@ -185,7 +192,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>รายละเอียด</label>
-                 <input type="text" name="order_detail" class="form-control" placeholder="Enter ...">
+                 <input type="text" name="order_detail" class="form-control" placeholder="รายละเอียด">
              </div>
          </div>
 
@@ -193,7 +200,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <!-- text input -->
              <div class="form-group">
                  <label>เพื่มไฟล์ข้อมูล</label>
-                 <input type="file" name="order_file" class="form-control" placeholder="Enter ...">
+                 <input type="file" name="order_file" class="form-control" placeholder="เพื่มไฟล์ข้อมูล">
              </div>
          </div>
 
@@ -218,7 +225,7 @@ $qryorder = mysqli_query($conn,$sqlorder);
     include './conn.php';
 
     $order_id = $_GET['order_id'];
-    $sqlhuser = " SELECT * FROM order_management INNER JOIN user ON order_management.order_user_id = user.user_id WHERE order_management.order_id = '$order_id' ";
+    $sqlhuser = " SELECT * FROM order_management WHERE order_id = '$order_id' ";
  	$qryhuser = mysqli_query($conn,$sqlhuser);
  	$rowuser = mysqli_fetch_assoc($qryhuser);
 
@@ -228,17 +235,11 @@ $qryorder = mysqli_query($conn,$sqlorder);
 
      <div class="row">
 
-         <div class="col-sm-4">
+     <div class="col-sm-4">
              <!-- text input -->
              <div class="form-group">
-                 <label>ชื่อ-นามสกุล</label>
-                 <select class="form-control select2" name="order_user_id" style="width: 100%;">
-
-                     <option selected="selected" value="<?= $rowuser['order_user_id']; ?>">
-                         <?= $rowuser['first_name']."  ".$rowuser['last_name']; ?>
-                     </option>
-
-                 </select>
+             <label>คำสั่งเรื่อง</label>
+                 <input type="text" name="order_name" value="<?= $rowuser['order_name']; ?>" class="form-control" placeholder="คำสั่งเรื่อง">
              </div>
          </div>
 
@@ -255,6 +256,22 @@ $qryorder = mysqli_query($conn,$sqlorder);
              <div class="form-group">
                  <label>คำสั่งจาก</label>
                  <input type="text" name="order_where" value="<?= $rowuser['order_where']; ?>" class="form-control" placeholder="Enter ...">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ประเภทคำสั่ง</label>
+                 <input type="text" name="order_type" value="<?= $rowuser['order_type']; ?>" class="form-control" placeholder="ประเภทคำสั่ง">
+             </div>
+         </div>
+
+         <div class="col-sm-4">
+             <!-- text input -->
+             <div class="form-group">
+                 <label>ประธาน</label>
+                 <input type="text" name="order_head" value="<?= $rowuser['order_head']; ?>" class="form-control" placeholder="ประธาน">
              </div>
          </div>
 
