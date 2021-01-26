@@ -120,7 +120,7 @@ session_start();
         include 'page/p_rate.php';
 
       }elseif (isset($_GET['p_kana'])) {
-        include 'page/p_kana.php';
+        include 'page/p_kana_from_google.php';
 
       }elseif (isset($_GET['print'])) {
         include 'page/print.php';
