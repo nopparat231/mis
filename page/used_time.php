@@ -103,6 +103,7 @@ $qryused = mysqli_query($conn,$sqlused);
                  <?php else: ?>
                  <?php echo "<font color='red'>ยกเลิก</fon>"; ?>
                  <?php endif ?>
+                 <a href="#" onClick="window.print()"><i class="fas fa-print float-right"></i></a>
              </td>
 
          </tr>

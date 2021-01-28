@@ -1,6 +1,6 @@
 <?php
 
-require_once"include/connection.php";
+require_once "include/connection.php";
 
 if($_GET["obj"] == "delete_account_cookie"){
 
@@ -25,6 +25,7 @@ if($_GET["obj"] == "check_login"){
         $_SESSION["USER_ID"] = $row["user_id"];
         $_SESSION["USERNAME"] = $row["username"];
         $user_id = $row["user_id"];
+        include "Log_login.php";
         
         if(isset($remember)){
             $cookie_value = $row["username"];
