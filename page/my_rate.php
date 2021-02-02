@@ -136,7 +136,7 @@
                                      <td width="5px"><i class="fas fa-arrow-right isDisabled"></i></td>
 
                                      <?php }else{ ?>
-                                     <td>หัวหน้ายังไม่ประเมิน</td>
+                                     <td>ส่วนของหัวหน้าประเมิน</td>
                                      <td width="5px"><i class="fas fa-arrow-right isDisabled"></i></td>
 
                                      <?php } ?>
