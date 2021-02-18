@@ -38,6 +38,10 @@
                                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjh6az5a9cLdCXric_sbIeb3Qr7rcaGgSz0WPCVk9QyAHLgQ/viewform?embedded=true" width="900" height="3262" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
                                  </div>
+                                 <div class="col-md-12">
+                                 <h1>รายงานการประเมินของคณะ/สำนัก/กอง </h1>
+                                 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQuspnhOHvuyzYcCfy3IAhLTo543SSjzBlriVFCjzWv7xNMZp-wWOT67oPVmAshiN8LsLB9Z87xRQ_b/pubhtml?gid=453414506&amp;single=true&amp;widget=true&amp;headers=true" width="900" height="350" ></iframe>
+                                 </div>
                              </div>
                          </div>
 
